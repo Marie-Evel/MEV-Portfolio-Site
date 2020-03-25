@@ -1,0 +1,144 @@
+/*
+Colors palette:
+Jazzberry Jam: #B20F5C;
+Syrah: #7D0B5B;
+Lizard Green: #239B15;
+Cerulean Blue: #3056CE;
+Vaguely Violet: #E6ECFF;
+*/
+
+body {
+  background-color: white;
+  font-family: 'Metrisch', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.375;
+  color: black;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #7D0B5B /* Syrah */
+}
+
+h2 {
+  font-size: 1.125em;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #3056CE; /* Blue */
+}
+
+a:visited { /* visited link */
+  color: #7D0B5B; /* Syrah */
+}
+
+a:hover,
+a:focus {
+  color: #239B15; /* Green */
+}
+
+a:active { /* selected link */
+  color: #239B15; /* Green */
+}
+
+header {
+  width: 100%;
+  margin: 0;
+ }
+
+main,
+footer {
+  width: 100%;
+  margin: 30px 20px;
+}
+
+#top-menus li a {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  background-color: #B20F5C; /* Jazzberry */
+  text-decoration: none !important;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.button,
+.button-filled,
+.button-ghost {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1;
+  padding: 10px 30px 7px 30px;
+  border-radius: 4px;
+}
+
+.button-filled {
+    background-color: yellow;
+    color: #ffffff !important;
+    transition: 0.2s opacity;
+}
+.button-ghost {
+    background-color: white;
+    color: black !important;
+    border: 1.5px solid black;
+}
+
+.button-filled.about {
+  background-color: #3056CE; /* Blue */
+}
+
+.button-filled.work {
+  background-color: #239B15; /* Green */
+}
+
+.button-ghost.about {
+  color: #3056CE !important; /* Blue */
+  border-color: #3056CE; /* Blue */
+}
+
+.button-filled:hover,
+.button-filled:active {
+  opacity: 0.8;
+}
+
+.container-full-width {
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+}
+
+#top-nav {
+  display: grid;
+  grid-template-columns: 4fr 10fr;
+  grid-template-rows: auto;
+  background-color: #B20F5C /* Jazzberry */;
+}
+
+.cont-logo {
+  fill: white;
+}
+
+.cont-menus {
+  text-align: right;
+}
+/* On mobile screens switch to 1 column */
+@media screen and (max-width: 411px) {
+  #top-nav {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+  }
+}
