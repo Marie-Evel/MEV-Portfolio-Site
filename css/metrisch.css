@@ -24,12 +24,12 @@
 
 @font-face {
     font-family: 'Metrisch';
-    src: url('Metrisch-Book-webfont.eot');
-    src: url('Metrisch-Book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Metrisch-Book-webfont.woff2') format('woff2'),
-         url('Metrisch-Book-webfont.woff') format('woff'),
-         url('Metrisch-Book-webfont.ttf') format('truetype'),
-         url('Metrisch-Book-webfont.svg#metrischbook') format('svg');
+    src: url('metrisch_font/Metrisch-Book-webfont.eot');
+    src: url('metrisch_font/Metrisch-Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('metrisch_font/Metrisch-Book-webfont.woff2') format('woff2'),
+         url('metrisch_font/Metrisch-Book-webfont.woff') format('woff'),
+         url('metrisch_font/Metrisch-Book-webfont.ttf') format('truetype'),
+         url('metrisch_font/Metrisch-Book-webfont.svg#metrischbook') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -37,12 +37,12 @@
 
 @font-face {
     font-family: 'Metrisch';
-    src: url('Metrisch-Bold-webfont.eot');
-    src: url('Metrisch-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Metrisch-Bold-webfont.woff2') format('woff2'),
-         url('Metrisch-Bold-webfont.woff') format('woff'),
-         url('Metrisch-Bold-webfont.ttf') format('truetype'),
-         url('Metrisch-Bold-webfont.svg#metrischbold') format('svg');
+    src: url('metrisch_font/Metrisch-Bold-webfont.eot');
+    src: url('metrisch_font/Metrisch-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('metrisch_font/Metrisch-Bold-webfont.woff2') format('woff2'),
+         url('metrisch_font/Metrisch-Bold-webfont.woff') format('woff'),
+         url('metrisch_font/Metrisch-Bold-webfont.ttf') format('truetype'),
+         url('metrisch_font/Metrisch-Bold-webfont.svg#metrischbold') format('svg');
     font-weight: bold;
     font-style: normal;
 
@@ -50,17 +50,17 @@
 
 @font-face {
     font-family: 'Metrisch';
-    src: url('Metrisch-Medium-webfont.eot');
-    src: url('Metrisch-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Metrisch-Medium-webfont.woff2') format('woff2'),
-         url('Metrisch-Medium-webfont.woff') format('woff'),
-         url('Metrisch-Medium-webfont.ttf') format('truetype'),
-         url('Metrisch-Medium-webfont.svg#metrischmedium') format('svg');
+    src: url('metrisch_font/Metrisch-Medium-webfont.eot');
+    src: url('metrisch_font/Metrisch-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('metrisch_font/Metrisch-Medium-webfont.woff2') format('woff2'),
+         url('metrisch_font/Metrisch-Medium-webfont.woff') format('woff'),
+         url('metrisch_font/Metrisch-Medium-webfont.ttf') format('truetype'),
+         url('metrisch_font/Metrisch-Medium-webfont.svg#metrischmedium') format('svg');
     font-weight: 500;
     font-style: normal;
 
 }
-
+/*
 @font-face {
     font-family: 'Metrischbook';
     src: url('Metrisch-BookItalic-webfont.eot');
@@ -73,3 +73,4 @@
     font-style: italic;
 
 }
+*/
