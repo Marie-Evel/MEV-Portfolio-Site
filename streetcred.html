@@ -4,10 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>StreetCred Case Study</title>
 
-  <!-- Favicon -->
+  <title>StreetCred Case Study</title>
+  <!-- Favicon -------------------------------------------------------------->
   <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/favicon-16x16.png">
@@ -15,26 +14,35 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b20f5c">
   <meta name="msapplication-TileColor" content="#b20f5c">
   <meta name="theme-color" content="#b20f5c">
-  <!-- END of Favicon -->
 
+  <!-- Fonts ---------------------------------------------------------------->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/6837ed2a31.js" crossorigin="anonymous"></script>
+
+  <!-- CSS files ------------------------------------------------------------>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/metrisch.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/streetcred.css">
+
+  <!-- JavaScript files ----------------------------------------------------->
+
 </head>
 
 <body>
   <header>
-    <div>
-      <!-- Row -->
-      <div>
-        <!-- Column 1 with logo -->
+    <div id="top-nav">
+      <div class="cont-logo">
         <a href="index.html">
           <picture>
             <source media="(max-width: 411px)" srcset="img/logo/logo mobile.svg">
             <img src="img/logo/logo_desktop.svg" alt="M E V logo">
           </picture>
         </a>
-      </div><!-- END Column 1 -->
-      <div>
-        <!-- Column 2 with menus -->
+      </div><!-- END .cont-logo -->
+      <div class="cont-menus">
         <nav>
           <ul>
             <li><a href="index.html#work">WORK</a></li>
@@ -42,22 +50,22 @@
             <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
-      </div><!-- END Column 2 -->
-    </div><!-- END Row-->
+      </div><!-- END of .cont-menus -->
+    </div><!-- END #top-nav-->
   </header>
 
-  <main>
+  <main class="sc">
     <!-- 01 INTRO ------------------------------------------------------------->
     <div><!-- Intro -->
       <p>
         UX CASE STUDY
       </p>
-      <picture class="sc shadow-white">
+      <picture class="shadow-white">
         <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
           <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="StreetCred home screen on iPhone XS">
       </picture>
-      <h1 class="sc font-white">Explore a city like you've never experienced before!</h1>
-      <p class="sc font-white">
+      <h1 class="sc font-white back-med-blue">Explore a city like you've never experienced before!</h1>
+      <p class="sc font-white font-medium back-med-blue">
         Street­Cred will take you on a tour of the must-see land­marks, while
         in­tro­duc­ing you to hidden gems rec­om­mended by the lo­cals. You’ll solve
         rid­dles to un­veil your next lo­ca­tion, com­plete fun pic­ture chal­lenges,
@@ -78,7 +86,7 @@
 
         <div><!-- Row 2: text -->
           <div><!-- Cell(2,1) -->
-            <ul class="sc sub-sections">
+            <ul class="sc font-smallest">
               <li>the problem</li>
               <li>potential solution</li>
               <li>target audience</li>
@@ -189,7 +197,7 @@
           </picture>
         </div><!-- END of Screenshot 5-->
       </div><!-- END of Screenshots-->
-      <p class="sc font-white font-medium">
+      <p class="sc font-white font-medium back-med-blue">
         Want to see how I got there?
         <br>Let’s dig in.
       </p>
@@ -202,7 +210,7 @@
           <h1 class="sc">02</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>competitive analysis</li>
             <li>opportunities & strategy</li>
             <li>user surveys</li>
@@ -229,8 +237,8 @@
           <p>
             I’ve identified and analyzed two competitors who provide
             ready-to-play, affordable scavenger hunts:
-            <span class="font-letsroam">Let’s Roam</span>, and
-            <span class="font-uaq">Urban Adventure Quest</span> (UAQ). Let’s
+            <span class="font-letsroam font-medium">Let’s Roam</span>, and
+            <span class="font-uaq font-medium">Urban Adventure Quest</span> (UAQ). Let’s
             take a look at their strengths and weaknesses.
           </p>
         </div><!-- END of Cell(2,2) -->
@@ -244,7 +252,7 @@
           <h3 class="sc">Strengths</h3>
         </div><!-- END of Cell(1,2) -->
         <div><!-- Cell(2,2) Strengths -->
-          <ul class="sc bullets-letsroam">
+          <ul class="sc bullets letsroam-bullets">
             <li>Hunts available in 350 cities all over the world, including
               U.S., Europe, Australia, and Asia.</li>
             <li>Good variety of themed hunts: bar crawls, ghost tours, date
@@ -258,7 +266,7 @@
           <h3 class="sc">Weaknesses</h3>
         </div><!-- END of Cell(1,3) -->
         <div><!-- Cell(2,3) Weaknesses -->
-          <ul class="sc bullets-letsroam-light">
+          <ul class="sc bullets letsroam-light-bullets">
             <li>Content of hunts is weak with very basic historical info, and
               riddles are not very challenging (e.g.: what's the color of the
               door?)</li>
@@ -280,7 +288,7 @@
           <h3 class="sc">Strengths</h3>
         </div><!-- END of Cell(1,2) -->
         <div><!-- Cell(2,2) Strengths -->
-          <ul class="sc bullets-uaq">
+          <ul class="sc bullets uaq-bullets">
             <li>Content of quests is excellent: clever riddles, interesting
               historical facts, and fun photo challenges.</li>
             <li>Discounts are offered regularly.</li>
@@ -297,7 +305,7 @@
           <h3 class="sc">Weaknesses</h3>
         </div><!-- END of Cell(1,3) -->
         <div><!-- Cell(2,3) Weaknesses -->
-          <ul class="sc bullets-uaq-light">
+          <ul class="sc bullets uaq-light-bullets">
             <li>Quests are only available in the United States (plus 1 city in
               Canada).</li>
             <li>Web interface is clunky and looks dated.</li>
@@ -315,7 +323,7 @@
           <h3 class="sc">Opportunities & Business Strategy</h3>
         </div><!-- END of Cell(1,2) -->
         <div><!-- Cell(2,1)-->
-          <p class="sc font-red font-large">
+          <p class="sc font-red font-larger">
             <b>As mil­len­ni­als reach the age where they have the means and
               de­sire to travel, there’s a real op­por­tu­nity to mod­ern­ize the
               self-guided tour in­dus­try where we can com­bine the con­ve­nience of
@@ -330,7 +338,7 @@
           <p class="sc">
             Here are initial thoughts on StreetCred’s business strategy:
           </p>
-          <ul class="sc bullets-med-blue">
+          <ul class="sc bullets med-blue-bullets">
             <li>Provide users with a memorable sightseeing experience by
               offering ready-made scavenger hunts with high-quality content
               (clever riddles, interesting historical info, fun photo
@@ -372,7 +380,7 @@
                                      <br>Leisure</h3>
           </div><!-- END of Cell(1,1)-->
           <div><!-- Cell(1,2) -->
-            <ul class="sc bullets-blue font-medium">
+            <ul class="sc bullets med-blue-bullets font-medium">
               <li>Determine if people want to spend more time outside.</li>
               <li>Identify what people like to do when they travel.</li>
               <li>Assess how adventurous people are in terms of trying new
@@ -387,7 +395,7 @@
             <p class="sc font-medium">
               Understand people’s gaming /social media habits and usage:
             </p>
-            <ul class="sc bullets-blue font-medium">
+            <ul class="sc bullets med-blue-bullets font-medium">
               <li>What type of games do people like to play on their phones?
                 Why?</li>
               <li>How much do people use social media, and for what purpose?</li>
@@ -398,7 +406,7 @@
                                      <br>Hunts</h3>
           </div><!-- END of Cell(3,1)-->
           <div><!-- Cell(3,2) -->
-            <ul class="sc bullets-blue font-medium">
+            <ul class="sc bullets med-blue-bullets font-medium">
               <li>Determine if users would turn to a scavenger hunt game as a
                 way to explore their city, or as a means to discover a new city
                 while traveling.</li>
@@ -436,7 +444,7 @@
                 the op­por­tu­nity to dig deeper on each topic. Here are ad­di­tional
                 re­search goals that were not ad­dressed by the sur­vey:
               </p>
-              <ul class="bullets-med-blue">
+              <ul class="sc bullets med-blue-bullets">
                 <li>Find out about people's experiences when traveling (good
                   and bad).</li>
                 <li>Gather people's thoughts on guided tours and museums.</li>
@@ -456,7 +464,7 @@
               <p>
                 I selected 5 interviewees with the following characteristics:
               </p>
-              <ul class="bullets-med-blue">
+              <ul class="sc bullets med-blue-bullets">
                 <li>Between the ages of 23 and 47 years old.</li>
                 <li>3 city dwellers + 2 suburbanites.</li>
                 <li>2 single + 2 married with children + 1 married without
@@ -513,11 +521,10 @@
               </p>
             </div><!-- END of Quote 5 -->
           </div><!-- END of Column 2 -->
-
         </div><!-- END of 1x2 grid -->
       </div><!-- END of User Interviews-->
 
-      <div><!-- Equation infographic -->
+      <div class="sc back-light-pink"><!-- Equation infographic -->
         <img src="img/streetcred/sec2_research/equation.png" alt="1269 observations from survey + 506 quotes from interviews = a lot to process">
       </div><!-- END Equation infographic -->
 
@@ -529,26 +536,26 @@
           once I organized and categorized it, as it helped me to derive key
           insights for features to include in the app.
         </p>
-        <ul class="sc bullets-red">
-          <li>Feedback from the survey and interviews strongly supported
-            including <span class="font-red"><b>riddles, picture challenges</b>
-            </span> and <span class="font-red"><b>historical information</b>
-            </span> in the hunts.</li>
-          <li>All 5 interviewees mentioned that they would like the hunt to
-            incorporate a mix of <span class="font-red"><b>famous landmarks</b>
-            </span>, as well as little <span class="font-red"><b>hidden gems
-            only known by the locals</b></span>.</li>
-          <li>Most people think a scavenger hunt is a great way to explore a
+        <ul class="sc bullets red-bullets">
+          <li><p>Feedback from the survey and interviews strongly supported
+            including <span class="sc font-red"><b>riddles, picture challenges</b>
+            </span> and <span class="sc font-red"><b>historical information</b>
+            </span> in the hunts.</p></li>
+          <li><p>All 5 interviewees mentioned that they would like the hunt to
+            incorporate a mix of <span class="sc font-red"><b>famous landmarks</b>
+            </span>, as well as little <span class="sc font-red"><b>hidden gems
+            only known by the locals</b></span>.</p></li>
+          <li><p>Most people think a scavenger hunt is a great way to explore a
             city while traveling. On the other hand, the idea of a
-            <span class="font-red"><b>generic hunt or playing a hunt in their
-            hometown was not very popular</b></span>.</li>
-          <li>Very few people want to race during a scavenger hunt;
-            <span class="font-red"><b>most prefer to take their time</b></span>
-            and enjoy the sights.</li>
-          <li>Most trav­el­ers want to try lo­cal cui­sine, and all in­ter­vie­wees
-            said they would wel­come <span class="font-red"><b>restau­rant
+            <span class="sc font-red"><b>generic hunt or playing a hunt in their
+            hometown was not very popular</b></span>.</p></li>
+          <li><p>Very few people want to race during a scavenger hunt;
+            <span class="sc font-red"><b>most prefer to take their time</b></span>
+            and enjoy the sights.</p></li>
+          <li><p>Most trav­el­ers want to try lo­cal cui­sine, and all in­ter­vie­wees
+            said they would wel­come <span class="sc font-red"><b>restau­rant
             rec­om­men­da­tions</b></span> within a scav­enger hunt. But stay away
-            from the big chains!</li>
+            from the big chains!</p></li>
         </ul>
       </div><!-- END of Key Insights-->
 
@@ -568,7 +575,7 @@
           <h1 class="sc">03</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>user personas</li>
             <li>journey maps</li>
             <li>user flows</li>
@@ -604,7 +611,7 @@
       </div><!-- END of 2x2 grid -->
 
       <div><!-- Secondary personas section -->
-        <p class="sc font-medium">
+        <p class="sc font-medium back-light-grey">
           While Dereck is my primary persona, meaning most of my design decisions
           revolve around him, I also created Malika, the young professional who
           considers traveling a hobby, and Angie, the fun mom who likes to plan
@@ -643,14 +650,14 @@
         </picture>
         <div><!-- Row container -->
           <div><!-- Column 1 -->
-            <p class="sc font-small">
+            <p class="sc font-smaller">
               This emo­tional roller coaster can help us iden­tify op­por­tuni­ties
               to re­duce fric­tion points and im­prove the user ex­pe­ri­ence.
             </p>
           </div><!-- END of Column 1 -->
           <div><!-- Column 2 -->
             <h3>Opportunities from Dereck's Journey</h3>
-            <ul class="bullets-dereck-red">
+            <ul class="sc bullets dereck-bullets">
               <li>If location access is allowed, the home screen should
                 automatically display hunts nearby (but still include a search
                 bar) and show the user’s current location on a map relative to
@@ -676,7 +683,7 @@
         </div><!-- END of Row container -->
       </div><!-- END of Primary user journey section -->
 
-      <div><!-- Secondary user journey section -->
+      <div class="sc back-light-grey"><!-- Secondary user journey section -->
         <div><!-- Row container -->
           <div><!-- Column 1 -->
             <picture>
@@ -688,7 +695,7 @@
               <img src="img/streetcred/sec3_users/journey_map_angie_large.jpg" alt="Detailed user journey map for Angie">
             </picture>
           </div><!-- END of Column 1 -->
-          <div class="sc"><!-- Column 2 -->
+          <div class="sc back-light-grey"><!-- Column 2 -->
             <h3>Opportunities from Malika’s and Angie’s Journeys</h3>
             <p class="font-medium">
               Ad­di­tional op­por­tu­ni­ties were iden­ti­fied by ob­serv­ing how Ma­lika is
@@ -696,14 +703,14 @@
               Fran­cisco, and how Angie re­lies on Street­Cred as a fun ac­tiv­ity to do
               in her own city with her kids and guests from out town.
             </p>
-            <ul class="bullets-malika-blue font-medium">
+            <ul class="sc bullets malika-bullets font-medium">
               <li>Businesses we partner with (such as tour companies,
                 restaurants, and museums) should be provided with a QR code so
                 users can easily download the app by scanning the code. The code
                  could also be embedded with a specific hunt the vendor
                  recommends and/or a discount code.</li>
             </ul>
-            <ul class="bullets-angie-green font-medium">
+            <ul class="sc bullets angie-bullets font-medium">
               <li>Our app should be supported by a website to increase the
                 likelihood it will show up in Google search results. We should
                 also have a Face-book page, and have a strong presence on
@@ -776,7 +783,7 @@
           <h1 class="sc">04</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>navigation structure</li>
             <li>card sorting</li>
             <li>sitemap</li>
@@ -794,8 +801,8 @@
           <h2>NAVIGATION STRUCTURE</h2>
           <p>
             I want to keep the navigation as simple as possible to focus on the
-            app’s two primary functions: <span class="font-red"><b>find a hunt
-            </b></span> and <span class="font-red"><b>play a hunt</b></span>.
+            app’s two primary functions: <span class="sc font-red"><b>find a hunt
+            </b></span> and <span class="sc font-red"><b>play a hunt</b></span>.
             Anything else not related to those, such as profile, settings, or
             FAQ, will be available from a kebab menu.
           </p>
@@ -810,7 +817,7 @@
         </div><!-- END of Cell(2,2) -->
       </div><!-- END of 2x2 grid -->
 
-      <div><!-- Container for Card Sorting section -->
+      <div class="sc back-light-pink"><!-- Container for Card Sorting section -->
         <h2 class="sc">CARD SORTING</h2>
         <p class="sc font-medium">
           To verify if I was on the right track with my initial sitemap, I
@@ -829,8 +836,8 @@
             </picture>
           </div><!-- END of cell(1,1) -->
           <div class="sc"><!-- Cell(2,1)-->
-            <h3 class="font-blue">Hypothetical similarity matrix</h3>
-            <p class="font-medium">
+            <h3 class="sc font-blue">Hypothetical similarity matrix</h3>
+            <p class="sc font-medium">
               Each cell rep­re­sents the pro­por­tion of par­tic­i­pants who placed the
               two intersecting cards in the same group (dark color = high
               per­cent­age). Here, the dark clus­ters at the edge of the di­ag­o­nal
@@ -844,8 +851,8 @@
             </picture>
           </div><!-- END of cell(1,2) -->
           <div class=""><!-- Cell(2,2)-->
-            <h3 class="font-red">StreetCred similarity matrix</h3>
-            <p class="font-medium">
+            <h3 class="sc font-red">StreetCred similarity matrix</h3>
+            <p class="sc font-medium">
               Cute mo­saic, but not very use­ful for or­ga­niz­ing con­tent. There’s
               too much over­lap be­tween card pair­ings, and no def­i­nite group­ings
               can be ex­tracted from this ma­trix.
@@ -864,16 +871,18 @@
       </div><!-- END of Container for Card Sorting section -->
 
       <div><!-- Container for Final Sitemap section -->
-        <h2 class="sc">FINAL SITEMAP (for now)</h2>
+        <h2 class="sc">FINAL SITEMAP <span class="title-suffix">(for now)</span></h2>
         <p class="sc font-medium">
           After a few iterations and much head-scratching, I ended up with a
           significantly more refined sitemap, consisting of
-          <span class="big-number">51</span>unique screens:
+          <span class="sc big-number">51</span> unique screens:
         </p>
-        <picture>
-          <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
-          <img src="img/streetcred/sec4_ia/wireflow_large.png" alt="Wireflow showing how StreetCred's mobile screens are connected">
-        </picture>
+        <div class="sc back-light-grey">
+          <picture>
+            <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
+            <img src="img/streetcred/sec4_ia/wireflow_large.png" alt="Wireflow showing how StreetCred's mobile screens are connected">
+          </picture>
+        </div>
       </div><!-- END of Container for Final Sitemap section -->
 
       <div class="sc">
@@ -897,7 +906,7 @@
           <h1 class="sc">05</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>low-fidelity wireframes</li>
             <li>rapid prototyping</li>
             <li>design iterations</li>
@@ -983,7 +992,7 @@
         </div><!-- END of Column 3 -->
       </div><!-- END of row container -->
 
-      <div class="sc"><!-- Container for Design Iterations intro -->
+      <div class="sc back-light-blue"><!-- Container for Design Iterations intro -->
         <h2>DESIGN ITERATIONS</h2>
         <p class="font-medium">
           Let’s take a closer look at the core fea­tures of the app to see how
@@ -1055,7 +1064,7 @@
         </div><!-- END of 2x3 grid -->
       </div><!-- END of Container for Finding a Hunt section -->
 
-      <div><!-- Container for Getting Info about a Hunt section -->
+      <div class="sc back-light-grey"><!-- Container for Getting Info about a Hunt section -->
         <h4 class="sc">B. Getting info about a hunt</h4>
         <div><!-- 3x3 grid -->
           <div><!-- Cell(1,1) -->
@@ -1156,7 +1165,7 @@
         </div><!-- END of 2x6 grid -->
       </div><!-- END of Container for Buying a Hunt section -->
 
-      <div><!-- Container for Selecting Preferences section -->
+      <div class="sc back-light-blue"><!-- Container for Selecting Preferences section -->
         <h4 class="sc">D. Selecting preferences</h4>
         <div><!-- 2x3 grid -->
           <div><!-- Cell(1,1) -->
@@ -1211,7 +1220,7 @@
           <h1 class="sc">06</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cells(2,1)(3,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>usability test plan</li>
             <li>test objective</li>
             <li>the participants</li>
@@ -1231,8 +1240,8 @@
             out.
           </p>
         </div><!-- END of Cells(2,2)(2,3) -->
-        <div class="sc"><!-- Cell(3,2) -->
-          <p class="sc general-quote font-blue">
+        <div><!-- Cell(3,2) -->
+          <p class="sc general-quote">
             Failing to plan is planning to fail.
           </p>
           <h2>USABILITY TEST PLAN</h2>
@@ -1241,7 +1250,7 @@
             and iron out lo­gis­ti­cal de­tails in ad­vance of the ses­sions. Here’s
             what my plan in­cludes:
           </p>
-          <ul class="bullets-med-blue">
+          <ul class="sc bullets med-blue-bullets">
             <li>Test script</li>
             <li>Informed consent form</li>
             <li>Pre-test questionnaire</li>
@@ -1283,26 +1292,26 @@
         </div><!-- END of Cell(3,3) -->
       </div><!-- END of 3x3 grid -->
 
-      <div><!-- Transition section with stats -->
+      <div class="sc back-med-red"><!-- Transition section with stats -->
         <div><!-- Row container -->
           <div><!-- Column 1 -->
-            <img src="img/streetcred/sec6_testing/participant_stats/gender.svg" alt="3 males + 3 females = 6 participants">
+            <img src="img/streetcred/sec6_testing/participant_stats/gender.png" alt="3 males + 3 females = 6 participants">
           </div><!-- END of Column 1 -->
           <div><!-- Column 2 -->
-            <img src="img/streetcred/sec6_testing/participant_stats/age_range.svg" alt="25 to 49 years old">
+            <img src="img/streetcred/sec6_testing/participant_stats/age_range.png" alt="25 to 49 years old">
           </div><!-- END of Column 2 -->
           <div><!-- Column 3 -->
-            <img src="img/streetcred/sec6_testing/participant_stats/session_type.svg" alt="4 in-person sessions, 2 remote sessions">
+            <img src="img/streetcred/sec6_testing/participant_stats/session_type.png" alt="4 in-person sessions, 2 remote sessions">
           </div><!-- END of Column 3 -->
           <div><!-- Column 4 -->
-            <img src="img/streetcred/sec6_testing/participant_stats/session_length.svg" alt="35 to 60 minutes per session">
+            <img src="img/streetcred/sec6_testing/participant_stats/session_length.png" alt="35 to 60 minutes per session">
           </div><!-- END of Column 4 -->
         </div><!-- END of Row container -->
       </div><!-- END of Transition section with stats -->
 
       <div><!-- Test Results section -->
         <h2 class="sc">TEST RESULTS</h2>
-        <table>
+        <table class="sc">
           <tr>
             <th colspan="2">Task</th>
             <th>SEQ score*</th>
@@ -1313,7 +1322,7 @@
             <td>Find hunts</td>
             <td>
               4.7
-              <br><span class="sc-small">very easy</span>
+              <br><span class="sc font-smallest">very easy</span>
             </td>
             <td>Searching for a hunt was easy and straightforward.
                 <br>Map functionality is well-integrated.</td>
@@ -1323,7 +1332,7 @@
             <td>Buy a hunt</td>
             <td>
               4.3
-              <br><span class="sc-small">easy</span>
+              <br><span class="sc font-smallest">easy</span>
             </td>
             <td>Buy­ing a hunt was easy, but 5 of the 6 par­tic­i­pants did­n’t like
                 to have to cre­ate an ac­count to buy the hunt.</td>
@@ -1333,7 +1342,7 @@
             <td>Invite other players to join a hunt</td>
             <td>
               5.0
-              <br><span class="sc-small">very easy</span>
+              <br><span class="sc font-smallest">very easy</span>
             </td>
             <td>Inviting players was quick and easy.</td>
           </tr>
@@ -1342,7 +1351,7 @@
             <td>Organize players into teams</td>
             <td>
               3.7
-              <br><span class="sc-small">moderately
+              <br><span class="sc font-smallest">moderately
               <br>easy</span>
             </td>
             <td>Al­though all par­tic­i­pants ended up suc­cess­fully com­plet­ing the
@@ -1352,12 +1361,12 @@
         </table>
         <ul class="sc bullet-asterisk">
           <li>
-            SEQ is a single ease question that the test participants answered
+            <i>SEQ is a single ease question that the test participants answered
             after each task to assess the difficulty of the task on a scale
-            from 1—very difficult to 5—very easy.
+            from 1—very difficult to 5—very easy.</i>
           </li>
         </ul>
-        <p class="sc">
+        <p>
           In addition to the SEQ, participants were asked to fill out a system
           usability scale (SUS) questionnaire at the end of their testing
           session. The SUS score measures how satisfied or dissatisfied each
@@ -1391,7 +1400,7 @@
 
       </div><!-- END of Test Results section -->
 
-      <div class="sc"><!-- Identifying, Prioritizing, and Fixing Issues section -->
+      <div class="sc back-light-blue"><!-- Identifying, Prioritizing, and Fixing Issues section -->
         <h2>IDENTIFYING, PRIORITIZING, AND FIXING ISSUES</h2>
         <p class="font-medium">
           I used affin­ity map­ping to or­ga­nize the in­for­ma­tion gath­ered from the
@@ -1432,9 +1441,9 @@
           </div><!-- END of Cell(1,2) -->
           <div class="sc quote-testing"><!-- Cell(2,2) -->
             <p>
-              Creating an account is a deal-breaker. I don’t want to have to
+              <i>Creating an account is a deal-breaker. I don’t want to have to
               remember another password. Had this been a real app, I wouldn’t
-              have pur­chased the hunt.
+              have pur­chased the hunt.</i>
             </p>
             <p>
               —Rich (tester #1)
@@ -1500,43 +1509,45 @@
       </div><!-- END of Issue #1 section -->
 
       <div><!-- Issue #2 section -->
-        <h2 class="sc">ISSUE #2 | medium priority</h2>
-        <p class="sc issue">
-          The Players screen is not very intuitive when it comes to splitting
-          players into teams.
-        </p>
-        <div><!-- 3x3 grid -->
-          <div><!-- Cell(1,1) -->
-            <p class="sc font-medium">
-              Only 1 of the 6 par­tic­i­pants cre­ated a new team on first click
-              be­fore at­tempt­ing to move play­ers.
-            </p>
-          </div><!-- END of Cell(1,1) -->
-          <div><!-- Cell(2,1) -->
-            <p class="sc font-medium">
-              Four of the other 5 par­tic­i­pants thought the process was not very
-              in­tu­itive.
-            </p>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cell(3,1) -->
-            <p class="sc font-medium">
-              One par­tic­i­pant said she would­n't have known play­ers could be
-              split into teams had it not been a task she was asked to per­form.
-            </p>
-          </div><!-- END of Cell(3,1) -->
-          <div><!-- Cells(1,2)(2,2)(2,3) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
-              <img src="img/streetcred/sec6_testing/issue_2/players_old_large.png" alt="Old Players screen on iPhone XS">
-            </picture>
-          </div><!-- END of Cells(1,2)(2,2)(2,3) -->
-          <div><!-- Cells(1,3)(2,3)(3,3) -->
-            <p class="sc font-medium">
-              Users didn’t understand the meaning of the asterisk icon and
-              didn’t notice there were team captains.
-            </p>
-          </div><!-- END of Cells(1,3)(2,3)(3,3) -->
-        </div><!-- END of 3x3 grid -->
+        <div class="sc back-light-blue">
+          <h2>ISSUE #2 | medium priority</h2>
+          <p class="sc issue">
+            The Players screen is not very intuitive when it comes to splitting
+            players into teams.
+          </p>
+          <div><!-- 3x3 grid -->
+            <div><!-- Cell(1,1) -->
+              <p class="sc font-medium">
+                Only 1 of the 6 par­tic­i­pants cre­ated a new team on first click
+                be­fore at­tempt­ing to move play­ers.
+              </p>
+            </div><!-- END of Cell(1,1) -->
+            <div><!-- Cell(2,1) -->
+              <p class="sc font-medium">
+                Four of the other 5 par­tic­i­pants thought the process was not very
+                in­tu­itive.
+              </p>
+            </div><!-- END of Cell(2,1) -->
+            <div><!-- Cell(3,1) -->
+              <p class="sc font-medium">
+                One par­tic­i­pant said she would­n't have known play­ers could be
+                split into teams had it not been a task she was asked to per­form.
+              </p>
+            </div><!-- END of Cell(3,1) -->
+            <div><!-- Cells(1,2)(2,2)(2,3) -->
+              <picture>
+                <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
+                <img src="img/streetcred/sec6_testing/issue_2/players_old_large.png" alt="Old Players screen on iPhone XS">
+              </picture>
+            </div><!-- END of Cells(1,2)(2,2)(2,3) -->
+            <div><!-- Cells(1,3)(2,3)(3,3) -->
+              <p class="sc font-medium">
+                Users didn’t understand the meaning of the asterisk icon and
+                didn’t notice there were team captains.
+              </p>
+            </div><!-- END of Cells(1,3)(2,3)(3,3) -->
+          </div><!-- END of 3x3 grid -->
+        </div><!-- END of .back-light-blue -->
         <h2 class="sc">SOLUTION</h2>
         <div><!-- 2x3 grid -->
           <div><!-- Cell(1,1) -->
@@ -1603,7 +1614,7 @@
           <h1 class="sc">07</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>color scheme</li>
             <li>design language</li>
           </ul>
@@ -1653,7 +1664,7 @@
         </div><!-- END of Cell(2,3) -->
       </div><!-- END of 2x3 grid -->
 
-      <div class="sc"><!-- Design Language section -->
+      <div class="sc back-light-blue"><!-- Design Language section -->
         <h2>DESIGN LANGUAGE</h2>
         <p class="font-medium">
           Visual design goes beyond branding and establishing a color scheme.
@@ -1681,13 +1692,13 @@
           <h1 class="sc">08</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>contrast & readability</li>
             <li>beyond contrast</li>
           </ul>
         </div><!-- END of Cell(2,1) -->
-        <div class="sc"><!-- Cell(1,2) -->
-          <h1>Accessibility</h1>
+        <div><!-- Cell(1,2) -->
+          <h1 class="sc">Accessibility</h1>
         </div><!-- END of Cell(1,2) -->
         <div class="sc"><!-- Cell(2,2) -->
           <p>
@@ -1732,9 +1743,9 @@
         <h2 class="sc">ACCESSIBILITY BEYOND CONTRAST</h2>
         <p class="sc">
           Accessibility is so much more than contrast and readability. For
-          instance, rather than using color to <span class="font-blue"><b>
+          instance, rather than using color to <span class="sc font-blue"><b>
           convey</b></span> information, it should be used to
-          <span class="font-blue"><b>complement</b></span> information.
+          <span class="sc font-blue"><b>complement</b></span> information.
         </p>
         <div><!-- 3x2 grid -->
           <div><!-- Cell(1,1) -->
@@ -1814,7 +1825,7 @@
           <h1 class="sc">09</h1>
         </div><!-- END of Cell(1,1) -->
         <div class="sc"><!-- Cell(1,2) -->
-          <h1>Final Designs and Interactive Prototype</h1>
+          <h1 class="sc">Final Designs and Interactive Prototype</h1>
         </div><!-- END of Cell(1,2) -->
         <div class="sc"><!-- Cell(2,2) -->
           <p>
@@ -1833,7 +1844,7 @@
           </p>
           <a href="https://projects.invisionapp.com/prototype/ck6s71ktw003ro501dhfr73wd/play"
              target="_blank"
-             class="sc-hyperlink">
+             class="sc">
             Click here for the interactive prototype
           </a>
         </div><!-- END of Cell(2,2) -->
@@ -1846,12 +1857,12 @@
 
     <!-- 10 FINAL THOUGHTS ---------------------------------------------------->
     <div><!-- Section 10 container -->
-      <div><!-- 2x2 grid -->
+      <div class="sc back-light-blue"><!-- 2x2 grid -->
         <div><!-- Cell(1,1) -->
           <h1 class="sc">10</h1>
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(2,1) -->
-          <ul class="sc sub-sections">
+          <ul class="sc font-smallest">
             <li>future improvements</li>
             <li>learnings</li>
           </ul>
@@ -1870,11 +1881,11 @@
         </div><!-- END of Cell(2,2) -->
       </div><!-- END of 2x2 grid -->
 
-      <div><!-- Container for Future Improvements section -->
+      <div class="sc back-light-blue"><!-- Container for Future Improvements section -->
         <h2 class="sc">FUTURE IMPROVEMENTS</h2>
         <p class="sc font-medium">
-          After developing <span class="font-red"><b>5 core features</b></span>
-          and designing <span class="font-red"><b>30 different screens</b>
+          After developing <span class="sc font-red"><b>5 core features</b></span>
+          and designing <span class="sc font-red"><b>30 different screens</b>
           </span>, I feel like I’ve only scratched the surface. There’s so much
           more I’m planning on doing with StreetCred!
         </p>
@@ -1944,22 +1955,22 @@
           process while work­ing on this pro­ject. Now armed with hind­sight,
           there are a few things I will do dif­fer­ently in fu­ture pro­jects:
         </p>
-        <ul bullets-med-red>
-          <li>Use <span class="font-red"><b>index cards</b></span> to sketch
-            low-fidelity wireframes.</li>
-          <li>Be mindful of <span class="font-red"><b>accessibility</b></span>
-            early in the process.</li>
-          <li>Develop a <span class="font-red"><b>design system</b></span>
-            as soon as I start designing high-fidelity mockups.</li>
-          <li>Despite my best efforts to put myself in the user's shoes,
-            <span class="font-red"><b>I am not the user.</b></span> That’s why
+        <ul class="sc bullets red-bullets">
+          <li><p>Use <span class="sc font-red font-larger" style="font-weight: 600;">index cards</span> to sketch
+            low-fidelity wireframes.</p></li>
+          <li><p>Be mindful of <span class="sc font-red" style="font-size: 1.2em;">accessibility</span>
+            early in the process.</p></li>
+          <li><p>Develop a <span class="sc font-red"><b>design system</b></span>
+            as soon as I start designing high-fidelity mockups.</p></li>
+          <li><p>Despite my best efforts to put myself in the user's shoes,
+            <span class="sc font-red" style="font-size: 2em;"><b>I am not the user.</b></span> That’s why
             it’s so important to get users involved as much as possible
             throughout the design process with the many tools and techniques
             at our disposal, such as surveys, interviews, card sorting,
-            usability testing, preference tests, first-click test, etc.</li>
-          <li>In future projects, I'd like to do more rounds of
-            <span class="font-red"><b>usability testing</b></span>, and leverage
-            tree-testing, preference tests and first-click tests.</li>
+            usability testing, preference tests, first-click test, etc.</p></li>
+          <li><p>In future projects, I'd like to do more rounds of
+            <span class="sc font-red font-medium" style="font-size: 1.2em;">usability testing</span>, and leverage
+            tree-testing, preference tests and first-click tests.</p></li>
         </ul>
       </div><!-- END of Container for Learnings -->
     </div><!-- END of Section 10 container -->
@@ -1968,17 +1979,17 @@
 
   <footer id="contact">
     <div>
-      <h2>Contact Me</h2>
+      <h1>Contact Me</h1>
       <p>
-        I'd love to hear from you. Let's collaborate!
+        Like what you see? Let's get in touch!
       </p>
       <p>
-        Please get in touch. Call me: <a href="tel:13128881726">
-          1-312-888-1726</a> or Skype me: <a href="skype:me.vesel">me.vesel</a>.
+        Call me: <a href="tel:13128881726">1-312-888-1726</a> or Skype me:
+        <a href="skype:me.vesel">me.vesel</a>.
       </p>
-      <a href="mailto:info@mevesel.design">Email me</a>
+      <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
 
-      <div><!-- Section with social media icons and copyright -->
+      <div class="cont-soc-media"><!-- Section with social media icons and copyright -->
         <ul><!-- Social media icons -->
           <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
             <span class="fab fa-linkedin"></span></a></li>
@@ -1991,7 +2002,7 @@
         <p>
           &copy; Marie-Eve Vesel, 2020
         </p>
-      </div><!-- END of section with social media icons and copyright -->
+      </div><!-- END of .cont-soc-media -->
     </div>
   </footer>
 
