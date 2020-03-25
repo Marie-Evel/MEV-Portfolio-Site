@@ -1,148 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title>MEV Portfolio Site</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b20f5c">
-  <meta name="msapplication-TileColor" content="#b20f5c">
-  <meta name="theme-color" content="#b20f5c">
-  <!-- END of Favicon -->
+    <title>MEV Portfolio Site</title>
 
-  <script src="https://kit.fontawesome.com/6837ed2a31.js" crossorigin="anonymous"></script>
-</head>
+    <!-- Favicon -------------------------------------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b20f5c">
+    <meta name="msapplication-TileColor" content="#b20f5c">
+    <meta name="theme-color" content="#b20f5c">
 
-<body>
-  <header>
-    <div>
-      <!-- Row -->
+    <!-- Fonts ---------------------------------------------------------------->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6837ed2a31.js" crossorigin="anonymous"></script>
+
+    <!-- CSS files ------------------------------------------------------------>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/metrisch.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- JavaScript files ----------------------------------------------------->
+
+  </head>
+
+  <body>
+    <header>
+      <div id="top-nav">
+        <div class="cont-logo">
+          <a href="index.html">
+            <picture>
+              <source media="(max-width: 411px)" srcset="img/logo/logo mobile.svg">
+              <img src="img/logo/logo_desktop.svg" alt="M E V logo">
+            </picture>
+          </a>
+        </div><!-- END .cont-logo -->
+        <div class="cont-menus">
+          <nav>
+            <ul>
+              <li><a href="index.html#work">WORK</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div><!-- END of .cont-menus -->
+      </div><!-- END #top-nav-->
+    </header>
+
+    <main>
+      <div id="about">
+        <!-- Intro section -->
+        <h1>Hello! I'm Marie-Eve.</h1>
+        <p>
+          <h2>I'm a French-Canadian interaction designer and UX generalist based
+            in Chicago.</h2>
+        </p>
+        <p>
+          I take pride in creating elegant, intuitive, and functional designs
+          to help people be healthier, happier, and more efficient.
+        </p>
+        <p>
+          My strong analytical background and keen attention to detail allow me
+          to solve complex UX problems, and create delightful and thoughtful
+          visualizations.
+        </p>
+        <a class="button-filled about" href="about.html">Check out my full bio</a>
+      </div><!-- END Intro section -->
+
+      <div id="work">
+        <!-- My Work section -->
+        <h1>My Work</h1>
+
+        <div>
+          <!-- StreetCred case study -->
+          <h2>StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
+
+          <div>
+            <picture>
+              <source media="(max-width:767px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
+              <img src="img/streetcred/streetcred_thumbnail_1200.jpg" alt="Montage of diagonal StreetCred screen mockups">
+            </picture>
+
+          </div>
+          <p>
+            StreetCred is a native app that takes sightseeing to a whole new
+            level! It provides scavenger hunts as a fun way for tourists to
+            explore U.S. cities. The app was the main project for an immersive
+            UX designer certification course I took at CareerFoundry. I was
+            responsible for the entire UX process from start to finish.
+          </p>
+          <a class="button-filled work" href="streetcred.html">View case study</a>
+        </div><!-- END StreetCred case study -->
+
+        <div>
+          <!-- My Word case study -->
+          <h2>My Word! | <span class="font-medium">flashcard learning app</span></h2>
+          <div>
+            <picture>
+              <source media="(max-width:767px)" srcset="img/my_word/my_word_thumbnail_600.png">
+              <img src="img/my_word/my_word_thumbnail_1200.png" alt="My Word home screen with 3 sketched mockups">
+            </picture>
+          </div>
+          <p>
+            There's so much to learn! My Word is an app that allows students
+            and learners of all ages to create and organize flashcards. It
+            includes a study mode to test concepts learned and track progress.
+            That was my very first UX design project, in which I learned about
+            user research, user personas, flowcharting, task analysis,
+            low-fidelity wireframing & prototyping, and usability testing.
+          </p>
+          <a class="button-filled work" href="#">View case study</a>
+        </div><!-- END My Word case study -->
+
+      </div><!-- END My Work section -->
+
+    </main>
+
+    <footer id="contact">
       <div>
-        <!-- Column 1 with logo -->
-        <a href="index.html">
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/logo/logo mobile.svg">
-            <img src="img/logo/logo_desktop.svg" alt="M E V logo">
-          </picture>
-        </a>
-      </div><!-- END Column 1 -->
-      <div>
-        <!-- Column 2 with menus -->
-        <nav>
-          <ul>
-            <li><a href="index.html#work">WORK</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+        <h1>Contact Me</h1>
+        <p>
+          Like what you see? Let's get in touch!
+        </p>
+        <p>
+          Call me: <a href="tel:13128881726">1-312-888-1726</a> or Skype me:
+          <a href="skype:me.vesel">me.vesel</a>.
+        </p>
+        <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
+
+        <div class="cont-soc-media"><!-- Section with social media icons and copyright -->
+          <ul><!-- Social media icons -->
+            <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
+              <span class="fab fa-linkedin"></span></a></li>
+            <li><a href="https://www.behance.net/marie-evevesel" target="_blank">
+              <span class="fab fa-behance"></span></a></li>
+            <li><a href=""><span class="fab fa-dribbble"></span></a></li>
+            <li><a href="mailto:info@mevesel.design">
+              <span class="fal fa-envelope"></span></a></li>
           </ul>
-        </nav>
-      </div><!-- END Column 2 -->
-    </div><!-- END Row-->
-  </header>
+          <p>
+            &copy; Marie-Eve Vesel, 2020
+          </p>
+        </div><!-- END of .cont-soc-media -->
+      </div>
+    </footer>
 
-  <main>
-    <div id="about">
-      <!-- Intro section -->
-      <h1>Hello! I'm Marie-Eve.</h1>
-      <p>
-        <b>I'm a French-Canadian interaction designer and UX generalist based
-          in Chicago.</b>
-      </p>
-      <p>
-        I take pride in creating elegant, intuitive, and functional designs
-        to help people be healthier, happier, and more efficient.
-      </p>
-      <p>
-        My strong analytical background and keen attention to detail allow me
-        to solve complex UX problems, and create delightful and thoughtful
-        visualizations.
-      </p>
-      <a class="filled-button-about" href="about.html">Check out my full bio</a>
-    </div><!-- END Intro section -->
-
-    <div id="work">
-      <!-- My Work section -->
-      <h2>My Work</h2>
-
-      <div>
-        <!-- StreetCred case study -->
-        <h3 style="display: inline-block;">StreetCred | </h3>
-        <span> urban scavenger hunt app</span>
-        <div>
-          <picture>
-            <source media="(max-width:767px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
-            <img src="img/streetcred/streetcred_thumbnail_1200.jpg" alt="Montage of diagonal StreetCred screen mockups">
-          </picture>
-
-        </div>
-        <p>
-          StreetCred is a native app that takes sightseeing to a whole new
-          level! It provides scavenger hunts as a fun way for tourists to
-          explore U.S. cities. The app was the main project for an immersive
-          UX designer certification course I took at CareerFoundry. I was
-          responsible for the entire UX process from start to finish.
-        </p>
-        <a class="filled-button-work" href="streetcred.html">View case study</a>
-      </div><!-- END StreetCred case study -->
-
-      <div>
-        <!-- My Word case study -->
-        <h3 style="display: inline-block;">My Word! | </h3>
-        <span> flashcard learning app</span>
-        <div>
-          <picture>
-            <source media="(max-width:767px)" srcset="img/my_word/my_word_thumbnail_600.png">
-            <img src="img/my_word/my_word_thumbnail_1200.png" alt="My Word home screen with 3 sketched mockups">
-          </picture>
-        </div>
-        <p>
-          There's so much to learn! My Word is an app that allows students
-          and learners of all ages to create and organize flashcards. It
-          includes a study mode to test concepts learned and track progress.
-          That was my very first UX design project, in which I learned about
-          user research, user personas, flowcharting, task analysis,
-          low-fidelity wireframing & prototyping, and usability testing.
-        </p>
-        <a class="filled-button-work" href="#">View case study</a>
-      </div><!-- END My Word case study -->
-
-    </div><!-- END My Work section -->
-
-  </main>
-
-  <footer id="contact">
-    <div>
-      <h2>Contact Me</h2>
-      <p>
-        I'd love to hear from you. Let's collaborate!
-      </p>
-      <p>
-        Please get in touch. Call me: <a href="tel:13128881726">
-          1-312-888-1726</a> or Skype me: <a href="skype:me.vesel">me.vesel</a>.
-      </p>
-      <a href="mailto:info@mevesel.design">Email me</a>
-
-      <div><!-- Section with social media icons and copyright -->
-        <ul><!-- Social media icons -->
-          <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
-            <span class="fab fa-linkedin"></span></a></li>
-          <li><a href="https://www.behance.net/marie-evevesel" target="_blank">
-            <span class="fab fa-behance"></span></a></li>
-          <li><a href=""><span class="fab fa-dribbble"></span></a></li>
-          <li><a href="mailto:info@mevesel.design">
-            <span class="fal fa-envelope"></span></a></li>
-        </ul>
-        <p>
-          &copy; Marie-Eve Vesel, 2020
-        </p>
-      </div><!-- END of section with social media icons and copyright -->
-    </div>
-  </footer>
-
-</body>
+  </body>
 
 </html>

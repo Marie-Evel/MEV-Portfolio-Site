@@ -21,25 +21,25 @@
 
     <!-- CSS files ------------------------------------------------------------>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/metrisch.css">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
     <!-- JavaScript files ----------------------------------------------------->
 
   </head>
 
   <body>
     <header>
-      <div><!-- Row -->
-        <div><!-- Column 1 with logo -->
+      <div id="top-nav">
+        <div class="cont-logo">
           <a href="index.html">
             <picture>
               <source media="(max-width: 411px)" srcset="img/logo/logo mobile.svg">
               <img src="img/logo/logo_desktop.svg" alt="M E V logo">
             </picture>
           </a>
-        </div><!-- END Column 1 -->
-        <div><!-- Column 2 with menus -->
+        </div><!-- END .cont-logo -->
+        <div class="cont-menus">
           <nav>
             <ul>
               <li><a href="index.html#work">WORK</a></li>
@@ -47,8 +47,8 @@
               <li><a href="#contact">CONTACT</a></li>
             </ul>
           </nav>
-        </div><!-- END Column 2 -->
-      </div><!-- END Row-->
+        </div><!-- END of .cont-menus -->
+      </div><!-- END #top-nav-->
     </header>
 
     <main>
@@ -181,17 +181,17 @@
 
     <footer id="contact">
       <div>
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
         <p>
-          I'd love to hear from you. Let's collaborate!
+          Like what you see? Let's get in touch!
         </p>
         <p>
-          Please get in touch. Call me: <a href="tel:13128881726">
-            1-312-888-1726</a> or Skype me: <a href="skype:me.vesel">me.vesel</a>.
+          Call me: <a href="tel:13128881726">1-312-888-1726</a> or Skype me:
+          <a href="skype:me.vesel">me.vesel</a>.
         </p>
-        <a href="mailto:info@mevesel.design">Email me</a>
+        <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
 
-        <div><!-- Section with social media icons and copyright -->
+        <div class="cont-soc-media"><!-- Section with social media icons and copyright -->
           <ul><!-- Social media icons -->
             <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
               <span class="fab fa-linkedin"></span></a></li>
@@ -204,7 +204,7 @@
           <p>
             &copy; Marie-Eve Vesel, 2020
           </p>
-        </div><!-- END of section with social media icons and copyright -->
+        </div><!-- END of .cont-soc-media -->
       </div>
     </footer>
 

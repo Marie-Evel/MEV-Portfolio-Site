@@ -1,6 +1,7 @@
 /*
 Colors palette:
 Jazzberry Jam: #B20F5C;
+Light version of Jazzberry Jam: #FFE5EE;
 Syrah: #7D0B5B;
 Lizard Green: #239B15;
 Cerulean Blue: #3056CE;
@@ -14,6 +15,10 @@ body {
   line-height: 1.375;
   color: black;
 }
+
+b { font-weight: bold; }
+
+i { font-style: italic; }
 
 h1 {
   font-family: 'Ubuntu', sans-serif;
@@ -29,9 +34,11 @@ h2 {
   line-height: 1.4;
 }
 
+/*
 img {
   width: 100%;
 }
+*/
 
 a {
   color: #3056CE; /* Blue */
@@ -61,17 +68,14 @@ footer {
   margin: 30px 20px;
 }
 
-#top-menus li a {
+nav li a {
   font-weight: 500;
   text-transform: uppercase;
-  color: white;
-  background-color: #B20F5C; /* Jazzberry */
+  color: white !important;
   text-decoration: none !important;
 }
 
-.font-medium {
-  font-weight: 500;
-}
+.font-medium { font-weight: 500; }
 
 .button,
 .button-filled,
@@ -135,10 +139,25 @@ footer {
 .cont-menus {
   text-align: right;
 }
+
+.cont-soc-media {
+  background-color: #3056CE;
+  color: white;
+}
+
+.cont-soc-media li a {
+  color: white !important;
+}
 /* On mobile screens switch to 1 column */
 @media screen and (max-width: 411px) {
   #top-nav {
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr;
+  }
+  #top-nav .cont-menus {
+    background-color: #E6ECFF; /* light blue */
+  }
+  #top-nav .cont-menus li a {
+    color: black !important;
   }
 }
