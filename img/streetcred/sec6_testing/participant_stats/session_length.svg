@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="60px" viewBox="0 0 229 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>session_length</title>
+    <desc>Created with Sketch.</desc>
+    <g id="6.-Usability-testing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6.2-Transition" transform="translate(-1261.000000, -142.000000)" fill="#2B2E33">
+            <g id="session_length" transform="translate(1261.000000, 130.000000)">
+                <text id="35" font-family="Montserrat-SemiBold, Montserrat" font-size="46" font-weight="500">
+                    <tspan x="0" y="45">35</tspan>
+                </text>
+                <text id="60" font-family="Montserrat-SemiBold, Montserrat" font-size="46" font-weight="500">
+                    <tspan x="79.2" y="45">60</tspan>
+                </text>
+                <text id="minutes-per-session" font-family="Raleway-Medium, Raleway" font-size="22" font-weight="400" line-spacing="24">
+                    <tspan x="145.528" y="44">minutes</tspan>
+                    <tspan x="112" y="68">per session</tspan>
+                </text>
+                <text id="to" font-family="Raleway-Medium, Raleway" font-size="16" font-weight="400" line-spacing="29">
+                    <tspan x="59.948" y="37">to</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

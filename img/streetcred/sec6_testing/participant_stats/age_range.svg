@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="121px" height="75px" viewBox="0 0 121 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>age_range</title>
+    <desc>Created with Sketch.</desc>
+    <g id="6.-Usability-testing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-65.000000, -51.000000)" fill="#2B2E33">
+            <g id="age_range" transform="translate(64.000000, 43.000000)">
+                <g id="to" transform="translate(13.000000, 35.500000)" font-family="Raleway-Medium, Raleway" font-size="16" font-weight="400">
+                    <text>
+                        <tspan x="0.448" y="15">to</tspan>
+                    </text>
+                </g>
+                <g id="25" transform="translate(2.000000, 0.000000)" font-family="Montserrat-SemiBold, Montserrat" font-size="32" font-weight="500">
+                    <text>
+                        <tspan x="0.344" y="31">25</tspan>
+                    </text>
+                </g>
+                <g id="49" transform="translate(0.000000, 51.000000)" font-family="Montserrat-SemiBold, Montserrat" font-size="32" font-weight="500">
+                    <text>
+                        <tspan x="0.184" y="31">49</tspan>
+                    </text>
+                </g>
+                <g id="years-old" transform="translate(52.000000, 12.000000)" font-family="Raleway-Medium, Raleway" font-size="28" font-weight="400">
+                    <text id="years">
+                        <tspan x="0" y="26">years</tspan>
+                    </text>
+                    <text id="old">
+                        <tspan x="0" y="59">old</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
