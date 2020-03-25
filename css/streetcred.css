@@ -1,0 +1,235 @@
+/*
+Colors palette:
+Dragon Fruit: #C6395C;
+Medium version of Dragon Fruit: #CE5573;
+Light version of Dragon Fruit: #FAEFF2;
+Free Speech Blue: #3966D0;
+Medium version of Free Speech Blue: #6286D9;
+Light version of Free Speech Blue: #F3F6FC;
+Light grey: #F4F5F6;
+*/
+
+body .sc {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.45;
+  color: black;
+}
+
+.sc h1, .sc h2, .sc h3, .sc h4 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.sc h1 {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 411px) {
+  body .sc { font-size: 16px; }
+  .sc h1 { font-size: 1.8em;}
+}
+
+.sc h2, .sc h3, .sc h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.sc h2 {
+  text-transform: capitalize;
+}
+
+.sc a {
+  color: #C6395C; /* red */
+  font-weight: 500;
+  filter: contrast(150%)
+}
+
+.sc a:visited {
+  color: #C6395C; /* red */
+  filter: contrast(100%)
+}
+
+.sc a:hover,
+.sc a:focus {
+  color: #3966D0; /* blue */
+  filter: contrast(100%);
+}
+/*
+.sc ul.bullets {
+  list-style-type: square;
+  padding-left: 1.5em;
+}
+.sc.bullets li {
+  font-size: 1.5em;
+  line-height: 0.95em;
+}
+.sc.bullets li span {
+  color: black;
+  font-size: .67em; }
+*/
+
+.bullets ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.bullets.sc li {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 0.2em;
+}
+
+.sc.bullets li:before {
+  content: 'H';
+  font-size: .1em;
+  /*vertical-align: middle;*/
+  line-height: 0.5;
+  margin-top: 3.25em;
+  margin-right: 7em;
+  border-radius: 20%;
+  padding: 3em;
+}
+
+.letsroam-bullets li:before {
+  color: #E97824;
+  background-color: #E97824;
+}
+
+.letsroam-light-bullets li:before {
+  color: #F2B282;
+  background-color: #F2B282;
+}
+
+.uaq-bullets li:before {
+  color: #0091CF;
+  background-color: #0091CF;
+}
+
+.uaq-light-bullets li:before {
+  color: #B0DDF0;
+  background-color: #B0DDF0;
+}
+
+.sc.med-blue-bullets li:before {
+  color: #6286D9;
+  background-color: #6286D9;
+}
+
+.sc.red-bullets li:before {
+  color: #CE5573;
+  background-color: #CE5573;
+}
+
+.dereck-bullets li:before {
+  color: #E1A7AB;
+  background-color: #E1A7AB;
+}
+
+.malika-bullets li:before {
+  color: #99B1D6;
+  background-color: #99B1D6;
+}
+.angie-bullets li:before {
+  color: #AFBC9F;
+  background-color: #AFBC9F;
+}
+
+.title-suffix {
+  font-size: .9em;
+  font-weight: normal;
+  text-transform: none;
+}
+/*
+ul {list-style: none;
+  padding-left: 1em;}
+
+li::before {
+  content: "";
+  color: red;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+*/
+.sc.back-blue { background-color: #3966D0; }
+.sc.back-med-blue { background-color: #6286D9; }
+.sc.back-med-red { background-color: #CE5573; }
+.sc.back-light-blue { background-color: #F3F6FC; }
+.sc.back-light-pink { background-color: #FAEFF2; }
+.sc.back-light-grey { background-color: #F4F5F6; }
+.sc.font-white { color: white; }
+.sc.font-red { color: #C6395C; }
+.sc.font-blue { color: #3966D0; }
+.font-letsroam { color: #E97824;}
+.font-uaq { color: #0091CF;}
+.sc.font-medium { font-weight: 500; }
+.sc.font-smaller { font-size: 0.8em; }
+.sc.font-smallest { font-size: 0.7em; }
+.sc.font-larger { font-size: 1.1em; }
+
+.sc.big-number {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #C6395C;
+}
+
+.sc.quote-interview {
+  color: white;
+  background-color: #CE5573; /* med-red */
+}
+
+.sc.quote-interview p:first-of-type {
+  font-size: 1.3em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.sc.general-quote {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #3966D0;
+}
+.emphasis-dereck {
+  color: #CD525E;
+  font-weight: 500;
+}
+
+.emphasis-malika {
+  color: #0F2D75;
+  font-weight: 500;
+}
+
+.emphasis-angie {
+  color: #587330;
+  font-weight: 500;
+}
+
+.dereck-header {
+  background-color: #6286D9;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.dereck-quote {
+  background-color: white;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.sc tr:nth-child(odd) {
+  background-color: #F3F6FC;
+}
+
+.sc th {
+  font-weight: bold;
+  color: white;
+  background-color: #6286D9;
+}
+
+.sc.issue {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #C6395C;
+}
