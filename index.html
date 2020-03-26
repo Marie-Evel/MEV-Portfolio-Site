@@ -35,30 +35,34 @@
         <div class="cont-logo">
           <a href="index.html">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/logo/logo_mobile.svg">
+              <source media="(max-width: 500px)" srcset="img/logo/logo_mobile.svg">
               <img src="img/logo/logo_desktop.svg" alt="M E V logo">
             </picture>
           </a>
         </div><!-- END .cont-logo -->
-        <div class="cont-menus">
-          <nav>
-            <ul>
-              <li><a href="index.html#work">Work</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div><!-- END of .cont-menus -->
+        <nav>
+          <div class="grid-container">
+            <div class="grid-item">
+              <a href="index.html#work">Work</a>
+            </div>
+            <div class="grid-item">
+              <a href="about.html">About</a>
+            </div>
+            <div class="grid-item">
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </nav>
       </div><!-- END #top-nav-->
     </header>
 
     <main>
-      <div id="about" class="cont-section">
+      <section id="about">
         <!-- Intro section -->
         <h1>Hello! I'm Marie-Eve.</h1>
         <p class="font-larger">
           I'm a French-Canadian interaction designer and UX generalist based
-            in Chicago.
+          in Chicago.
         </p>
         <p>
           I take pride in creating elegant, intuitive, and functional designs
@@ -70,82 +74,96 @@
           visualizations.
         </p>
         <a class="button-filled about" href="about.html">Check out my full bio</a>
-      </div><!-- END Intro section -->
+      </section><!-- END Intro section -->
 
-      <div id="work" class="cont-section">
+      <section id="work">
         <!-- My Work section -->
         <h1>My Work</h1>
-        <div class="row"><!-- StreetCred case study -->
-          <h2>StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
-
-          <div>
+        <div class="grid-container"><!-- StreetCred case study -->
+          <h2 class="grid-item">StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
+          <div class="grid-item project-picture">
             <picture>
               <source media="(max-width:767px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
               <img src="img/streetcred/streetcred_thumbnail_1200.jpg" alt="Montage of diagonal StreetCred screen mockups">
             </picture>
-
           </div>
-          <p>
-            StreetCred is a native app that takes sightseeing to a whole new
-            level! It provides scavenger hunts as a fun way for tourists to
-            explore U.S. cities. The app was the main project for an immersive
-            UX designer certification course I took at CareerFoundry. I was
-            responsible for the entire UX process from start to finish.
-          </p>
-          <a class="button-filled work" href="streetcred.html">View case study</a>
+          <div class="grid-item">
+            <p>
+              StreetCred is a native app that takes sightseeing to a whole new
+              level! It provides scavenger hunts as a fun way for tourists to
+              explore U.S. cities. The app was the main project for an immersive
+              UX designer certification course I took at CareerFoundry. I was
+              responsible for the entire UX process from start to finish.
+            </p>
+          </div>
+          <div class="grid-item">
+            <a class="button-filled work" href="streetcred.html">View case study</a>
+          </div>
         </div><!-- END StreetCred case study -->
 
-        <div class="row"><!-- My Word case study -->
-          <h2>My Word! | <span class="font-medium">flashcard learning app</span></h2>
-          <div>
+        <div class="grid-container"><!-- My Word case study -->
+          <h2 class="grid-item">My Word! | <span class="font-medium">flashcard learning app</span></h2>
+          <div class="grid-item project-picture">
             <picture>
               <source media="(max-width:767px)" srcset="img/my_word/my_word_thumbnail_600.png">
               <img src="img/my_word/my_word_thumbnail_1200.png" alt="My Word home screen with 3 sketched mockups">
             </picture>
           </div>
-          <p>
-            There's so much to learn! My Word is an app that allows students
-            and learners of all ages to create and organize flashcards. It
-            includes a study mode to test concepts learned and track progress.
-            That was my very first UX design project, in which I learned about
-            user research, user personas, flowcharting, task analysis,
-            low-fidelity wireframing & prototyping, and usability testing.
-          </p>
-          <a class="button-filled work" href="#">View case study</a>
+          <div class="grid-item">
+            <p>
+              There's so much to learn! My Word is an app that allows students
+              and learners of all ages to create and organize flashcards. It
+              includes a study mode to test concepts learned and track progress.
+              That was my very first UX design project, in which I learned about
+              user research, user personas, flowcharting, task analysis,
+              low-fidelity wireframing & prototyping, and usability testing.
+            </p>
+          </div>
+          <div class="grid-item">
+            <a class="button-filled work" href="#">View case study</a>
+          </div>
         </div><!-- END My Word case study -->
 
-      </div><!-- END My Work section -->
+      </section><!-- END My Work section -->
 
     </main>
 
-    <footer id="contact">
-      <div class="cont-section">
+    <footer>
+      <section id="contact">
         <h1>Contact Me</h1>
         <p>
           Like what you see? Let's get in touch!
         </p>
-        <p>
-          Call me: <a href="tel:13128881726">1-312-888-1726</a> or Skype me:
-          <a href="skype:me.vesel">me.vesel</a>.
-        </p>
         <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
-        </div>
+        <p class="text-center">
+          Call me: <a href="tel:13128881726">1-312-888-1726</a> | Skype me:
+          <a href="skype:me.vesel">me.vesel</a>
+        </p>
+      </section>
 
-        <div class="solid-footer"><!-- Section with social media icons and copyright -->
-          <ul class="soc-media-icons"><!-- Social media icons -->
-            <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
-              <span class="fab fa-linkedin-in"></span></a></li>
-            <li><a href="https://www.behance.net/marie-evevesel" target="_blank">
-              <span class="fab fa-behance"></span></a></li>
-            <li><a href=""><span class="fab fa-dribbble"></span></a></li>
-            <li><a href="mailto:info@mevesel.design">
-              <span class="far fa-envelope"></span></a></li>
-          </ul>
-          <p style="{font-family: 'Arial';}">
+      <div class="solid-footer"><!-- Section with social media icons and copyright -->
+        <div class="grid-container soc-media-icons">
+          <div class="grid-item">
+            <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
+            <span class="fab fa-linkedin-in"></span></a>
+          </div>
+          <div class="grid-item">
+            <a href="https://www.behance.net/marie-evevesel" target="_blank">
+            <span class="fab fa-behance"></span></a>
+          </div>
+          <div class="grid-item">
+            <a href=""><span class="fab fa-dribbble"></span></a>
+          </div>
+          <div class="grid-item"><a href="mailto:info@mevesel.design">
+            <span class="far fa-envelope"></span></a>
+          </div>
+        </div>
+        <div id="mev-copyright">
+          <p>
             &copy; Marie-Eve Vesel, 2020
           </p>
-        </div><!-- END of Section with social media icons and copyright -->
-
+        </div>
+      </div><!-- END of Section with social media icons and copyright -->
     </footer>
 
   </body>

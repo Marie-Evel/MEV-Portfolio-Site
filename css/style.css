@@ -7,7 +7,9 @@ Lizard Green: #239B15;
 Cerulean Blue: #3056CE;
 Vaguely Violet: #E6ECFF;
 */
-
+/*----------------------------------------------------------------------------*/
+/* Global styles */
+/*----------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -21,7 +23,6 @@ body {
 }
 
 b { font-weight: bold; }
-
 i { font-style: italic; }
 
 h1 {
@@ -29,23 +30,24 @@ h1 {
   font-size: 1.25em;
   font-weight: bold;
   line-height: 1.4;
-  margin-bottom: 0.9em;
+  margin-bottom: 0.75em;
   color: #7D0B5B /* Syrah */
 }
 
 h2 {
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
 
 p {
   margin-bottom: 0.625em;
+  hyphens: auto;
 }
-/*
+
 img {
   width: 100%;
 }
-*/
 
 a {
   color: #3056CE; /* Blue */
@@ -67,50 +69,89 @@ a:active { /* selected link */
 header {
   width: 100%;
   margin: 0;
+  background-color: #B20F5C;
  }
 
-nav {
-<<<<<<< Updated upstream
-
-=======
-  position: fixed;
->>>>>>> Stashed changes
+.cont-logo {
+ padding: 60px 0 25px 20px;
 }
 
-nav li {
-  display: inline-block;
+.cont-logo img {
+  width: 80%;
+}
+
+nav {
+  background-color: #E6ECFF; /* Light blue */
+}
+
+nav .grid-container {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1;
+  margin: 0 20px;
+}
+
+nav .grid-item {
   text-align: center;
+  padding: 10px 15px;
  }
 
-nav li a {
+nav a {
   font-weight: 500;
   font-size: 0.95em;
   text-transform: uppercase;
-  color: white !important;
-  text-decoration: none !important;
-  padding: 10px 15px;
+  color: black !important;
+  text-decoration: none;
+  /* padding: 10px 15px; */
 }
+
+/*----------------------------------------------------------------------------*/
+/* Layout styling */
+/*----------------------------------------------------------------------------*/
+
+section {
+  padding: 30px 20px 40px 20px;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.grid-item {
+  /* width: auto; */
+}
+
+.project-picture { margin-bottom: 0.75em;}
+
+/*----------------------------------------------------------------------------*/
+/* Font styling */
+/*----------------------------------------------------------------------------*/
 
 .font-medium { font-weight: 500; }
 
 .font-larger {
   font-size: 1.125em;
   font-weight: bold;
+  hyphens: none;
   margin-bottom: 0.9em;
 }
 
 .text-center { text-align: center; }
 
+/*----------------------------------------------------------------------------*/
+/* Buttons styling */
+/*----------------------------------------------------------------------------*/
+
 .button,
 .button-filled,
 .button-ghost {
-  display: inline-block;
+  display: grid;
   text-decoration: none;
   font-weight: 500;
-  line-height: 1;
-  padding: 10px 30px 7px 30px;
-  border-radius: 4px;
-  margin-top: 0.625em;
+  font-size: 1.125em;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .button-filled {
@@ -142,126 +183,80 @@ nav li a {
   opacity: 0.8;
 }
 
-.container-full-width {
-  width: 100%;
+.button-ghost ~ p {
+  margin-top: 20px;
 }
 
-.grid-container {
-  display: grid;
-}
+/*----------------------------------------------------------------------------*/
+/* Footer */
+/*----------------------------------------------------------------------------*/
 
-#top-nav {
-  background-color: #B20F5C /* Jazzberry */;
-}
-
-#top-nav .cont-menus {
-  background-color: #E6ECFF; /* light blue for mobile */
-  padding: 10px 0;
-}
-
-#top-nav .cont-menus li a {
-  color: black !important;
-}
-
-.cont-logo {
-  width: 100px;
-  padding: 60px 0 25px 20px;
-  /*fill: white;*/
+#contact {
+  padding-bottom: 15px;
 }
 
 .solid-footer {
-<<<<<<< Updated upstream
   margin: 0;
-=======
-  margin: 0 !important;
->>>>>>> Stashed changes
   background-color: #3056CE;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 20px 10px 20px;
 }
 
-.soc-media-icons li {
+.grid-container.soc-media-icons {
+  width: 80%;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  text-align: center;
+}
+.soc-media-icons a {
   display: inline-block;
+  color: #3056CE;
+  line-height: 2.4em;
+  text-align: center;
   background-color: white;
   border-radius: 50%;
   width: 2.2em;
   height: 2.2em;
-  line-height: 2.37em;
+}
+
+#mev-copyright {
+  font-family: Arial, sans-serif;
+  font-size: 0.8125em;
+  color: white;
   text-align: center;
-
-}
-.soc-media-icons li a {
-  color: #3056CE !important;
-  font-size: 1em;
-<<<<<<< Updated upstream
-}
-
-/* Layout styling */
-.cont-section {
-  padding: 30px 20px 40px 20px;
-}
-
-.row {
-  padding-bottom: 20px;
-}
-
-.row:last-of-type {
-  margin-bottom: 0;
-}
-
-.row:not(:first-of-type) {
   margin-top: 15px;
 }
 
-.row:not(:last-of-type) {
-  border-bottom: 1px solid #7D0B5B;
-}
 
-=======
-}
-
-/* Layout styling */
-.cont-section {
-  padding: 30px 20px 40px 20px;
-}
-
-.row {
+#work .grid-container:not(:last-of-type) {
   padding-bottom: 20px;
 }
 
-.row:last-of-type {
+#work .grid-item p:last-of-type {
   margin-bottom: 0;
 }
 
-.row:not(:first-of-type) {
-  margin-top: 15px;
+#work .grid-container:not(:first-of-type) {
+  padding-top: 20px;
+  border-top: 1px solid #7D0B5B;
 }
 
-.row:not(:last-of-type) {
-  border-bottom: 1px solid #7D0B5B;
-}
-
->>>>>>> Stashed changes
 #about, #work {
   border-bottom: 5px solid #E6ECFF;
 }
 
-<<<<<<< Updated upstream
-/* On tablet and desktop screens switch to 2 columns */
-=======
-/* On mobile screens switch to 2 columns */
->>>>>>> Stashed changes
-@media screen and (min-width: 412px) {
-  #top-nav {
-    display: grid;
-    grid-template-columns: 4fr 10fr;
-    grid-template-rows: auto;
-  }
-  #top-nav .cont-menus {
+/*----------------------------------------------------------------------------*/
+/* Media queries for tablet and desktop */
+/*----------------------------------------------------------------------------*/
+@media screen and (min-width: 500px) {
+  nav {
     background-color: #B20F5C; /* Jazzberry */
+    text-align: right;
   }
-  #top-nav .cont-menus li a {
+  nav a {
     color: white !important;
   }
+}
+
+@media screen and (min-width: 769px) {
+  body { font-size: 18px; }
 }
