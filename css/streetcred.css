@@ -80,7 +80,7 @@ ul.bullets.sc li {
   margin-left: 0.2em;
 }
 
-.sc.bullets li:before {
+.sc.bullets li::before {
   content: 'H';
   font-size: .1em;
   /*vertical-align: middle;*/
