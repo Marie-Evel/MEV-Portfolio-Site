@@ -8,6 +8,10 @@ Cerulean Blue: #3056CE;
 Vaguely Violet: #E6ECFF;
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
   font-family: 'Metrisch', Arial, sans-serif;
@@ -25,15 +29,18 @@ h1 {
   font-size: 1.25em;
   font-weight: bold;
   line-height: 1.4;
+  margin-bottom: 0.9em;
   color: #7D0B5B /* Syrah */
 }
 
 h2 {
-  font-size: 1.125em;
   font-weight: bold;
   line-height: 1.4;
 }
 
+p {
+  margin-bottom: 0.625em;
+}
 /*
 img {
   width: 100%;
@@ -62,20 +69,33 @@ header {
   margin: 0;
  }
 
-main,
-footer {
-  width: 100%;
-  margin: 30px 20px;
+nav {
+
 }
+
+nav li {
+  display: inline-block;
+  text-align: center;
+ }
 
 nav li a {
   font-weight: 500;
+  font-size: 0.95em;
   text-transform: uppercase;
   color: white !important;
   text-decoration: none !important;
+  padding: 10px 15px;
 }
 
 .font-medium { font-weight: 500; }
+
+.font-larger {
+  font-size: 1.125em;
+  font-weight: bold;
+  margin-bottom: 0.9em;
+}
+
+.text-center { text-align: center; }
 
 .button,
 .button-filled,
@@ -86,6 +106,7 @@ nav li a {
   line-height: 1;
   padding: 10px 30px 7px 30px;
   border-radius: 4px;
+  margin-top: 0.625em;
 }
 
 .button-filled {
@@ -126,38 +147,83 @@ nav li a {
 }
 
 #top-nav {
-  display: grid;
-  grid-template-columns: 4fr 10fr;
-  grid-template-rows: auto;
   background-color: #B20F5C /* Jazzberry */;
 }
 
+#top-nav .cont-menus {
+  background-color: #E6ECFF; /* light blue for mobile */
+  padding: 10px 0;
+}
+
+#top-nav .cont-menus li a {
+  color: black !important;
+}
+
 .cont-logo {
-  fill: white;
+  width: 100px;
+  padding: 60px 0 25px 20px;
+  /*fill: white;*/
 }
 
-.cont-menus {
-  text-align: right;
-}
-
-.cont-soc-media {
+.solid-footer {
+  margin: 0;
   background-color: #3056CE;
   color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.cont-soc-media li a {
-  color: white !important;
+.soc-media-icons li {
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2.37em;
+  text-align: center;
+
 }
-/* On mobile screens switch to 1 column */
-@media screen and (max-width: 411px) {
+.soc-media-icons li a {
+  color: #3056CE !important;
+  font-size: 1em;
+}
+
+/* Layout styling */
+.cont-section {
+  padding: 30px 20px 40px 20px;
+}
+
+.row {
+  padding-bottom: 20px;
+}
+
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+.row:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.row:not(:last-of-type) {
+  border-bottom: 1px solid #7D0B5B;
+}
+
+#about, #work {
+  border-bottom: 5px solid #E6ECFF;
+}
+
+/* On tablet and desktop screens switch to 2 columns */
+@media screen and (min-width: 412px) {
   #top-nav {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+    grid-template-rows: auto;
   }
   #top-nav .cont-menus {
-    background-color: #E6ECFF; /* light blue */
+    background-color: #B20F5C; /* Jazzberry */
   }
   #top-nav .cont-menus li a {
-    color: black !important;
+    color: white !important;
   }
 }
