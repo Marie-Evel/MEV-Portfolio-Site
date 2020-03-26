@@ -70,7 +70,11 @@ header {
  }
 
 nav {
+<<<<<<< Updated upstream
 
+=======
+  position: fixed;
+>>>>>>> Stashed changes
 }
 
 nav li {
@@ -166,7 +170,11 @@ nav li a {
 }
 
 .solid-footer {
+<<<<<<< Updated upstream
   margin: 0;
+=======
+  margin: 0 !important;
+>>>>>>> Stashed changes
   background-color: #3056CE;
   color: white;
   padding: 20px;
@@ -186,6 +194,7 @@ nav li a {
 .soc-media-icons li a {
   color: #3056CE !important;
   font-size: 1em;
+<<<<<<< Updated upstream
 }
 
 /* Layout styling */
@@ -209,11 +218,40 @@ nav li a {
   border-bottom: 1px solid #7D0B5B;
 }
 
+=======
+}
+
+/* Layout styling */
+.cont-section {
+  padding: 30px 20px 40px 20px;
+}
+
+.row {
+  padding-bottom: 20px;
+}
+
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+.row:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.row:not(:last-of-type) {
+  border-bottom: 1px solid #7D0B5B;
+}
+
+>>>>>>> Stashed changes
 #about, #work {
   border-bottom: 5px solid #E6ECFF;
 }
 
+<<<<<<< Updated upstream
 /* On tablet and desktop screens switch to 2 columns */
+=======
+/* On mobile screens switch to 2 columns */
+>>>>>>> Stashed changes
 @media screen and (min-width: 412px) {
   #top-nav {
     display: grid;
