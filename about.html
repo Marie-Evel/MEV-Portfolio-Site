@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Meet Marie-Eve Vesel</title>
+    <title>MEV Portfolio Site</title>
 
     <!-- Favicon -------------------------------------------------------------->
     <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
@@ -16,7 +17,7 @@
     <meta name="theme-color" content="#b20f5c">
 
     <!-- Fonts ---------------------------------------------------------------->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6837ed2a31.js" crossorigin="anonymous"></script>
 
     <!-- CSS files ------------------------------------------------------------>
@@ -29,55 +30,61 @@
   </head>
 
   <body>
-    <header>
+    <header class="sticky">
       <div id="top-nav">
-        <div class="cont-logo">
+        <div class="logo-container">
           <a href="index.html">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/logo/logo_mobile.svg">
+              <source media="(max-width: 500px)" srcset="img/logo/logo_mobile.svg">
               <img src="img/logo/logo_desktop.svg" alt="M E V logo">
             </picture>
           </a>
-        </div><!-- END .cont-logo -->
-        <div class="cont-menus">
-          <nav>
-            <ul>
-              <li><a href="index.html#work">WORK</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="#contact">CONTACT</a></li>
-            </ul>
-          </nav>
-        </div><!-- END of .cont-menus -->
-      </div><!-- END #top-nav-->
+        </div><!-- END .logo-container -->
+        <nav>
+          <div class="grid-container">
+            <div class="grid-item">
+              <a href="index.html#work">Work</a>
+            </div>
+            <div class="grid-item">
+              <a href="about.html">About</a>
+            </div>
+            <div class="grid-item">
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div><!-- END #top-nav -->
     </header>
 
     <main>
-      <div><!-- Top section with profile picture -->
-        <div><!-- Row -->
-          <div><!-- Column 1 with profile picture -->
+      <section id="hero">
+        <div class="grid-container">
+          <div id="profile-pic" class="grid-item"><!-- Column 1 with profile picture -->
             <picture>
-              <source media="(max-width: 411px)" srcset="img/mev_profile_circle.jpg">
+              <source media="(max-width: 767px)" srcset="img/mev_profile_rectangle.jpg">
               <img src="img/mev_profile_circle.jpg" alt="Headshot of Marie-Eve smiling">
             </picture>
           </div><!-- END of Column 1-->
 
-          <div> <!-- Column 2 with text and view resume button -->
-            <h1>Hello! I'm Marie-Eve,</h1>
-            <p>
-              a passionate interaction designer and UX generalist.
-            </p>
-            <p>
+          <div class="grid-item"> <!-- Column 2 with text and view resume button -->
+            <h1>
+              Hello! I'm Marie-Eve,
+              <p>
+                a passionate interaction designer and UX generalist.
+              </p>
+            </h1>
+            <p class="font-larger">
               I'm a matchmaker between delightful, thoughtful design and
               practical solutions.
             </p>
             <a class="button-filled about" href="files/mev_resume.pdf" target="_blank" download>View résumé</a>
           </div><!-- END of Column 2 -->
         </div><!-- END of Row-->
-      </div><!--  END of Top section with picture -->
+      </section><!--  END of #hero -->
 
-      <div><!-- About detail -->
-        <div><!-- Row -->
-          <div><!-- Column 1 with My Story, Up Close and Personal, and Fun Facts -->
+      <section id="about-me"><!-- About detail -->
+        <div class="grid-container">
+          <div class="grid-item">
             <h1>My Story</h1>
             <p>
               I'm an actuary turned UX designer. It all makes sense now. Looking
@@ -90,10 +97,11 @@
             </p>
             <p>
               In the summer of 2019, I took the plunge and enrolled in a UX
-              Design certification course at CareerFoundry. I'm now ready to
-              take on the UX design world by the horns!
+              Design certification course at CareerFoundry. And as they say,
+              the rest is history. I'm now ready to take on the UX design world
+              by the horns!
             </p>
-            <p class="quote">
+            <p class="indented-quote">
               I've always been a designer; it only took me two decades to
               realize it.
             </p>
@@ -104,22 +112,71 @@
               until I find a solution to make things simple, digestable, and
               streamlined. And pretty.
             </p>
+          </div>
+          <div class="grid-item"><!-- Skills and Tools-->
+            <div id="skills-and-tools" class="grid-container">
+              <div id="skills" class="grid-item">
+                <h1>Skills</h1>
+                <ul>
+                  <li>User research</li>
+                  <li>User personas</li>
+                  <li>Information architecture</li>
+                  <li>Task analysis</li>
+                  <li>Flow charting</li>
+                  <li>Wireframing</li>
+                  <li>Prototyping</li>
+                  <li>Usability testing</li>
+                  <li>Interaction design</li>
+                  <li>Visual direction</li>
+                  <li>Animations</li>
+                  <li>Data analytics</li>
+                  <li>Data visualization</li>
+                </ul>
+              </div>
 
+              <div id="tools" class="grid-item">
+                <h1>Tools</h1>
+                <ul>
+                  <li>Sketch</li>
+                  <li>InVision</li>
+                  <li>InVision Studio</li>
+                  <li>Prott</li>
+                  <li>Excel</li>
+                  <li>PowerPoint</li>
+                  <li>Google Forms</li>
+                  <li>Optimal Workshop</li>
+                  <li>Usability Hub</li>
+                  <li>HTML/CSS</li>
+                  <li>JavaScript</li>
+                  <li>SQL</li>
+                  <li>VBA</li>
+                </ul>
+              </div>
+
+              <div id="resume-button" class="grid-item">
+                <a class="button-ghost about" href="files/mev_resume.pdf" target="_blank" download>View résumé</a>
+              </div>
+
+            </div><!-- END of .grid-container for Skills and Tools -->
+          </div><!-- END of .grid-item for Skills and Tools -->
+
+          <div class="grid-item">
             <h1>Up Close and Personal</h1>
             <p>
               I'm a proud mother of two very smart and talented teenage
               daughters, and I'm married to a wonderful and incredibly
               supportive husband who pushed me to pursue my passion for UX/UI
               design. Our family wouldn't be complete without our two quirky
-              cats who sit at the table with us when we eat dinner. They also
+              cats who sit at the kitchen table with us when we eat dinner. They also
               seem to enjoy chilling out in the bath tub (no water in the tub
               though.)
             </p>
 
             <h1>Fun Facts</h1>
             <p>
-              Throughout the madness of raising a family (I did say two
-              <u>teenage daughters</u>), working, and going back to school, I
+              Throughout the madness of raising a family (I did mention two
+              <span class="font-medium"><i>teenage daughters</i></span>,
+              right?), working, and going back to school, I
               take the time to <em>exercise</em> both my body and my mind.
             </p>
             <p>
@@ -134,79 +191,50 @@
               guitar a few years ago. And yes, I sometimes fantasize about being
               a rock star while I play. Dream on!
             </p>
-          </div><!-- End of Column 1 -->
+          </div>
 
-          <div><!-- Column 2 with Skills and Tools-->
-            <h1>Skills</h1>
-            <ul>
-              <li>User research</li>
-              <li>User personas</li>
-              <li>Information architecture</li>
-              <li>Task analysis</li>
-              <li>Flow charting</li>
-              <li>Wireframing</li>
-              <li>Prototyping</li>
-              <li>Usability testing</li>
-              <li>Interaction design</li>
-              <li>Visual direction</li>
-              <li>Animations</li>
-              <li>Data analytics</li>
-              <li>Data visualization</li>
-            </ul>
-
-            <h1>Tools</h1>
-            <ul>
-              <li>Sketch</li>
-              <li>InVision</li>
-              <li>InVision Studio</li>
-              <li>Prott</li>
-              <li>Excel</li>
-              <li>PowerPoint</li>
-              <li>Google Forms</li>
-              <li>Optimal Workshop</li>
-              <li>Usability Hub</li>
-              <li>HTML/CSS</li>
-              <li>JavaScript</li>
-              <li>SQL</li>
-              <li>VBA</li>
-            </ul>
-
-            <a class="button-ghost about" href="files/mev_resume.pdf" target="_blank" download>View résumé</a>
-
-          </div><!-- END of Column 2-->
-
-        </div><!-- End of Row-->
-      </div><!-- END of About detail -->
+        </div><!-- End of .grid-container-->
+      </section><!-- END of #about-me -->
     </main>
 
-    <footer id="contact">
-      <div>
+    <footer>
+      <section id="contact">
         <h1>Contact Me</h1>
         <p>
           Like what you see? Let's get in touch!
         </p>
-        <p>
-          Call me: <a href="tel:13128881726">1-312-888-1726</a> or Skype me:
-          <a href="skype:me.vesel">me.vesel</a>.
-        </p>
         <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
+        <p class="text-center">
+          Call me: <a href="tel:13128881726">1-312-888-1726</a> | Skype me:
+          <a href="skype:me.vesel">me.vesel</a>
+        </p>
+      </section>
 
-        <div class="cont-soc-media"><!-- Section with social media icons and copyright -->
-          <ul><!-- Social media icons -->
-            <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
-              <span class="fab fa-linkedin"></span></a></li>
-            <li><a href="https://www.behance.net/marie-evevesel" target="_blank">
-              <span class="fab fa-behance"></span></a></li>
-            <li><a href=""><span class="fab fa-dribbble"></span></a></li>
-            <li><a href="mailto:info@mevesel.design">
-              <span class="fal fa-envelope"></span></a></li>
-          </ul>
+      <div class="solid-footer"><!-- Section with social media icons and copyright -->
+        <div class="grid-container soc-media-icons">
+          <div class="grid-item">
+            <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
+            <span class="fab fa-linkedin-in"></span></a>
+          </div>
+          <div class="grid-item">
+            <a href="https://www.behance.net/marie-evevesel" target="_blank">
+            <span class="fab fa-behance"></span></a>
+          </div>
+          <div class="grid-item">
+            <a href=""><span class="fab fa-dribbble"></span></a>
+          </div>
+          <div class="grid-item"><a href="mailto:info@mevesel.design">
+            <span class="far fa-envelope"></span></a>
+          </div>
+        </div>
+        <div id="mev-copyright">
           <p>
             &copy; Marie-Eve Vesel, 2020
           </p>
-        </div><!-- END of .cont-soc-media -->
-      </div>
+        </div>
+      </div><!-- END of Section with social media icons and copyright -->
     </footer>
+
 
   </body>
 </html>

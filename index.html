@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#b20f5c">
 
     <!-- Fonts ---------------------------------------------------------------->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6837ed2a31.js" crossorigin="anonymous"></script>
 
     <!-- CSS files ------------------------------------------------------------>
@@ -30,17 +30,17 @@
   </head>
 
   <body>
-    <header>
-      <div id="top-nav">
-        <div class="cont-logo">
+    <header class="sticky">
+      <div id="top-nav grid-container">
+        <div class="logo-container grid-item">
           <a href="index.html">
             <picture>
-              <source media="(max-width: 500px)" srcset="img/logo/logo_mobile.svg">
+              <source media="(max-width: 767px)" srcset="img/logo/logo_mobile.svg">
               <img src="img/logo/logo_desktop.svg" alt="M E V logo">
             </picture>
           </a>
-        </div><!-- END .cont-logo -->
-        <nav>
+        </div><!-- END .logo-container -->
+        <nav class="grid-container">
           <div class="grid-container">
             <div class="grid-item">
               <a href="index.html#work">Work</a>
