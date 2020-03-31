@@ -1,5 +1,6 @@
-/*
-Color palette:
+/* -------------------------------------------------------------------------- */
+/* Color palette:*/
+/* -----------------------------------------------------------------------------
 Dragon Fruit: #C6395C;
 Medium version of Dragon Fruit: #CE5573;
 Light version of Dragon Fruit: #FAEFF2;
@@ -165,11 +166,16 @@ body .sc {
   grid-template-columns: 45vw 1fr;
   grid-template-areas: "screen-shot hero-text"
                        "desc-text desc-text";
-  align-items: stretch;
 }
 
 #intro-grid .screen-shot { grid-area: screen-shot; }
-#intro-grid .hero-text { grid-area: hero-text; }
+
+#intro-grid .hero-text {
+  grid-area: hero-text;
+  height: 100%;
+  /* align-self: center; */
+}
+
 #intro-grid .desc-text { grid-area: desc-text; }
 
 .sc-intro-top.screen-shot {
@@ -1127,7 +1133,7 @@ body .sc {
 }
 
 #sc-accessibility1 .caption-left p,
-#sc-accessibility2 .caption-right p {
+#sc-accessibility1 .caption-right p {
   margin-bottom: 30px;
 }
 
@@ -1165,6 +1171,15 @@ body .sc {
   left: calc(64.93vw - 32.46px);
   width: calc(25.07vw - 7.54px);
   height: calc(8.33vw + 20.84px);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 09 Final Designs */
+/* -------------------------------------------------------------------------- */
+
+#sc-demo img {
+  height: 150vw;
+  object-fit: cover;
 }
 
 /* -------------------------------------------------------------------------- */
