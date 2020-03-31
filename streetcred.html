@@ -32,48 +32,60 @@
 </head>
 
 <body>
-  <header>
-    <div id="top-nav">
-      <div class="cont-logo">
+  <header class="project sticky">
+    <div id="top-nav" class="grid-container">
+      <div class="logo-container grid-item">
         <a href="index.html">
           <picture>
-            <source media="(max-width: 411px)" srcset="img/logo/logo_mobile.svg">
+            <source media="(max-width: 500px)" srcset="img/logo/logo_mobile_red.svg">
             <img src="img/logo/logo_desktop.svg" alt="M E V logo">
           </picture>
         </a>
-      </div><!-- END .cont-logo -->
-      <div class="cont-menus">
-        <nav>
-          <ul>
-            <li><a href="index.html#work">WORK</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div><!-- END of .cont-menus -->
+      </div><!-- END .logo-container -->
+      <nav class="grid-container">
+        <div class="grid-item">
+          <a href="index.html#work">Work</a>
+        </div>
+        <div class="grid-item">
+          <a href="about.html">About</a>
+        </div>
+        <div class="grid-item">
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </div><!-- END #top-nav-->
   </header>
 
   <main class="sc">
-    <!-- 01 INTRO ------------------------------------------------------------->
-    <div><!-- Intro -->
-      <p>
-        UX CASE STUDY
-      </p>
-      <picture class="shadow-white">
-        <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
-          <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="StreetCred home screen on iPhone XS">
-      </picture>
-      <h1 class="sc font-white back-med-blue">Explore a city like you've never experienced before!</h1>
-      <p class="sc font-white font-medium back-med-blue">
-        Street­Cred will take you on a tour of the must-see land­marks, while
-        in­tro­duc­ing you to hidden gems rec­om­mended by the lo­cals. You’ll solve
-        rid­dles to un­veil your next lo­ca­tion, com­plete fun pic­ture chal­lenges,
-        and learn about the his­tory and cul­ture of the city.
-      </p>
-    </div><!-- END of Intro -->
 
-    <div><!-- 01 Overview -->
+    <!-- 01 INTRO ------------------------------------------------------------->
+    <div id="intro"><!-- Intro -->
+      <p class="project-tagline">
+        Urban Scavenger Hunt App
+      </p>
+      <div id="intro-grid">
+        <div class="screen-shot sc-intro-top">
+          <picture class="shadow-white">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
+            <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="StreetCred home screen on iPhone XS">
+          </picture>
+        </div>
+        <div class="sc-intro-top hero-text">
+          <h1 class="sc font-white">Explore a city like you've never experienced before!</h1>
+        </div>
+        <div class="sc-intro-bottom desc-text">
+          <p class="sc font-medium">
+            Street­Cred will take you on a tour of the must-see land­marks, while
+            in­tro­duc­ing you to hidden gems rec­om­mended by the lo­cals. You’ll solve
+            rid­dles to un­veil your next lo­ca­tion, com­plete fun pic­ture chal­lenges,
+            and learn about the his­tory and cul­ture of the city.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- END of #intro -->
+
+    <section id="sc-overview"><!-- 01 Overview -->
       <div><!-- 2x3 grid -->
         <div><!-- Row 1: titles -->
           <div><!-- Cell(1,1) -->
@@ -85,8 +97,8 @@
         </div><!-- END of Row 1 -->
 
         <div><!-- Row 2: text -->
-          <div><!-- Cell(2,1) -->
-            <ul class="sc font-smallest">
+          <div class="sc sub-sections"><!-- Cell(2,1) -->
+            <ul>
               <li>the problem</li>
               <li>potential solution</li>
               <li>target audience</li>
@@ -104,8 +116,8 @@
             <p class="sc">
               Peo­ple like to play games. Peo­ple like to play games on their
               phones. But peo­ple also want to play with their friends and
-              spend more time out­doors. How about a so­cial <b>scav­enger
-              hunt</b>?
+              spend more time out­doors. How about a so­cial <b><span class="sc font-blue">scav­enger
+              hunt</span></b>?
             </p>
             <h2 class="sc">POTENTIAL SOLUTION</h2>
             <p class="sc">
@@ -127,8 +139,8 @@
               culture and his­tory.
             </p>
           </div><!-- END of Cell(2,2) -->
-          <div><!-- Cell(2,3) Role, Skills & Tools -->
-            <h3 class="sc font-red">ROLE</h3>
+          <div class="sc role-skills-tools"><!-- Cell(2,3) Role, Skills & Tools -->
+            <h3 class="sc font-red">MY ROLE</h3>
             <ul>
               <li>Main (and only) UX/UI Designer</li>
             </ul>
@@ -157,71 +169,80 @@
           </div>
         </div><!-- END of Row 2 -->
       </div><!-- END of 2x3 grid -->
-    </div><!-- END of 01 Overview -->
+    </section><!-- END of 01 Overview -->
 
-    <div><!-- Sneak Peak-->
-      <h1 class="sc font-blue">SNEAK PEAK</h1>
-      <p class="sc font-medium">
-        Before you scroll all the way down to see if my final designs are
-        worthy of your time, here’s a little preview.
-      </p>
-      <div><!-- Screenshots -->
-        <div><!-- Screenshot 1 -->
-          <picture class="sc shadow-white">
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/benefit1_small.png">
-              <img src="img/streetcred/sec1_overview/benefit1_large.png" alt="Screenshot of sightseeing with a twist">
-          </picture>
-        </div><!-- END of Screenshot 1-->
-        <div><!--Screenshot 2 -->
-          <picture class="sc shadow-white">
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
-              <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="Screenshot of Find Hunts screen">
-          </picture>
-        </div><!-- END of Screenshot 2-->
-        <div><!--Screenshot 3 -->
-          <picture class="sc shadow-white">
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/hunt_detail_small.png">
-              <img src="img/streetcred/sec1_overview/hunt_detail_large.png" alt="Screenshot of Hunt Detail screen">
-          </picture><!-- END of Screenshot 2-->
-        </div><!-- END of Screenshot 3-->
-        <div><!--Screenshot 4 -->
-          <picture class="sc shadow-white">
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/players_small.png">
-              <img src="img/streetcred/sec1_overview/players_large.png" alt="Screenshot of Players screen">
-          </picture><!-- END of Screenshot 2-->
-        </div><!-- END of Screenshot 4-->
-        <div><!--Screenshot 5 -->
-          <picture class="sc shadow-white">
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec1_overview/pref1_small.png">
-              <img src="img/streetcred/sec1_overview/pref1_large.png" alt="Screenshot of first Preference screen">
-          </picture>
-        </div><!-- END of Screenshot 5-->
+    <div id="sc-sneak-peek" class="center-text"><!-- Sneak Peak-->
+      <div class="section-top">
+        <h1 class="sc font-blue centered-title">SNEAK PEEK</h1>
+        <p class="sc font-medium">
+          Before you scroll all the way down to see if my final designs are
+          worthy of your time, here’s a little preview.
+        </p>
+      </div>
+      <div id="sc-screen-shots"><!-- Screenshots -->
+        <div id="screen-shots-row1"><!-- Row 1 -->
+          <div class="sc screen-shot"><!-- Screenshot 1 -->
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/benefit1_small.png">
+                <img src="img/streetcred/sec1_overview/benefit1_large.png" alt="Screenshot of sightseeing with a twist">
+            </picture>
+          </div><!-- END of Screenshot 1-->
+          <div class="sc screen-shot"><!--Screenshot 2 -->
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/home_small.png">
+                <img src="img/streetcred/sec1_overview/home_large.png" alt="Screenshot of Find Hunts screen">
+            </picture>
+          </div><!-- END of Screenshot 2-->
+        </div>
+        <div id="screen-shots-row2"><!-- Row 2 -->
+          <div class="sc screen-shot"><!--Screenshot 3 -->
+            <picture class="shadow-white">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/hunt_detail_small.png">
+                <img src="img/streetcred/sec1_overview/hunt_detail_large.png" alt="Screenshot of Hunt Detail screen">
+            </picture><!-- END of Screenshot 2-->
+          </div><!-- END of Screenshot 3-->
+          <div class="sc screen-shot"><!--Screenshot 4 -->
+            <picture class="shadow-white">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/players_small.png">
+                <img src="img/streetcred/sec1_overview/players_large.png" alt="Screenshot of Players screen">
+            </picture><!-- END of Screenshot 2-->
+          </div><!-- END of Screenshot 4-->
+          <div class="sc screen-shot"> <!--Screenshot 5 -->
+            <picture class="shadow-white">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/pref1_small.png">
+                <img src="img/streetcred/sec1_overview/pref1_large.png" alt="Screenshot of first Preference screen">
+            </picture>
+          </div><!-- END of Screenshot 5-->
+        </div>
       </div><!-- END of Screenshots-->
-      <p class="sc font-white font-medium back-med-blue">
-        Want to see how I got there?
-        <br>Let’s dig in.
-      </p>
+      <div id="sc-sneak-peek-bottom">
+        <p class="font-white font-medium">
+          Want to see how I got there?
+          <br>Let’s dig in.
+        </p>
+      </div>
+
     </div><!-- END of Sneak Peak-->
 
     <!-- 02 RESEARCH ---------------------------------------------------------->
-    <div><!-- Section 2 container -->
-      <div><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-research">
+      <div class="sc header-section"><!-- Grid container for section header -->
+        <div>
           <h1 class="sc">02</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Exploratory Research</h1>
+        </div>
+        <div class="sc sub-sections"><!-- Cell(2,1) -->
+          <ul>
             <li>competitive analysis</li>
             <li>opportunities & strategy</li>
             <li>user surveys</li>
             <li>user interviews</li>
             <li>key insights</li>
           </ul>
-        </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Exploratory Research</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+        </div>
+        <div class="sc first-body-cell">
           <h2>COMPETITIVE ANALYSIS</h2>
           <p>
             Before jumping into mockups, wireframes, and user flows, it’s
@@ -241,17 +262,17 @@
             <span class="font-uaq font-medium">Urban Adventure Quest</span> (UAQ). Let’s
             take a look at their strengths and weaknesses.
           </p>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
+        </div><!-- END of .first-body-cell -->
+      </div><!-- END of grid container for header section -->
 
-      <div><!-- 2x3 grid for Let's Roam Strengths & Weaknesses -->
-        <div><!-- Cell(1,1) -->
+      <div class="st-wk-grid letsroam"><!-- 2x3 grid for Let's Roam Strengths & Weaknesses -->
+        <div class="logo"><!-- Cell(1,1) -->
           <img src="img/streetcred/sec2_research/letsroam_icon.png" alt="Let's Roam app icon">
         </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(1,2) -->
+        <div class="st-title"><!-- Cell(1,2) -->
           <h3 class="sc">Strengths</h3>
         </div><!-- END of Cell(1,2) -->
-        <div><!-- Cell(2,2) Strengths -->
+        <div class="st-bullets"><!-- Cell(2,2) Strengths -->
           <ul class="sc bullets letsroam-bullets">
             <li>Hunts available in 350 cities all over the world, including
               U.S., Europe, Australia, and Asia.</li>
@@ -262,10 +283,13 @@
             <li>Excellent ratings on Google Play and the App Store.</li>
           </ul>
         </div><!-- END of Cell(2,2) Strengths-->
-        <div><!-- Cell(1,3) -->
+        <div class="logo2"><!-- Cell(1,1) -->
+          <img src="img/streetcred/sec2_research/letsroam_icon.png" alt="Let's Roam app icon">
+        </div><!-- END of Cell(1,1) -->
+        <div class="wk-title"><!-- Cell(1,3) -->
           <h3 class="sc">Weaknesses</h3>
         </div><!-- END of Cell(1,3) -->
-        <div><!-- Cell(2,3) Weaknesses -->
+        <div class="wk-bullets"><!-- Cell(2,3) Weaknesses -->
           <ul class="sc bullets letsroam-light-bullets">
             <li>Content of hunts is weak with very basic historical info, and
               riddles are not very challenging (e.g.: what's the color of the
@@ -280,14 +304,14 @@
         </div><!-- END of Cell(2,3) Weaknesses -->
       </div><!-- END of 2x3 grid for Let's Roam-->
 
-      <div><!-- 2x3 grid for Urban Adventure Quest Strengths & Weaknesses -->
-        <div><!-- Cell(1,1) -->
+      <div class="st-wk-grid uaq"><!-- 2x3 grid for Urban Adventure Quest Strengths & Weaknesses -->
+        <div class="logo"><!-- Cell(1,1) -->
           <img src="img/streetcred/sec2_research/uaq_icon.png" alt="Urban Adventure Quest icon">
         </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(1,2) -->
+        <div class="st-title"><!-- Cell(1,2) -->
           <h3 class="sc">Strengths</h3>
         </div><!-- END of Cell(1,2) -->
-        <div><!-- Cell(2,2) Strengths -->
+        <div class="st-bullets"><!-- Cell(2,2) Strengths -->
           <ul class="sc bullets uaq-bullets">
             <li>Content of quests is excellent: clever riddles, interesting
               historical facts, and fun photo challenges.</li>
@@ -298,13 +322,16 @@
               and negative.</li>
             <li>Customers can get a full refund if not satisfied with the quest,
               no questions asked.</li>
-            <li>Strong rating on TrustPilot: 4.4 stars out of 5.</li>
+            <li>Strong rating on TrustPilot: 4.4 stars out of five.</li>
           </ul>
         </div><!-- END of Cell(2,2) Strengths -->
-        <div><!-- Cell(1,3) -->
+        <div class="logo2"><!-- Cell(1,1) -->
+          <img src="img/streetcred/sec2_research/uaq_icon.png" alt="Urban Adventure Quest icon">
+        </div><!-- END of Cell(1,1) -->
+        <div class="wk-title"><!-- Cell(1,3) -->
           <h3 class="sc">Weaknesses</h3>
         </div><!-- END of Cell(1,3) -->
-        <div><!-- Cell(2,3) Weaknesses -->
+        <div class="wk-bullets section-bottom"><!-- Cell(2,3) Weaknesses -->
           <ul class="sc bullets uaq-light-bullets">
             <li>Quests are only available in the United States (plus 1 city in
               Canada).</li>
@@ -315,30 +342,30 @@
         </div><!-- END of Cell(2,3) Weaknesses -->
       </div><!-- END of 2x3 grid for UAQ-->
 
-      <div><!-- 2x2 grid for Opportunities & Business Strategy -->
-        <div><!-- Cell(1,1)-->
-          <img src="img/streetcred/sec2_research/streetcred_logo.png" alt="StreetCred logo with tagline: urban scavenger hunt">
+      <div class="sc"><!-- 2x2 grid for Opportunities & Business Strategy -->
+        <div class="border red-border"><!-- Cell(1,1) -->
+          <img id="sc-logo" src="img/streetcred/sec2_research/streetcred_logo.png" alt="StreetCred logo with tagline: urban scavenger hunt">
         </div><!-- END of Cell(1,1) -->
         <div><!-- Cell(1,2)-->
-          <h3 class="sc">Opportunities & Business Strategy</h3>
+          <h2>Opportunities & Business Strategy</h2>
         </div><!-- END of Cell(1,2) -->
         <div><!-- Cell(2,1)-->
-          <p class="sc font-red font-larger">
+          <p class="font-red">
             <b>As mil­len­ni­als reach the age where they have the means and
               de­sire to travel, there’s a real op­por­tu­nity to mod­ern­ize the
               self-guided tour in­dus­try where we can com­bine the con­ve­nience of
               an app for ex­plor­ing a city, while hav­ing fun with friends and
               fam­ily.</b>
           </p>
-          <div>
-            <img src="img/streetcred/sec2_research/route.svg" alt="Infographic of scavenger hunt starting point and ending point">
-          </div>
+          <!-- <div> -->
+            <!-- <img src="img/streetcred/sec2_research/route.svg" alt="Infographic of scavenger hunt starting point and ending point"> -->
+          <!-- </div> -->
         </div><!-- END of Cell(2,1) -->
         <div><!-- Cell(2,2)-->
-          <p class="sc">
+          <p>
             Here are initial thoughts on StreetCred’s business strategy:
           </p>
-          <ul class="sc bullets med-blue-bullets">
+          <ul class="sc bullets med-blue-bullets section-bottom">
             <li>Provide users with a memorable sightseeing experience by
               offering ready-made scavenger hunts with high-quality content
               (clever riddles, interesting historical info, fun photo
@@ -360,9 +387,9 @@
         </div><!-- END of Cell(2,2) -->
       </div><!-- END of 2x2 grid for Opportunities & Business Strategy-->
 
-      <div><!-- User Surveys -->
-        <h2 class="sc">USER SURVEYS</h2>
-        <div class="sc font-medium">
+      <div class="sc full-width-section" id="survey-section"><!-- User Surveys -->
+        <h2>USER SURVEYS</h2>
+        <div class="font-medium">
           <p>
             Now that we have a good grasp on our competition, we need to
             understand our users. I decided to start with a survey to gather
@@ -375,38 +402,35 @@
           </p>
         </div>
         <div><!-- 3x2 grid for research goals-->
-          <div><!-- Cell(1,1) -->
-            <h3 class="sc font-blue">Travel &
-                                     <br>Leisure</h3>
+          <div class="border blue-border"><!-- Cell(1,1) -->
+            <h3 class="font-blue">Travel & Leisure</h3>
           </div><!-- END of Cell(1,1)-->
           <div><!-- Cell(1,2) -->
-            <ul class="sc bullets med-blue-bullets font-medium">
+            <ul class="bullets med-blue-bullets font-medium">
               <li>Determine if people want to spend more time outside.</li>
               <li>Identify what people like to do when they travel.</li>
               <li>Assess how adventurous people are in terms of trying new
                 things.</li>
             </ul>
           </div><!-- END of Cell(1,2)-->
-          <div><!-- Cell(2,1) -->
-            <h3 class="sc font-blue">Gaming &
-                                     <br>Social Media</h3>
+          <div class="border blue-border"><!-- Cell(2,1) -->
+            <h3 class="font-blue">Gaming & Social Media</h3>
           </div><!-- END of Cell(2,1)-->
           <div><!-- Cell(2,2) -->
-            <p class="sc font-medium">
+            <p class="font-medium">
               Understand people’s gaming /social media habits and usage:
             </p>
-            <ul class="sc bullets med-blue-bullets font-medium">
+            <ul class="bullets med-blue-bullets font-medium">
               <li>What type of games do people like to play on their phones?
                 Why?</li>
               <li>How much do people use social media, and for what purpose?</li>
             </ul>
           </div><!-- END of Cell(2,2)-->
-          <div><!-- Cell(3,1) -->
-            <h3 class="sc font-blue">Scavenger
-                                     <br>Hunts</h3>
+          <div class="border blue-border"><!-- Cell(3,1) -->
+            <h3 class="font-blue">Scavenger Hunts</h3>
           </div><!-- END of Cell(3,1)-->
           <div><!-- Cell(3,2) -->
-            <ul class="sc bullets med-blue-bullets font-medium">
+            <ul class="bullets med-blue-bullets font-medium">
               <li>Determine if users would turn to a scavenger hunt game as a
                 way to explore their city, or as a means to discover a new city
                 while traveling.</li>
@@ -416,26 +440,28 @@
                 / cultural information, if at all.</li>
             </ul>
           </div><!-- END of Cell(3,2)-->
-        </div><!-- END of 3x2 grid for research goals-->
-        <p class="sc font-medium">
-          I launched the survey via Google Forms, which I sent to co-workers,
-          friends, friends of friends, fellow students, and a Facebook group of
-          Chicago suburban moms. The survey resulted in a 100% completion rate
-          from <span class="sc big-number">78</span> respondents.
-        </p>
-
+        </div><!-- END of grid container for research goals-->
+        <div class="sc section-top">
+          <p class="font-medium">
+            I launched the survey via Google Forms, which I sent to co-workers,
+            friends, friends of friends, fellow students, and a Facebook group of
+            Chicago suburban moms. The survey resulted in a 100% completion rate
+            from <span class="big-number">78</span> respondents.
+          </p>
+        </div>
       </div><!-- END of User Surveys-->
 
-      <div><!-- User Interviews -->
+      <div class="sc section-top"><!-- User Interviews -->
         <div><!-- 1x2 grid to split main section from sidebar with quotes-->
-          <div class="sc"><!-- Column 1 with main text -->
+          <div><!-- Column 1 with main text -->
               <h2>USER INTERVIEWS</h2>
               <p>
                 The sur­vey was great for gath­er­ing a large amount of
                 <span class="sc font-blue"><b>quan­ti­ta­tive</b></span> in­for­ma­tion
                 about our users. Let’s now turn to in­ter­views to gen­er­ate a
-                dif­fer­ent type of user data: <span class="sc font-blue"><b>
-                qual­i­ta­tive</b></span> in­for­ma­tion.
+                dif­fer­ent type of user data:
+                <span class="sc font-blue"><b>qual­i­ta­tive</b></span>
+                in­for­ma­tion.
               </p>
               <h3>Research Goals</h3>
               <p>
@@ -464,7 +490,7 @@
               <p>
                 I selected 5 interviewees with the following characteristics:
               </p>
-              <ul class="sc bullets med-blue-bullets">
+              <ul class="bullets med-blue-bullets section-bottom">
                 <li>Between the ages of 23 and 47 years old.</li>
                 <li>3 city dwellers + 2 suburbanites.</li>
                 <li>2 single + 2 married with children + 1 married without
@@ -475,8 +501,8 @@
                   recently, I chose them because they seemed to be the type to enjoy that kind of activity.</li>
               </ul>
           </div><!--  END of Column 1 -->
-          <div><!-- Column 2 for sidebar -->
-            <div class="sc quote-interview"><!-- Quote 1 -->
+          <div class="full-width-section back-med-red"><!-- Column 2 for sidebar -->
+            <div class="quote quote-interview"><!-- Quote 1 -->
               <p>
                 Sometimes, you just don’t know what the city might be famous
                 for or what things you definitely shouldn’t miss.
@@ -485,7 +511,7 @@
                 —Danielle, 34
               </p>
             </div><!-- END of Quote 1 -->
-            <div class="sc quote-interview"><!-- Quote 2 -->
+            <div class="quote quote-interview"><!-- Quote 2 -->
               <p>
                 I like taking the risk of doing new things.
               </p>
@@ -493,7 +519,7 @@
                 —Jake, 23
               </p>
             </div><!-- END of Quote 2 -->
-            <div class="sc quote-interview"><!-- Quote 3 -->
+            <div class="quote quote-interview"><!-- Quote 3 -->
               <p>
                 I kind of like playing people I don’t know because I don’t feel
                 bad about winning or losing.
@@ -502,7 +528,7 @@
                 —Pam, 41
               </p>
             </div><!-- END of Quote 3 -->
-            <div class="sc quote-interview"><!-- Quote 4 -->
+            <div class="quote quote-interview"><!-- Quote 4 -->
               <p>
                 When I travel, I try to go places that en­able me to be out­side
                 most of the day.
@@ -511,7 +537,7 @@
                 —Anna, 24
               </p>
             </div><!-- END of Quote 4 -->
-            <div class="sc quote-interview"><!-- Quote 5 -->
+            <div class="quote quote-interview"><!-- Quote 5 -->
               <p>
                 I’m less ad­ven­tur­ous than most, but when I’m on va­ca­tion, I
                 still like to do things that maybe I would­n’t nor­mally do.
@@ -524,11 +550,11 @@
         </div><!-- END of 1x2 grid -->
       </div><!-- END of User Interviews-->
 
-      <div class="sc back-light-pink"><!-- Equation infographic -->
-        <img src="img/streetcred/sec2_research/equation.png" alt="1269 observations from survey + 506 quotes from interviews = a lot to process">
+      <div class="sc full-width-section back-light-pink"><!-- Equation infographic -->
+        <img id="research-equation" src="img/streetcred/sec2_research/equation.png" alt="1269 observations from survey + 506 quotes from interviews = a lot to process">
       </div><!-- END Equation infographic -->
 
-      <div><!-- Key Insights -->
+      <div class="sc section-top"><!-- Key Insights -->
         <h2 class="sc">KEY INSIGHTS</h2>
         <p class="sc">
           Yes, the amount of data generated by the survey and interviews can be
@@ -559,32 +585,32 @@
         </ul>
       </div><!-- END of Key Insights-->
 
-    </div><!-- END of Section 2 container -->
+    </section><!-- END of Section 2 container -->
 
-    <div><!-- Affinity mapping transition -->
+    <div id="affinity-transition"><!-- Affinity mapping transition -->
       <picture>
-        <source media="(max-width: 411px)" srcset="img/streetcred/sec2_research/affinity_mapping_small.png">
+        <source media="(max-width: 767px)" srcset="img/streetcred/sec2_research/affinity_mapping_small.png">
         <img src="img/streetcred/sec2_research/affinity_mapping_large.png" alt="Dry-erase board with sticky notes in various colors (faded)">
       </picture>
     </div><!-- END of Affinity mapping transition -->
 
     <!-- 03 UNDERSTANDING THE USER -------------------------------------------->
-    <div><!-- Section 3 container -->
-      <div><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-user"><!-- Section 3 container -->
+      <div class="sc section-header"><!-- Grid container for section header -->
+        <div>
           <h1 class="sc">03</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Understanding the User</h1>
+        </div>
+        <div class="sc sub-sections">
+          <ul>
             <li>user personas</li>
             <li>journey maps</li>
             <li>user flows</li>
           </ul>
-        </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Understanding the User</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+        </div>
+        <div class="sc first-body-cell">
           <p>
             It’s crucial to understand our users early in the design process.
             Let’s use the massive amount of info we collected in the research
@@ -603,15 +629,18 @@
             Let me introduce you to Dereck, the cool high-school teacher who is
             fascinated by the United States’ colorful cultural landscape:
           </p>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/persona_dereck_small.jpg">
-              <img src="img/streetcred/sec3_users/persona_dereck_large.jpg" alt="User persona sheet for Dereck">
-            </picture>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
+        </div><!-- END of .first-body-cell -->
+      </div><!-- END of grid container for header section -->
 
-      <div><!-- Secondary personas section -->
-        <p class="sc font-medium back-light-grey">
+      <div id="dereck-persona" class="sc full-width-section">
+        <picture class="shadow-black">
+          <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_dereck_small.jpg">
+          <img src="img/streetcred/sec3_users/persona_dereck_large.jpg" alt="User persona sheet for Dereck">
+        </picture>
+      </div>
+
+      <div class="sc full-width-section back-light-grey"><!-- Secondary personas section -->
+        <p class="font-medium">
           While Dereck is my primary persona, meaning most of my design decisions
           revolve around him, I also created Malika, the young professional who
           considers traveling a hobby, and Angie, the fun mom who likes to plan
@@ -619,43 +648,48 @@
           types.
         </p>
 
-        <div><!-- Row container to show Malika and Angie side by side -->
+        <div id="malika-angie-container"><!-- Row container to show Malika and Angie side by side -->
           <div><!-- Column 1 -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/persona_malika_small.jpg">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_malika_small.jpg">
               <img src="img/streetcred/sec3_users/persona_malika_large.jpg" alt="User persona sheet for Malika">
             </picture>
           </div><!-- END of Column 1 -->
           <div><!-- Column 2 -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/persona_angie_small.jpg">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_angie_small.jpg">
               <img src="img/streetcred/sec3_users/persona_angie_large.jpg" alt="User persona sheet for Angie">
             </picture>
           </div><!-- END of Column 2 -->
         </div><!-- END of Row container for Malika and Angie -->
       </div><!-- END of Secondary personas section -->
 
-      <div class="sc"><!-- Primary user journey section -->
+      <div class="sc section-top"><!-- Primary user journey section -->
         <h2>HOW WILL THE APP BE USED?</h2>
         <p>
           In or­der to empathize with our users, let’s map out how they will use
           the app to per­form cer­tain ac­tiv­i­ties. In the fol­low­ing <b>user
-          jour­ney</b> map, we’ll see how Dereck in­ter­acts with the app while in
+          jour­ney map</b>, we’ll see how Dereck in­ter­acts with the app while in
           Austin, TX dur­ing spring break. We’ll also ob­serve what he thinks and
           feels along the way.
         </p>
-        <picture>
-          <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
-          <img src="img/streetcred/sec3_users/journey_map_dereck_large.jpg" alt="Detailed user journey map for Dereck">
-        </picture>
-        <div><!-- Row container -->
-          <div><!-- Column 1 -->
-            <p class="sc font-smaller">
+        <div id="sc-dereck-journey" class="sc section-top"><!-- Grid container -->
+          <div id="sc-journey-map">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
+              <img src="img/streetcred/sec3_users/journey_map_dereck_large.jpg" alt="Detailed user journey map for Dereck">
+            </picture>
+            <svg id="dereck-journey-vert-line" class="connector dereck-red" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
+            </svg>
+          </div>
+          <div class="sc caption-bottom">
+            <p>
               This emo­tional roller coaster can help us iden­tify op­por­tuni­ties
               to re­duce fric­tion points and im­prove the user ex­pe­ri­ence.
             </p>
-          </div><!-- END of Column 1 -->
-          <div><!-- Column 2 -->
+          </div>
+          <div class="sc section-bottom">
             <h3>Opportunities from Dereck's Journey</h3>
             <ul class="sc bullets dereck-bullets">
               <li>If location access is allowed, the home screen should
@@ -679,24 +713,28 @@
               <li>Users should be able to rate the recommendations so the app
                 can better tailor recommendations over time.</li>
             </ul>
-          </div><!-- END of Column 2 -->
-        </div><!-- END of Row container -->
+          </div>
+        </div><!-- END of grid container -->
       </div><!-- END of Primary user journey section -->
 
-      <div class="sc back-light-grey"><!-- Secondary user journey section -->
-        <div><!-- Row container -->
-          <div><!-- Column 1 -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/journey_map_malika_small.jpg">
+      <div class="sc full-width-section back-light-grey"><!-- Secondary user journey section -->
+        <div id="malika-angie-journey">
+          <div id="malika-journey">
+            <picture  class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_malika_small.jpg">
               <img src="img/streetcred/sec3_users/journey_map_malika_large.jpg" alt="Detailed user journey map for Malika">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/journey_map_angie_small.jpg">
+          </div>
+          <div id="angie-journey">
+            <picture  class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_angie_small.jpg">
               <img src="img/streetcred/sec3_users/journey_map_angie_large.jpg" alt="Detailed user journey map for Angie">
             </picture>
-          </div><!-- END of Column 1 -->
-          <div class="sc back-light-grey"><!-- Column 2 -->
+          </div>
+          <div id="malika-angie-journey-title">
             <h3>Opportunities from Malika’s and Angie’s Journeys</h3>
+          </div>
+          <div id="malika-angie-journey-text">
             <p class="font-medium">
               Ad­di­tional op­por­tu­ni­ties were iden­ti­fied by ob­serv­ing how Ma­lika is
               us­ing our app as a sub­sti­tute for a guided walk­ing tour in San
@@ -722,13 +760,13 @@
                 with options to drive, walk, take public transportation, or
                 ride-share.</li>
             </ul>
-          </div><!-- END of Column 2 -->
-        </div><!-- END of Row container -->
+          </div>
+        </div><!-- END of #malika-angie-journey -->
       </div><!-- END of Secondary user journey section -->
 
-      <div><!-- User flow section -->
-        <h2 class="sc">DOWN TO THE NITTY-GRITTY</h2>
-        <p class="sc">
+      <div class="sc section-top"><!-- User flow section -->
+        <h2>DOWN TO THE NITTY-GRITTY</h2>
+        <p>
           The user jour­ney maps were great for iden­ti­fy­ing prob­lems and get­ting
           us think­ing about po­ten­tial so­lu­tions. Let’s take it one step fur­ther
           and cre­ate <b>user flows</b> in which we map spe­cific tasks that our
@@ -746,53 +784,55 @@
           <span class="emphasis-angie">Angie plans a scav­enger hunt ahead of
             time for an up­com­ing fam­ily va­ca­tion</span>.
         </p>
-        <picture>
-          <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/user_flow_dereck_small.jpg">
-          <img src="img/streetcred/sec3_users/user_flow_dereck_large.jpg" alt="User flow for Dereck">
-        </picture>
-        <picture>
-          <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/user_flow_malika_small.jpg">
-          <img src="img/streetcred/sec3_users/user_flow_malika_large.jpg" alt="User flow for Malika">
-        </picture>
-        <picture>
-          <source media="(max-width: 411px)" srcset="img/streetcred/sec3_users/user_flow_angie_small.jpg">
-          <img src="img/streetcred/sec3_users/user_flow_angie_large.jpg" alt="User flow for Angie">
-        </picture>
+        <div class="sc section-top">
+          <picture class="shadow-black user-flow">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_dereck_small.jpg">
+            <img src="img/streetcred/sec3_users/user_flow_dereck_large.jpg" alt="User flow for Dereck">
+          </picture>
+          <picture class="shadow-black user-flow">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_malika_small.jpg">
+            <img src="img/streetcred/sec3_users/user_flow_malika_large.jpg" alt="User flow for Malika">
+          </picture>
+          <picture class="shadow-black user-flow">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_angie_small.jpg">
+            <img src="img/streetcred/sec3_users/user_flow_angie_large.jpg" alt="User flow for Angie">
+          </picture>
+        </div>
       </div><!-- END of User flow section -->
 
-      <div class="sc">
+      <div id="sc-overwhelmed" class="sc text-center">
         <p>
           Feeling a little overwhelmed?
           <br>Fear not, it’s all about to come together in the sitemap.
         </p>
       </div>
 
-    </div><!-- END of Section 3 container-->
+    </section><!-- END of Section 3 container-->
 
     <div><!-- Information Architecture transition -->
-      <picture>
-        <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
+      <picture id="ia-transition">
+        <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
         <img src="img/streetcred/sec4_ia/ia_transition_large.jpg" alt="Abstract of wires inter-connecting">
       </picture>
     </div><!-- END of Information Architecture transition -->
 
     <!-- 04 INFORMATION ARCHITECTURE ------------------------------------------>
-    <div><!-- Section 4 container -->
-      <div><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-ia"><!-- Section 4 container -->
+      <div class="sc section-header section-bottom"><!-- Grid container for section header-->
+        <div>
           <h1 class="sc">04</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Information Architecture</h1>
+        </div>
+        <div class="sc sub-sections">
+          <ul>
             <li>navigation structure</li>
             <li>card sorting</li>
             <li>sitemap</li>
           </ul>
-        </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Information Architecture</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+        </div>
+        <div class="sc first-body-cell">
           <p>
             From our research, we now have a bunch of ideas on features and
             screens to include in the app. Let’s contemplate navigation and
@@ -811,14 +851,14 @@
             navigation structure I have in mind:
           </p>
           <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/sitemap_small.png">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/sitemap_small.png">
             <img src="img/streetcred/sec4_ia/sitemap_large.png" alt="Simple StreetCred sitemap">
           </picture>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
+        </div>
+      </div><!-- END of grid container for section header -->
 
-      <div class="sc back-light-pink"><!-- Container for Card Sorting section -->
-        <h2 class="sc">CARD SORTING</h2>
+      <div id="sc-card-sorting" class="sc full-width-section"><!-- Container for Card Sorting section -->
+        <h2>CARD SORTING</h2>
         <p class="sc font-medium">
           To verify if I was on the right track with my initial sitemap, I
           conducted an open card sorting exercise on OptimalWorkshop.com.
@@ -828,37 +868,41 @@
         <p class="sc font-medium">
           Long story short, it didn’t work…
         </p>
-        <div><!-- 2x2 grid -->
-          <div><!-- Cell(1,1)-->
+        <div id="sc-similarity-matrix" class="sc section-bottom">
+          <div id="sc-ideal-matrix">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/sim_matrix_desired_small.png">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/sim_matrix_desired_small.png">
               <img src="img/streetcred/sec4_ia/sim_matrix_desired_large.png" alt="Example of ideal similarity matrix with clusters by the diagonal">
             </picture>
-          </div><!-- END of cell(1,1) -->
-          <div class="sc"><!-- Cell(2,1)-->
+          </div>
+          <div id="sc-ideal-matrix-title" class="sc">
             <h3 class="sc font-blue">Hypothetical similarity matrix</h3>
+          </div>
+          <div id="sc-ideal-matrix-text">
             <p class="sc font-medium">
               Each cell rep­re­sents the pro­por­tion of par­tic­i­pants who placed the
               two intersecting cards in the same group (dark color = high
               per­cent­age). Here, the dark clus­ters at the edge of the di­ag­o­nal
               in­di­cate 4 to 5 strong group­ings.
             </p>
-          </div><!-- END of cell(2,1) -->
-          <div><!-- Cell(1,2)-->
+          </div>
+          <div id="sc-actual-matrix">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/sim_matrix_actual_small.png">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/sim_matrix_actual_small.png">
               <img src="img/streetcred/sec4_ia/sim_matrix_actual_large.png" alt="StreetCred similarity matrix with no clear clusters">
             </picture>
-          </div><!-- END of cell(1,2) -->
-          <div class=""><!-- Cell(2,2)-->
+          </div>
+          <div id="sc-actual-matrix-title">
             <h3 class="sc font-red">StreetCred similarity matrix</h3>
+          </div>
+          <div id="sc-actual-matrix-text">
             <p class="sc font-medium">
               Cute mo­saic, but not very use­ful for or­ga­niz­ing con­tent. There’s
               too much over­lap be­tween card pair­ings, and no def­i­nite group­ings
               can be ex­tracted from this ma­trix.
             </p>
-          </div><!-- END of cell(2,2) -->
-        </div><!-- END of 2x2 grid-->
+          </div>
+        </div><!-- END of grid container for similarity matrix -->
         <p class="sc font-medium">
           The lesson here is that some of my cards were not clear and the
           participants were lacking context. For instance, one of the
@@ -870,52 +914,56 @@
         </p>
       </div><!-- END of Container for Card Sorting section -->
 
-      <div><!-- Container for Final Sitemap section -->
-        <h2 class="sc">FINAL SITEMAP <span class="title-suffix">(for now)</span></h2>
-        <p class="sc font-medium">
-          After a few iterations and much head-scratching, I ended up with a
-          significantly more refined sitemap, consisting of
-          <span class="sc big-number">51</span> unique screens:
-        </p>
-        <div class="sc back-light-grey">
+      <div id="sc-sitemap" class="sc full-width-section"><!-- Container for Final Sitemap section -->
+        <div class="sc section-bottom">
+          <h2>FINAL SITEMAP <span class="title-suffix">(for now)</span></h2>
+          <p class="font-medium">
+            After a few iterations and much head-scratching, I ended up with a
+            significantly more refined sitemap, consisting of
+            <span class="sc big-number">51</span> unique screens:
+          </p>
+        </div>
+        <div>
           <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
             <img src="img/streetcred/sec4_ia/wireflow_large.png" alt="Wireflow showing how StreetCred's mobile screens are connected">
           </picture>
         </div>
       </div><!-- END of Container for Final Sitemap section -->
 
-      <div class="sc">
+      <div id="sc-ia-conclusion" class="sc text-center section-top">
         <p>
-          I never promised it was going to get easier,
-          <br>I just said it would all come together.
+          I never promised it was going to get easier, <wbr>I<wbr> just said it would all come together.
         </p>
       </div>
 
-    </div><!-- END of Section 4 container -->
+    </section><!-- END of Section 4 container -->
 
-    <!-- 05 WIREFREAMING & PROTOTYPING ---------------------------------------->
-    <div><!-- Section 5 container -->
+    <div id="sc-low-fid-transition">
       <picture>
-        <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/low-fid_transition_small.png">
+        <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/low-fid_transition_small.png">
         <img src="img/streetcred/sec5_wireframing/low-fid_transition_large.png" alt="Series of low-fidelity sketched wireframes">
       </picture>
+    </div>
 
-      <div><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <!-- 05 WIREFREAMING & PROTOTYPING ---------------------------------------->
+    <section id="sc-wires"><!-- Section 5 container -->
+
+      <div class="sc section-header"><!-- Grid container for section header -->
+        <div>
           <h1 class="sc">05</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Wireframing & Prototyping</h1>
+        </div>
+        <div class="sc sub-sections">
+          <ul>
             <li>low-fidelity wireframes</li>
             <li>rapid prototyping</li>
             <li>design iterations</li>
           </ul>
-        </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Wireframing & Prototyping</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+        </div>
+        <div class="sc first-body-cell">
           <p>
             Now that we have a sitemap and a solid understanding of our users,
             we’re ready to design some screens. Welcome to wireframing and
@@ -926,26 +974,40 @@
             I drew the first round of low-fidelity wireframes on mockup
             templates. Here’s a first attempt at the ‘My Hunts’ screen:
           </p>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
-      <div><!-- Row container-->
-        <div><!-- Column 1 -->
+        </div>
+      </div><!-- END of grid container for header section -->
+      <div id="my-hunts-grid">
+        <div id="my-hunts-screen"><!-- Column 1 -->
           <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
             <img src="img/streetcred/sec5_wireframing/my_hunts_v1_large.png" alt="Low-fidelity sketched wireframe of My Hunts screen">
           </picture>
+          <svg id="my-hunts-vert-line1" class="connector" height="200" width="10">
+            <line x1="0" y1="0" x2="0" y2="100%" />
+          </svg>
+          <svg id="my-hunts-horiz-line1" class="connector" height="10" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
+          </svg>
+          <svg id="my-hunts-horiz-line2" class="connector" height="10" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
+          </svg>
+          <svg id="my-hunts-vert-line2" class="connector" height="200" width="10">
+            <line x1="0" y1="0" x2="0" y2="100%" />
+          </svg>
         </div><!-- END of column 1 -->
-        <div class="sc"><!-- Column 2 -->
+        <div id="my-hunts-caption1" class="sc caption-right">
           <p>
             Because there’s a grid, I was trying to align, distribute, and
             center everything. For instance, I counted the dots to make each
             row the same height (8 dots per row).
           </p>
+        </div>
+        <div id="my-hunts-caption2" class="sc caption-bottom">
           <p>
             I counted the dots here too (14 for each half of the navigation
             bar). I just couldn’t help it…
           </p>
-        </div><!-- END of column 2 -->
+        </div>
       </div><!-- END of Row container-->
       <div class="sc">
         <p>
@@ -962,37 +1024,41 @@
           Here’s the sec­ond it­er­a­tion of the ‘My Hunts’ screen:
         </p>
       </div>
-      <div><!-- Row container -->
-        <div><!-- Column 1 -->
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/index_card_small.png">
+      <div id="index-card-example" class="sc section-bottom">
+        <div id="index-card">
+          <picture class="shadow-black">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/index_card_small.png">
             <img src="img/streetcred/sec5_wireframing/index_card_large.png" alt="Lined index card">
           </picture>
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v2_small.png">
-            <img src="img/streetcred/sec5_wireframing/my_hunts_v2_large.png" alt="Low-fidelity sketched wireframe of My Hunts screen on index card">
-          </picture>
-          <p class="sc">
+          <div id="my-hunts-low-fid">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v2_small.png">
+              <img src="img/streetcred/sec5_wireframing/my_hunts_v2_large.png" alt="Low-fidelity sketched wireframe of My Hunts screen on index card">
+            </picture>
+          </div>
+        </div>
+        <div id="index-caption2" class="caption-left">
+          <p>
             Rapid prototyping enabled me to capture the essence of the design
             while setting aesthetics aside until the high-fidelity phase.
           </p>
-        </div><!-- END of Column 1 -->
-        <div><!-- Column 2 -->
-          <p class="sc">
+        </div>
+        <div id="index-caption1" class="caption-right">
+          <p>
             It took me less than 1 minute to sketch that screen. It’s ugly,
             it’s messy, and it’s exactly what I needed in the early stages of
             wireframing.
           </p>
-        </div><!-- END of Column 2 -->
-        <div><!-- Column 3 -->
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/my_hunts_final_small.jpg">
+        </div>
+        <div id="index-final">
+          <picture class="shadow-black">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_final_small.jpg">
             <img src="img/streetcred/sec5_wireframing/my_hunts_final_large.jpg" alt="High-fidelity screen mockup of My Hunts screen on iPhone XS">
           </picture>
-        </div><!-- END of Column 3 -->
-      </div><!-- END of row container -->
+        </div>
+      </div><!-- END of #index-card-example -->
 
-      <div class="sc back-light-blue"><!-- Container for Design Iterations intro -->
+      <div class="sc back-light-blue full-width-section"><!-- Container for Design Iterations intro -->
         <h2>DESIGN ITERATIONS</h2>
         <p class="font-medium">
           Let’s take a closer look at the core fea­tures of the app to see how
@@ -1002,405 +1068,466 @@
         </p>
       </div><!-- END of Container for Design Iterations intro -->
 
-      <div><!-- Container for Finding a Hunt section -->
-        <h4 class="sc">A. Finding a hunt</h4>
-        <div><!-- 2x3 grid -->
-          <div><!-- Cell(1,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
+      <div class="sc section-bottom"><!-- Finding a Hunt section -->
+        <h4>A. Finding a hunt</h4>
+        <div id="finding-a-hunt" class="section-top"><!-- Grid container -->
+          <div id="sc-a-lo-fid">
+            <picture class="sc-screen-low-fid shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_large.png" alt="First sketched iteration of Find Hunts wireframe">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
+          </div>
+          <div id="sc-a-connector1">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-a-mid-fid">
+            <picture class="sc-screen-mid-fid shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_large.png" alt="Second mid-fidelity iteration of Find Hunts wireframe">
             </picture>
-          </div><!-- END of Cell(1,1) -->
-          <div class="sc"><!-- Cell(2,1) -->
+          </div>
+          <div id="sc-a-connector2">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-a-caption1" class="sc">
             <p>
               In early iterations, the hunt cards were on top of the map in a
               single column format, meaning that when the user scrolls up to
               view more cards, the map is not visible anymore.
             </p>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cell(1,2) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
+          </div>
+          <div id="sc-a-hi-fid1">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_large.png" alt="Third high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_small.png">
+          </div>
+          <div id="sc-a-connector3">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-a-hi-fid2">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_large.png" alt="Final high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
-          </div><!-- END of Cell(1,2) -->
-          <div class="sc"><!-- Cell(2,2) -->
+          </div>
+          <div id="sc-a-connector4">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-a-caption2" class="sc">
             <p>
-              In later screens, the hunt cards and ­the map don’t overlap
+              In later screens, the hunt cards and the map don’t overlap
               anymore. The cards are in a sin­gle row for­mat, al­low­ing the user
               to swipe left to view the next card while still be­ing able to see
               the map.
             </p>
-          </div><!-- END of Cell(2,2) -->
-          <div><!-- Cell(3,1) -->
-            <!-- Intentionally blank -->
-          </div><!-- END of Cell(3,1) -->
-          <div><!-- Cell(3,2) -->
-            <div class="dereck-says">
-              <img src="img/streetcred/dereck_circle.jpg" alt="Dereck smiling and looking to the side">
-              <div class="dereck-header">
-                <p>
-                  Dereck says:
-                </p>
-              </div>
-              <div class="dereck-quote">
-                <p>
-                  I’m a visual person so I LOVE to be able to see the full-size
-                  map at all times. And it’s re­ally cool how the map moves to
-                  cen­ter in on the new route when you swipe to see the next hunt
-                  at the bottom.
-                </p>
-              </div>
-            </div><!-- END of class="dereck-says" -->
-          </div><!-- END of Cell(3,2) -->
-        </div><!-- END of 2x3 grid -->
-      </div><!-- END of Container for Finding a Hunt section -->
+          </div>
+          <div class="dereck-says">
+            <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+            <p>
+              I’m a visual person so I LOVE to be able to see the full-size
+              map at all times. And it’s re­ally cool how the map moves to
+              cen­ter in on the new route when you swipe to see the next hunt
+              at the bottom.
+            </p>
+          </div>
+        </div><!-- END of Grid container -->
+      </div><!-- END of Finding a Hunt section -->
 
-      <div class="sc back-light-grey"><!-- Container for Getting Info about a Hunt section -->
-        <h4 class="sc">B. Getting info about a hunt</h4>
-        <div><!-- 3x3 grid -->
-          <div><!-- Cell(1,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
+      <div class="sc back-light-grey full-width-section section-bottom"><!-- Container for Getting Info about a Hunt section -->
+        <h4>B. Getting info about a hunt</h4>
+        <div id="hunt-info" class="section-top"><!-- Grid container -->
+          <div id="sc-b-lo-fid">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_large.png" alt="First sketched iteration of Hunt Detail wireframe">
             </picture>
-          </div><!-- END of Cell(1,1) -->
-          <div class="sc font-medium"><!-- Cell(2,1) -->
+          </div>
+          <div id="sc-b-caption1" class="font-medium caption-right">
             <p>
               The hunt de­tail started out as a sim­ple screen, with de­tail about
               the hunt, and a few ac­tions such as buy this hunt, add to
               cal­en­dar, and start hunt.
             </p>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cell(1,2) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
+          </div>
+          <div id="sc-b-mid-fid">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_large.png" alt="Second mid-fidelity iteration of Hunt Detail wireframe">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
+          </div>
+          <div id="sc-b-connector2">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-b-hi-fid1">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_large.png" alt="Third high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
-          </div><!-- END of Cell(1,2) -->
-          <div class="sc font-medium"><!-- Cell(2,2) -->
+          </div>
+          <div id="sc-b-connector3">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-b-caption2" class="font-medium">
             <p>
               I stream­lined the lay­out to establish a clear CTA in the bot­tom
               nav­i­ga­tion, while pre­sent­ing sec­ondary ac­tions in the form of FABs
               overlapping the hunt pic­ture.
             </p>
-          </div><!-- END of Cell(2,2) -->
-          <div><!-- Cell(1,3) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
+          </div>
+          <div id="sc-b-hi-fid2">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_large.png" alt="Final high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
-          </div><!-- END of Cell(1,3) -->
-          <div class="sc font-medium"><!-- Cell(3,2) -->
+          </div>
+          <div id="sc-b-caption3" class="font-medium caption-right"><!-- Cell(3,2) -->
             <p>
               In the end, the chal­lenge was to pre­sent a large amount of
               in­for­ma­tion in an or­ga­nized man­ner while mak­ing it easy for the
               user to iden­tify and find ac­tion­able items.
             </p>
-          </div><!-- END of Cell(3,2) -->
-        </div><!-- END of 3x3 grid -->
-      </div><!-- END of Container for Getting Info about a Hunt section -->
+          </div>
+        </div><!-- END of grid container -->
+      </div><!-- END of section Getting Info about a Hunt -->
 
-      <div><!-- Container for Buying a Hunt section -->
-        <h4 class="sc">C. Buying a hunt</h4>
-        <div><!-- 2x6 grid -->
-          <div><!-- Cells(1,1)(1,2) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
+      <div class="sc section-bottom"><!-- Container for Buying a Hunt section -->
+        <h4>C. Buying a hunt</h4>
+        <div id="buy-hunt" class="section-top"><!-- Grid container -->
+          <div id="sc-c-buy-lo-fid">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_large.png" alt="First sketched iteration of Buy Hunt wireframe">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
+          </div>
+          <div id="sc-c-conf-lo-fid">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_large.png" alt="First sketched iteration of Successful Purchase wireframe">
             </picture>
-          </div><!-- END of Cell(1,1)(1,2) -->
-          <div class="sc"><!-- Cells(2,1)(2,2)(2,3) -->
+          </div>
+          <div id="sc-c-caption1">
             <p>
               The Buy Hunt screen did­n’t change much be­tween low and high
               fi­delity. How­ever, the pay­ment con­fir­ma­tion screen was ma­jorly
               im­proved. In the low fi­delity stage, it gave the user too many
               op­tions af­ter pur­chas­ing a hunt.
             </p>
-          </div><!-- END of Cells(2,1)(2,2)(2,3) -->
-          <div><!-- Cells(1,3)(1,4) -->
+          </div>
+          <div id="sc-c-buy-hi-fid1">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_large.png" alt="Second high-fidelity iteration of Buy Hunt screen">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
+          </div>
+          <div id="sc-c-conf-hi-fid1">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_large.png" alt="Second high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
-          </div><!-- END of Cells(1,3)(1,4) -->
-          <div><!-- Cell(1,5)(1,6) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_small.jpg">
+          </div>
+          <div id="sc-c-buy-hi-fid2">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_large.jpg" alt="Final high-fidelity iteration of Buy Hunt screen">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
+          </div>
+          <div id="sc-c-conf-hi-fid2">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_large.png" alt="Final high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
-          </div><!-- END of Cells(1,5)(1,6) -->
-          <div class="sc"><!-- Cells(2,4)(2,5)(2,6) -->
+          </div>
+          <div id="sc-c-caption2">
             <p>
               Only the most im­por­tant action ‘Start­ scavenger hunt now’ is kept
               on the con­fir­ma­tion modal, while the rest of the op­tions are
               avail­able from the Hunt De­tail screen if the user prefers to start
               the hunt later.
             </p>
-          </div><!-- END of Cells(2,4)(2,5)(2,6) -->
-        </div><!-- END of 2x6 grid -->
-      </div><!-- END of Container for Buying a Hunt section -->
+          </div>
+        </div><!-- END of grid container -->
+      </div><!-- END of section Buying a Hunt -->
 
-      <div class="sc back-light-blue"><!-- Container for Selecting Preferences section -->
-        <h4 class="sc">D. Selecting preferences</h4>
-        <div><!-- 2x3 grid -->
-          <div><!-- Cell(1,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
+      <div class="sc back-light-blue full-width-section"><!-- Container for Selecting Preferences section -->
+        <h4>D. Selecting preferences</h4>
+        <div id="sc-pref" class="section-top"><!-- Grid container -->
+          <div id="sc-d-lo-fid">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_1_large.png" alt="First sketched iteration of Restaurant Preferences wireframe">
             </picture>
-          </div><!-- END of Cell(1,1) -->
-          <div class="sc font-medium"><!-- Cells(2,1)(2,2) -->
+          </div>
+          <div id="sc-d-connector1">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-d-caption1" class="font-medium">
             <p>
               The idea of us­ing pills for the user to se­lect pref­er­ences stuck
               till the end (al­though they kind of look like pud­dles in this
               very low fi­delity version…)
             </p>
-          </div><!-- END of Cells(2,1)(2,2) -->
-          <div><!-- Cell(1,2) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
+          </div>
+          <div id="sc-d-hi-fid1">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_2_large.png" alt="Second high-fidelity iteration of Restaurant Preferences screen on iPhone XS">
             </picture>
-          </div><!-- END of Cell(1,2)-->
-          <div><!-- Cell(1,3) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.jpg">
+          </div>
+          <div id="sc-d-hi-fid2-a">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3a_large.jpg" alt="Final high-fidelity iteration of Restaurant Preferences screen">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
+          </div>
+          <div id="sc-d-hi-fid2-b">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3b_large.png" alt="Final high-fidelity iteration of Place Preferences screen on iPhone XS">
             </picture>
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.jpg">
+          </div>
+          <div id="sc-d-hi-fid2-c">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3c_large.jpg" alt="Final high-fidelity iteration of Events & Interest Preferences screen">
             </picture>
-          </div><!-- END of Cell(1,3) -->
-          <div class="sc"><!-- Cell(2,3) -->
+          </div>
+          <div id="sc-d-connector2">
+            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
+          </div>
+          <div id="sc-d-caption2">
             <p>
               The over­all de­sign got more crisp and re­fined. For instance, I
               replaced the traditional progress bar with large icons to make
               the screen look more enticing.
             </p>
-          </div><!-- END of Cell(2,2) -->
-        </div><!-- END of 2x3 grid -->
-      </div><!-- END of Container for Selecting Preferences section -->
+          </div>
+        </div><!-- END of grid container -->
+      </div><!-- END of section Selecting Preferences -->
 
-    </div><!-- END of Section 5 container -->
+    </section><!-- END of Section 5 container -->
 
     <!-- 06 USABILITY TESTING ------------------------------------------------->
-    <div><!-- Section 6 container -->
-      <div><!-- 3x3 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-testing" class="sc no-transition"><!-- Section 6 container -->
+      <div class="sc section-header"><!-- Grid container for section header -->
+        <div>
           <h1 class="sc">06</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cells(2,1)(3,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Usability Testing</h1>
+        </div>
+        <div class="sc sub-sections">
+          <ul>
             <li>usability test plan</li>
             <li>test objective</li>
             <li>the participants</li>
             <li>test results</li>
             <li>issues & solutions</li>
           </ul>
-        </div><!-- END of Cells(2,1)(3,1) -->
-        <div><!-- Cells(1,2)(1,3) -->
-          <h1 class="sc">Usability Testing</h1>
-        </div><!-- END of Cells(1,2)(1,3) -->
-        <div><!-- Cells(2,2)(2,3) -->
-          <p class="sc">
-            Test­ing with real peo­ple is a cru­cial step in the it­er­a­tive de­sign
-            process, not only to re­fine the de­sign, but also to de­ter­mine how
-            suc­cess­ful we were in solv­ing the ini­tial prob­lem. Are we pro­vid­ing
-            the right fea­tures? Are they us­able? Are they en­joy­able? Let’s find
-            out.
-          </p>
-        </div><!-- END of Cells(2,2)(2,3) -->
-        <div><!-- Cell(3,2) -->
-          <p class="sc general-quote">
-            Failing to plan is planning to fail.
-          </p>
-          <h2>USABILITY TEST PLAN</h2>
-          <p>
-            ­­I pre­pared a us­abil­ity test plan to out­line the scope of the test­ing
-            and iron out lo­gis­ti­cal de­tails in ad­vance of the ses­sions. Here’s
-            what my plan in­cludes:
-          </p>
-          <ul class="sc bullets med-blue-bullets">
-            <li>Test script</li>
-            <li>Informed consent form</li>
-            <li>Pre-test questionnaire</li>
-            <li>Scenario and list of tasks tested</li>
-            <li>Evaluation form for each task (SEQ)</li>
-            <li>Overall satisfaction questionnaire (SUS)</li>
-          </ul>
-          <h2>TEST OBJECTIVE</h2>
-          <p>
-            The goal of the testing was to measure StreetCred’s usability for
-            first-time users by observing how the participants interact with
-            the app when they first open it, and how they complete a few basic
-            tasks.
-          </p>
-          <h2>THE PARTICIPANTS</h2>
-          <p>
-            I re­cruited 6 par­tic­i­pants from my per­sonal and pro­fes­sional net­work
-            who gra­ciously ac­cepted to put my pro­to­type to the test.
-          </p>
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/participant_icons_small.png">
-            <img src="img/streetcred/sec6_testing/participant_icons_large.png" alt="3 male icons and 3 female icons, representing test participants">
-          </picture>
-          <p>
-            When se­lect­ing the par­tic­i­pants, I made sure to cover a wide age
-            range and in­clude var­i­ous personalities and back­grounds. One of the
-            test sub­jects actually shared a lot of sim­i­lar­i­ties with Dereck.
-          </p>
-        </div><!-- END of Cell(3,2) -->
-        <div><!-- Cell(3,3) -->
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/test_plan_1_small.png">
-            <img src="img/streetcred/sec6_testing/test_plan_1_large.png" alt="Samples pages of test plan, including Usability Test Script, Informed Consent Form, and Scenarios & Tasks">
-          </picture>
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/test_plan_2_small.png">
-            <img src="img/streetcred/sec6_testing/test_plan_2_large.png" alt="Samples pages of test plan, including Pre-Test Questions, Satisfaction Questionnaire, and Evaluation of Tasks">
-          </picture>
-        </div><!-- END of Cell(3,3) -->
-      </div><!-- END of 3x3 grid -->
+        </div>
 
-      <div class="sc back-med-red"><!-- Transition section with stats -->
-        <div><!-- Row container -->
-          <div><!-- Column 1 -->
+        <div id="sc-testing-prep" class="sc first-body-cell"><!-- Grid container -->
+          <div id="sc-test-p1" class="sc">
+            <p>
+              Test­ing with real peo­ple is a cru­cial step in the it­er­a­tive de­sign
+              process, not only to re­fine the de­sign, but also to de­ter­mine how
+              suc­cess­ful we were in solv­ing the ini­tial prob­lem. Are we pro­vid­ing
+              the right fea­tures? Are they us­able? Are they en­joy­able? Let’s find
+              out.
+            </p>
+          </div>
+          <div id="sc-testing-quote" class="sc indented-quote">
+            <p>
+              Failing to plan is planning to fail.
+            </p>
+          </div>
+          <div id="sc-test-plan" class="sc">
+            <h2>USABILITY TEST PLAN</h2>
+            <p>
+              ­­I pre­pared a us­abil­ity test plan to out­line the scope of the test­ing
+              and iron out lo­gis­ti­cal de­tails in ad­vance of the ses­sions. Here’s
+              what my plan in­cludes:
+            </p>
+            <ul class="sc bullets med-blue-bullets">
+              <li>Test script</li>
+              <li>Informed consent form</li>
+              <li>Pre-test questionnaire</li>
+              <li>Scenario and list of tasks tested</li>
+              <li>Evaluation form for each task (SEQ)</li>
+              <li>Overall satisfaction questionnaire (SUS)</li>
+            </ul>
+          </div>
+          <div id="sc-test-plan-docs">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_1_small.png">
+              <img src="img/streetcred/sec6_testing/test_plan_1_large.png" alt="Samples pages of test plan, including Usability Test Script, Informed Consent Form, and Scenarios & Tasks">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_2_small.png">
+              <img src="img/streetcred/sec6_testing/test_plan_2_large.png" alt="Samples pages of test plan, including Pre-Test Questions, Satisfaction Questionnaire, and Evaluation of Tasks">
+            </picture>
+          </div>
+          <div id="sc-test-objectives" class="sc">
+            <h2>TEST OBJECTIVE</h2>
+            <p>
+              The goal of the testing was to measure StreetCred’s usability for
+              first-time users by observing how the participants interact with
+              the app when they first open it, and how they complete a few basic
+              tasks.
+            </p>
+          </div>
+          <div id="sc-test-participants" class="sc section-bottom">
+            <h2>THE PARTICIPANTS</h2>
+            <p>
+              I re­cruited 6 par­tic­i­pants from my per­sonal and pro­fes­sional net­work
+              who gra­ciously ac­cepted to put my pro­to­type to the test.
+            </p>
+            <picture id="sc-test-participants-icons">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/participant_icons_small.png">
+              <img src="img/streetcred/sec6_testing/participant_icons_large.png" alt="3 male icons and 3 female icons, representing test participants">
+            </picture>
+            <p>
+              When se­lect­ing the par­tic­i­pants, I made sure to cover a wide age
+              range and in­clude var­i­ous personalities and back­grounds. One of the
+              test sub­jects actually shared a lot of sim­i­lar­i­ties with Dereck.
+            </p>
+          </div>
+        </div><!-- END of grid container -->
+      </div><!-- END of grid container -->
+
+      <div class="sc back-med-red full-width-section"><!-- Transition section with stats -->
+        <div id="sc-tester-stats"><!-- Grid container -->
+          <div id="sc-stat1">
             <img src="img/streetcred/sec6_testing/participant_stats/gender.png" alt="3 males + 3 females = 6 participants">
-          </div><!-- END of Column 1 -->
-          <div><!-- Column 2 -->
+          </div>
+          <div id="sc-stat2">
             <img src="img/streetcred/sec6_testing/participant_stats/age_range.png" alt="25 to 49 years old">
-          </div><!-- END of Column 2 -->
-          <div><!-- Column 3 -->
+          </div>
+          <div id="sc-stat3">
             <img src="img/streetcred/sec6_testing/participant_stats/session_type.png" alt="4 in-person sessions, 2 remote sessions">
-          </div><!-- END of Column 3 -->
-          <div><!-- Column 4 -->
+          </div>
+          <div id="sc-stat4">
             <img src="img/streetcred/sec6_testing/participant_stats/session_length.png" alt="35 to 60 minutes per session">
           </div><!-- END of Column 4 -->
-        </div><!-- END of Row container -->
+        </div><!-- END of grid container -->
       </div><!-- END of Transition section with stats -->
 
-      <div><!-- Test Results section -->
-        <h2 class="sc">TEST RESULTS</h2>
-        <table class="sc">
-          <tr>
-            <th colspan="2">Task</th>
-            <th>SEQ score*</th>
-            <th>Outcome/Observations</th>
-          </tr>
-          <tr>
-            <td>1.</td>
-            <td>Find hunts</td>
-            <td>
-              4.7
-              <br><span class="sc font-smallest">very easy</span>
-            </td>
-            <td>Searching for a hunt was easy and straightforward.
-                <br>Map functionality is well-integrated.</td>
-          </tr>
-          <tr>
-            <td>2.</td>
-            <td>Buy a hunt</td>
-            <td>
-              4.3
-              <br><span class="sc font-smallest">easy</span>
-            </td>
-            <td>Buy­ing a hunt was easy, but 5 of the 6 par­tic­i­pants did­n’t like
-                to have to cre­ate an ac­count to buy the hunt.</td>
-          </tr>
-          <tr>
-            <td>3.</td>
-            <td>Invite other players to join a hunt</td>
-            <td>
-              5.0
-              <br><span class="sc font-smallest">very easy</span>
-            </td>
-            <td>Inviting players was quick and easy.</td>
-          </tr>
-          <tr>
-            <td>4.</td>
-            <td>Organize players into teams</td>
-            <td>
-              3.7
-              <br><span class="sc font-smallest">moderately
-              <br>easy</span>
-            </td>
-            <td>Al­though all par­tic­i­pants ended up suc­cess­fully com­plet­ing the
+      <div class="sc"><!-- Test Results section -->
+        <h2>TEST RESULTS</h2>
+        <div id="sc-test-results">
+          <div class="table-header">
+            <p>Task</p>
+            <p>SEQ score*</p>
+            <p>Outcome/Observations</p>
+          </div>
+          <div id="task1" class="test-task">
+            <div class="task-number">
+              1
+            </div>
+            <div class="task-desc">
+              Find hunts
+            </div>
+            <div class="seq-score">
+              <span class="sc font-blue font-largest">4.7</span> <span class="seq-score-desc">very easy</span>
+            </div>
+            <div class="task-result">
+              Searching for a hunt was easy and straightforward.
+              Map functionality is well-integrated.
+            </div>
+          </div>
+          <div id="task2" class="test-task">
+            <div class="task-number">
+              2
+            </div>
+            <div class="task-desc">
+              Buy a hunt
+            </div>
+            <div class="seq-score">
+              <span class="sc font-blue font-largest">4.3</span> <span class="seq-score-desc">easy</span>
+            </div>
+            <div class="task-result">
+              Buy­ing a hunt was easy, but 5 of the 6 par­tic­i­pants did­n’t like
+              to have to cre­ate an ac­count to buy the hunt.
+            </div>
+          </div>
+          <div id="task3" class="test-task">
+            <div class="task-number">
+              3
+            </div>
+            <div class="task-desc">
+              Invite other players to join a hunt
+            </div>
+            <div class="seq-score">
+              <span class="sc font-blue font-largest">5.0</span> <span class="seq-score-desc">very easy</span>
+            </div>
+            <div class="task-result">
+              Inviting players was quick and easy.
+            </div>
+          </div>
+          <div id="task4" class="test-task">
+            <div class="task-number">
+              4
+            </div>
+            <div class="task-desc">
+              Organize players into teams
+            </div>
+            <div class="seq-score">
+              <span class="sc font-blue font-largest">3.7</span> <span class="seq-score-desc">moderately easy</span>
+            </div>
+            <div class="task-result">
+              Al­though all par­tic­i­pants ended up suc­cess­fully com­plet­ing the
               task, most ini­tially strug­gled with cre­at­ing a new team and
-              thought the process was not in­tu­itive.</td>
-          </tr>
-        </table>
-        <ul class="sc bullet-asterisk">
-          <li>
-            <i>SEQ is a single ease question that the test participants answered
+              thought the process was not in­tu­itive.
+            </div>
+          </div>
+        </div>
+        <div class="sc bullet-asterisk">
+            SEQ is a single ease question that the test participants answered
             after each task to assess the difficulty of the task on a scale
-            from 1—very difficult to 5—very easy.</i>
-          </li>
-        </ul>
-        <p>
-          In addition to the SEQ, participants were asked to fill out a system
-          usability scale (SUS) questionnaire at the end of their testing
-          session. The SUS score measures how satisfied or dissatisfied each
-          user was with the usability of the app.
-        </p>
-        <div><!-- 2x2 grid -->
-          <div class="sc"><!-- Cell(1,1) -->
-            <h4>Average SUS score</h4>
-          </div><!-- END of Cell(1,1) -->
-          <div><!-- Cell(2,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/avg_satisfaction_small.png">
-              <img src="img/streetcred/sec6_testing/avg_satisfaction_large.png" alt="Graph showing average satisfaction score of 93%">
-            </picture>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cell(1,2) -->
-            <h4>Positive quotes</h4>
-          </div><!-- END of Cell(1,2) -->
-          <div class="sc"><!-- Cell(2,2) -->
-            <p>
-              <i>Onboarding screens are delightful and informative.</i>
-            </p>
-            <p>
-              <i>Personalization screens are welcoming and easy to fill out.</i>
-            </p>
-            <p>
-              <i>The app looks streamlined and polished.</i>
-            </p>
-          </div><!-- END of Cell(2,2) -->
-        </div><!-- END of 2x2 grid -->
+            from 1 (very difficult) to 5 (very easy).
+        </div>
 
-      </div><!-- END of Test Results section -->
+        <div class="sc section-top partial-divider">
+          <p>
+            In addition to the SEQ, participants were asked to fill out a system
+            usability scale (SUS) questionnaire at the end of their testing
+            session. The SUS score measures how satisfied or dissatisfied each
+            user was with the usability of the app.
+          </p>
+          <div id="sc-test-sus-quotes" class="sc section-bottom"><!-- Grid container -->
+            <div>
+              <h4>Average SUS score</h4>
+            </div>
+            <div id="sc-sus-score">
+              <picture>
+                <img src="img/streetcred/sec6_testing/avg_satisfaction.png" alt="Graph showing average satisfaction score of 93%">
+              </picture>
+            </div>
+            <div><!-- Cell(1,2) -->
+              <h4>Positive quotes from testing</h4>
+            </div>
+            <div id="sc-positive-quotes" class="sc">
+              <div class="quote sc-tester-quote">
+                <p>
+                  Onboarding screens are delightful and informative.
+                </p>
+              </div>
+              <div class="quote sc-tester-quote">
+                <p>
+                  Personalization screens are welcoming and easy to fill out.
+                </p>
+              </div>
+              <div class="quote sc-tester-quote">
+                <p>
+                  The app looks streamlined and polished.
+                </p>
+              </div>
+            </div>
+          </div><!-- END of grid container -->
+        </div>
+      </div><!-- END of section Test Results -->
 
-      <div class="sc back-light-blue"><!-- Identifying, Prioritizing, and Fixing Issues section -->
+      <div class="sc full-width-section back-light-blue"><!-- Identifying, Prioritizing, and Fixing Issues section -->
         <h2>IDENTIFYING, PRIORITIZING, AND FIXING ISSUES</h2>
         <p class="font-medium">
           I used affin­ity map­ping to or­ga­nize the in­for­ma­tion gath­ered from the
@@ -1421,208 +1548,196 @@
         </p>
       </div><!-- END of Identifying, Prioritizing, and Fixing Issues section -->
 
-      <div><!-- Issue #1 section -->
-        <h2 class="sc">ISSUE #1 | critical</h2>
+      <div class="sc"><!-- Issue #1 section -->
+        <h2>ISSUE #1<span class="title-suffix"> | critical</span></h2>
         <p class="sc issue">
           Users don’t want to have to join or log in to buy a hunt
         </p>
-        <div><!-- 2x3 grid -->
-          <div><!-- Cells(1,1)(2,1) -->
+        <div id="sc-test-issue1" ><!-- Grid container -->
+          <div id="sc-test1-old-screen">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_1/join_old_small.png">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_old_small.png">
               <img src="img/streetcred/sec6_testing/issue_1/join_old_large.png" alt="Hunt Detail screen on iPhone XS with Join or Log in pop up">
             </picture>
-          </div><!-- END of Cells(1,1)(2,1) -->
-          <div><!-- Cell(1,2) -->
-            <p class="sc">
+          </div>
+          <div id="sc-test1-caption" class="caption-right">
+            <p>
               Four of the ­6 testers did­n’t un­der­stand they had to join to
               pur­chase a hunt and wanted the op­tion to check out as a guest.
             </p>
-          </div><!-- END of Cell(1,2) -->
-          <div class="sc quote-testing"><!-- Cell(2,2) -->
+          </div>
+          <div id="sc-test1-quote" class="sc quote quote-testing">
             <p>
-              <i>Creating an account is a deal-breaker. I don’t want to have to
+              Creating an account is a deal-breaker. I don’t want to have to
               remember another password. Had this been a real app, I wouldn’t
-              have pur­chased the hunt.</i>
+              have pur­chased the hunt.
             </p>
             <p>
               —Rich (tester #1)
             </p>
-          </div><!-- END of Cell(2,2) -->
-          <div><!-- Cells(1,3)(2,3) -->
+          </div>
+          <div id="sc-test1-dereck-says">
             <div class="dereck-says">
-              <img src="img/streetcred/dereck_circle.jpg" alt="Dereck smiling and looking to the side">
-              <div class="dereck-header">
-                <p>
-                  Dereck says:
-                </p>
-              </div>
-              <div class="dereck-quote">
-                <p>
-                  I don’t mind cre­at­ing a new ac­count, but I’d like to be able
-                  to try the app be­fore join­ing. If I can poke around with­out
-                  hav­ing to cre­ate an ac­count, it tells me the app has noth­ing
-                  to hide.
-                </p>
-              </div>
-            </div><!-- END of class="dereck-says" -->
-          </div><!-- END of Cells(1,3)(2,3) -->
-        </div><!-- END of 2x3 grid -->
-        <h2 class="sc">SOLUTION</h2>
-        <div><!-- 2x3 grid -->
-          <div><!-- Cell(1,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_1/checkout_options_small.png">
-              <img src="img/streetcred/sec6_testing/issue_1/checkout_options_large.png" alt="Checkout Options screen on iPhone XS">
-            </picture>
-          </div><!-- END of Cell(1,1) -->
-          <div><!-- Cell(2,1) -->
-            <p class="sc">
-              Offer the option to checkout as a guest.
-            </p>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cell(1,2) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_1/guest_checkout_small.png">
-              <img src="img/streetcred/sec6_testing/issue_1/guest_checkout_large.png" alt="Guest Checkout screen on iPhone XS">
-            </picture>
-          </div><!-- END of Cell(1,2) -->
-          <div><!-- Cell(2,2) -->
-            <p class="sc">
-              Only ask for the min­i­mum info re­quired to check­out and be
-              trans­par­ent about how that info will be used.
-            </p>
-          </div><!-- END of Cell(2,2) -->
-          <div><!-- Cell(1,3) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_1/join_new_small.png">
-              <img src="img/streetcred/sec6_testing/issue_1/join_new_large.png" alt="New Join or Log in screen on iPhone XS">
-            </picture>
-          </div><!-- END of Cell(1,3) -->
-          <div><!-- Cell(2,3) -->
-            <p class="sc">
-              En­cour­age users to cre­ate an ac­count AF­TER they have suc­cess­fully
-              paid for a hunt.
-            </p>
-          </div><!-- END of Cell(2,3) -->
-        </div><!-- END of 2x3 grid -->
-      </div><!-- END of Issue #1 section -->
+              <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+              <p>
+                I don’t mind cre­at­ing a new ac­count, but I’d like to be able
+                to try the app be­fore join­ing. If I can poke around with­out
+                hav­ing to cre­ate an ac­count, it tells me the app has noth­ing
+                to hide.
+              </p>
+            </div><!-- END of .dereck-says -->
+          </div>
+        </div><!-- END of grid container-->
+        <div class="sc section-top">
+          <h2>SOLUTION</h2>
+          <div id="sc-test-solution1" class="section-bottom"><!-- Grid container -->
+            <div id="sc-sol1-screen1">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/checkout_options_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/checkout_options_large.png" alt="Checkout Options screen on iPhone XS">
+              </picture>
+            </div>
+            <div id="sc-sol1-caption1" class="caption-right">
+              <p>
+                Offer the option to checkout as a guest.
+              </p>
+            </div>
+            <div id="sc-sol1-screen2">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/guest_checkout_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/guest_checkout_large.png" alt="Guest Checkout screen on iPhone XS">
+              </picture>
+            </div>
+            <div id="sc-sol1-caption2" class="caption-right">
+              <p>
+                Only ask for the min­i­mum info re­quired to check­out and be
+                trans­par­ent about how that info will be used.
+              </p>
+            </div>
+            <div id="sc-sol1-screen3">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_new_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/join_new_large.png" alt="New Join or Log in screen on iPhone XS">
+              </picture>
+            </div>
+            <div id="sc-sol1-caption3" class="caption-left">
+              <p>
+                En­cour­age users to cre­ate an ac­count AF­TER they have suc­cess­fully
+                paid for a hunt.
+              </p>
+            </div>
+          </div><!-- END of grid container-->
+        </div>
+      </div><!-- END of Issue #1 -->
 
-      <div><!-- Issue #2 section -->
-        <div class="sc back-light-blue">
-          <h2>ISSUE #2 | medium priority</h2>
+      <div class="sc"><!-- Issue #2 section -->
+        <div class="full-width-section back-light-blue">
+          <h2>ISSUE #2<span class="title-suffix"> | medium priority</span></h2>
           <p class="sc issue">
             The Players screen is not very intuitive when it comes to splitting
             players into teams.
           </p>
-          <div><!-- 3x3 grid -->
-            <div><!-- Cell(1,1) -->
-              <p class="sc font-medium">
+          <div id="sc-test-issue2"><!-- Grid container -->
+            <div id="sc-test2-caption1" class="caption-right">
+              <p class="font-medium">
                 Only 1 of the 6 par­tic­i­pants cre­ated a new team on first click
                 be­fore at­tempt­ing to move play­ers.
               </p>
-            </div><!-- END of Cell(1,1) -->
-            <div><!-- Cell(2,1) -->
+            </div>
+            <div id="sc-test2-caption2" class="caption-right">
               <p class="sc font-medium">
                 Four of the other 5 par­tic­i­pants thought the process was not very
                 in­tu­itive.
               </p>
-            </div><!-- END of Cell(2,1) -->
-            <div><!-- Cell(3,1) -->
+            </div>
+            <div id="sc-test2-caption3">
               <p class="sc font-medium">
                 One par­tic­i­pant said she would­n't have known play­ers could be
                 split into teams had it not been a task she was asked to per­form.
               </p>
-            </div><!-- END of Cell(3,1) -->
-            <div><!-- Cells(1,2)(2,2)(2,3) -->
+            </div>
+            <div id="sc-test2-old-screen">
               <picture>
-                <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
                 <img src="img/streetcred/sec6_testing/issue_2/players_old_large.png" alt="Old Players screen on iPhone XS">
               </picture>
-            </div><!-- END of Cells(1,2)(2,2)(2,3) -->
-            <div><!-- Cells(1,3)(2,3)(3,3) -->
+            </div>
+            <div id="sc-test2-caption4" class="caption-bottom">
               <p class="sc font-medium">
                 Users didn’t understand the meaning of the asterisk icon and
                 didn’t notice there were team captains.
               </p>
-            </div><!-- END of Cells(1,3)(2,3)(3,3) -->
-          </div><!-- END of 3x3 grid -->
+            </div>
+          </div><!-- END of grid container-->
         </div><!-- END of .back-light-blue -->
         <h2 class="sc">SOLUTION</h2>
-        <div><!-- 2x3 grid -->
-          <div><!-- Cell(1,1) -->
-            <p class="sc">
+        <div id="sc-test-solution2"><!-- Grid container -->
+          <div id="sc-sol2-caption1" class="caption-left">
+            <p>
               I re-de­signed the screen with clear team con­tain­ers, and added a
               sec­ond empty team to in­di­cate play­ers can be split into teams.
             </p>
-          </div><!-- END of Cell(1,1) -->
-          <div><!-- Cell(2,1) -->
+          </div>
+          <div  id="sc-sol2-screen1">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_2/players_new_small.png">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_new_small.png">
               <img src="img/streetcred/sec6_testing/issue_2/players_new_large.png" alt="Final Players screen on iPhone XS">
             </picture>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cells(1,2)(1,3) -->
-            <p class="sc">
+          </div>
+          <div id="sc-sol2-caption2" class="caption-right">
+            <p>
               I changed the asterisk icon to a simple ‘C’ to identify the
               captains, and added a popup to point out what the icon means and
               how captains can be changed.
             </p>
-          </div><!-- END of Cells(1,2)(1,3) -->
-          <div><!-- Cell(2,2) -->
+          </div>
+          <div id="sc-sol2-screen2">
             <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec6_testing/issue_2/captain_tip_small.png">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/captain_tip_small.png">
               <img src="img/streetcred/sec6_testing/issue_2/captain_tip_large.png" alt="Final Players screen on iPhone XS with captain tip popup ">
             </picture>
-          </div><!-- END of Cell(2,2) -->
-          <div><!-- Cells(2,3) -->
+          </div>
+          <div id="sc-sol2-dereck-says" >
             <div class="dereck-says">
-              <img src="img/streetcred/dereck_circle.jpg" alt="Dereck smiling and looking to the side">
-              <div class="dereck-header">
-                <p>
-                  Dereck says:
-                </p>
-              </div>
-              <div class="dereck-quote">
-                <p>
-                  I’m not the type to read in­struc­tions; I just jump in and
-                  fig­ure things out on my own. It’s nice that the app is
-                  point­ing out the cap­tains, but I’m not in­ter­ested in the FAQ
-                  right now. I’m sure the cap­tains will make sense when I start
-                  the hunt. If it’s still un­clear, then I know to go to the FAQ
-                  for an­swers.
-                </p>
-              </div>
-            </div><!-- END of class="dereck-says" -->
-          </div><!-- END of Cell(2,3) -->
-        </div><!-- END of 2x3 grid -->
-      </div><!-- END of Issue #2 section -->
+              <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+              <p>
+                I’m not the type to read in­struc­tions; I just jump in and
+                fig­ure things out on my own. It’s nice that the app is
+                point­ing out the cap­tains, but I’m not in­ter­ested in the FAQ
+                right now. I’m sure the cap­tains will make sense when I start
+                the hunt. If it’s still un­clear, then I know to go to the FAQ
+                for an­swers.
+              </p>
+            </div><!-- END of .dereck-says -->
+          </div>
+        </div><!-- END of grid container -->
+      </div><!-- END of Issue #2 -->
 
-    </div><!-- END of Section 6 container -->
+    </section><!-- END of Section 6 container -->
 
-    <div><!-- US Flag Transition -->
+    <div id="us-flag-transition"><!-- US Flag Transition -->
       <picture>
-        <source media="(max-width: 411px)" srcset="img/streetcred/sec7_fine_tuning/ux_flag_small.jpg">
-        <img src="img/streetcred/sec7_fine_tuning/us_flag_large.jpg" alt="StreetCred sample screen and logo with U.S. flag colors">
+        <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/us_flag_small.jpg">
+        <img src="img/streetcred/sec7_fine_tuning/us_flag_large.jpg" alt="U.S. flag">
       </picture>
     </div><!-- END of US Flag Transition -->
 
     <!-- 07 FINE-TUNING THE DESIGN -------------------------------------------->
-    <div><!-- Section 7 container -->
-      <div><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-fine-tuning"><!-- Section 7 container -->
+      <div class="sc section-header"><!-- Grid container for section header -->
+        <div>
           <h1 class="sc">07</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Fine-Tuning the Design</h1>
+        </div>
+        <div class="sc sub-sections">
+          <ul>
             <li>color scheme</li>
             <li>design language</li>
           </ul>
         </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Fine-Tuning the Design</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+        <div class="sc first-body-cell">
           <h2>COLOR SCHEME</h2>
           <p>
             Since Street­Cred of­fers scav­enger hunts in U.S. cities, I used the
@@ -1630,42 +1745,30 @@
             give the app a less tra­di­tional look and feel. I wanted to con­vey
             that Street­Cred makes sight­see­ing fun and ex­cit­ing.
           </p>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
+        </div><!-- END of .first-body-cell -->
+      </div><!-- END of grid container for section header -->
 
-      <div><!-- 2x3 grid -->
-        <div><!-- Cell(1,1) -->
+      <div class="sc section-bottom" id="sc-color-scheme"><!-- Grid container -->
+        <div id="sc-color-transition">
           <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec7_fine_tuning/flag_colors_small.png">
-            <img src="img/streetcred/sec7_fine_tuning/flag_colors_large.png" alt="StreetCred sample screen and logo with U.S. flag colors">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/color_scheme_small.png">
+            <img src="img/streetcred/sec7_fine_tuning/color_shceme_large.png" alt="StreetCred sample screen and logo with U.S. flag colors">
           </picture>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <p class="sc">
+        </div>
+        <div id="sc-colors-caption1" class="caption-left">
+          <p>
             The original flag colors make the app look stern and boring.
           </p>
-        </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec7_fine_tuning/color_change_small.png">
-            <img src="img/streetcred/sec7_fine_tuning/color_change_large.png" alt="Color transition from U.S. flag colors to final StreetCred colors">
-          </picture>
-        </div><!-- END of Cell(1,2) -->
-        <div><!-- Cell(1,3) -->
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec7_fine_tuning/final_colors_small.png">
-            <img src="img/streetcred/sec7_fine_tuning/final_colors_large.png" alt="StreetCred sample screen and logo with final color scheme">
-        </picture>
-        </div><!-- END of Cell(1,3) -->
-        <div><!-- Cell(2,3) -->
-          <p class="sc">
+        </div>
+        <div id="sc-colors-caption2" class="caption-right">
+          <p>
             The final color scheme is bright, bold, and vibrant!
           </p>
-        </div><!-- END of Cell(2,3) -->
-      </div><!-- END of 2x3 grid -->
+        </div>
+      </div><!-- END of grid container -->
 
-      <div class="sc back-light-blue"><!-- Design Language section -->
-        <h2>DESIGN LANGUAGE</h2>
+      <div class="sc full-width-section back-light-blue"><!-- Design Language section -->
+        <h2 class="centered-title">DESIGN LANGUAGE</h2>
         <p class="font-medium">
           Visual design goes beyond branding and establishing a color scheme.
           In order to maintain design consistency throughout the app, I created
@@ -1676,39 +1779,40 @@
         <p class="font-medium">
           Below is the style guide at the core of StreetCred’s design language.
         </p>
-        <div><!-- Style sheet -->
-          <picture>
-            <source media="(max-width: 411px)" srcset="img/streetcred/sec7_fine_tuning/style_sheet_small.png">
+        <div class="section-top"><!-- Style sheet -->
+          <picture class="shadow-black">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/style_sheet_small.png">
             <img src="img/streetcred/sec7_fine_tuning/style_sheet_large.png" alt="StreetCred style sheet with color scheme, typography, iconography, buttons, etc">
         </picture>
         </div><!-- END of Style sheet -->
       </div><!-- END of Design Language section -->
-    </div><!-- END of Section 7 container -->
+    </section><!-- END of Section 7 container -->
 
     <!-- 08 ACCESSIBILITY ----------------------------------------------------->
-    <div><!-- Section 8 container -->
-      <div><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-accessibility" class="sc no-transition"><!-- Section 8 container -->
+      <div class="sc section-header"><!-- Grid container for section header -->
+        <div>
           <h1 class="sc">08</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Accessibility</h1>
+        </div>
+        <div class="sc sub-sections"><!-- Cell(2,1) -->
+          <ul>
             <li>contrast & readability</li>
             <li>beyond contrast</li>
           </ul>
         </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Accessibility</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+
+        <div class="sc first-body-cell"><!-- Cell(2,2) -->
           <p>
             I aim for my designs to be accessible, inclusive, and
             non-discriminatory, and StreetCred is no exception. As such, I went
             over every single screen with a fine-tooth comb to check for
             readability.
           </p>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
+        </div><!-- END of .firs-body-cell -->
+      </div><!-- END of grid container for section header -->
 
       <div><!-- Container for Contrast & Readability section -->
         <h2 class="sc">CONTRAST & READABILITY</h2>
@@ -1719,118 +1823,130 @@
           a sig­nif­i­cant amount of text when play­ing a hunt.
         </p>
         <picture>
-          <source media="(max-width: 411px)" srcset="img/streetcred/sec8_accessibility/contrast_small.png">
+          <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/contrast_small.png">
           <img src="img/streetcred/sec8_accessibility/contrast_large.png" alt="Various before and after StreetCred screens with callouts indicating improved contrast ratio of certain elements">
         </picture>
         <div class="dereck-says">
-          <img src="img/streetcred/dereck_circle.jpg" alt="Dereck smiling and looking to the side">
-          <div class="dereck-header">
-            <p>
-              Dereck says:
-            </p>
-          </div>
-          <div class="dereck-quote">
-            <p>
-              This is great! My girlfriend has vision problems because of her
-              diabetes. The high contrast will definitely make it easier for her
-              to use the app.
-            </p>
-          </div>
+          <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+          <p>
+            This is great! My girlfriend has vision problems because of her
+            diabetes. The high contrast will definitely make it easier for her
+            to use the app.
+          </p>
         </div><!-- END of class="dereck-says" -->
       </div><!-- END of Container for Contrast & Readability section -->
 
-      <div><!-- Container for Accessibility Beyond Contrast section -->
-        <h2 class="sc">ACCESSIBILITY BEYOND CONTRAST</h2>
-        <p class="sc">
+      <div class="sc section-top"><!-- Accessibility Beyond Contrast section -->
+        <h2>ACCESSIBILITY BEYOND CONTRAST</h2>
+        <p>
           Accessibility is so much more than contrast and readability. For
           instance, rather than using color to <span class="sc font-blue"><b>
           convey</b></span> information, it should be used to
           <span class="sc font-blue"><b>complement</b></span> information.
         </p>
-        <div><!-- 3x2 grid -->
-          <div><!-- Cell(1,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec8_accessibility/error_small.png">
+        <div id="sc-accessibility1" class="section-top"><!-- Grid container -->
+          <div id="sc-error">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/error_small.png">
               <img src="img/streetcred/sec8_accessibility/error_large.png" alt="Example of input field with error icon and error message">
           </picture>
-          </div><!-- END of Cell(1,1) -->
-          <div><!-- Cell(1,2) -->
-            <p class="sc">
+          <svg id="sc-error-elbow" class="connector sc line-black" height="200" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
+            <line x1="100%" y1="0" x2="100%" y2="100%" />
+          </svg>
+          </div>
+          <div id="sc-error-caption" class="sc caption-left">
+            <p>
               A color-blind person can tell there’s an error here because they
               can see the in-field icon and they can read the error message.
             </p>
-          </div><!-- END of Cell(1,2) -->
-          <div><!-- Cell(2,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec8_accessibility/buttons_small.png">
+          </div>
+          <div id="sc-buttons">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/buttons_small.png">
               <img src="img/streetcred/sec8_accessibility/buttons_large.png" alt="Two buttons side-by-side: ghost button on left, filled button on right">
           </picture>
-          </div><!-- END of Cell(2,1) -->
-          <div><!-- Cell(2,2) -->
-            <p class="sc">
+          <svg id="sc-buttons-elbow" class="connector sc line-black" height="200" width="200">
+            <line x1="100%" y1="0" x2="0" y2="0" />
+            <line x1="0" y1="0" x2="0" y2="100%" />
+          </svg>
+          </div>
+          <div id="sc-buttons-caption" class="sc caption-right">
+            <p>
               Users can see the difference between the two buttons regardless
               of color because the primary button is filled, while the other
               is a ghost button.
             </p>
-          </div><!-- END of Cell(2,2) -->
-          <div><!-- Cell(3,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec8_accessibility/link_small.png">
+          </div>
+          <div id="sc-link">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/link_small.png">
               <img src="img/streetcred/sec8_accessibility/link_large.png" alt="Example of underlined link text within a paragraph">
           </picture>
-          </div><!-- END of Cell(3,1) -->
-          <div><!-- Cell(3,2) -->
-            <p class="sc">
+          <svg id="sc-link-elbow" class="connector sc line-black" height="200" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
+            <line x1="100%" y1="0" x2="100%" y2="100%" />
+          </svg>
+          </div>
+          <div id="sc-link-caption" class="sc caption-left">
+            <p>
               Links are easy to differentiate from regular text based on more
               than color because they are underlined.
             </p>
-          </div><!-- END of Cell(3,2) -->
-        </div><!-- END of 3x2 grid -->
-        <p class="sc">
-          An­other way to make de­sign ac­ces­si­ble is to have bor­ders around in­put
-          fields so the user can tell where they’re ex­pected to en­ter text.
-          Ad­di­tion­ally place­holder text is used to sup­ple­ment the la­bel, not to
-          re­place it.
-        </p>
-        <div><!-- 1x2 grid -->
-          <div><!-- Cell(1,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec8_accessibility/input_field_small.png">
+          </div>
+        </div><!-- END of grid container -->
+        <div id="sc-accessibility2" class="sc section-top"><!-- Grid container -->
+          <div id="sc-another-way" class="sc">
+            <p>
+              An­other way to make de­sign ac­ces­si­ble is to have bor­ders around in­put
+              fields so the user can tell where they’re ex­pected to en­ter text.
+              Ad­di­tion­ally place­holder text is used to sup­ple­ment the la­bel, not to
+              re­place it.
+            </p>
+          </div>
+
+          <div id="sc-input-field" class="sc">
+            <picture class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/input_field_small.png">
               <img src="img/streetcred/sec8_accessibility/input_field_large.png" alt="Example of input field with border and label above field">
-          </picture>
-          </div><!-- END of Cell(1,1) -->
-          <div><!-- Cell(1,2) -->
-            <p class="sc">
+            </picture>
+            <svg id="sc-input-elbow" class="connector sc line-black" height="200" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
+              <line x1="100%" y1="0" x2="100%" y2="100%" />
+            </svg>
+          </div>
+          <div id="sc-input-caption" class="sc caption-left">
+            <p>
               The user is able to tell what the field is even when the
               placeholder text is not available anymore because the label is
-              outside of the field and always visible.
+              outside of the field and therefore always visible.
             </p>
-          </div><!-- END of Cell(1,2) -->
-        </div><!-- END of 1x2 grid -->
+          </div>
+        </div><!-- END of grid container -->
 
       </div><!-- Container for Accessibility Beyond Contrast section -->
-    </div><!-- END of Section 8 container -->
+    </section><!-- END of Section 8 container -->
 
     <div><!-- Final Designs Transition -->
       <picture>
-        <source media="(max-width: 411px)" srcset="img/streetcred/sec9_final_designs/montage_small.jpg">
+        <source media="(max-width: 767px)" srcset="img/streetcred/sec9_final_designs/montage_small.jpg">
         <img src="img/streetcred/sec9_final_designs/montage_large.jpg" alt="Montage of various StreetCred screens on iPhone XS">
     </picture>
     </div><!-- END of Final Designs Transition -->
 
     <!-- 09 FINAL DESIGNS ----------------------------------------------------->
-    <div><!-- Section 9 container -->
-      <div><!-- 2x3 grid -->
+    <section id="sc-final-designs"><!-- Section 9 container -->
+      <div class="sc section-header"><!-- Grid container for section header -->
         <div><!-- Cell(1,1) -->
           <h1 class="sc">09</h1>
         </div><!-- END of Cell(1,1) -->
         <div class="sc"><!-- Cell(1,2) -->
           <h1 class="sc">Final Designs and Interactive Prototype</h1>
         </div><!-- END of Cell(1,2) -->
-        <div class="sc"><!-- Cell(2,2) -->
+        <div class="sc section-top"><!-- Cell(2,2) -->
           <p>
             This is the big payoff! Nothing is more rewarding than seeing your
-            final scenes in action.
+            final screens in action.
           </p>
           <p>
             Thanks for sticking around till the end! And I don’t blame you if
@@ -1851,26 +1967,27 @@
         <div><!-- Cells(3,1)(3,2) -->
           <img src="img/streetcred/sec9_final_designs/preview.gif" alt="Animation of what happends when you open StreetCred on iPhone (from splash screen to home screen)">
         </div><!--  END of Cells(3,1)(3,2) -->
-      </div><!-- END of 2x3 grid -->
+      </div><!-- END of grid container for section header -->
 
-    </div><!-- END of Section 9 container -->
+    </section><!-- END of Section 9 container -->
 
     <!-- 10 FINAL THOUGHTS ---------------------------------------------------->
-    <div><!-- Section 10 container -->
-      <div class="sc back-light-blue"><!-- 2x2 grid -->
-        <div><!-- Cell(1,1) -->
+    <section id="sc-final-thoughts" class="sc no-transition"><!-- Section 10 container -->
+      <div class="sc section-header full-width-section back-light-blue"><!-- Section header grid -->
+        <div>
           <h1 class="sc">10</h1>
-        </div><!-- END of Cell(1,1) -->
-        <div><!-- Cell(2,1) -->
-          <ul class="sc font-smallest">
+        </div>
+        <div>
+          <h1 class="sc">Final Thoughts</h1>
+        </div>
+        <div class="sc sub-sections">
+          <ul>
             <li>future improvements</li>
             <li>learnings</li>
           </ul>
-        </div><!-- END of Cell(2,1) -->
-        <div><!-- Cell(1,2) -->
-          <h1 class="sc">Final Thoughts</h1>
-        </div><!-- END of Cell(1,2) -->
-        <div class="sc font-medium"><!-- Cell(2,2) -->
+        </div>
+
+        <div class="sc first-body-cell font-medium">
           <p>
             It was quite a journey to start with a problem to solve and end up
             with a scavenger hunt app that allows users to find hunts, read
@@ -1878,75 +1995,78 @@
             players to join in on the fun, split players into teams, and set
             preferences to obtain tailored recommendations.
           </p>
-        </div><!-- END of Cell(2,2) -->
-      </div><!-- END of 2x2 grid -->
+          <h2>FUTURE IMPROVEMENTS</h2>
+          <p class="font-medium">
+            After developing <span class="sc font-red"><b>5 core features</b></span>
+            and designing <span class="sc font-red"><b>30 different screens</b></span>,
+            I feel like I’ve only scratched the surface. There’s so much
+            more I’m planning on doing with StreetCred!
+          </p>
+          <div id="sc-improvements" class="sc section-top"><!-- Grid container -->
+            <div id="sc-impr-caption1" class="sc font-medium caption-right">
+              <p>
+                I’d like to give the users the abil­ity to add a hunt to their
+                cal­en­dar, whether the hunt is pur­chased or not. I be­lieve this
+                would be a use­ful fea­ture for peo­ple who like to plan their trip
+                ac­tiv­i­ties in ad­vance.
+              </p>
+            </div>
+            <div id="sc-improv-hunt-detail"><!-- Cell(1,3) -->
+              <picture  class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.jpg">
+                <img src="img/streetcred/sec10_final_thoughts/hunt_detail_large.jpg" alt="Section of Hunt Detail screen">
+              </picture>
+            </div>
+            <div id="sc-improv-caption2" class="sc font-medium caption-right">
+              <p>
+                Every­thing I’ve de­vel­oped so far hap­pens be­fore play­ing a hunt.
+                Now I want to al­low users to ac­tu­ally play a hunt. That’s a huge
+                un­der­tak­ing as it in­volves de­vel­op­ing a sub-app within the app.
+                I’m up for the chal­lenge!
+              </p>
+            </div>
+            <div id="sc-improv-join">
+              <picture  class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec10_final_thoughts/join_small.jpg">
+                <img src="img/streetcred/sec10_final_thoughts/join_large.jpg" alt="Section of kebab menu to join or login">
+              </picture>
+            </div>
+            <div id="sc-improv-caption3" class="sc font-medium caption-left">
+              <p>
+                I want to fine-tune the flow for joining or logging in, and
+                explore an option where the user could join or log in without
+                having to create a password.
+              </p>
+            </div>
+            <div id="sc-improv-my-hunts">
+              <picture class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec10_final_thoughts/my_hunts_small.jpg">
+                <img src="img/streetcred/sec10_final_thoughts/my_hunts_large.jpg" alt="Section of Hunt Detail screen">
+              </picture>
+            </div>
+            <div id="sc-improv-caption4" class="sc font-medium caption-right">
+              <p>
+                Once the func­tion­al­ity to play a hunt is developed, users need a
+                way to ac­cess their pre­vi­ously played hunts so they can see
+                pic­tures taken dur­ing the hunt, re­fer to the his­tor­i­cal
+                in­for­ma­tion pro­vided, and re­trieve rec­om­men­da­tions and dis­counts
+                of­fered.
+              </p>
+            </div>
+            <div id="sc-improv-caption5" class="sc font-medium caption-right">
+              <p>
+                I’d love to de­velop the scav­enger hunt demo. It’s an im­por­tant
+                fea­ture for first-time users so they know what to ex­pect be­fore
+                they in­vest their money and pre­cious va­ca­tion time into a hunt.
+              </p>
+            </div>
+          </div><!-- END of grid container for improvement examples-->
+        </div><!-- END of .first-body-cell -->
+      </div><!-- END of grid for section header -->
 
-      <div class="sc back-light-blue"><!-- Container for Future Improvements section -->
-        <h2 class="sc">FUTURE IMPROVEMENTS</h2>
-        <p class="sc font-medium">
-          After developing <span class="sc font-red"><b>5 core features</b></span>
-          and designing <span class="sc font-red"><b>30 different screens</b>
-          </span>, I feel like I’ve only scratched the surface. There’s so much
-          more I’m planning on doing with StreetCred!
-        </p>
-        <div><!-- 4x3 grid for examples of improvements-->
-          <div class="sc font-medium"><!-- Cells(1,1)(1,2) -->
-            <p>
-              I’d like to give the users the abil­ity to add a hunt to their
-              cal­en­dar, whether the hunt is pur­chased or not. I be­lieve this
-              would be a use­ful fea­ture for peo­ple who like to plan their trip
-              ac­tiv­i­ties in ad­vance.
-            </p>
-          </div><!-- END of Cells(1,1)(1,2) -->
-          <div><!-- Cell(1,3) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.jpg">
-              <img src="img/streetcred/sec10_final_thoughts/hunt_detail_large.jpg" alt="Section of Hunt Detail screen">
-            </picture>
-          </div><!-- END of Cell(1,3) -->
-          <div class="sc font-medium"><!-- Cells(2,2)(2,3) -->
-            <p>
-              Every­thing I’ve de­vel­oped so far hap­pens be­fore play­ing a hunt.
-              Now I want to al­low users to ac­tu­ally play a hunt. That’s a huge
-              un­der­tak­ing as it in­volves de­vel­op­ing a sub-app within the app.
-              I’m up for the chal­lenge!
-            </p>
-          </div><!-- END of Cells(2,2)(2,3) -->
-          <div><!-- Cells(2,1)(3,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec10_final_thoughts/join_small.jpg">
-              <img src="img/streetcred/sec10_final_thoughts/join_large.jpg" alt="Section of Hunt Detail screen">
-            </picture>
-          </div><!-- END of Cells(2,1)(3,1) -->
-          <div class="sc font-medium"><!-- Cells(3,2)(3,3) -->
-            <p>
-              I want to fine-tune the flow for joining or logging in, and
-              explore an option where the user could join or log in without
-              having to create a password.
-            </p>
-          </div><!-- END of Cells(3,2)(3,3) -->
-          <div><!-- Cell(4,1) -->
-            <picture>
-              <source media="(max-width: 411px)" srcset="img/streetcred/sec10_final_thoughts/my_hunts_small.jpg">
-              <img src="img/streetcred/sec10_final_thoughts/my_hunts_large.jpg" alt="Section of Hunt Detail screen">
-            </picture>
-          </div><!-- END of Cell(4,1) -->
-          <div class="sc font-medium"><!-- Cells(4,2)(4,3) -->
-            <p>
-              Once the func­tion­al­ity to play a hunt is developed, users need a
-              way to ac­cess their pre­vi­ously played hunts so they can see
-              pic­tures taken dur­ing the hunt, re­fer to the his­tor­i­cal
-              in­for­ma­tion pro­vided, and re­trieve rec­om­men­da­tions and dis­counts
-              of­fered.
-            </p>
-            <p>
-              I’d love to de­velop the scav­enger hunt demo. It’s an im­por­tant
-              fea­ture for first-time users so they know what to ex­pect be­fore
-              they in­vest their money and pre­cious va­ca­tion time into a hunt.
-            </p>
-          </div><!-- END of Cells(4,2)(4,3) -->
-        </div><!-- END of 4x3 grid for examples of improvements -->
-      </div><!-- END of Container for Future Improvements section -->
+      <div class="sc full-width-section back-light-blue"><!-- Container for Future Improvements section -->
+
+      </div><!-- END of Future Improvements section -->
 
       <div class="sc"><!-- Container for Learnings -->
         <h2>LEARNINGS</h2>
@@ -1963,47 +2083,58 @@
           <li><p>Develop a <span class="sc font-red"><b>design system</b></span>
             as soon as I start designing high-fidelity mockups.</p></li>
           <li><p>Despite my best efforts to put myself in the user's shoes,
-            <span class="sc font-red" style="font-size: 2em;"><b>I am not the user.</b></span> That’s why
-            it’s so important to get users involved as much as possible
-            throughout the design process with the many tools and techniques
-            at our disposal, such as surveys, interviews, card sorting,
-            usability testing, preference tests, first-click test, etc.</p></li>
+            <br><span class="sc font-red" style="font-size: 2em;">
+            <b>I am not the user.</b></span>
+            <br>That’s why it’s so important to get users involved as much as
+            possible throughout the design process with the many tools and
+            techniques at our disposal, such as surveys, interviews, card
+            sorting, usability testing, preference tests, first-click test,
+            etc.</p></li>
           <li><p>In future projects, I'd like to do more rounds of
             <span class="sc font-red font-medium" style="font-size: 1.2em;">usability testing</span>, and leverage
             tree-testing, preference tests and first-click tests.</p></li>
         </ul>
       </div><!-- END of Container for Learnings -->
-    </div><!-- END of Section 10 container -->
+    </section><!-- END of Section 10 container -->
 
   </main>
 
-  <footer id="contact">
-    <div>
+  <footer>
+    <section id="contact">
       <h1>Contact Me</h1>
       <p>
         Like what you see? Let's get in touch!
       </p>
-      <p>
-        Call me: <a href="tel:13128881726">1-312-888-1726</a> or Skype me:
-        <a href="skype:me.vesel">me.vesel</a>.
-      </p>
       <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
+      <p class="text-center">
+        Call me: <a href="tel:13128881726">1-312-888-1726</a> | Skype me:
+        <a href="skype:me.vesel">me.vesel</a>
+      </p>
+    </section>
 
-      <div class="cont-soc-media"><!-- Section with social media icons and copyright -->
-        <ul><!-- Social media icons -->
-          <li><a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
-            <span class="fab fa-linkedin"></span></a></li>
-          <li><a href="https://www.behance.net/marie-evevesel" target="_blank">
-            <span class="fab fa-behance"></span></a></li>
-          <li><a href=""><span class="fab fa-dribbble"></span></a></li>
-          <li><a href="mailto:info@mevesel.design">
-            <span class="fal fa-envelope"></span></a></li>
-        </ul>
+    <div class="solid-footer"><!-- Section with social media icons and copyright -->
+      <div class="grid-container soc-media-icons">
+        <div class="grid-item">
+          <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
+          <span class="fab fa-linkedin-in"></span></a>
+        </div>
+        <div class="grid-item">
+          <a href="https://www.behance.net/marie-evevesel" target="_blank">
+          <span class="fab fa-behance"></span></a>
+        </div>
+        <div class="grid-item">
+          <a href=""><span class="fab fa-dribbble"></span></a>
+        </div>
+        <div class="grid-item"><a href="mailto:info@mevesel.design">
+          <span class="far fa-envelope"></span></a>
+        </div>
+      </div>
+      <div id="mev-copyright">
         <p>
           &copy; Marie-Eve Vesel, 2020
         </p>
-      </div><!-- END of .cont-soc-media -->
-    </div>
+      </div>
+    </div><!-- END of Section with social media icons and copyright -->
   </footer>
 
 </body>
