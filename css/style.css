@@ -38,6 +38,8 @@ h1 {
   color: #7D0B5B /* Syrah */
 }
 
+h1.project { color: #B20F5C; }
+
 h2 {
   font-weight: bold;
   line-height: 1.2;
@@ -51,6 +53,7 @@ p {
 
 img {
   width: 100%;
+  vertical-align: middle;
 }
 
 a {
@@ -97,9 +100,7 @@ main.sc {
   padding: 60px 0 25px 20px;
 }
 
-.logo-container img {
-  width: 80%;
-}
+.logo-container img { width: 80%; }
 
 nav {
   background-color: #E6ECFF; /* Light blue */
@@ -118,7 +119,7 @@ nav .grid-item {
 
 .project .logo-container {
   background-color: white;
-  padding: 0 5px 0 20px;
+  padding: 0 5px 6px 20px;
 }
 
 .project .logo-container img {
@@ -182,7 +183,7 @@ p + h1 {
 /* -------------------------- */
 .project-picture { margin-bottom: 0.75em;}
 
-#work .grid-container:not(:last-of-type) {
+.case-study:not(:last-of-type) {
   padding-bottom: 20px;
 }
 
@@ -190,14 +191,14 @@ p + h1 {
   margin-bottom: 0;
 }
 
-#work .grid-container:not(:first-of-type) {
+.case-study:not(:first-of-type) {
   padding-top: 20px;
   border-top: 1px solid #7D0B5B;
 }
 
-#about, #work, #about-me {
-  border-bottom: 5px solid #E6ECFF; /* Light blue */
-}
+#about, #about-me { border-bottom: 5px solid #E6ECFF; /* Light blue */ }
+/* #work { border-bottom: 1.5px solid #3056CE; /* Blue */ } */
+
 
 /* Sections in about page */
 /* -------------------------- */
@@ -308,13 +309,34 @@ h1 > p {
   margin-top: 20px;
 }
 
+.button-disabled {
+  opacity: 70%;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Footer */
 /*----------------------------------------------------------------------------*/
 
 #contact {
+  background-color: #E6ECFF;
   padding-bottom: 15px;
 }
+
+#contact h1 { color: black; }
+
+#contact {
+  display: grid;
+  grid-template-areas: "title"
+                       "tagline"
+                       "button"
+                       "call-skype";
+  justify-items: center;
+}
+
+#contact h1 { grid-area: title;}
+#contact p:first-of-type { grid-area: tagline; }
+#contact a.button-ghost { grid-area: button; width: 100%; }
+#contact p:last-of-type { grid-area: call-skype; }
 
 .solid-footer {
   margin: 0;
@@ -322,14 +344,16 @@ h1 > p {
   padding: 20px 20px 10px 20px;
 }
 
-.grid-container.soc-media-icons {
+.soc-media-icons {
+  display: grid;
   width: 80%;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
-  text-align: center;
+  justify-items: center;
 }
 .soc-media-icons a {
   display: inline-block;
+  justify-content: center;
   color: #3056CE;
   line-height: 2.4em;
   text-align: center;
@@ -339,7 +363,7 @@ h1 > p {
   height: 2.2em;
 }
 
-#mev-copyright {
+#mev-copyright p {
   font-family: Arial, sans-serif;
   font-size: 0.8125em;
   color: white;
@@ -348,18 +372,111 @@ h1 > p {
 }
 
 /*----------------------------------------------------------------------------*/
-/* Media queries for tablet and desktop */
+/* Media queries for tablets and larger */
 /*----------------------------------------------------------------------------*/
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 640px) {
   nav {
     background-color: #B20F5C; /* Jazzberry */
     text-align: right;
   }
-  nav a {
-    color: white !important;
+  nav a { color: white !important; }
+
+  #top-nav {
+    display: grid;
+    grid-template-areas: "logo menus";
+    grid-template-columns: 3fr 2fr;
+    align-content: end;
   }
+
+  .logo-container { grid-area: logo; }
+  nav { display: grid; grid-area: menus; }
+
+  nav .grid-container { align-self: end; }
+  nav .grid-item {
+    vertical-align: bottom;
+    padding-bottom: 20px;
+  }
+
+  .logo-container { padding-left: 40px; }
+  .logo-container img { height: 71px; width: auto; }
+
+  main { padding-top: 156px; }
+
+  section {
+    padding: 30px 40px 40px 40px;
+  }
+
+  #about{
+    padding: 46px 57px 40px 193px;
+  }
+
+  a.button-filled { display: inline-block; }
+
+  .case-study {
+    display: grid;
+    grid-template-areas: "pic title"
+                         "pic desc"
+                         "button desc";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 32px 180px 1fr;
+    grid-column-gap: 35px;
+  }
+
+  .case-study h2 { grid-area: title; }
+  .case-study .project-picture { grid-area: pic; }
+  .case-study p { grid-area: desc; }
+  .case-study a { grid-area: button; }
+
+  .button-filled.work {
+    width: 100%;
+    margin-top: 15px;
+   }
+
+  .project-picture { margin-bottom: 0; }
+
+  .project-picture img {
+    width: 330px;
+    height: auto;
+    vertical-align: top;
+  }
+
+  #work { border-bottom: none;}
+  #contact p:first-of-type {margin-bottom: 0; }
+
+  #contact a.button-ghost {
+    width: 16em;
+    margin-top: 15px;
+  }
+
+  #contact h1 { display: none; }
+
+  .solid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  #mev-copyright p {
+    text-align: right;
+    margin: 0 40px 0 0;
+  }
+
+  .soc-media-icons {
+    justify-items: start;
+    margin-left: 40px;
+  }
+
+
+
+
+
+
 }
 
-@media screen and (min-width: 769px) {
+/*----------------------------------------------------------------------------*/
+/* Media queries for desktops and larger */
+/*----------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) {
   body { font-size: 18px; }
 }

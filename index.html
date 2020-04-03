@@ -31,16 +31,16 @@
 
   <body>
     <header class="sticky">
-      <div id="top-nav grid-container">
+      <div id="top-nav">
         <div class="logo-container grid-item">
           <a href="index.html">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/logo/logo_mobile.svg">
+              <source media="(max-width: 639px)" srcset="img/logo/logo_mobile.svg">
               <img src="img/logo/logo_desktop.svg" alt="M E V logo">
             </picture>
           </a>
         </div><!-- END .logo-container -->
-        <nav class="grid-container">
+        <nav>
           <div class="grid-container">
             <div class="grid-item">
               <a href="index.html#work">Work</a>
@@ -79,15 +79,15 @@
       <section id="work">
         <!-- My Work section -->
         <h1>My Work</h1>
-        <div class="grid-container"><!-- StreetCred case study -->
-          <h2 class="grid-item">StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
-          <div class="grid-item project-picture">
+        <div class="case-study"><!-- StreetCred case study -->
+          <h2>StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
+          <div class="project-picture">
             <picture>
-              <source media="(max-width:767px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
+              <source media="(max-width:639px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
               <img src="img/streetcred/streetcred_thumbnail_1200.jpg" alt="Montage of diagonal StreetCred screen mockups">
             </picture>
           </div>
-          <div class="grid-item">
+          <div>
             <p>
               StreetCred is a native app that takes sightseeing to a whole new
               level! It provides scavenger hunts as a fun way for tourists to
@@ -96,20 +96,20 @@
               responsible for the entire UX process from start to finish.
             </p>
           </div>
-          <div class="grid-item">
+          <div>
             <a class="button-filled work" href="streetcred.html">View case study</a>
           </div>
         </div><!-- END StreetCred case study -->
 
-        <div class="grid-container"><!-- My Word case study -->
-          <h2 class="grid-item">My Word! | <span class="font-medium">flashcard learning app</span></h2>
-          <div class="grid-item project-picture">
+        <div class="case-study"><!-- My Word case study -->
+          <h2>My Word! | <span class="font-medium">flashcard learning app</span></h2>
+          <div class="project-picture">
             <picture>
-              <source media="(max-width:767px)" srcset="img/my_word/my_word_thumbnail_600.png">
+              <source media="(max-width:639px)" srcset="img/my_word/my_word_thumbnail_600.png">
               <img src="img/my_word/my_word_thumbnail_1200.png" alt="My Word home screen with 3 sketched mockups">
             </picture>
           </div>
-          <div class="grid-item">
+          <div>
             <p>
               There's so much to learn! My Word is an app that allows students
               and learners of all ages to create and organize flashcards. It
@@ -119,8 +119,8 @@
               low-fidelity wireframing & prototyping, and usability testing.
             </p>
           </div>
-          <div class="grid-item">
-            <a class="button-filled work" href="#">View case study</a>
+          <div>
+            <a class="button-filled work button-disabled" href="">Coming soon</a>
           </div>
         </div><!-- END My Word case study -->
 
@@ -131,32 +131,25 @@
     <footer>
       <section id="contact">
         <h1>Contact Me</h1>
-        <p>
+        <p class="font-medium">
           Like what you see? Let's get in touch!
         </p>
         <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
-        <p class="text-center">
+        <p>
           Call me: <a href="tel:13128881726">1-312-888-1726</a> | Skype me:
           <a href="skype:me.vesel">me.vesel</a>
         </p>
       </section>
 
       <div class="solid-footer"><!-- Section with social media icons and copyright -->
-        <div class="grid-container soc-media-icons">
-          <div class="grid-item">
-            <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
+        <div class="soc-media-icons">
+          <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
             <span class="fab fa-linkedin-in"></span></a>
-          </div>
-          <div class="grid-item">
-            <a href="https://www.behance.net/marie-evevesel" target="_blank">
+          <a href="https://www.behance.net/marie-evevesel" target="_blank">
             <span class="fab fa-behance"></span></a>
-          </div>
-          <div class="grid-item">
-            <a href=""><span class="fab fa-dribbble"></span></a>
-          </div>
-          <div class="grid-item"><a href="mailto:info@mevesel.design">
+          <a href=""><span class="fab fa-dribbble"></span></a>
+          <a href="mailto:info@mevesel.design">
             <span class="far fa-envelope"></span></a>
-          </div>
         </div>
         <div id="mev-copyright">
           <p>
