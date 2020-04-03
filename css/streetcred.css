@@ -87,11 +87,9 @@ body .sc {
 
 .section-top {
   margin-top: 30px;
-  /* padding-top: 30px; */
 }
 .section-bottom {
   margin-bottom: 30px;
-  /* padding-bottom: 30px; */
 }
 
 .full-width-section {
@@ -170,10 +168,10 @@ body .sc {
 
 #intro-grid .screen-shot { grid-area: screen-shot; }
 
-#intro-grid .hero-text {
+#intro-grid .hero-text-cell {
   grid-area: hero-text;
-  height: 100%;
-  /* align-self: center; */
+
+  padding: 3em 2.5em 5.25em 0em;
 }
 
 #intro-grid .desc-text { grid-area: desc-text; }
@@ -182,11 +180,11 @@ body .sc {
   padding: 20px;
 }
 
-.sc-intro-top.hero-text {
+.sc-intro-top .hero-text {
   hyphens: auto;
   font-size: 0.9em;
-  padding: 3em 2.5em 5.25em 0em;
-  /* align-self: center; */
+  vertical-align: middle;
+  height: 100%;
 }
 
 .sc-intro-top {
@@ -227,7 +225,7 @@ body .sc {
 
 #sc-screen-shots {
   display: grid;
-  grid-temlate-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-items: center;
 }
 
@@ -296,6 +294,10 @@ body .sc {
   border-bottom: 2px solid #E97824;
 }
 
+.letsroam .logo,
+.letsroam .logo2 {
+  padding-bottom: .4em;
+}
 .uaq .logo,
 .uaq .st-title,
 .uaq .logo2,
@@ -323,7 +325,6 @@ body .sc {
 
 .sc .quote-interview {
   color: white;
-  /* background-color: #CE5573; /* med-red */ */
 }
 
 .sc .quote-interview p:first-of-type {
@@ -370,12 +371,11 @@ body .sc {
   position: relative;
 }
 
-#dereck-journey-vert-line {
+#sc-journey-map .connector {
   position: absolute;
   top: calc(58.37vw - 23.3px);
   left: calc(10vw + 1em);
-  /* left: calc(35vw + 5px); */
-  height: calc(13.73vw + 10px );
+  height: calc(15.9vw - 2.36px);
 }
 
 #malika-angie-journey {
@@ -443,6 +443,11 @@ body .sc {
   margin-bottom: 1em;
 }
 
+#sc-similarity-matrix img {
+  margin-bottom: 0.75em;
+}
+
+
 #sc-ia-conclusion {
   max-width: 85vw;
   margin-left: auto;
@@ -472,14 +477,14 @@ body .sc {
   position: relative;
 }
 
-#my-hunts-vert-line1 {
+#my-hunts-screen .connector:nth-of-type(1) {
   position: absolute;
   top: 18vw;
   left: calc(35vw + 5px);
   height: 29vw;
 }
 
-#my-hunts-horiz-line1 {
+#my-hunts-screen .connector:nth-of-type(2) {
   position: absolute;
   top: calc(18vw + 0.5em);
   left: calc(35vw + 5px);
@@ -489,18 +494,18 @@ body .sc {
 #my-hunts-caption1 { grid-area: caption1; }
 #my-hunts-caption1 p { margin-top: 18vw; }
 
-#my-hunts-horiz-line2 {
+#my-hunts-screen .connector:nth-of-type(3) {
   position: absolute;
   top: calc(66.4vw + 5px);
   left: 0.69vw;
   width: 33.47vw;
 }
 
-#my-hunts-vert-line2 {
+#my-hunts-screen .connector:nth-of-type(4) {
   position: absolute;
   top: calc(66.4vw + 5px);
   left: 5vw;
-  height: calc(5vw + 22px);
+  height: calc(5vw + 17px);
 }
 
 #my-hunts-caption2 {
@@ -544,206 +549,16 @@ body .sc {
 
 /* 05A Finding a hunt */
 /* -------------------------------------------------------------------------- */
-#finding-a-hunt {
+
+.sc-design-iterations {
   display: grid;
-  grid-template-areas: "lo-fid mid-fid"
-                       "connector1 connector2"
-                       "caption1 caption1"
-                       "hi-fid1 hi-fid2"
-                       "connector3 connector4"
-                       "caption2 caption2"
-                       "dereck-says dereck-says";
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px 20px;
   justify-items: center;
 }
 
-#sc-a-lo-fid { grid-area: lo-fid; }
-#sc-a-mid-fid { grid-area: mid-fid;}
-#sc-a-connector1 { grid-area: connector1; }
-#sc-a-connector2 { grid-area: connector2; }
-#sc-a-caption1 { grid-area: caption1; }
-#sc-a-hi-fid1 { grid-area: hi-fid1; }
-#sc-a-hi-fid2 { grid-area: hi-fid2; }
-#sc-a-connector3 { grid-area: connector3; }
-#sc-a-connector4 { grid-area: connector4; }
-#sc-a-caption2 { grid-area: caption2; }
-#finding-a-hunt .dereck-says { grid-area: dereck-says; }
-
-.sc-screen-low-fid img,
-.sc-screen-mid-fid img {
-  max-height: 82.5vw;
-  width: auto;
-}
-
-#sc-a-hi-fid1 img,
-#sc-a-hi-fid2 img {
-  max-width: 41vw;
-  width: auto;
-  height: auto;
-}
-
-/* 05B Getting info about a hunt */
-/* -------------------------------------------------------------------------- */
-
-#hunt-info {
-  display: grid;
-  grid-template-areas: "lo-fid caption1"
-                       "mid-fid hi-fid1"
-                       "connector2 connector3"
-                       "caption2 caption2"
-                       "hi-fid2 caption3";
-
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 20px;
-  justify-items: center;
-}
-
-#sc-b-lo-fid { grid-area: lo-fid; }
-
-#sc-b-caption1 {
-  grid-area: caption1;
-  align-self: center;
-}
-
-#sc-b-mid-fid { grid-area: mid-fid; }
-#sc-b-hi-fid1 { grid-area: hi-fid1; }
-#sc-b-connector2 { grid-area: connector2; }
-#sc-b-connector3 { grid-area: connector3; }
-#sc-b-caption2 { grid-area: caption2; }
-#sc-b-hi-fid2 { grid-area: hi-fid2; }
-
-#sc-b-caption3 {
-  grid-area: caption3;
-  margin-top: 19vw;
-}
-
-#sc-b-lo-fid img {
-  max-height: 82.5vw;
-  width: auto;
-}
-
-#sc-b-mid-fid img,
-#sc-b-hi-fid1 img {
-  max-height: 81.82vw;
-  width: auto;
-}
-
-#sc-b-hi-fid2 {
-  max-width: 41vw;
-  height: auto;
-}
-
-/* 05C Buying a hunt */
-/* -------------------------------------------------------------------------- */
-#buy-hunt {
-  display: grid;
-  grid-template-areas: "buy-lo-fid conf-lo-fid"
-                       "buy-hi-fid1 con-hi-fid1"
-                       "caption1 caption1"
-                       "buy-hi-fid2 conf-hi-fid2"
-                       "caption2 caption2";
-
-  grid-template-columns: 1fr 48vw;
-  grid-gap: 30px 0;
-  align-items: center;
-}
-
-#sc-c-buy-lo-fid { grid-area: buy-lo-fid; }
-#sc-c-conf-lo-fid { grid-area: conf-lo-fid; }
-#sc-c-buy-hi-fid1 { grid-area: buy-hi-fid1; display: none;}
-#sc-c-conf-hi-fid1 { grid-area: conf-hi-fid1; display: none;}
-#sc-c-caption1 { grid-area: caption1; }
-#sc-c-buy-hi-fid2 { grid-area: buy-hi-fid2; }
-#sc-c-conf-hi-fid2 { grid-area: conf-hi-fid2; }
-#sc-c-caption2 { grid-area: caption2; }
-
-#sc-c-buy-lo-fid,
-#sc-c-buy-hi-fid2 {
-  justify-self: end;
-  margin-right: -1vw;
-}
-
-#sc-c-conf-lo-fid img {
-  max-height: 82.5vw;
-  width: auto;
-}
-
-#sc-c-buy-lo-fid img {
-  max-height: 62.17vw;
-  width: auto;
-}
-
-#sc-c-conf-hi-fid2 img {
-  max-width: 41vw;
-  height: auto;
-}
-#sc-c-buy-hi-fid2 img {
-  max-width: 33vw;
-  height: auto;
-}
-
-/* 05D Selecting preferences */
-/* -------------------------------------------------------------------------- */
-#sc-pref {
-  display: grid;
-  grid-template-areas: "lo-fid hi-fid1"
-                       "connector1 ."
-                       "caption1 caption1"
-                       "hi-fid2b hi-fid2c"
-                       "connector2 ."
-                       "caption2 caption2";
-
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-#sc-d-lo-fid { grid-area: lo-fid; }
-#sc-d-hi-fid1 { grid-area: hi-fid1; }
-#sc-d-connector1 { grid-area: connector1; }
-#sc-d-caption1 { grid-area: caption1; }
-
-#sc-d-hi-fid2-b {
-  grid-area: hi-fid2b;
-  justify-self: end;
-  margin-right: -7vw;
-  z-index: 2;
-}
-
-#sc-d-hi-fid2-c {
-  grid-area: hi-fid2c;
-  justify-self: start;
-  margin-left: 1vw;
-  z-index: 1;
-}
-
-#sc-d-connector2 {
-  grid-area: connector2;
-  justify-self: start;
-  margin-left: calc(30vw - 15px);
- }
-#sc-d-caption2 { grid-area: caption2; }
-
-#sc-d-lo-fid img,
-#sc-d-hi-fid1 img {
-  max-height: 81.82vw;
-  width: auto;
-}
-
-#sc-d-hi-fid2-a img { display: none;}
-
-#sc-d-hi-fid2-b img {
-  max-width: 41vw;
-  height: auto;
-}
-
-#sc-d-hi-fid2-c img {
-  max-width: 33vw;
-  height: auto;
-}
-
+.sc-design-iterations .mockup { position: relative; }
+.sc-design-iterations .mockup svg { position: absolute; }
 
 .connector {
   stroke-width: 3;
@@ -751,15 +566,168 @@ body .sc {
 }
 
 .connector.dereck-red { stroke: #CD535F;}
-
 .connector.line-black { stroke: black; }
+.connector.sc-red { stroke: #CE5573;}
 
-.connector-circle {
-  width: 4vw;
-  object-fit: cover;
+.sc-design-iterations .connector.circle {
+  fill: white;
+  stroke-width: 2;
+}
+
+#hunt-info .connector.circle { fill: #F4F5F6; }
+#sc-pref .connector.circle { fill: #F3F6FC; }
+
+.sc-design-iterations .connector.line {
+  height: 80px;
+  stroke-width: 2;
+}
+
+.sc-design-iterations .connector.line.offset-lo-fid { height: calc(10.165vw + 80px); }
+
+.sc-design-iterations .sc-screen-hi-fid1 .connector,
+.sc-design-iterations .sc-screen-hi-fid2 .connector { top: calc(83.09vw + 5px); }
+
+.sc-design-iterations .sc-screen-lo-fid .connector,
+.sc-design-iterations .sc-screen-mid-fid .connector,
+#hunt-info .sc-screen-hi-fid1 .connector { top: calc(82.5vw + 10px); }
+
+.sc-design-iterations .sc-screen-rect-lo-fid .connector { top: calc(62.17vw + 10px); }
+#buy-hunt .sc-screen-lo-fid .connector.line { top: calc(72.33454vw + 10px); }
+
+.sc-design-iterations .connector { left: 0; }
+.sc-design-iterations .connector.line.horiz-middle {
+  left: calc(50vw - 50px);
+  width: 20vw;
+}
+
+#buy-hunt .connector.line.horiz-middle { left: calc(40vw - 50px); }
+
+.sc-design-iterations .sc-screen-lo-fid .connector { width: 39.17396061vw; }
+.sc-design-iterations .sc-screen-rect-lo-fid .connector { width: 34.9950629vw;}
+.sc-design-iterations .sc-screen-mid-fid .connector { width: 40.8006536vw; }
+.sc-design-iterations .sc-screen-hi-fid1 .connector,
+.sc-design-iterations .sc-screen-hi-fid2 .connector { width: 41vw; }
+
+.sc-design-iterations .sc-screen-lo-fid { grid-area: lo-fid;}
+.sc-design-iterations .sc-screen-rect-lo-fid { grid-area: rect-lo-fid; }
+.sc-design-iterations .sc-screen-mid-fid  { grid-area: mid-fid;}
+.sc-design-iterations .sc.caption1 { grid-area: caption1; }
+.sc-design-iterations .sc-screen-hi-fid1 { grid-area: hi-fid1; }
+.sc-design-iterations .sc-screen-hi-fid2 { grid-area: hi-fid2; }
+.sc-design-iterations .sc-screen-rect-hi-fid2 { grid-area: rect-hi-fid2; }
+.sc-design-iterations .sc.caption2 { grid-area: caption2; }
+.sc-design-iterations .sc.caption3 { grid-area: caption3; }
+.sc-design-iterations .dereck-says { grid-area: dereck-says; }
+
+.sc-design-iterations .caption { margin-top: 65px; }
+
+.sc-screen-lo-fid img,
+.sc-screen-mid-fid img {
+  max-height: 82.5vw;
+  width: auto;
+}
+
+.sc-screen-hi-fid1 img,
+.sc-screen-hi-fid2 img {
+  max-width: 41vw;
+  width: auto;
+  height: auto;
+}
+
+.mockup img { vertical-align: top; }
+
+#finding-a-hunt {
+  grid-template-areas: "lo-fid mid-fid"
+                       "caption1 caption1"
+                       "hi-fid1 hi-fid2"
+                       "caption2 caption2"
+                       "dereck-says dereck-says";
+}
+
+/* 05B Getting info about a hunt */
+/* -------------------------------------------------------------------------- */
+
+#hunt-info {
+  grid-template-areas: "lo-fid caption1"
+                       "mid-fid hi-fid1"
+                       "caption2 caption2"
+                       "hi-fid2 caption3";
+}
+
+#hunt-info .caption1 { align-self: center; }
+#hunt-info .caption3 { margin-top: 31vw; }
+
+#hunt-info .sc-screen-mid-fid img,
+#hunt-info .sc-screen-hi-fid1 img,
+#sc-pref .sc-scree-lo-fid img,
+#sc-pref .sc-screen-hi-fid1 img {
+  max-height: 81.82vw;
+  width: auto;
 }
 
 
+/* 05C Buying a hunt */
+/* -------------------------------------------------------------------------- */
+#buy-hunt {
+  grid-template-areas: "rect-lo-fid lo-fid"
+                       "caption1 caption1"
+                       "rect-hi-fid2 hi-fid2"
+                       "caption2 caption2";
+  grid-template-columns: 1fr 48vw;
+  grid-gap: 30px 0;
+  align-items: center;
+}
+
+#sc-c-buy-hi-fid1 { display: none;}
+#sc-c-conf-hi-fid1 { display: none;}
+
+#buy-hunt .mockup.no-shell {
+  justify-self: end;
+  margin-right: -1vw;
+}
+
+#buy-hunt .sc-screen-lo-fid,
+#buy-hunt .sc-screen-hi-fid2 { justify-self: start; }
+
+#buy-hunt .sc-screen-rect-lo-fid img {
+  max-height: 62.17vw;
+  width: auto;
+}
+
+#buy-hunt .sc-screen-rect-hi-fid2 img {
+  max-width: 33vw;
+  height: auto;
+}
+
+/* 05D Selecting preferences */
+/* -------------------------------------------------------------------------- */
+#sc-pref {
+  grid-template-areas: "lo-fid hi-fid1"
+                       "caption1 caption1"
+                       "hi-fid2 rect-hi-fid2"
+                       "caption2 caption2";
+  /* align-items: center; */
+}
+
+#sc-pref .sc-screen-hi-fid2 {
+  justify-self: end;
+  margin-right: -7vw;
+  z-index: 2;
+}
+
+#sc-pref .sc-screen-rect-hi-fid2 img {
+  max-width: 33vw;
+  height: auto;
+}
+
+#sc-pref .sc-screen-rect-hi-fid2 {
+  justify-self: start;
+  align-self: center;
+  margin-left: 1vw;
+  z-index: 1;
+}
+
+#sc-d-hi-fid2-a img { display: none;}
 
 
 /* -------------------------------------------------------------------------- */
@@ -805,6 +773,8 @@ body .sc {
 /* 06b Test results */
 /* -------------------------------------------------------------------------- */
 
+#sc-test-plan-docs img:first-of-type { margin-bottom: 20px;}
+
 #sc-test-results .table-header { display: none;}
 
 #sc-test-results .test-task {
@@ -821,6 +791,11 @@ body .sc {
 
 #sc-test-results .test-task div {
   padding: 0.5em 0.75em;
+}
+
+#sc-test-results .test-task .seq-score {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #sc-test-results .test-task .task-number {
@@ -915,6 +890,14 @@ body .sc {
 /* 06a Issue 1 */
 /* -------------------------------------------------------------------------- */
 
+.sc.test-solution {
+  border-bottom: 5px solid #E6ECF9;
+  margin-bottom: 15px;
+  margin-top: 0;
+  margin-left: -2px;
+  padding-left: 2px;
+}
+
 #sc-test-issue1 {
   display: grid;
   grid-template-areas: "old-screen caption"
@@ -948,7 +931,7 @@ body .sc {
 
 #sc-sol1-caption1 {
   grid-area: caption1;
-  margin-top: 2vw;
+  /* margin-top: 2vw; */
 }
 
 #sc-sol1-screen1 { grid-area: screen1; }
@@ -979,6 +962,10 @@ body .sc {
 /* 06b Issue 2 */
 /* -------------------------------------------------------------------------- */
 
+#sc-test-issue2-section {
+  background-image: linear-gradient(#F3F6FC 50%, white);
+}
+
 #sc-test-issue2 {
   display: grid;
   grid-template-areas: "caption3 caption3"
@@ -990,7 +977,33 @@ body .sc {
   justify-content: center;
 }
 
-#sc-test2-old-screen { grid-area: old-screen; }
+#sc-test2-old-screen {
+  grid-area: old-screen;
+  position: relative;
+}
+
+#sc-test2-old-screen .connector.line {
+  position: absolute;
+  top: calc(19.2vw - 11.52px);
+  left: calc(14.29vw - 8.57px);
+  height: calc(92.59vw - 54.55px);
+}
+
+#sc-test2-old-screen .connector.double-elbow {
+  position: absolute;
+  top: calc(11vw + 0.55em);
+  left: calc(19.64vw - 11.79px);
+  height: calc(41.23vw - 31.34px - 0.55em);
+  width: calc(30.36vw - 1.31px);
+}
+
+.connector.vert-line {
+  position: absolute;
+  top: calc(11vw + 0.55em);
+  left: calc(46.81vw - 12.962px);
+  height: calc(41.23vw - 31.34px - 0.55em);
+}
+
 #sc-test2-caption1 {
   grid-area: caption1;
   margin-top: 11vw;
@@ -998,12 +1011,15 @@ body .sc {
 
 #sc-test2-caption2 {
   grid-area: caption2;
-  align-self: flex-end;
-  margin-bottom: 3vw;
+  /* align-self: center; */
+  /* margin-bottom: 3vw; */
 }
 #sc-test2-caption3 { grid-area: caption3; }
 
-#sc-test2-caption4 { grid-area: caption4; }
+#sc-test2-caption4 {
+  grid-area: caption4;
+  margin-left: 0;
+}
 
 #sc-test-solution2 {
   display: grid;
@@ -1026,12 +1042,11 @@ body .sc {
 
 #sc-sol2-screen2 {
   grid-area: screen2;
-  margin-top: -28vw;
+  margin-top: -23vw;
 }
 #sc-sol2-caption2 {
   grid-area: caption2;
-  align-self: flex-end;
-  margin-bottom: 2vw;
+  align-self: center;
 }
 #sc-sol2-dereck-says { grid-area: dereck-says; }
 
@@ -1072,16 +1087,12 @@ body .sc {
 
 #sc-color-transition {
   grid-area: colors;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-#sc-colors-caption1 {
-  grid-area: caption1;
-  text-align: right;
-}
-
+#sc-colors-caption1 { grid-area: caption1; }
 #sc-colors-caption2 { grid-area: caption2; }
-
 
 #sc-colors-caption1 p,
 #sc-colors-caption2 p {
@@ -1141,36 +1152,37 @@ body .sc {
   position: relative;
 }
 
-#sc-error-elbow {
+#sc-error .connector {
   position: absolute;
   top: calc(16.81vw - 8.41px);
   left: calc(56.23vw - 28.12px);
   width: calc(33.77vw - 11.88px);
-  height: calc(15.07vw + 17.46px);
+  height: calc(15.07vw + 12.46px);
 }
 
-#sc-buttons-elbow {
+#sc-buttons .connector {
   position: absolute;
   top: calc(11.59vw - 5.8px);
   left: -10vw;
   width: calc(13.48vw - 1.74px);
-  height: calc(10.72vw + 19.64px);
+  height: calc(10.72vw + 14.64px);
 }
 
-#sc-link-elbow {
+#sc-link .connector {
   position: absolute;
   top: calc(22.32vw - 11.16px);
   left: calc(77.39vw - 38.5px);
   width: calc(12.61vw - 1.3px);
-  height: calc(7.25vw + 21.38px);
+  height: calc(7.25vw + 16.38px);
 }
 
-#sc-input-elbow {
+/* #sc-input-elbow { */
+#sc-input-field .connector {
   position: absolute;
   top: calc(13.33vw - 6.67px);
   left: calc(64.93vw - 32.46px);
   width: calc(25.07vw - 7.54px);
-  height: calc(8.33vw + 20.84px);
+  height: calc(8.33vw + 15.84px);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1208,13 +1220,75 @@ body .sc {
 }
 
 #sc-improv-caption1 { grid-area: caption1; }
-#sc-improv-hunt-detail { grid-area: hunt-detail; }
+
+#sc-improv-hunt-detail {
+  grid-area: hunt-detail;
+  position: relative;
+}
+
 #sc-improv-caption2 { grid-area: caption2; }
 #sc-improv-caption3 { grid-area: caption3; }
+
 #sc-improv-join { grid-area: join; }
-#sc-improv-my-hunts { grid-area: my-hunts; }
-#sc-improv-caption4 { grid-area: caption4; }
+#sc-improv-my-hunts {
+  grid-area: my-hunts;
+  position: relative;
+}
+
+#sc-improv-caption4 {
+  grid-area: caption4;
+  margin-top: calc(16.125vw - 18.67px);
+}
+
+#sc-improv-caption1 p,
+#sc-improv-caption4 p {
+  margin-bottom: 0;
+ }
+
 #sc-improv-caption5 { grid-area: caption5; }
+
+#sc-improv-hunt-detail .connector.double-elbow {
+  position: absolute;
+  top: 0.5em;
+  left: calc(25.11vw - 15.06px);
+  height: calc(26.62vw - 15.97px - 0.5em);
+  width: calc(24.89vw + 5.06px)
+}
+
+#sc-improv-hunt-detail .connector.vert-line {
+  position: absolute;
+  top: 0.5em;
+  left: calc(47.38655vw - 10.5313px);
+  height: calc(26.62vw - 15.97px - 0.5em);
+}
+
+#sc-improv-hunt-detail .connector.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: calc(3.03vw + 16.18px); */
+}
+
+#sc-improv-hunt-detail .connector.line {
+  position: absolute;
+  top: calc(77.71vw - 46.62px);
+  left: calc(44.37vw - 26.62px);
+  height: calc(3.03vw + 16.18px);
+}
+
+#sc-improv-my-hunts .connector.horiz-line {
+  position: absolute;
+  left: calc(41.56vw - 24.94px);
+  top: calc(16.02vw - 9.61px);
+  width: calc(8.44vw + 9.94px);
+}
+
+#sc-improv-my-hunts .connector.vert-line {
+  position: absolute;
+  left: calc(5.41vw - 3.25px);
+  top: calc(46.32vw - 27.79px);
+  height: calc(62.12vw - 19.27px);
+}
 
 .shadow-black {
   filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
@@ -1273,58 +1347,23 @@ body .sc {
 }
 
 .sc .bullets li::before {
-  content: 'H';
-  font-size: .1em;
+  content: '■';
+  font-size: 1.1em;
+  font-family: 'SF Mono';
   line-height: 1;
-  margin-top: 3.25em;
-  margin-right: 7em;
-  border-radius: 20%;
-  padding: 3em;
+  margin-right: .7em;
+  margin-top: 0.12em;
 }
 
-.letsroam-bullets li:before {
-  color: #E97824;
-  background-color: #E97824;
-}
-
-.letsroam-light-bullets li:before {
-  color: #F2B282;
-  background-color: #F2B282;
-}
-
-.uaq-bullets li:before {
-  color: #0091CF;
-  background-color: #0091CF;
-}
-
-.uaq-light-bullets li:before {
-  color: #B0DDF0;
-  background-color: #B0DDF0;
-}
-
-.sc .med-blue-bullets li:before {
-  color: #6286D9;
-  background-color: #6286D9;
-}
-
-.sc .red-bullets li:before {
-  color: #CE5573;
-  background-color: #CE5573;
-}
-
-.dereck-bullets li:before {
-  color: #E1A7AB;
-  background-color: #E1A7AB;
-}
-
-.malika-bullets li:before {
-  color: #99B1D6;
-  background-color: #99B1D6;
-}
-.angie-bullets li:before {
-  color: #AFBC9F;
-  background-color: #AFBC9F;
-}
+.letsroam-bullets li:before { color: #E97824; }
+.letsroam-light-bullets li:before { color: #F2B282; }
+.uaq-bullets li:before { color: #0091CF; }
+.uaq-light-bullets li:before { color: #B0DDF0; }
+.sc .med-blue-bullets li:before { color: #6286D9; }
+.sc .red-bullets li:before { color: #CE5573; }
+.dereck-bullets li:before { color: #E1A7AB; }
+.malika-bullets li:before { color: #99B1D6; }
+.angie-bullets li:before { color: #AFBC9F; }
 
 .title-suffix {
   font-size: .9em;
@@ -1373,8 +1412,14 @@ body .sc {
   font-size: 1.7em;
   font-weight: bold;
   color: #C6395C;
+  vertical-align: text-top;
+  line-height: 0.6;
 }
 
+.sc-random-red-text {
+  color: #C6395C;
+  line-height: 1;
+}
 .emphasis-dereck {
   color: #CD525E;
   font-weight: 500;

@@ -70,8 +70,10 @@
             <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="StreetCred home screen on iPhone XS">
           </picture>
         </div>
-        <div class="sc-intro-top hero-text">
-          <h1 class="sc font-white">Explore a city like you've never experienced before!</h1>
+        <div class="sc-intro-top hero-text-cell">
+          <div class="hero-text">
+            <h1 class="sc font-white">Explore a city like you've never experienced before!</h1>
+          </div>
         </div>
         <div class="sc-intro-bottom desc-text">
           <p class="sc font-medium">
@@ -679,7 +681,7 @@
               <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
               <img src="img/streetcred/sec3_users/journey_map_dereck_large.jpg" alt="Detailed user journey map for Dereck">
             </picture>
-            <svg id="dereck-journey-vert-line" class="connector dereck-red" height="200" width="10">
+            <svg class="connector dereck-red" height="200" width="10">
               <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
           </div>
@@ -800,7 +802,7 @@
         </div>
       </div><!-- END of User flow section -->
 
-      <div id="sc-overwhelmed" class="sc text-center">
+      <div id="sc-overwhelmed" class="sc text-center section-top">
         <p>
           Feeling a little overwhelmed?
           <br>Fear not, it’s all about to come together in the sitemap.
@@ -982,16 +984,16 @@
             <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
             <img src="img/streetcred/sec5_wireframing/my_hunts_v1_large.png" alt="Low-fidelity sketched wireframe of My Hunts screen">
           </picture>
-          <svg id="my-hunts-vert-line1" class="connector" height="200" width="10">
+          <svg class="connector" height="200" width="10">
             <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
-          <svg id="my-hunts-horiz-line1" class="connector" height="10" width="200">
+          <svg class="connector" height="10" width="200">
             <line x1="0" y1="0" x2="100%" y2="0" />
           </svg>
-          <svg id="my-hunts-horiz-line2" class="connector" height="10" width="200">
+          <svg class="connector" height="10" width="200">
             <line x1="0" y1="0" x2="100%" y2="0" />
           </svg>
-          <svg id="my-hunts-vert-line2" class="connector" height="200" width="10">
+          <svg class="connector" height="200" width="10">
             <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
         </div><!-- END of column 1 -->
@@ -1070,51 +1072,78 @@
 
       <div class="sc section-bottom"><!-- Finding a Hunt section -->
         <h4>A. Finding a hunt</h4>
-        <div id="finding-a-hunt" class="section-top"><!-- Grid container -->
-          <div id="sc-a-lo-fid">
-            <picture class="sc-screen-low-fid shadow-black">
+        <div id="finding-a-hunt" class="sc-design-iterations section-top"><!-- Grid container -->
+          <div class="mockup sc-screen-lo-fid">
+            <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_large.png" alt="First sketched iteration of Find Hunts wireframe">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="100%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
+            <svg class="connector line" height="90" width="400">
+              <line x1="50%" y1="60%" x2="100%" y2="60%" />
+            </svg>
+            <svg class="connector line horiz-middle" height="90" width="50">
+              <line x1="0" y1="60%" x2="100%" y2="60%" />
+            </svg>
           </div>
-          <div id="sc-a-connector1">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-a-mid-fid">
-            <picture class="sc-screen-mid-fid shadow-black">
+
+          <div class="mockup sc-screen-mid-fid">
+            <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_large.png" alt="Second mid-fidelity iteration of Find Hunts wireframe">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="61%" />
+              <line x1="0" y1="60%" x2="50%" y2="60%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-a-connector2">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-a-caption1" class="sc">
+          <div class="sc caption caption1">
             <p>
               In early iterations, the hunt cards were on top of the map in a
               single column format, meaning that when the user scrolls up to
               view more cards, the map is not visible anymore.
             </p>
           </div>
-          <div id="sc-a-hi-fid1">
+          <div class="mockup sc-screen-hi-fid1">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_large.png" alt="Third high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="100%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
+            <svg class="connector line" height="90" width="400">
+              <line x1="50%" y1="60%" x2="100%" y2="60%" />
+            </svg>
+            <svg class="connector line horiz-middle" height="90" width="50">
+              <line x1="0" y1="60%" x2="100%" y2="60%" />
+            </svg>
           </div>
-          <div id="sc-a-connector3">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-a-hi-fid2">
+          <div class="mockup sc-screen-hi-fid2">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_large.png" alt="Final high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="61%" />
+              <line x1="0" y1="60%" x2="50%" y2="60%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-a-connector4">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-a-caption2" class="sc">
+          <div class="sc caption caption2">
             <p>
               In later screens, the hunt cards and the map don’t overlap
               anymore. The cards are in a sin­gle row for­mat, al­low­ing the user
@@ -1136,52 +1165,65 @@
 
       <div class="sc back-light-grey full-width-section section-bottom"><!-- Container for Getting Info about a Hunt section -->
         <h4>B. Getting info about a hunt</h4>
-        <div id="hunt-info" class="section-top"><!-- Grid container -->
-          <div id="sc-b-lo-fid">
+        <div id="hunt-info" class="sc-design-iterations section-top"><!-- Grid container -->
+          <div class="mockup sc-screen-lo-fid">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_large.png" alt="First sketched iteration of Hunt Detail wireframe">
             </picture>
           </div>
-          <div id="sc-b-caption1" class="font-medium caption-right">
+          <div class="sc font-medium caption caption1 caption-right">
             <p>
               The hunt de­tail started out as a sim­ple screen, with de­tail about
               the hunt, and a few ac­tions such as buy this hunt, add to
               cal­en­dar, and start hunt.
             </p>
           </div>
-          <div id="sc-b-mid-fid">
+          <div class="mockup sc-screen-mid-fid">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_large.png" alt="Second mid-fidelity iteration of Hunt Detail wireframe">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="61%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
+            <svg class="connector line" height="90" width="400">
+              <line x1="50%" y1="60%" x2="100%" y2="60%" />
+            </svg>
+            <svg class="connector line horiz-middle" height="90" width="50">
+              <line x1="0" y1="60%" x2="100%" y2="60%" />
+            </svg>
           </div>
-          <div id="sc-b-connector2">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-b-hi-fid1">
+          <div class="mockup sc-screen-hi-fid1">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_large.png" alt="Third high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="100%" />
+              <line x1="0" y1="60%" x2="50%" y2="60%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-b-connector3">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-b-caption2" class="font-medium">
+          <div class="sc caption caption2 font-medium">
             <p>
               I stream­lined the lay­out to establish a clear CTA in the bot­tom
               nav­i­ga­tion, while pre­sent­ing sec­ondary ac­tions in the form of FABs
               overlapping the hunt pic­ture.
             </p>
           </div>
-          <div id="sc-b-hi-fid2">
+          <div class="mockup sc-screen-hi-fid2">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_large.png" alt="Final high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
           </div>
-          <div id="sc-b-caption3" class="font-medium caption-right"><!-- Cell(3,2) -->
+          <div class="sc caption caption3 font-medium caption-right"><!-- Cell(3,2) -->
             <p>
               In the end, the chal­lenge was to pre­sent a large amount of
               in­for­ma­tion in an or­ga­nized man­ner while mak­ing it easy for the
@@ -1193,20 +1235,39 @@
 
       <div class="sc section-bottom"><!-- Container for Buying a Hunt section -->
         <h4>C. Buying a hunt</h4>
-        <div id="buy-hunt" class="section-top"><!-- Grid container -->
-          <div id="sc-c-buy-lo-fid">
+        <div id="buy-hunt" class="sc-design-iterations section-top"><!-- Grid container -->
+          <div class="mockup no-shell sc-screen-rect-lo-fid">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_large.png" alt="First sketched iteration of Buy Hunt wireframe">
             </picture>
+            <svg class="connector line offset-lo-fid" height="180" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="73.5%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
+            <svg class="connector line offset-lo-fid" height="180" width="400">
+              <line x1="50%" y1="73%" x2="100%" y2="73%" />
+            </svg>
+            <svg class="connector line horiz-middle offset-lo-fid" height="180" width="50">
+              <line x1="0" y1="73%" x2="100%" y2="73%" />
+            </svg>
           </div>
-          <div id="sc-c-conf-lo-fid">
+          <div class="mockup sc-screen-lo-fid">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_large.png" alt="First sketched iteration of Successful Purchase wireframe">
             </picture>
+            <svg class="connector line offset-lo-fid" height="180" width="200">
+              <line x1="50%" y1="38%" x2="50%" y2="100%" />
+              <line x1="0" y1="73%" x2="50%" y2="73%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-c-caption1">
+          <div class="sc caption caption1">
             <p>
               The Buy Hunt screen did­n’t change much be­tween low and high
               fi­delity. How­ever, the pay­ment con­fir­ma­tion screen was ma­jorly
@@ -1214,31 +1275,37 @@
               op­tions af­ter pur­chas­ing a hunt.
             </p>
           </div>
-          <div id="sc-c-buy-hi-fid1">
+          <div id="sc-c-buy-hi-fid1" class="mockup no-shell sc-screen-rect-hi-fid1">
             <picture>
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_large.png" alt="Second high-fidelity iteration of Buy Hunt screen">
             </picture>
           </div>
-          <div id="sc-c-conf-hi-fid1">
+          <div id="sc-c-conf-hi-fid1" class="mockup sc-screen-hi-fid1">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_large.png" alt="Second high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
           </div>
-          <div id="sc-c-buy-hi-fid2">
+          <div class="mockup no-shell sc-screen-rect-hi-fid2">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_large.jpg" alt="Final high-fidelity iteration of Buy Hunt screen">
             </picture>
           </div>
-          <div id="sc-c-conf-hi-fid2">
+          <div class="mockup sc-screen-hi-fid2">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_large.png" alt="Final high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="100%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-c-caption2">
+          <div class="sc caption caption2">
             <p>
               Only the most im­por­tant action ‘Start­ scavenger hunt now’ is kept
               on the con­fir­ma­tion modal, while the rest of the op­tions are
@@ -1251,24 +1318,28 @@
 
       <div class="sc back-light-blue full-width-section"><!-- Container for Selecting Preferences section -->
         <h4>D. Selecting preferences</h4>
-        <div id="sc-pref" class="section-top"><!-- Grid container -->
-          <div id="sc-d-lo-fid">
+        <div id="sc-pref" class="sc-design-iterations section-top"><!-- Grid container -->
+          <div class="mockup sc-screen-lo-fid">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_1_large.png" alt="First sketched iteration of Restaurant Preferences wireframe">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="100%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-d-connector1">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-d-caption1" class="font-medium">
+
+          <div class="sc caption caption1 font-medium">
             <p>
               The idea of us­ing pills for the user to se­lect pref­er­ences stuck
               till the end (al­though they kind of look like pud­dles in this
               very low fi­delity version…)
             </p>
           </div>
-          <div id="sc-d-hi-fid1">
+          <div class="mockup sc-screen-hi-fid1">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_2_large.png" alt="Second high-fidelity iteration of Restaurant Preferences screen on iPhone XS">
@@ -1280,22 +1351,25 @@
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3a_large.jpg" alt="Final high-fidelity iteration of Restaurant Preferences screen">
             </picture>
           </div>
-          <div id="sc-d-hi-fid2-b">
+          <div class="mockup sc-screen-hi-fid2">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3b_large.png" alt="Final high-fidelity iteration of Place Preferences screen on iPhone XS">
             </picture>
+            <svg class="connector line" height="90" width="200">
+              <line x1="50%" y1="10%" x2="50%" y2="100%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
           </div>
-          <div id="sc-d-hi-fid2-c">
+          <div class="mockup no-shell sc-screen-rect-hi-fid2">
             <picture class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3c_large.jpg" alt="Final high-fidelity iteration of Events & Interest Preferences screen">
             </picture>
           </div>
-          <div id="sc-d-connector2">
-            <img class="connector-circle" src="img/streetcred/connectors/circle_blue.svg" alt="Circle with blue border and no fill">
-          </div>
-          <div id="sc-d-caption2">
+          <div class="sc caption caption2 font-medium">
             <p>
               The over­all de­sign got more crisp and re­fined. For instance, I
               replaced the traditional progress bar with large icons to make
@@ -1412,7 +1486,7 @@
         </div><!-- END of grid container -->
       </div><!-- END of Transition section with stats -->
 
-      <div class="sc"><!-- Test Results section -->
+      <div class="sc section-top"><!-- Test Results section -->
         <h2>TEST RESULTS</h2>
         <div id="sc-test-results">
           <div class="table-header">
@@ -1589,7 +1663,7 @@
           </div>
         </div><!-- END of grid container-->
         <div class="sc section-top">
-          <h2>SOLUTION</h2>
+          <h2 class="sc test-solution">SOLUTION</h2>
           <div id="sc-test-solution1" class="section-bottom"><!-- Grid container -->
             <div id="sc-sol1-screen1">
               <picture>
@@ -1631,7 +1705,7 @@
       </div><!-- END of Issue #1 -->
 
       <div class="sc"><!-- Issue #2 section -->
-        <div class="full-width-section back-light-blue">
+        <div id="sc-test-issue2-section" class="full-width-section">
           <h2>ISSUE #2<span class="title-suffix"> | medium priority</span></h2>
           <p class="sc issue">
             The Players screen is not very intuitive when it comes to splitting
@@ -1661,6 +1735,16 @@
                 <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
                 <img src="img/streetcred/sec6_testing/issue_2/players_old_large.png" alt="Old Players screen on iPhone XS">
               </picture>
+              <svg class="connector line" height="200" width="10">
+                <line x1="0" y1="0" x2="0" y2="100%" />
+              </svg>
+              <svg class="connector double-elbow" height="200" width="200">
+                <line x1="0" y1="100%" x2="90.5%" y2="100%" />
+                <line x1="90%" y1="0" x2="100%" y2="0" />
+              </svg>
+              <svg class="connector vert-line" height="200" width="10">
+                <line x1="0" y1="0" x2="0" y2="100%" />
+              </svg>
             </div>
             <div id="sc-test2-caption4" class="caption-bottom">
               <p class="sc font-medium">
@@ -1670,7 +1754,7 @@
             </div>
           </div><!-- END of grid container-->
         </div><!-- END of .back-light-blue -->
-        <h2 class="sc">SOLUTION</h2>
+        <h2 class="sc test-solution">SOLUTION</h2>
         <div id="sc-test-solution2"><!-- Grid container -->
           <div id="sc-sol2-caption1" class="caption-left">
             <p>
@@ -1755,12 +1839,12 @@
             <img src="img/streetcred/sec7_fine_tuning/color_shceme_large.png" alt="StreetCred sample screen and logo with U.S. flag colors">
           </picture>
         </div>
-        <div id="sc-colors-caption1" class="caption-left">
+        <div id="sc-colors-caption1" class="caption-right">
           <p>
             The original flag colors make the app look stern and boring.
           </p>
         </div>
-        <div id="sc-colors-caption2" class="caption-right">
+        <div id="sc-colors-caption2" class="caption-left">
           <p>
             The final color scheme is bright, bold, and vibrant!
           </p>
@@ -1852,7 +1936,7 @@
               <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/error_small.png">
               <img src="img/streetcred/sec8_accessibility/error_large.png" alt="Example of input field with error icon and error message">
           </picture>
-          <svg id="sc-error-elbow" class="connector sc line-black" height="200" width="200">
+          <svg class="connector sc line-black" height="200" width="200">
             <line x1="0" y1="0" x2="100%" y2="0" />
             <line x1="100%" y1="0" x2="100%" y2="100%" />
           </svg>
@@ -1868,7 +1952,7 @@
               <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/buttons_small.png">
               <img src="img/streetcred/sec8_accessibility/buttons_large.png" alt="Two buttons side-by-side: ghost button on left, filled button on right">
           </picture>
-          <svg id="sc-buttons-elbow" class="connector sc line-black" height="200" width="200">
+          <svg class="connector sc line-black" height="200" width="200">
             <line x1="100%" y1="0" x2="0" y2="0" />
             <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
@@ -1885,7 +1969,7 @@
               <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/link_small.png">
               <img src="img/streetcred/sec8_accessibility/link_large.png" alt="Example of underlined link text within a paragraph">
           </picture>
-          <svg id="sc-link-elbow" class="connector sc line-black" height="200" width="200">
+          <svg class="connector sc line-black" height="200" width="200">
             <line x1="0" y1="0" x2="100%" y2="0" />
             <line x1="100%" y1="0" x2="100%" y2="100%" />
           </svg>
@@ -1912,7 +1996,7 @@
               <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/input_field_small.png">
               <img src="img/streetcred/sec8_accessibility/input_field_large.png" alt="Example of input field with border and label above field">
             </picture>
-            <svg id="sc-input-elbow" class="connector sc line-black" height="200" width="200">
+            <svg class="connector sc line-black" height="200" width="200">
               <line x1="0" y1="0" x2="100%" y2="0" />
               <line x1="100%" y1="0" x2="100%" y2="100%" />
             </svg>
@@ -2008,7 +2092,7 @@
             more I’m planning on doing with StreetCred!
           </p>
           <div id="sc-improvements" class="sc section-top"><!-- Grid container -->
-            <div id="sc-impr-caption1" class="sc font-medium caption-right">
+            <div id="sc-improv-caption1" class="sc font-medium caption-right">
               <p>
                 I’d like to give the users the abil­ity to add a hunt to their
                 cal­en­dar, whether the hunt is pur­chased or not. I be­lieve this
@@ -2021,6 +2105,16 @@
                 <source media="(max-width: 767px)" srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.jpg">
                 <img src="img/streetcred/sec10_final_thoughts/hunt_detail_large.jpg" alt="Section of Hunt Detail screen">
               </picture>
+              <svg class="connector double-elbow sc-red" height="200" width="200">
+                <line x1="0" y1="100%" x2="90.5%" y2="100%" />
+                <line x1="90%" y1="0" x2="100%" y2="0" />
+              </svg>
+              <svg class="connector vert-line sc-red" height="200" width="10">
+                <line x1="0" y1="0" x2="0" y2="100%" />
+              </svg>
+              <svg class="connector line sc-red" height="200" width="10">
+                <line x1="0" y1="0" x2="0" y2="100%" />
+              </svg>
             </div>
             <div id="sc-improv-caption2" class="sc font-medium caption-right">
               <p>
@@ -2048,6 +2142,12 @@
                 <source media="(max-width: 767px)" srcset="img/streetcred/sec10_final_thoughts/my_hunts_small.jpg">
                 <img src="img/streetcred/sec10_final_thoughts/my_hunts_large.jpg" alt="Section of Hunt Detail screen">
               </picture>
+              <svg class="connector horiz-line sc-red" height="10" width="200">
+                <line x1="0" y1="0" x2="100%" y2="0" />
+              </svg>
+              <svg class="connector vert-line sc-red" height="200" width="10">
+                <line x1="0" y1="0" x2="0" y2="100%" />
+              </svg>
             </div>
             <div id="sc-improv-caption4" class="sc font-medium caption-right">
               <p>
@@ -2081,14 +2181,14 @@
           there are a few things I will do dif­fer­ently in fu­ture pro­jects:
         </p>
         <ul class="sc bullets red-bullets">
-          <li><p>Use <span class="sc font-red font-larger" style="font-weight: 600;">index cards</span> to sketch
+          <li><p>Use <span class="sc-random-red-text font-larger" style="font-weight: 600;">index cards</span> to sketch
             low-fidelity wireframes.</p></li>
-          <li><p>Be mindful of <span class="sc font-red" style="font-size: 1.2em;">accessibility</span>
+          <li><p>Be mindful of <span class="sc-random-red-text" style="font-size: 1.2em;">accessibility</span>
             early in the process.</p></li>
-          <li><p>Develop a <span class="sc font-red"><b>design system</b></span>
+          <li><p>Develop a <span class="sc-random-red-text"><b>design system</b></span>
             as soon as I start designing high-fidelity mockups.</p></li>
           <li><p>Despite my best efforts to put myself in the user's shoes,
-            <br><span class="sc font-red" style="font-size: 2em;">
+            <br><span class="sc-random-red-text" style="font-size: 2em;">
             <b>I am not the user.</b></span>
             <br>That’s why it’s so important to get users involved as much as
             possible throughout the design process with the many tools and
@@ -2096,7 +2196,7 @@
             sorting, usability testing, preference tests, first-click test,
             etc.</p></li>
           <li><p>In future projects, I'd like to do more rounds of
-            <span class="sc font-red font-medium" style="font-size: 1.2em;">usability testing</span>, and leverage
+            <span class="sc-random-red-text font-medium" style="font-size: 1.2em;">usability testing</span>, and leverage
             tree-testing, preference tests and first-click tests.</p></li>
         </ul>
       </div><!-- END of Container for Learnings -->
@@ -2106,7 +2206,7 @@
 
   <footer>
     <section id="contact">
-      <h1>Contact Me</h1>
+      <h1 class="project">Contact Me</h1>
       <p>
         Like what you see? Let's get in touch!
       </p>
