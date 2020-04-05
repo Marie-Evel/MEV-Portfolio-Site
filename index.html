@@ -32,7 +32,7 @@
   <body>
     <header class="sticky">
       <div id="top-nav">
-        <div class="logo-container grid-item">
+        <div class="logo-container">
           <a href="index.html">
             <picture>
               <source media="(max-width: 639px)" srcset="img/logo/logo_mobile.svg">
@@ -41,14 +41,14 @@
           </a>
         </div><!-- END .logo-container -->
         <nav>
-          <div class="grid-container">
-            <div class="grid-item">
+          <div class="menu-container">
+            <div class="top-menu">
               <a href="index.html#work">Work</a>
             </div>
-            <div class="grid-item">
+            <div class="top-menu">
               <a href="about.html">About</a>
             </div>
-            <div class="grid-item">
+            <div class="top-menu">
               <a href="#contact">Contact</a>
             </div>
           </div>
@@ -58,22 +58,23 @@
 
     <main>
       <section id="about">
-        <!-- Intro section -->
-        <h1>Hello! I'm Marie-Eve.</h1>
-        <p class="font-larger">
-          I'm a French-Canadian interaction designer and UX generalist based
-          in Chicago.
-        </p>
-        <p>
-          I take pride in creating elegant, intuitive, and functional designs
-          to help people be healthier, happier, and more efficient.
-        </p>
-        <p>
-          My strong analytical background and keen attention to detail allow me
-          to solve complex UX problems, and create delightful and thoughtful
-          visualizations.
-        </p>
-        <a class="button-filled about" href="about.html">Check out my full bio</a>
+        <div class="section-content">
+          <h1>Hello! I'm Marie-Eve.</h1>
+          <p class="font-larger">
+            I'm a French-Canadian interaction designer and UX generalist based
+            in Chicago.
+          </p>
+          <p>
+            I take pride in creating elegant, intuitive, and functional designs
+            to help people be healthier, happier, and more efficient.
+          </p>
+          <p>
+            My strong analytical background and keen attention to detail allow me
+            to solve complex UX problems, and create delightful and thoughtful
+            visualizations.
+          </p>
+          <a class="button-filled about" href="about.html">Check out my full bio</a>
+        </div>
       </section><!-- END Intro section -->
 
       <section id="work">
@@ -82,16 +83,21 @@
         <div class="case-study"><!-- StreetCred case study -->
           <h2>StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
           <div class="project-picture">
-            <picture>
-              <source media="(max-width:639px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
-              <img src="img/streetcred/streetcred_thumbnail_1200.jpg" alt="Montage of diagonal StreetCred screen mockups">
-            </picture>
+            <a class="" href="streetcred.html">
+              <picture>
+                <source media="(max-width:639px)" srcset="img/streetcred/streetcred_thumbnail_600.jpg">
+                <img src="img/streetcred/streetcred_thumbnail_1200.jpg" alt="Montage of diagonal StreetCred screen mockups">
+              </picture>
+            </a>
           </div>
-          <div>
+          <div class="case-desc">
             <p>
-              StreetCred is a native app that takes sightseeing to a whole new
+              StreetCred is a native iOS app that takes sightseeing to a whole new
               level! It provides scavenger hunts as a fun way for tourists to
-              explore U.S. cities. The app was the main project for an immersive
+              explore U.S. cities.
+            </p>
+            <p>
+              The app was the main project for an immersive
               UX designer certification course I took at CareerFoundry. I was
               responsible for the entire UX process from start to finish.
             </p>
@@ -101,26 +107,123 @@
           </div>
         </div><!-- END StreetCred case study -->
 
+        <div class="case-study"><!-- Animation case study -->
+          <h2>MEV Website | <span class="font-medium">personal branding</span></h2>
+          <div id="mev-logo-animation" class="project-picture">
+            <div class="image-container">
+              <a class="disabled" href="">
+                <svg width="568px" height="142px" viewbox="0 0 568 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                    <title>mev_logo_animation</title>
+                    <desc>Created with Sketch.</desc>
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="vesel" class="stroke" fill="#B20F5C" fill-rule="nonzero">
+                        <path d="M491.274728,142 L500.549455,122.711111 L497.671091,122.711111 L491.274728,136.4 L484.878364,122.711111 L482,122.711111 L491.274728,142 Z M512.374955,141.688889 C516.532591,141.688889 519.05116,139.861111 519.570864,139.433333 L518.61141,137.177778 C517.012319,138.383333 514.9335,139.2 512.454909,139.2 C508.377227,139.2 505.338955,136.827778 504.939182,133.288889 L520.730205,133.288889 C520.81016,132.861111 520.850137,132.355556 520.850137,131.966667 C520.850137,125.977778 516.932364,122.4 511.85525,122.4 C505.978591,122.4 502.300682,126.638889 502.300682,132.044444 C502.300682,137.294444 506.058546,141.688889 512.374955,141.688889 Z M518.251614,130.8 L504.939182,130.8 C505.059114,128.155556 507.177909,124.888889 511.735318,124.888889 C516.25275,124.888889 518.131682,128.233333 518.251614,130.8 Z M532.155932,141.688889 C536.753319,141.688889 539.23191,139.005556 539.23191,136.166667 C539.23191,133.561111 537.952637,131.538889 532.795568,130.488889 C530.71675,130.061111 527.718455,129.4 527.718455,127.611111 C527.718455,125.083333 530.516864,124.85 532.315841,124.888889 C534.434637,124.927778 536.833273,125.822222 537.632819,126.444444 L538.592273,124.188889 C536.353546,122.827778 533.874955,122.4 532.275864,122.4 C527.958318,122.4 525.159909,124.461111 525.159909,127.572222 C525.159909,130.255556 526.479159,131.888889 532.275864,132.977778 C534.394659,133.405556 536.673364,134.261111 536.673364,136.283333 C536.673364,138.344444 534.314705,139.238889 532.075977,139.2 C529.757296,139.161111 527.038841,138.266667 525.639636,136.788889 L524.520273,139.044444 C525.319818,139.861111 528.278136,141.688889 532.155932,141.688889 Z M552.6565,141.688889 C556.814137,141.688889 559.332705,139.861111 559.852409,139.433333 L558.892955,137.177778 C557.293864,138.383333 555.215046,139.2 552.736455,139.2 C548.658773,139.2 545.6205,136.827778 545.220727,133.288889 L561.01175,133.288889 C561.091705,132.861111 561.131682,132.355556 561.131682,131.966667 C561.131682,125.977778 557.213909,122.4 552.136796,122.4 C546.260136,122.4 542.582227,126.638889 542.582227,132.044444 C542.582227,137.294444 546.340091,141.688889 552.6565,141.688889 Z M558.533159,130.8 L545.220727,130.8 C545.340659,128.155556 547.459455,124.888889 552.016864,124.888889 C556.534296,124.888889 558.413228,128.233333 558.533159,130.8 Z M568,141.377778 L568,114 L565.441454,114 L565.441454,141.377778 L568,141.377778 Z"></path>
+                      </g>
+                      <g id="hide-last-name" fill="#FFE5EE">
+                        <rect x="230" y="94" width="253" height="48"></rect>
+                      </g>
+                      <g  id="marie-eve" class="stroke" fill="#B20F5C" fill-rule="nonzero">
+                        <path d="M292.560905,141.372093 L292.560905,129.755814 C292.560905,126.537791 295.521952,124.732558 297.842773,124.732558 C300.483706,124.732558 302.164301,126.577035 302.164301,129.598837 L302.164301,141.372093 L304.725206,141.372093 L304.725206,129.755814 C304.725206,126.537791 307.686253,124.732558 310.007073,124.732558 C312.96812,124.732558 314.328601,126.577035 314.328601,129.912791 L314.328601,141.372093 L316.889506,141.372093 L316.889506,130.226744 C316.889506,124.340116 314.328601,122.22093 310.087102,122.22093 C307.36614,122.22093 305.405446,123.359012 303.764866,125.517442 C302.604456,123.162791 300.403678,122.22093 297.922801,122.22093 C295.001768,122.22093 293.521245,123.790698 292.560905,125.046512 L292.560905,122.534884 L290,122.534884 L290,141.372093 L292.560905,141.372093 Z M331.126762,141.686047 C334.247865,141.686047 336.848785,140.234012 338.489365,138.036337 L338.489365,141.372093 L341.05027,141.372093 L341.05027,122.534884 L338.489365,122.534884 L338.489365,125.87064 C336.848785,123.672965 334.247865,122.22093 331.126762,122.22093 C325.644824,122.22093 321.203254,126.577035 321.203254,131.953488 C321.203254,137.329942 325.644824,141.686047 331.126762,141.686047 Z M331.126762,139.174419 C327.045319,139.174419 323.764159,135.956395 323.764159,131.953488 C323.764159,127.950581 327.045319,124.732558 331.126762,124.732558 C335.208205,124.732558 338.489365,127.950581 338.489365,131.953488 C338.489365,135.956395 335.208205,139.174419 331.126762,139.174419 Z M349.525489,141.372093 L349.525489,132.34593 C349.525489,128.578488 351.36614,126.106105 353.847017,125.242733 C355.447582,124.693314 357.008134,124.889535 357.848431,125.085756 L357.848431,122.22093 C354.247158,122.22093 350.845956,123.869186 349.525489,126.577035 L349.525489,122.534884 L346.964583,122.534884 L346.964583,141.372093 L349.525489,141.372093 Z M363.762744,119.395349 C365.003183,119.395349 366.003537,118.414244 366.003537,117.197674 C366.003537,115.981105 365.003183,115 363.762744,115 C362.522306,115 361.521952,115.981105 361.521952,117.197674 C361.521952,118.414244 362.522306,119.395349 363.762744,119.395349 Z M365.043197,141.372093 L365.043197,122.534884 L362.482292,122.534884 L362.482292,141.372093 L365.043197,141.372093 Z M379.440509,141.686047 C383.60198,141.686047 386.122872,139.84157 386.643056,139.409884 L385.682716,137.133721 C384.08215,138.350291 382.001415,139.174419 379.520538,139.174419 C375.439095,139.174419 372.39802,136.780523 371.997878,133.209302 L387.803466,133.209302 C387.883494,132.777616 387.923508,132.267442 387.923508,131.875 C387.923508,125.831395 384.002122,122.22093 378.920325,122.22093 C373.038246,122.22093 369.356944,126.498547 369.356944,131.953488 C369.356944,137.251453 373.118274,141.686047 379.440509,141.686047 Z M385.322589,130.697674 L371.997878,130.697674 C372.11792,128.02907 374.23867,124.732558 378.800283,124.732558 C383.321881,124.732558 385.202546,128.107558 385.322589,130.697674 Z M402.480877,132.267442 L402.480877,129.755814 L392.237256,129.755814 L392.237256,132.267442 L402.480877,132.267442 Z M416.878189,141.686047 C421.03966,141.686047 423.560552,139.84157 424.080736,139.409884 L423.120396,137.133721 C421.51983,138.350291 419.439095,139.174419 416.958218,139.174419 C412.876775,139.174419 409.835699,136.780523 409.435558,133.209302 L425.241146,133.209302 C425.321174,132.777616 425.361188,132.267442 425.361188,131.875 C425.361188,125.831395 421.439802,122.22093 416.358005,122.22093 C410.475926,122.22093 406.794624,126.498547 406.794624,131.953488 C406.794624,137.251453 410.555954,141.686047 416.878189,141.686047 Z M422.760269,130.697674 L409.435558,130.697674 C409.5556,128.02907 411.67635,124.732558 416.237963,124.732558 C420.759561,124.732558 422.640226,128.107558 422.760269,130.697674 Z M436.397312,142 L445.680594,122.534884 L442.799576,122.534884 L436.397312,136.348837 L429.995049,122.534884 L427.11403,122.534884 L436.397312,142 Z M457.517001,141.686047 C461.678472,141.686047 464.199363,139.84157 464.719547,139.409884 L463.759208,137.133721 C462.158642,138.350291 460.077906,139.174419 457.597029,139.174419 C453.515586,139.174419 450.474511,136.780523 450.07437,133.209302 L465.879958,133.209302 C465.959986,132.777616 466,132.267442 466,131.875 C466,125.831395 462.078614,122.22093 456.996817,122.22093 C451.114738,122.22093 447.433436,126.498547 447.433436,131.953488 C447.433436,137.251453 451.194766,141.686047 457.517001,141.686047 Z M463.39908,130.697674 L450.07437,130.697674 C450.194412,128.02907 452.315162,124.732558 456.876775,124.732558 C461.398373,124.732558 463.279038,128.107558 463.39908,130.697674 Z"></path>
+                      </g>
+                      <g id="hide-full-name" fill="#FFE5EE">
+                        <rect x="0" y="94" width="230" height="48"></rect>
+                      </g>
+                      <g id="v-vertical" class="stroke" transform="translate(229.996509, 62.137406)" fill="#B20F5C">
+                        <polygon id="Rectangle" transform="translate(8.689170, 30.230568) rotate(90.000000) translate(-8.689170, -30.230568) " points="-21 22 38.3783395 22 38.3783395 38.4611356 -21 38.4611356"></polygon>
+                      </g>
+                      <g id="hide-v-vertical" transform="translate(224.000000, 62.000000)" fill="#FFE5EE">
+                        <rect x="0" y="0" width="27" height="56"></rect>
+                      </g>
+                      <g id="v-diagonal" class="stroke"  transform="translate(230.454793, 1.246829)" fill="#B20F5C">
+                        <path d="M96.9335241,2.30926389e-14 L109.516844,10.6338637 L-7.10542736e-15,140.749 L-7.10542736e-15,115.165 L96.9335241,2.30926389e-14 Z"></path>
+                      </g>
+                      <g id="hide-v-diagonal" transform="translate(211, 16.5)" fill="#FFE5EE">
+                        <rect x="0" y="0" width="126" height="126"></rect>
+                      </g>
+                      <g id="e-bottom" class="stroke"  transform="translate(134.980525, 125.355064)" fill="#B20F5C">
+                        <rect x="4.97379915e-14" y="-7.10542736e-15" width="72.4289967" height="16.4939832"></rect>
+                      </g>
+                      <g id="e-middle" class="stroke"  transform="translate(134.980525, 62.677928)" fill="#B20F5C">
+                        <rect id="stroke-horiz-2" x="-6.39488462e-14" y="-7.10542736e-15" width="72.4289967" height="16.4939832"></rect>
+                      </g>
+                      <g id="e-top" class="stroke"  transform="translate(134.980525, 0.001668)" fill="#B20F5C">
+                        <path d="M214.986,-0.000668437977 L201.133,16.4933316 L0,16.4939832 L0,-9.54965274e-15 L214.986,-0.000668437977 Z"></path>
+                      </g>
+                      <g id="hide-e" transform="translate(130, -1)" fill="#FFE5EE">
+                        <rect  x="0" y="0" width="220" height="143"></rect>
+                      </g>
+                      <g id="m-right" class="stroke"  transform="translate(95.473062, 19.000792)" fill="#B20F5C">
+                        <rect x="0.000737399071" y="0.849131763" width="16.4611356" height="122"></rect>
+                      </g>
+                      <g id="hide-m-right" transform="translate(94.000000, 0.000000)" fill="#FFE5EE">
+                        <rect x="0" y="0" width="19" height="142"></rect>
+                      </g>
+                      <g id="m-diagonal2" class="stroke"  transform="translate(45.532152, -0.274230)" fill="#B20F5C">
+                        <path d="M66.3247264,0.274230238 L66.397,0.335230238 L66.397,25.8422302 L21.486,79.4502302 L-0.005,79.4502302 L66.3247264,0.274230238 Z"></path>
+                      </g>
+                      <g id="hide-m-diagonal2" transform="translate(33.000000, 0.000000)" fill="#FFE5EE">
+                        <rect x="0" y="0" width="83" height="80"></rect>
+                      </g>
+                      <g id="m-diagonal1" transform="translate(-52.000000, -47.000000)" fill="#B20F5C">
+                          <path d="M12.6099615,-7.10542736e-15 L66.272,64.08 L44.784,64.08 L-2.06057393e-13,10.602128 L12.6099615,-7.10542736e-15 Z" id="m-ghost-stroke"></path>
+                      </g>
+                      <g  id="hide-m-diagonal1" fill="#FFE5EE" transform="translate(41.00000, 79.00000)">
+                        <rect width="76" height="60"></rect>
+                      </g>
+                      <g id="m-left" class="stroke"  transform="translate(-0.000938, 0.003792)" fill="#B20F5C">
+                        <path d="M9.23705556e-14,1.42108547e-14 L16.461,19.599 L16.4612863,141.846132 L0.000938336985,141.846132 L9.23705556e-14,1.42108547e-14 Z"></path>
+                      </g>
+                      <g id="hide-m-left" transform="translate(-1, 0)" fill="#FFE5EE">
+                        <rect x="0" y="0" width="20" height="142"></rect>
+                      </g>
+                      <g id="hide-top" transform="translate(-50, -50)" fill="#FFE5EE">
+                        <rect x="0" y="0" width="50" height="100"></rect>
+                      </g>
+                    </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="case-desc">
+            <p>
+              This is the website you're looking at right now. I designed it and
+              coded it from scratch with only HTML/CSS and a smidge of
+              JavaScript. No templates or libraries!
+            </p>
+            <p>
+              I also designed my own logo and created the animation.
+            </p>
+          </div>
+          <div>
+            <a class="button-filled work disabled" href="">Coming soon</a>
+          </div>
+        </div><!-- END My Word case study -->
+
         <div class="case-study"><!-- My Word case study -->
           <h2>My Word! | <span class="font-medium">flashcard learning app</span></h2>
           <div class="project-picture">
-            <picture>
-              <source media="(max-width:639px)" srcset="img/my_word/my_word_thumbnail_600.png">
-              <img src="img/my_word/my_word_thumbnail_1200.png" alt="My Word home screen with 3 sketched mockups">
-            </picture>
+            <a class="disabled" href="">
+              <picture>
+                <source media="(max-width:639px)" srcset="img/my_word/my_word_thumbnail_600.png">
+                <img src="img/my_word/my_word_thumbnail_1200.png" alt="My Word home screen with 3 sketched mockups">
+              </picture>
+            </a>
           </div>
-          <div>
+          <div class="case-desc">
             <p>
               There's so much to learn! My Word is an app that allows students
               and learners of all ages to create and organize flashcards. It
               includes a study mode to test concepts learned and track progress.
+            </p>
+            <p>
               That was my very first UX design project, in which I learned about
               user research, user personas, flowcharting, task analysis,
               low-fidelity wireframing & prototyping, and usability testing.
             </p>
           </div>
           <div>
-            <a class="button-filled work button-disabled" href="">Coming soon</a>
+            <a class="button-filled work disabled" href="">Coming soon</a>
           </div>
         </div><!-- END My Word case study -->
 
@@ -135,10 +238,15 @@
           Like what you see? Let's get in touch!
         </p>
         <a class="button-ghost about" href="mailto:info@mevesel.design">Send me an Email</a>
-        <p>
-          Call me: <a href="tel:13128881726">1-312-888-1726</a> | Skype me:
-          <a href="skype:me.vesel">me.vesel</a>
-        </p>
+        <div id="call-skype">
+          <p>
+            Call me: <a href="tel:13128881726">1-312-888-1726</a>
+          </p>
+          <p>
+            Skype me: <a href="skype:me.vesel">me.vesel</a>
+          </p>
+        </div>
+
       </section>
 
       <div class="solid-footer"><!-- Section with social media icons and copyright -->
