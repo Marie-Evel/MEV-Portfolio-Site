@@ -58,6 +58,7 @@ img {
 
 a {
   color: #3056CE; /* Blue */
+  transition: all 0.25s;
 }
 
 a:visited { /* visited link */
@@ -65,15 +66,11 @@ a:visited { /* visited link */
 }
 
 a:hover,
-a:focus {
-  /* color: #239B15; /* Green */
+a:focus,
+a:active {
   color: #B20F5C; /* Jazzberry */
 }
 
-a:active { /* selected link */
-  /* color: #239B15; /* Green */
-  color: #B20F5C; /* Jazzberry */
-}
 
 /*----------------------------------------------------------------------------*/
 /* Header and top nav */
@@ -336,10 +333,10 @@ h1 > p {
 
 .button-ghost:hover,
 .button-ghost:active {
-  /* color: #239B15 !important; */
-  color: #B20F5C !important; /* Jazzberry */
-  /* border-color: #239B15; */
+  background-color:  #B20F5C; /* Jazzberry */
+  color: #FFFFFF !important;
   border-color: #B20F5C; /* Jazzberry */
+  filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
 }
 
 .button-ghost ~ p {
@@ -427,6 +424,13 @@ h1 > p {
   width: 2.2em;
   height: 2.2em;
 }
+
+.soc-media-icons a:hover,
+.soc-media-icons a:active {
+  color: #B20F5C !important;
+  box-shadow: inset 0 0 5px 1px rgba(178,15,92,.4);
+}
+
 
 #mev-copyright p {
   font-family: Arial, sans-serif;
@@ -801,6 +805,12 @@ h1 > p {
   }
 
   #skills-and-tools { grid-area: skills-and-tools; }
+  #skills-and-tools .button-ghost:hover,
+  #skills-and-tools .button-ghost:active {
+    background-color: #3056CE; /* Blue */
+    border-color: #3056CE; /* Blue */
+  }
+
   #my-story { grid-area: my-story; }
   #personal { grid-area: personal; }
   #fun { grid-area: fun; }

@@ -227,7 +227,6 @@ footer .button-ghost:active {
 .solid-footer .soc-media-icons a {
   display: inline-block;
   justify-content: center;
-  color: #C6395C;
   line-height: 2.4em;
   text-align: center;
   background-color: white;
@@ -237,7 +236,7 @@ footer .button-ghost:active {
 }
 
 .soc-media-icons a:hover,
-.soc-media-icons a:active { color: #3966D0 !important; }
+.soc-media-icons a:active { color: #C6395C !important; }
 
 .solid-footer .mev-copyright p {
   font-family: Arial, sans-serif;
@@ -2052,6 +2051,7 @@ body .sc a:visited { color: #C6395C; /* red */ }
     display: grid;
     grid-area: band;
     position: relative;
+    height: 100%;
   }
 
   .design-iterations-grid .mockup.low-fid img,
