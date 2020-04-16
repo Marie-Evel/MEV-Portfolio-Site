@@ -66,11 +66,13 @@ a:visited { /* visited link */
 
 a:hover,
 a:focus {
-  color: #239B15; /* Green */
+  /* color: #239B15; /* Green */
+  color: #B20F5C; /* Jazzberry */
 }
 
 a:active { /* selected link */
-  color: #239B15; /* Green */
+  /* color: #239B15; /* Green */
+  color: #B20F5C; /* Jazzberry */
 }
 
 /*----------------------------------------------------------------------------*/
@@ -91,13 +93,11 @@ main {
   padding-top: 200px;
 }
 
-main.sc {
-  padding-top: 110px;
-}
+main.project { padding-top: 110px; }
 
 .project > #top-nav {
   display: grid;
-  grid-template-columns: auto 2fr;
+  grid-template-columns: auto 1fr;
   background-color: white;
   padding: 40px 0 5px 0;
   border-bottom: 5px solid #DBDBDB; /* Light grey */
@@ -141,6 +141,7 @@ nav .menu-container {
 
 .project nav .menu-container {
   align-items: end;
+  margin-left: 0;
 }
 
 nav .top-menu {
@@ -195,13 +196,7 @@ p + h1 {
 
 .image-container { position: relative; }
 
-.image-container svg {
-  /* position: absolute; */
-  width: 160%;
-  /* top: 0;
-  left: 0; */
-  /* height: 100%; */
-}
+.image-container svg { width: 160%; }
 
 #mev-logo-animation { padding: 20px; }
 
@@ -228,7 +223,6 @@ p + h1 {
 /* Sections in about page */
 /* -------------------------- */
 
-
 #profile-pic {
   width: 12.5em;
   height: auto;
@@ -239,6 +233,16 @@ h1 > p {
   font-size: .85em;
   font-weight: normal;
 }
+
+#hero .intro h1 { margin-bottom: 0; }
+
+#hero .intro p {
+  color: #7D0B5B;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: 0;
+}
+
 #hero { border-bottom: 5px solid #7D0B5B; } /* Syrah */
 
 #skills-and-tools {
@@ -327,13 +331,15 @@ h1 > p {
 
 .button-filled:hover,
 .button-filled:active {
-  filter: brightness(125%);
+  filter: brightness(125%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
 }
 
 .button-ghost:hover,
 .button-ghost:active {
-  color: #239B15 !important;
-  border-color: #239B15;
+  /* color: #239B15 !important; */
+  color: #B20F5C !important; /* Jazzberry */
+  /* border-color: #239B15; */
+  border-color: #B20F5C; /* Jazzberry */
 }
 
 .button-ghost ~ p {
@@ -349,13 +355,14 @@ h1 > p {
   filter: none;
 }
 
-.project-picture img:hover,
-.project-picture img:active,
+.project-picture:hover,
+.project-picture:active,
 #mev-logo-animation:hover {
   border: 4px solid #239B15;
 }
 
-.project-picture img {
+.project-picture,
+#mev-logo-animation {
   transition: all 0.25s;
 }
 
@@ -587,28 +594,21 @@ h1 > p {
 /* Media queries for tablets and larger */
 /*----------------------------------------------------------------------------*/
 @media only screen and (min-width: 640px) {
-  nav {
-    background-color: #B20F5C; /* Jazzberry */
-    /* text-align: right; */
-  }
-
-  nav a {
-    color: white !important;
-    font-size: 1.06em;
-  }
 
   #top-nav {
     display: grid;
-    grid-template-areas: "logo menus";
+    /* grid-template-areas: "logo menus"; */
     grid-template-columns: 3fr 2fr;
     align-content: end;
   }
 
   .logo-container {
-    grid-area: logo;
+    /* grid-area: logo; */
     padding-left: 40px;
     vertical-align: bottom;
   }
+
+  .project .logo-container { padding-left: 40px; }
 
   .logo-container img {
     height: 71px;
@@ -616,9 +616,25 @@ h1 > p {
     max-width: 46vw;
   }
 
+  .project .logo-container img {
+    width: 100%;
+    height: auto;
+    max-width: unset;
+  }
+
+  nav {
+    background-color: #B20F5C; /* Jazzberry */
+    /* text-align: right; */
+  }
+
+  body:not(.project) header nav a {
+    color: white !important;
+    font-size: 1.06em;
+  }
+
   nav {
     display: grid;
-    grid-area: menus;
+    /* grid-area: menus; */
     justify-items: end;
   }
 
@@ -628,7 +644,6 @@ h1 > p {
   }
 
   nav .top-menu {
-    /* vertical-align: bottom; */
     padding-bottom: 20px;
     min-width: 100px;
   }
@@ -655,10 +670,9 @@ h1 > p {
 
   main { padding-top: 156px; }
 
-  section {
-    padding: 30px 40px 40px 40px;
-    /* max-width: 980px; */
-  }
+  main.project { padding-top: 85px; }
+
+  section { padding: 30px 40px 40px 40px; }
 
   #about{ padding: 46px 57px 40px 186px; }
 
@@ -693,6 +707,8 @@ h1 > p {
     height: auto;
     vertical-align: top;
   }
+
+  .project-picture { border: 4px solid rgba(35, 155, 21, 0); }
 
   #work { border-bottom: none;}
 
@@ -755,25 +771,25 @@ h1 > p {
     margin-bottom: 0;
   }
 
-  #hero .section-content h1 {
+  #hero .intro {
     grid-area: hello;
     margin-top: 10px;
     margin-bottom: 0px;
   }
 
-  #hero .section-content > p {
+  #hero .desc {
     grid-area: desc;
     margin: 0;
     max-width: 25em;
   }
 
-  #hero .section-content .cta {
+  #hero .cta {
     grid-area: button;
     margin: 0;
     align-self: end;
   }
 
-  #hero .section-content .cta a { margin: 0;}
+  #hero .cta a { margin: 0;}
 
   #about-me .section-content {
     display: grid;
@@ -824,6 +840,8 @@ h1 > p {
   body { font-size: 18px; }
 
   main { padding-top: 110px; }
+  main.project { padding-top: 105px; }
+
   section {
     padding: 30px 70px 40px 70px;
     /* max-width: 1040px;
@@ -832,6 +850,7 @@ h1 > p {
   }
 
   .logo-container { padding: 40px 20px 20px 70px; }
+  .project .logo-container { padding-left: 70px; }
 
   .logo-container img {
     height: 50px;
