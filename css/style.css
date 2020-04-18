@@ -1,12 +1,13 @@
-/*
-Color palette:
-Jazzberry Jam: #B20F5C;
-Light version of Jazzberry Jam: #FFE5EE;
-Syrah: #7D0B5B;
-Lizard Green: #239B15;
-Cerulean Blue: #3056CE;
-Vaguely Violet: #E6ECFF;
-*/
+/* Color palette: */
+:root {
+  --jazzberry: #B20F5C;
+  --light-jazzberry: #FFE5EE;
+  --syrah: #7D0B5B;
+  --lizard-green: #239B15;
+  --cerulean-blue: #3056CE;
+  --vaguely-violet: #E6ECFF;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Global styles */
 /*----------------------------------------------------------------------------*/
@@ -26,7 +27,7 @@ b { font-weight: bold; }
 i { font-style: italic; }
 em {
   font-weight: bold;
-  color: #B20F5C; /* Jazzberry */
+  color: var(--jazzberry);
 }
 
 h1 {
@@ -35,10 +36,10 @@ h1 {
   font-weight: bold;
   line-height: 1.4;
   margin-bottom: 0.75em;
-  color: #7D0B5B /* Syrah */
+  color: var(--syrah) /* Syrah */
 }
 
-h1.project { color: #B20F5C; }
+h1.project { color: var(--jazzberry); }
 
 h2 {
   font-weight: bold;
@@ -57,18 +58,18 @@ img {
 }
 
 a {
-  color: #3056CE; /* Blue */
+  color: var(--cerulean-blue); /* Blue */
   transition: all 0.25s;
 }
 
 a:visited { /* visited link */
-  color: #7D0B5B; /* Syrah */
+  color: var(--syrah); /* Syrah */
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #B20F5C; /* Jazzberry */
+  color: var(--jazzberry); /* Jazzberry */
 }
 
 
@@ -102,7 +103,7 @@ main.project { padding-top: 110px; }
 }
 
 .logo-container {
-  background-color: #B20F5C; /* Jazzberry */
+  background-color: var(--jazzberry); /* Jazzberry */
   padding: 60px 0 25px 20px;
 }
 
@@ -123,7 +124,7 @@ main.project { padding-top: 110px; }
 
 nav {
   display: grid;
-  background-color: #E6ECFF; /* Light blue */
+  background-color: var(--vaguely-violet); /* Light blue */
 }
 
 .project nav {
@@ -180,11 +181,11 @@ p + h1 {
 
 .indented-quote {
     margin: 30px 10px 30px 20px;
-    border-left: solid 2px #3056CE; /* Blue */
+    border-left: solid 2px var(--cerulean-blue); /* Blue */
     padding: .1em 0 .1em 0.75em;
     font-size: 1.1em;
     font-weight: bold;
-    color: #3056CE; /* Blue */
+    color: var(--cerulean-blue); /* Blue */
 }
 
 /* Sections in index page */
@@ -212,10 +213,10 @@ p + h1 {
 
 .case-study:not(:first-of-type) {
   padding-top: 20px;
-  border-top: 1px solid #7D0B5B; /* Syrah */
+  border-top: 1px solid var(--syrah); /* Syrah */
 }
 
-#about, #about-me { border-bottom: 5px solid #E6ECFF; /* Light blue */ }
+#about, #about-me { border-bottom: 5px solid var(--vaguely-violet); /* Light blue */ }
 
 /* Sections in about page */
 /* -------------------------- */
@@ -234,13 +235,13 @@ h1 > p {
 #hero .intro h1 { margin-bottom: 0; }
 
 #hero .intro p {
-  color: #7D0B5B;
+  color: var(--syrah);
   font-size: 1.1em;
   font-weight: 500;
   margin-top: 0;
 }
 
-#hero { border-bottom: 5px solid #7D0B5B; } /* Syrah */
+#hero { border-bottom: 5px solid var(--syrah); } /* Syrah */
 
 #skills-and-tools {
   display: grid;
@@ -249,7 +250,7 @@ h1 > p {
   grid-template-areas: "skills tools"
                        "resume resume";
   grid-gap: 0 25px;
-  background-color: #FFE5EE; /* Light pink */
+  background-color: var(--light-jazzberry); /* Light pink */
   padding: 20px;
   margin: 30px -20px;
 }
@@ -314,16 +315,16 @@ h1 > p {
 }
 
 .button-filled.about {
-  background-color: #3056CE; /* Blue */
+  background-color: var(--cerulean-blue);
 }
 
 .button-filled.work {
-  background-color: #239B15; /* Green */
+  background-color: var(--lizard-green);
 }
 
 .button-ghost.about {
-  color: #3056CE !important; /* Blue */
-  border-color: #3056CE; /* Blue */
+  color: var(--cerulean-blue) !important;
+  border-color: var(--cerulean-blue);
 }
 
 .button-filled:hover,
@@ -333,9 +334,9 @@ h1 > p {
 
 .button-ghost:hover,
 .button-ghost:active {
-  background-color:  #B20F5C; /* Jazzberry */
+  background-color:  var(--jazzberry);
   color: #FFFFFF !important;
-  border-color: #B20F5C; /* Jazzberry */
+  border-color: var(--jazzberry);
   filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
 }
 
@@ -343,7 +344,10 @@ h1 > p {
   margin-top: 20px;
 }
 
-.disabled { cursor: not-allowed; }
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none; /* NOTE: pointer-events cancels out the not-allowed cursor */
+}
 
 .button-filled.disabled,
 .button-filled.disabled:hover,
@@ -355,7 +359,7 @@ h1 > p {
 .project-picture:hover,
 .project-picture:active,
 #mev-logo-animation:hover {
-  border: 4px solid #239B15;
+  border: 4px solid var(--lizard-green);
 }
 
 .project-picture,
@@ -368,7 +372,7 @@ h1 > p {
 /*----------------------------------------------------------------------------*/
 
 #contact {
-  background-color: #E6ECFF;
+  background-color: var(--vaguely-violet);
   padding-bottom: 15px;
 }
 
@@ -402,7 +406,7 @@ h1 > p {
 
 .solid-footer {
   margin: 0;
-  background-color: #3056CE;
+  background-color: var(--cerulean-blue);
   padding: 20px 20px 10px 20px;
 }
 
@@ -416,7 +420,7 @@ h1 > p {
 .soc-media-icons a {
   display: inline-block;
   justify-content: center;
-  color: #3056CE;
+  color: var(--cerulean-blue);
   line-height: 2.4em;
   text-align: center;
   background-color: white;
@@ -427,7 +431,7 @@ h1 > p {
 
 .soc-media-icons a:hover,
 .soc-media-icons a:active {
-  color: #B20F5C !important;
+  color: var(--jazzberry) !important;
   box-shadow: inset 0 0 5px 1px rgba(178,15,92,.4);
 }
 
@@ -445,7 +449,7 @@ h1 > p {
 /*----------------------------------------------------------------------------*/
 
 
-#mev-logo-animation { background-color: #FFE5EE; }
+#mev-logo-animation { background-color: var(--light-jazzberry); }
 
 #hide-m-left { animation: unhide-m-left 6s ease-out 0s infinite normal forwards; }
 
@@ -627,7 +631,7 @@ h1 > p {
   }
 
   nav {
-    background-color: #B20F5C; /* Jazzberry */
+    background-color: var(--jazzberry); /* Jazzberry */
     /* text-align: right; */
   }
 
@@ -680,8 +684,8 @@ h1 > p {
 
   #about{ padding: 46px 57px 40px 186px; }
 
-  #about, #about-me { border-bottom: 7px solid #E6ECFF; /* Light blue */ }
-  #hero { border-bottom: 7px solid #7D0B5B; } /* Syrah */
+  #about, #about-me { border-bottom: 7px solid var(--vaguely-violet); /* Light blue */ }
+  #hero { border-bottom: 7px solid var(--syrah); } /* Syrah */
 
   a.button-filled { display: inline-block; }
 
@@ -807,8 +811,8 @@ h1 > p {
   #skills-and-tools { grid-area: skills-and-tools; }
   #skills-and-tools .button-ghost:hover,
   #skills-and-tools .button-ghost:active {
-    background-color: #3056CE; /* Blue */
-    border-color: #3056CE; /* Blue */
+    background-color: var(--cerulean-blue); /* Blue */
+    border-color: var(--cerulean-blue); /* Blue */
   }
 
   #my-story { grid-area: my-story; }
@@ -824,7 +828,7 @@ h1 > p {
                          "tools"
                          "resume";
     grid-row-gap: 20px;
-    /* background-color: #FFE5EE; /* Light pink */
+    /* background-color: var(--light-jazzberry); /* Light pink */
     padding: 30px 30px 40px 40px;
     margin: -30px 0px -40px -40px;
   }
@@ -875,9 +879,9 @@ h1 > p {
 
   #about { padding: 46px 177px 40px 177px; }
   #about .section-content { max-width: 800px;}
-  #about, #about-me { border-bottom: 10px solid #E6ECFF; /* Light blue */ }
+  #about, #about-me { border-bottom: 10px solid var(--vaguely-violet); /* Light blue */ }
   #work { padding: 30px 177px 40px 177px;}
-  #hero { border-bottom: 10px solid #7D0B5B; } /* Syrah */
+  #hero { border-bottom: 10px solid var(--syrah); } /* Syrah */
 
   .case-study {
     grid-template-columns: 2fr 3fr;
