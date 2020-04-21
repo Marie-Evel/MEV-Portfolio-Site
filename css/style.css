@@ -170,7 +170,10 @@ p + h1 {
 
 .image-container svg { width: 160%; }
 
-#mev-logo-animation { padding: 20px; }
+#mev-logo-animation {
+  padding: 20px;
+  background-color: var(--light-jazzberry);
+}
 
 .image-container {
   overflow: hidden;
@@ -266,12 +269,11 @@ h1 > p {
 .button,
 .button-filled,
 .button-ghost {
-  display: grid;
+  display: block;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.125em;
   text-align: center;
-  padding: 10px 30px;
   border-radius: 5px;
   margin-top: 20px;
   cursor: pointer;
@@ -280,6 +282,7 @@ h1 > p {
 .button-filled {
     background-color: yellow;
     color: #ffffff !important;
+    padding: 10px 30px;
     transition: all 0.25s;
 }
 
@@ -287,6 +290,7 @@ h1 > p {
     background-color: white;
     color: black !important;
     border: 1.5px solid black;
+    padding: 8.5px 28.5px;
     transition: all 0.25s;
 }
 
@@ -298,7 +302,8 @@ h1 > p {
   background-color: var(--lizard-green);
 }
 
-.button-ghost.about {
+.button-ghost.about,
+.button-ghost.contact {
   color: var(--cerulean-blue) !important;
   border-color: var(--cerulean-blue);
 }
@@ -420,157 +425,6 @@ h1 > p {
   margin-top: 15px;
 }
 
-/*----------------------------------------------------------------------------*/
-/* Animations for logo project */
-/*----------------------------------------------------------------------------*/
-#mev-logo-animation { background-color: var(--light-jazzberry); }
-
-#hide-m-left { animation: unhide-m-left 6s ease-out 0s infinite normal forwards; }
-
-#m-diagonal1 { animation: draw-m-diagonal1 6s linear 0s infinite normal forwards; }
-
-#hide-m-diagonal1 { animation: hide-m-diagonal1 6s linear 0s infinite normal forwards; }
-
-#hide-m-diagonal2 { animation: unhide-m-diagonal2 6s ease-in 0s infinite normal forwards; }
-
-#hide-m-right { animation: unhide-m-right 6s linear 0s infinite normal forwards; }
-
-#hide-e { animation: unhide-e 6s linear 0s infinite normal forwards; }
-
-#hide-v-diagonal { animation: unhide-v-diagonal 6s linear 0s infinite normal forwards; }
-
-#hide-v-vertical { animation: unhide-v-vertical 6s ease-out 0s infinite normal forwards; }
-
-#mev-logo-animation svg {
-  animation: shrink-logo 6s ease-out 0s infinite normal forwards,
-             exit-right 6s ease-in 5.2s infinite normal forwards;
-}
-
-#vesel, #marie-eve { transform: translate(-290px, 0px); }
-
-#marie-eve { animation: me-entrance 6s ease-out 0s infinite normal forwards; }
-
-#vesel { animation: vesel-entrance 6s ease-out 0s infinite normal forwards; }
-
-@keyframes unhide-m-left {
-  0%    { transform: translate(-1px, 0px); }
-  8.25% { transform: translate(-1px, -142px);
-          opacity: 1; }
-  8.33% { transform: translate(-1px, -142px);
-          opacity: 0; }
-  99.9% { transform: translate(-1px, 0px);
-          opacity: 0; }
-  100%  { transform: translate(-1px, 0px);
-          opacity: 1; }
-}
-
-@keyframes draw-m-diagonal1 {
-  7.5%    { transform: translate(-52px, -47px); }
-  11.5%   { transform: translate(0.079782px, 15.1px); }
-  17.4%   { opacity: 1; }
-  17.5% ,100%
-          { transform: translate(47px, 71px);
-          opacity: 0; }
-}
-
-@keyframes hide-m-diagonal1 {
-  17.33% { opacity: 1; }
-  19%, 99.9%
-         { opacity: 0; }
-  100%   { opacity: 1; }
-}
-
-@keyframes unhide-m-diagonal2 {
-  10.83% { transform: translate(33px, 0px); }
-  17.43% { transform: translate(116px, 0px);
-           opacity: 1; }
-  17.5%  { transform: translate(116px, 0px);
-          opacity: 0; }
-  99.9%  { transform: translate(33px, 0px);
-           opacity: 0; }
-  100%   { transform: translate(33px, 0px);
-           opacity: 1; }
-}
-
-@keyframes unhide-m-right {
-  17.5%  { transform: translate(94px, 0px); }
-  25.75% { transform: translate(94px, 142px);
-           opacity: 1; }
-  25.83% { transform: translate(94px, 142px);
-           opacity: 0; }
-  99.9% { transform: translate(94px, 0px);
-          opacity: 0; }
-  100%   { transform: translate(94px, 0px);
-           opacity: 1; }
-}
-
-@keyframes unhide-e {
-  25.83%  { transform: translate(130px, -1px); }
-  34.08%  { transform: translate(350px, -1px);
-            opacity: 1; }
-  34.17%  { transform: translate(350px, -1px);
-            opacity: 0; }
-  99.9%    { transform: translate(130px, -1px);
-            opacity: 0; }
-  100%    { transform: translate(130px, -1px);
-            opacity: 1; }
-}
-
-@keyframes unhide-v-diagonal {
-  32.5%  { transform: translate(211px, 16.5px); }
-  40.75% { transform: translate(85px, 16.5px);
-           opacity: 1; }
-  40.83% { transform: translate(85px, 16.5px);
-           opacity: 0; }
-  99.9%  { transform: translate(211px, 16.5px);
-           opacity: 0; }
-  100%   { transform: translate(211px, 16.5px);
-           opacity: 1; }
-}
-
-@keyframes unhide-v-vertical {
-  40.83% { transform: translate(224px, 62px); }
-  46.61% { transform: translate(224px, 6px);
-           opacity: 1; }
-  46.67% { transform: translate(224px, 6px);
-           opacity: 0; }
-  99.9%  { transform: translate(224px, 62px);
-           opacity: 0; }
-  100%   { transform: translate(224px, 62px);
-           opacity: 1; }
-}
-
-@keyframes shrink-logo {
-  49.17% { transform: scale(1, 1);
-           transform-origin: top left; }
-  61.67%, 86.87%
-          { transform: scale(0.6);
-           transform-origin: top left; }
-  95%, 99.9%
-         { transform: scale(0.6) translateX(700px);
-           transform-origin: top left; }
-  100%   { transform: scale(1, 1) translateX(0);
-           transform-origin: top left; }
-}
-
-@keyframes me-entrance {
-  53.33% { transform: translate(-290px, 0); }
-  61.67%, 78.33%
-         { transform: translate(0, 0); }
-  82.5%, 99.9%
-         { transform: translateY(150px); }
-  100%   { transform: translate(-290px, 0); }
-}
-
-@keyframes vesel-entrance {
-  54.17% { transform: translate(-290px, 0); }
-  66.67%, 78.33%
-         { transform: translate(0, 0); }
-  86.67%, 99.9%
-         { transform: translateY(-200px); }
-  100%   { transform: translate(-290px, 0); }
-}
-
 
 /*----------------------------------------------------------------------------*/
 /* Media queries for tablets and larger */
@@ -602,10 +456,7 @@ h1 > p {
     max-width: unset;
   }
 
-  nav {
-    background-color: var(--jazzberry); /* Jazzberry */
-    /* text-align: right; */
-  }
+  nav { background-color: var(--jazzberry); }
 
   body:not(.project) header nav a {
     color: white !important;
@@ -614,7 +465,6 @@ h1 > p {
 
   nav {
     display: grid;
-    /* grid-area: menus; */
     justify-items: end;
   }
 
@@ -659,7 +509,10 @@ h1 > p {
   #about, #about-me { border-bottom: 7px solid var(--vaguely-violet); }
   #hero { border-bottom: 7px solid var(--syrah); }
 
-  a.button-filled { display: inline-block; }
+  a.button-filled,
+  a.button-ghost { display: inline-block; }
+
+  .button-ghost.about { margin-left: 15px; }
 
   .case-study {
     display: grid;
@@ -700,7 +553,6 @@ h1 > p {
     justify-items: start;
     padding-bottom: 30px;
   }
-  /* #contact p:first-of-type {margin-bottom: 0; } */
 
   #contact a.button-ghost { width: 16em; }
 
@@ -803,7 +655,6 @@ h1 > p {
                          "tools"
                          "resume";
     grid-row-gap: 20px;
-    /* background-color: var(--light-jazzberry); /* Light pink */
     padding: 30px 30px 40px 40px;
     margin: -30px 0px -40px -40px;
   }
@@ -816,7 +667,7 @@ h1 > p {
     margin-bottom: 0.625em;
   }
 
-  .button-ghost.about { margin: 0; }
+  #resume-button a { margin: 0; }
 
   .indented-quote { margin: 30px 50px 30px 30px; }
 
@@ -869,18 +720,4 @@ h1 > p {
 
   .soc-media-icons { margin-left: 70px; }
   #mev-copyright p { margin-right: 70px; }
-}
-
-/*----------------------------------------------------------------------------*/
-/* Media queries when viewport gets too wide  */
-/*----------------------------------------------------------------------------*/
-@media only screen and (min-width: 1350px) {
-
-
-  /* #contact { padding-right: calc(100vw - 1280px); }
-
-  #mev-copyright p { margin-right: calc(100vw - 1280px); }
-
-  nav .menu-container { margin-right: calc(100vw - 1290px); } */
-
 }
