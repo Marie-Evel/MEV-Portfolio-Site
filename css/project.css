@@ -243,7 +243,6 @@ footer h1 {
   font-weight: 500;
   font-size: 1.125em;
   text-align: center;
-  padding: 10px 30px;
   border-radius: 5px;
   margin-top: 20px;
   cursor: pointer;
@@ -251,12 +250,16 @@ footer h1 {
   transition: all 0.25s;
 }
 
-.button-filled { color: #FFFFFF; }
+.button-filled {
+  color: #FFFFFF;
+  padding: 10px 30px;
+}
 
 .button-ghost {
   color: var(--sc-red);
   border: 1.5px solid var(--sc-red);
   background-color: #FFFFFF;
+  padding: 8.5px 28.5px;
 }
 
 .button-filled:hover,
