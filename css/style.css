@@ -107,28 +107,13 @@ main.project { padding-top: 110px; }
   padding: 60px 0 25px 20px;
 }
 
-.project .logo-container {
-  background-color: white;
-  padding: 0 5px 6px 20px;
-}
-
 .logo-container img {
   width: 80%;
   height: auto; }
 
-.project .logo-container img {
-  width: 100%;
-  max-width: 100px;
-  height: auto;
-}
-
 nav {
   display: grid;
   background-color: var(--vaguely-violet); /* Light blue */
-}
-
-.project nav {
-  background-color: white;
 }
 
 nav .menu-container {
@@ -137,20 +122,9 @@ nav .menu-container {
   margin: 0 20px;
 }
 
-.project nav .menu-container {
-  align-items: end;
-  margin-left: 0;
-}
-
 nav .top-menu {
   text-align: center;
   padding: 10px 0;
- }
-
- .project nav .top-menu {
-   padding: 0;
-   vertical-align: bottom;
-
  }
 
  nav a {
