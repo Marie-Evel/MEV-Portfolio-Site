@@ -26,7 +26,6 @@
   <link rel="stylesheet" type="text/css" href="css/metrisch.css">
   <link rel="stylesheet" type="text/css" href="css/project.css">
 
-  <!-- JavaScript files ----------------------------------------------------->
 
 </head>
 
@@ -36,13 +35,13 @@
       <div class="mev-logo">
         <a href="index.html">
           <picture>
-            <source media="(max-width: 640px)" srcset="img/streetcred/logo_mobile_sc_blue.svg">
+            <source media="(max-width: 640px)" srcset="img/streetcred/logo_desktop_sc_blue.svg">
             <img src="img/streetcred/logo_desktop_sc_blue.svg" alt="M E V logo">
           </picture>
         </a>
       </div>
       <nav>
-        <ul class="menu-container">
+        <ul id="menu-container" class="">
           <li class="menu-item">
             <a href="index.html#work">Work</a>
           </li>
@@ -54,6 +53,11 @@
           </li>
         </ul>
       </nav>
+      <div id="nav-icon" onclick="toggleMenu()" class="hamburger">
+        <span>
+          <!-- NOTE: Intentionally blank; hamburger icon generated with CSS -->
+        </span>
+      </div>
     </div>
   </header>
 
@@ -2439,6 +2443,11 @@
 
   </footer>
 
+  <!-- JavaScript files ----------------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+    crossorigin="anonymous">
+  </script>
   <script src="js/scripts.js"></script>
 </body>
 
