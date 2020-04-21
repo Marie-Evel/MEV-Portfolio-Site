@@ -242,6 +242,8 @@ h1 > p {
   margin-bottom: 0.75em;
 }
 
+#fun { margin-top: 30px; }
+
 /*----------------------------------------------------------------------------*/
 /* Font styling */
 /*----------------------------------------------------------------------------*/
@@ -421,8 +423,6 @@ h1 > p {
 /*----------------------------------------------------------------------------*/
 /* Animations for logo project */
 /*----------------------------------------------------------------------------*/
-
-
 #mev-logo-animation { background-color: var(--light-jazzberry); }
 
 #hide-m-left { animation: unhide-m-left 6s ease-out 0s infinite normal forwards; }
@@ -579,13 +579,11 @@ h1 > p {
 
   #top-nav {
     display: grid;
-    /* grid-template-areas: "logo menus"; */
     grid-template-columns: 3fr 2fr;
     align-content: end;
   }
 
   .logo-container {
-    /* grid-area: logo; */
     padding-left: 40px;
     vertical-align: bottom;
   }
@@ -658,8 +656,8 @@ h1 > p {
 
   #about{ padding: 46px 57px 40px 186px; }
 
-  #about, #about-me { border-bottom: 7px solid var(--vaguely-violet); /* Light blue */ }
-  #hero { border-bottom: 7px solid var(--syrah); } /* Syrah */
+  #about, #about-me { border-bottom: 7px solid var(--vaguely-violet); }
+  #hero { border-bottom: 7px solid var(--syrah); }
 
   a.button-filled { display: inline-block; }
 
@@ -791,7 +789,10 @@ h1 > p {
 
   #my-story { grid-area: my-story; }
   #personal { grid-area: personal; }
-  #fun { grid-area: fun; }
+  #fun {
+    grid-area: fun;
+    margin-top: 0;
+  }
 
   #my-story, #personal, #fun { max-width: 700px;}
 
@@ -830,20 +831,12 @@ h1 > p {
   main { padding-top: 110px; }
   main.project { padding-top: 105px; }
 
-  section {
-    padding: 30px 70px 40px 70px;
-    /* max-width: 1040px;
-    margin-left: auto;
-    margin-right: auto; */
-  }
+  section { padding: 30px 70px 40px 70px; }
 
   .logo-container { padding: 40px 20px 20px 70px; }
   .project .logo-container { padding-left: 70px; }
 
-  .logo-container img {
-    height: 50px;
-    /* width: auto; */
-  }
+  .logo-container img { height: 50px; }
 
   nav .menu-container { margin-right: 60px; }
 
@@ -853,9 +846,9 @@ h1 > p {
 
   #about { padding: 46px 177px 40px 177px; }
   #about .section-content { max-width: 800px;}
-  #about, #about-me { border-bottom: 10px solid var(--vaguely-violet); /* Light blue */ }
+  #about, #about-me { border-bottom: 10px solid var(--vaguely-violet); }
   #work { padding: 30px 177px 40px 177px;}
-  #hero { border-bottom: 10px solid var(--syrah); } /* Syrah */
+  #hero { border-bottom: 10px solid var(--syrah); }
 
   .case-study {
     grid-template-columns: 2fr 3fr;
@@ -866,7 +859,7 @@ h1 > p {
 
   #about-me .section-content {
     grid-template-columns: 270px 1fr;
-    grid-gap: 0 50px;
+    grid-gap: 30px 50px;
   }
 
   #skills-and-tools {
