@@ -73,7 +73,7 @@ div p:last-of-type { margin-bottom: 0; }
 b { font-weight: bold; }
 i { font-style: italic; }
 
-picture img { display: block; }
+picture img, img { display: block; }
 
 img { width: 100%; }
 
@@ -1631,8 +1631,8 @@ body .sc a:visited { color: var(--sc-red); }
   nav {
     display: flex;
     width: 62.5vw;
-    max-width: 200px;
-    min-width: 20vw;
+    max-width: 230px;
+    /* min-width: 20vw; */
     padding-bottom: 0.6rem;
   }
 
