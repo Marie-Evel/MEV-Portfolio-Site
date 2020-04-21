@@ -11,9 +11,9 @@
 /*----------------------------------------------------------------------------*/
 /* Global styles */
 /*----------------------------------------------------------------------------*/
-* {
-  box-sizing: border-box;
-}
+html { scroll-behavior: smooth; }
+
+* { box-sizing: border-box; }
 
 body {
   background-color: white;
