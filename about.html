@@ -24,36 +24,38 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/metrisch.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <!-- JavaScript files ----------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
 
   </head>
 
   <body>
-    <header class="sticky">
+
+    <header>
       <div id="top-nav">
-        <div class="logo-container">
+        <div id="mev-logo">
           <a href="index.html">
-            <picture>
-              <source media="(max-width: 639px)" srcset="img/logo/logo_mobile.svg">
-              <img src="img/logo/logo_desktop.svg" alt="M E V logo">
-            </picture>
+            <img src="img/logo/logo_white.svg" alt="M E V logo">
           </a>
-        </div><!-- END .logo-container -->
+        </div>
         <nav>
-          <div class="menu-container">
-            <div class="top-menu">
-              <a href="index.html#work">Work</a>
-            </div>
-            <div class="top-menu">
+          <ul id="menu-container">
+            <li class="menu-item">
+              <a href="index.html#work-anchor" onclick="toggleMenu()">Work</a>
+            </li>
+            <li class="menu-item">
               <a href="about.html">About</a>
-            </div>
-            <div class="top-menu">
-              <a href="#contact">Contact</a>
-            </div>
-          </div>
+            </li>
+            <li class="menu-item">
+              <a href="#contact" onclick="toggleMenu()">Contact</a>
+            </li>
+          </ul>
         </nav>
-      </div><!-- END #top-nav-->
+        <div id="nav-icon" onclick="toggleMenu()" class="hamburger">
+          <span>
+            <!-- NOTE: Intentionally blank; hamburger icon generated with CSS -->
+          </span>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -65,8 +67,7 @@
           <div class="intro">
             <h1>Hello! I'm Marie-Eve,</h1>
             <p>
-              a passionate interaction designer
-              <br>and UX generalist.
+              a passionate interaction designer and&nbsp;UX&nbsp;generalist.
             </p>
           </div>
           <div class="desc">
@@ -75,8 +76,9 @@
               practical solutions.
             </p>
           </div>
-          <div class="cta">
-            <a class="button-filled about" href="files/mev_resume.pdf" target="_blank" download>View résumé</a>
+          <div class="button-container">
+            <a class="button-filled button-blue" href="index.html#work-anchor">Check out my work</a>
+            <a class="button-ghost button-blue" href="files/mev_resume.pdf" target="_blank" download>View my résumé</a>
           </div>
         </div>
       </section><!--  END of #hero -->
@@ -153,7 +155,7 @@
             </div>
 
             <div id="resume-button">
-              <a class="button-ghost about" href="files/mev_resume.pdf" target="_blank" download>View résumé</a>
+              <a class="button-ghost button-red" href="files/mev_resume.pdf" target="_blank" download>View résumé</a>
             </div>
           </div><!-- END of Skills and Tools -->
 
@@ -201,7 +203,7 @@
         <p class="font-medium">
           Like what you see? Let's get in touch!
         </p>
-        <a class="button-ghost contact" href="mailto:info@mevesel.design">Send me an Email</a>
+        <a class="button-ghost button-blue" href="mailto:info@mevesel.design">Send me an Email</a>
         <div id="call-skype">
           <p>
             Call me: <a href="tel:13128881726">1-312-888-1726</a>
@@ -231,6 +233,7 @@
       </div><!-- END of Section with social media icons and copyright -->
     </footer>
 
+    <!-- JavaScript files ----------------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous">
