@@ -77,125 +77,6 @@ a:active {
   color: var(--jazzberry);
 }
 
-
-/*----------------------------------------------------------------------------*/
-/* Header and top nav */
-/*----------------------------------------------------------------------------*/
-header,
-#menu-container { background-color: var(--jazzberry); }
-
-#menu-container { border-top: solid 5px var(--vaguely-violet); }
-
-#work { position: relative; }
-
-#work-anchor {
- position: absolute;
- top: -66px;
-}
-
-/*----------------------------------------------------------------------------*/
-/* Layout styling */
-/*----------------------------------------------------------------------------*/
-
-section { padding: 30px 20px 40px 20px; }
-
-p + h1 { margin-top: 30px; }
-
-.indented-quote {
-    margin: 30px 10px 30px 20px;
-    border-left: solid 2px var(--cerulean-blue);
-    padding: .1em 0 .1em 0.75em;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: var(--cerulean-blue);
-}
-
-/* Sections in index page */
-/*----------------------------------------------------------------------------*/
-.project-picture { margin-bottom: 0.75em; }
-
-.image-container { position: relative; }
-
-.image-container svg { width: 160%; }
-
-#mev-logo-animation {
-  padding: 20px;
-  background-color: var(--jazzberry-light);
-}
-
-.image-container {
-  overflow: hidden;
-  -o-object-position: top left;
-     object-position: top left;
-}
-
-.case-study:not(:last-of-type) { padding-bottom: 20px; }
-
-.grid-item p:last-of-type { margin-bottom: 0; }
-
-#work .case-studies .case-study:not(:first-of-type) {
-  padding-top: 20px;
-  border-top: 1px solid var(--syrah);
-}
-
-#intro,
-#about-me { border-bottom: 5px solid var(--vaguely-violet); }
-
-/* Sections in about page */
-/*----------------------------------------------------------------------------*/
-
-#profile-pic {
-  width: 12.5em;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-h1 > p {
-  font-size: .85em;
-  font-weight: normal;
-}
-
-#hero .intro h1 { margin-bottom: 0; }
-
-#hero .intro p {
-  color: var(--syrah);
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-top: 0;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
-}
-
-#hero { border-bottom: 5px solid var(--syrah); }
-
-#skills-and-tools {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "skills tools"
-                       "resume resume";
-  grid-gap: 0 25px;
-  background-color: var(--jazzberry-light);
-  padding: 20px;
-  margin: 30px -20px;
-}
-
-#skills { grid-area: skills; }
-#tools { grid-area: tools; }
-#resume-button { grid-area: resume; }
-
-#tools,
-#skills { font-size: .9em; }
-
-#tools li,
-#skills li {
-  line-height: 1.25;
-  margin-bottom: 0.75em;
-}
-
-#fun { margin-top: 30px; }
-
 /*----------------------------------------------------------------------------*/
 /* Font styling */
 /*----------------------------------------------------------------------------*/
@@ -298,12 +179,172 @@ h1 > p {
           filter: none;
 }
 
-.project-picture:hover,
-.project-picture:active,
-#mev-logo-animation:hover { border: 4px solid var(--lizard-green); }
+/*----------------------------------------------------------------------------*/
+/* Header and top nav */
+/*----------------------------------------------------------------------------*/
+header,
+#menu-container { background-color: var(--jazzberry); }
 
-.project-picture,
-#mev-logo-animation { transition: all 0.25s; }
+#menu-container { border-top: solid 5px var(--vaguely-violet); }
+
+#work { position: relative; }
+
+#work-anchor {
+ position: absolute;
+ top: -66px;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Layout styling */
+/*----------------------------------------------------------------------------*/
+
+section { padding: 30px 20px 40px 20px; }
+
+p + h1 { margin-top: 30px; }
+
+.indented-quote {
+    margin: 30px 10px 30px 20px;
+    border-left: solid 2px var(--cerulean-blue);
+    padding: .1em 0 .1em 0.75em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--cerulean-blue);
+}
+
+/* Sections in index page */
+/*----------------------------------------------------------------------------*/
+#intro,
+#about-me { border-bottom: 5px solid var(--vaguely-violet); }
+
+.case-study:not(:last-of-type) { padding-bottom: 20px; }
+
+.grid-item p:last-of-type { margin-bottom: 0; }
+
+#work .case-studies .case-study:not(:first-of-type) {
+  padding-top: 20px;
+  border-top: 1px solid var(--syrah);
+}
+
+.project-picture {
+  position: relative;
+  margin-bottom: 0.75em;
+  overflow: hidden;
+}
+
+.project-picture .overlay {
+  position: absolute;
+  display: grid;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(125,11,91, 0.80);
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+  transition: all 0.25s;
+  align-content: center;
+}
+
+a.overlay { text-decoration: none; }
+
+.project-picture .overlay p {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  text-align: center;
+  margin: 0 10px;
+
+}
+
+.project-picture:hover .overlay,
+.project-picture:active .overlay {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+}
+
+.project-picture img {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.project-picture:hover img {
+  transform: scale(1.1);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  -o-object-position: top left;
+     object-position: top left;
+}
+
+.image-container svg { width: 160%; }
+
+#mev-logo-animation {
+  padding: 20px;
+  background-color: var(--jazzberry-light);
+}
+
+
+/* Sections in about page */
+/*----------------------------------------------------------------------------*/
+
+#profile-pic {
+  width: 12.5em;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 > p {
+  font-size: .85em;
+  font-weight: normal;
+}
+
+#hero .intro h1 { margin-bottom: 0; }
+
+#hero .intro p {
+  color: var(--syrah);
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: 0;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+#hero { border-bottom: 5px solid var(--syrah); }
+
+#skills-and-tools {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "skills tools"
+                       "resume resume";
+  grid-gap: 0 25px;
+  background-color: var(--jazzberry-light);
+  padding: 20px;
+  margin: 30px -20px;
+}
+
+#skills { grid-area: skills; }
+#tools { grid-area: tools; }
+#resume-button { grid-area: resume; }
+
+#tools,
+#skills { font-size: .9em; }
+
+#tools li,
+#skills li {
+  line-height: 1.25;
+  margin-bottom: 0.75em;
+}
+
+#fun { margin-top: 30px; }
 
 /*----------------------------------------------------------------------------*/
 /* Footer */
@@ -433,7 +474,7 @@ h1 > p {
     margin-top: 15px;
    }
 
-  .project-picture { margin-bottom: 0; }
+  .project-picture { margin: 0; }
 
   .project-picture img {
     width: 100%;
@@ -441,7 +482,7 @@ h1 > p {
     vertical-align: top;
   }
 
-  .project-picture { border: 4px solid rgba(35, 155, 21, 0); }
+  /* .project-picture { border: 4px solid rgba(35, 155, 21, 0); } */
 
 
   /* Hero section in about page | tablets */
@@ -539,6 +580,11 @@ h1 > p {
     padding-bottom: 30px;
   }
 
+  #contact > p {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
   #contact a.button-ghost { width: 16em; }
 
   #call-skype {
@@ -593,7 +639,7 @@ h1 > p {
     padding-top: var(--topnav-height-lg);
     max-width: 1250px;
     margin: 0 auto;
-    background-color: #FFF5F8;/*#F8FCF8; /*#FFF5F8;*/
+    background-color: #FFF5F8;/*#F8FCF8 (green); /*#FFF5F8 (pink);*/
     box-shadow: 1px 0 15px rgba(0,0,0,.4);
     -webkit-box-shadow: 1px 0 15px rgba(0,0,0,.4);
   }
@@ -610,8 +656,9 @@ h1 > p {
   #intro { padding: 46px 177px 40px 150px; }
   #intro .section-content { max-width: 510px; }
   #intro, #about-me { border-bottom: 10px solid var(--vaguely-violet); }
-  #work { padding: 30px 150px 40px 150px; }
+
   #work-anchor { top: -95px; }
+  #work { padding: 30px 150px 40px 150px; }
 
   .case-study {
     grid-template-columns: 2fr 3fr;
