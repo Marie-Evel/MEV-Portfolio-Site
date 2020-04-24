@@ -672,6 +672,16 @@ section.intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--s
 
 /* 04 Information Architecture */
 /* -------------------------------------------------------------------------- */
+#ia-transition {
+  width: 100%;
+  height: 330px;
+  background-image: url('../img/streetcred/sec4_ia/ia_transition_small.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat:repeat-y;
+  /* background-size: cover; */
+}
+
 #card-sorting { background-image: linear-gradient(var(--sc-light-pink) 0%, white 25%, white 70%, var(--sc-light-pink) 100%); }
 
 #similarity-matrix {
@@ -1556,7 +1566,7 @@ body .sc a:visited { color: var(--sc-red); }
   /*--------------------------------------------------------------------------*/
   #contact section {
     grid-template-areas: "title ."
-                         "tagline ."
+                         "tagline call-skype"
                          "button call-skype";
     grid-template-columns: auto 1fr;
     justify-items: start;
