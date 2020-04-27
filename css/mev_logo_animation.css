@@ -1,147 +1,177 @@
+/* Logo starting point */
+#mev-logo-animation .hide-stroke { opacity: 0; }
 
-
-#hide-m-left { animation: unhide-m-left 6s ease-out 0s infinite normal forwards; }
-
-#m-diagonal1 { animation: draw-m-diagonal1 6s linear 0s infinite normal forwards; }
-
-#hide-m-diagonal1 { animation: hide-m-diagonal1 6s linear 0s infinite normal forwards; }
-
-#hide-m-diagonal2 { animation: unhide-m-diagonal2 6s ease-in 0s infinite normal forwards; }
-
-#hide-m-right { animation: unhide-m-right 6s linear 0s infinite normal forwards; }
-
-#hide-e { animation: unhide-e 6s linear 0s infinite normal forwards; }
-
-#hide-v-diagonal { animation: unhide-v-diagonal 6s linear 0s infinite normal forwards; }
-
-#hide-v-vertical { animation: unhide-v-vertical 6s ease-out 0s infinite normal forwards; }
-
-#mev-logo-animation svg {
-  animation: shrink-logo 6s ease-out 0s infinite normal forwards,
-             exit-right 6s ease-in 5.2s infinite normal forwards;
+/* Make logo leave */
+.animate #marie-eve {
+  animation: exit-down 0.5s 1s ease-in forwards,
+             me-entrance 0.4s 4.7s ease-out forwards;
 }
 
-#vesel, #marie-eve { transform: translate(-290px, 0px); }
-
-#marie-eve { animation: me-entrance 6s ease-out 0s infinite normal forwards; }
-
-#vesel { animation: vesel-entrance 6s ease-out 0s infinite normal forwards; }
-
-@keyframes unhide-m-left {
-  0%    { transform: translate(-1px, 0px); }
-  8.25% { transform: translate(-1px, -142px);
-          opacity: 1; }
-  8.33% { transform: translate(-1px, -142px);
-          opacity: 0; }
-  99.9% { transform: translate(-1px, 0px);
-          opacity: 0; }
-  100%  { transform: translate(-1px, 0px);
-          opacity: 1; }
-}
-
-@keyframes draw-m-diagonal1 {
-  7.5%    { transform: translate(-52px, -47px); }
-  11.5%   { transform: translate(0.079782px, 15.1px); }
-  17.4%   { opacity: 1; }
-  17.5% ,100%
-          { transform: translate(47px, 71px);
+@keyframes exit-down {
+  0%    { transform: translate(0, 0); }
+  80%   { opacity: 1; }
+  100% { transform: translateY(250px);
           opacity: 0; }
 }
 
-@keyframes hide-m-diagonal1 {
-  17.33% { opacity: 1; }
-  19%, 99.9%
-         { opacity: 0; }
-  100%   { opacity: 1; }
-}
-
-@keyframes unhide-m-diagonal2 {
-  10.83% { transform: translate(33px, 0px); }
-  17.43% { transform: translate(116px, 0px);
-           opacity: 1; }
-  17.5%  { transform: translate(116px, 0px);
-          opacity: 0; }
-  99.9%  { transform: translate(33px, 0px);
-           opacity: 0; }
-  100%   { transform: translate(33px, 0px);
-           opacity: 1; }
-}
-
-@keyframes unhide-m-right {
-  17.5%  { transform: translate(94px, 0px); }
-  25.75% { transform: translate(94px, 142px);
-           opacity: 1; }
-  25.83% { transform: translate(94px, 142px);
-           opacity: 0; }
-  99.9% { transform: translate(94px, 0px);
-          opacity: 0; }
-  100%   { transform: translate(94px, 0px);
-           opacity: 1; }
-}
-
-@keyframes unhide-e {
-  25.83%  { transform: translate(130px, -1px); }
-  34.08%  { transform: translate(350px, -1px);
-            opacity: 1; }
-  34.17%  { transform: translate(350px, -1px);
-            opacity: 0; }
-  99.9%    { transform: translate(130px, -1px);
-            opacity: 0; }
-  100%    { transform: translate(130px, -1px);
-            opacity: 1; }
-}
-
-@keyframes unhide-v-diagonal {
-  32.5%  { transform: translate(211px, 16.5px); }
-  40.75% { transform: translate(85px, 16.5px);
-           opacity: 1; }
-  40.83% { transform: translate(85px, 16.5px);
-           opacity: 0; }
-  99.9%  { transform: translate(211px, 16.5px);
-           opacity: 0; }
-  100%   { transform: translate(211px, 16.5px);
-           opacity: 1; }
-}
-
-@keyframes unhide-v-vertical {
-  40.83% { transform: translate(224px, 62px); }
-  46.61% { transform: translate(224px, 6px);
-           opacity: 1; }
-  46.67% { transform: translate(224px, 6px);
-           opacity: 0; }
-  99.9%  { transform: translate(224px, 62px);
-           opacity: 0; }
-  100%   { transform: translate(224px, 62px);
-           opacity: 1; }
-}
-
-@keyframes shrink-logo {
-  49.17% { transform: scale(1, 1);
-           transform-origin: top left; }
-  61.67%, 86.87%
-          { transform: scale(0.6);
-           transform-origin: top left; }
-  95%, 99.9%
-         { transform: scale(0.6) translateX(700px);
-           transform-origin: top left; }
-  100%   { transform: scale(1, 1) translateX(0);
-           transform-origin: top left; }
-}
+.animate #hide-full-name,
+.animate #hide-last-name { animation: hide-strokes 0s 2s forwards; }
 
 @keyframes me-entrance {
-  53.33% { transform: translate(-290px, 0); }
-  61.67%, 78.33%
-         { transform: translate(0, 0); }
-  82.5%, 99.9%
-         { transform: translateY(150px); }
-  100%   { transform: translate(-290px, 0); }
+  0%   { transform: translate(-200px, 0);
+         opacity: 1; }
+  100% { transform: translate(0, 0); }
+}
+
+.animate #vesel {
+  animation: exit-up 0.35s 1s ease-in forwards,
+             vesel-entrance 0.4s 5.1s ease-out forwards;
+}
+
+@keyframes exit-up {
+  0%    { transform: translate(0, 0); }
+  70%   { opacity: 1; }
+  100%  { transform: translateY(-150px);
+          opacity: 0; }
 }
 
 @keyframes vesel-entrance {
-  54.17% { transform: translate(-290px, 0); }
-  66.67%, 78.33%
-         { transform: translate(0, 0); }
-  86.67%, 99.9%
-         { transform: translateY(-200px); }
-  100%   { transform: translate(-290px, 0); }
+  0%   { transform: translate(-100px, 0);
+         opacity: 1; }
+  100% { transform: translate(0, 0); }
+}
+
+
+#mev-logo-animation.animate svg {
+  min-height: 192.97px;
+  animation: exit-right 0.65s 1.2s cubic-bezier(0.6,-0.29,0.74,0.05) forwards,
+             enlarge-logo 0.1s 2s forwards,
+             shrink-logo 0.5s 4.5s forwards;
+}
+
+@keyframes exit-right {
+  0%    { transform: translateX(0px); }
+  80%   { opacity: 1; }
+  100%  { transform: translateX(290px);
+          opacity: 0; }
+}
+
+/* Draw large logo */
+@keyframes hide-strokes {
+  0%      { opacity: 0; }
+  100%    { opacity: 1; }
+}
+
+@keyframes enlarge-logo {
+  0%      { transform: scale(1);
+            opacity: 0; }
+  100%    { transform: scale(1.6);
+            transform-origin: 0% -15%;
+            opacity: 1; }
+}
+
+@keyframes shrink-logo {
+  0%      { transform: scale(1.6);
+            transform-origin: 0% -15%; }
+  100%    { transform: scale(1);
+            transform-origin: 0% 0%; }
+}
+
+.animate #hide-m-left {
+  animation: hide-strokes 0s 2s forwards,
+             unhide-m-left 0.4s 2.25s ease-in forwards;
+}
+
+@keyframes unhide-m-left {
+  0%    { transform: translate(-3px, 0px);
+          opacity: 1; }
+  99.9% { transform: translate(-3px, -150px);
+          opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+.animate #hide-m-diagonal1 {
+  animation: hide-strokes 0s 2s forwards,
+             make-transparent 0.1s 3.2s forwards;
+}
+
+@keyframes make-transparent {
+  0%      { opacity: 1; }
+  100%    { opacity: 0; }
+}
+
+.animate #m-diagonal1 {
+  animation: draw-m-diagonal1 0.4s 2.55s forwards,
+             undraw-m-diagonal1 0.4s 2.8s forwards;
+}
+
+@keyframes draw-m-diagonal1 {
+  0%    { transform: translate(-52px, -47px); }
+  99.9% { transform: translate(0.079782px, 15.1px);
+          opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+@keyframes undraw-m-diagonal1 {
+  0%    { transform: translate(0.079782px, 15.1px); }
+  99.9% { transform: translate(47px, 71px);
+          opacity: 1; }
+  100%  { opacity: 0; }
+
+}
+
+.animate #hide-m-diagonal2 {
+  animation: hide-strokes 0s 2s forwards,
+             unhide-m-diagonal2 0.4s 2.8s forwards;
+}
+
+@keyframes unhide-m-diagonal2 {
+  0%    { transform: translate(33px, 0px);
+          opacity: 1; }
+  99.9% { transform: translate(116px, 0px);
+          opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+
+.animate #hide-m-right {
+  animation: hide-strokes 0s 2s forwards,
+             unhide-m-right 0.4s 3.1s ease-out forwards;
+}
+
+@keyframes unhide-m-right {
+  0%   { transform: translate(94px, 0px); }
+  100% { transform: translate(94px, 142px); }
+}
+
+.animate #hide-e.hide-stroke {
+  animation: hide-strokes 0s 2s forwards,
+             unhide-e 0.5s 3.5s ease-out forwards,
+             make-transparent 0.1s 4s forwards;
+}
+
+@keyframes unhide-e {
+  0%  { transform: translate(130px, -1px); }
+  100%  { transform: translate(350px, -1px); }
+}
+
+.animate #hide-v-diagonal.hide-stroke {
+  animation: hide-strokes 0s 2s forwards,
+             unhide-v-diagonal 0.5s 3.85s forwards;
+}
+
+@keyframes unhide-v-diagonal {
+  0%  { transform: translate(211px, 16.5px); }
+  100% { transform: translate(85px, 16.5px); }
+}
+
+.animate #hide-v-vertical {
+  animation: hide-strokes 0s 2s forwards,
+             unhide-v-vertical 0.3s 4.1s forwards;
+}
+
+@keyframes unhide-v-vertical {
+  0% { transform: translate(224px, 62px); }
+  100% { transform: translate(224px, 6px); }
+
 }

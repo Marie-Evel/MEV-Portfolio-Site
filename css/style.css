@@ -211,6 +211,9 @@ p + h1 { margin-top: 30px; }
     color: var(--cerulean-blue);
 }
 
+.hide { display: none; }
+
+
 /* Sections in index page */
 /*----------------------------------------------------------------------------*/
 #intro,
@@ -231,11 +234,20 @@ p + h1 { margin-top: 30px; }
   overflow: hidden;
 }
 
+#play-animation-button {
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+  font-size: 1.5rem;
+  color: var(--jazzberry);
+  align-items: center;
+}
+
 .project-picture .overlay {
   position: absolute;
   display: grid;
   content: "";
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -245,6 +257,10 @@ p + h1 { margin-top: 30px; }
   transition: all 0.25s;
   align-content: center;
 }
+
+#mev-logo-animation.project-picture:hover #play-animation-button { color: #FFFFFF; }
+
+#mev-logo-animation.project-picture { height: calc(63vw - 25.2px); }
 
 a.overlay { text-decoration: none; }
 
@@ -267,6 +283,11 @@ a.overlay { text-decoration: none; }
           filter: opacity(1);
 }
 
+.project-picture:hover .overlay.hide-overlay {
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+}
+
 .project-picture img {
   transform: scale(1);
   transition: all 0.5s;
@@ -283,10 +304,13 @@ a.overlay { text-decoration: none; }
      object-position: top left;
 }
 
-.image-container svg { width: 160%; }
+.image-container svg {
+  /* height: 100%; */
+  width: 100%;
+}
 
 #mev-logo-animation {
-  padding: 20px;
+  /* padding: 20px; */
   background-color: var(--jazzberry-light);
 }
 
@@ -482,7 +506,7 @@ h1 > p {
     vertical-align: top;
   }
 
-  /* .project-picture { border: 4px solid rgba(35, 155, 21, 0); } */
+  #mev-logo-animation.project-picture { height: calc(31.5vw - 36.225px); }
 
 
   /* Hero section in about page | tablets */
@@ -663,6 +687,12 @@ h1 > p {
   .case-study {
     grid-template-columns: 2fr 3fr;
     max-width: 800px;
+  }
+
+  #mev-logo-animation.project-picture {
+    height: calc(26vw - 84.42px);
+    max-height: 192.766px;
+
   }
 
   /* Sections in about page | desktop */
