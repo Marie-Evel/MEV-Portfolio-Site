@@ -68,12 +68,7 @@ h2 {
 
 h3 { font-size: 1.06em; }
 
-p {
-  margin-bottom: 1em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
+p { margin-bottom: 1em; }
 
 p + ul,
 h3 + ul { margin-top: 1em; }
@@ -102,10 +97,10 @@ footer a {
 
 body a:visited,
 body a:hover,
-body a:focus { -webkit-filter: contrast(100%); filter: contrast(100%) }
-
-ul li { -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; }
-
+body a:focus {
+  -webkit-filter: contrast(100%);
+  filter: contrast(100%)
+}
 
 
 /*----------------------------------------------------------------------------*/
@@ -456,9 +451,6 @@ section.intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--s
 }
 
 #intro-grid .hero-text {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
   font-size: 0.9em;
   vertical-align: middle;
   height: 100%;
@@ -486,7 +478,6 @@ section.intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--s
 }
 
 #sneak-peek-intro h1 { margin-bottom: 15px; }
-#sneak-peek-intro p { -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
 #sneak-peek {
   padding-top: 0;
@@ -663,9 +654,6 @@ section.intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--s
 }
 
 #sc-overwhelmed p {
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -699,8 +687,6 @@ section.intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--s
 #sitemap { background-image: linear-gradient(white 0%, var(--sc-light-grey) 30%, var(--sc-light-grey) 100%); }
 
 #ia-conclusion { max-width: 20rem; }
-
-#ia-conclusion p { -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
 
 /* 05 Wireframing & Prototyping */
@@ -1239,7 +1225,6 @@ section.intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--s
 }
 
 #color-scheme .caption1 p,
-#color-scheme .caption2 p { -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
 #color-scheme .connector { display: none; }
 
@@ -1675,7 +1660,6 @@ body .sc a:visited { color: var(--sc-red); }
     max-width: 25em;
   }
 
-  #intro-grid .hero-text { -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
   /* 01 Overview | tablets */
   /*--------------------------------------------------------------------------*/
@@ -2038,8 +2022,6 @@ body .sc a:visited { color: var(--sc-red); }
 
   /*--------------------------------------------------------------------------*/
   #design-iterations-intro { width: 570px; }
-
-  #design-iterations-intro p { -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
   .testing .mockup img {
     height: 280px;
@@ -2590,12 +2572,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #design-language { width: 560px; }
 
-  #design-language p:first-of-type {
-    margin-bottom: 40px;
-    -webkit-hyphens: none;
-        -ms-hyphens: none;
-            hyphens: none;
-  }
+  #design-language p:first-of-type { margin-bottom: 40px; }
 
   /* 08 Accessibility | tablets */
   /*--------------------------------------------------------------------------*/

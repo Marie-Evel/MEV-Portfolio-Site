@@ -50,12 +50,7 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-p {
-  margin-bottom: 1em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
+p { margin-bottom: 1em; }
 
 img {
   width: 100%;
@@ -86,9 +81,6 @@ a:active {
 .font-larger {
   font-size: 1.125em;
   font-weight: bold;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
   margin-bottom: 0.9em;
 }
 
@@ -269,9 +261,6 @@ a.overlay { text-decoration: none; }
   font-weight: 500;
   font-size: 1.5rem;
   text-transform: uppercase;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
   text-align: center;
   margin: 0 10px;
 
@@ -336,9 +325,6 @@ h1 > p {
   font-size: 1.1em;
   font-weight: 500;
   margin-top: 0;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
 }
 
 #hero { border-bottom: 5px solid var(--syrah); }
@@ -469,8 +455,8 @@ h1 > p {
   /* Intro section in index page | tablets */
   /*--------------------------------------------------------------------------*/
   #intro{ padding: 46px 57px 40px 136px; }
+  
   #intro .section-content { max-width: 460px; }
-  #intro p { -webkit-hyphens: none; -ms-hyphens: none; hyphens: none; }
 
   #intro, #about-me { border-bottom: 7px solid var(--vaguely-violet); }
 
