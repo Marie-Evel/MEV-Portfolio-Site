@@ -26,7 +26,7 @@ function animateLogo() {
     play.classList.remove('hide');
     logo.classList.remove('animate');
     overlay.classList.remove('hide-overlay');
-  }, 5500);
+  }, 6000);
 }
 
 function isVisible(targetElement) {
