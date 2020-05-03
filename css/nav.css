@@ -1,3 +1,9 @@
+:root {
+  --topnav-height-sm: 61px;
+  --topnav-height-md: 75px;
+  --topnav-height-lg: 85px;
+}
+
 
 header {
   display: block;
@@ -95,6 +101,66 @@ nav ul li a {
 
 
 /*----------------------------------------------------------------------------*/
+/* Footer */
+/*----------------------------------------------------------------------------*/
+
+footer h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 0.75em;
+  color: black;
+}
+
+#contact { text-align: center; }
+
+#contact a {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.solid-footer {
+  margin: 0;
+  padding: 20px 20px 10px 20px;
+}
+
+.soc-media-icons {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.soc-media-icons a {
+  display: inline-block;
+  justify-content: center;
+  color: #FFFFFF;
+  line-height: 2.4em;
+  text-align: center;
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  border: solid 1px #FFFFFF;
+}
+
+.soc-media-icons a:hover,
+.soc-media-icons a:active {
+  background-color: #FFFFFF;
+  text-shadow: unset;
+}
+
+#mev-copyright p {
+  font-family: Arial, sans-serif;
+  font-size: 0.8125em;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
 /* Media queries for tablets and larger */
 /*----------------------------------------------------------------------------*/
 @media screen and (min-width: 640px) {
@@ -130,6 +196,8 @@ nav ul li a {
   #mev-logo img { height: 100%; }
 
   .menu-item { display: flex; }
+
+  #menu-container { border-top: solid 2px #FFFFFF; }
 
   #menu-container,
   #menu-container.show-menu {
@@ -167,7 +235,32 @@ nav ul li a {
     left: -3px;
   }
 
+  #menu-container { border-top: unset; }
+
   #nav-icon { display: none; }
+
+  /* Footer | tablets */
+  /*--------------------------------------------------------------------------*/
+  #contact { padding-bottom: 30px; }
+
+  .solid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  #mev-copyright p {
+    text-align: right;
+    margin: 0 40px 0 0;
+  }
+
+  .soc-media-icons {
+    margin-left: 40px;
+    font-size: 0.85em;
+    width: 200px;
+  }
+
 
 }
 
@@ -180,5 +273,10 @@ nav ul li a {
 
   nav { max-width: 268px; min-width: 268px; }
 
+
+  /* Footer | desktop */
+  /*--------------------------------------------------------------------------*/
+  /* .soc-media-icons { margin-left: 70px; } */
+  /* #mev-copyright p { margin-right: 70px; } */
 
 }

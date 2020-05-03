@@ -1,15 +1,17 @@
-/* Color palette: */
-:root {
-  --jazzberry: #B20F5C;
-  --jazzberry-light: #FFE5EE;
-  --syrah: #7D0B5B;
-  --lizard-green: #239B15;
-  --cerulean-blue: #3056CE;
-  --vaguely-violet: #E6ECFF;
 
-  --topnav-height-sm: 61px;
+:root {
+  /* Color palette: */
+  --fuschia: #AD0984;
+  --light-pink: #FADBEE;
+  --barely-pink: #FEFBFD;
+  --deep-purple: #440675;
+  --light-purple: #F4EBFB;
+
+  /* Top nav spacing: */
+  /* --topnav-height-sm: 61px;
   --topnav-height-md: 75px;
-  --topnav-height-lg: 85px;
+  --topnav-height-lg: 85px; */
+
 }
 
 /*----------------------------------------------------------------------------*/
@@ -30,9 +32,10 @@ body {
 
 b { font-weight: bold; }
 i { font-style: italic; }
+
 em {
   font-weight: bold;
-  color: var(--jazzberry);
+  color: #9641D8;
 }
 
 h1 {
@@ -41,13 +44,14 @@ h1 {
   font-weight: bold;
   line-height: 1.4;
   margin-bottom: 0.75em;
-  color: var(--syrah)
+  color: var(--fuschia)
 }
 
 h2 {
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.5em;
+  /* margin-top: 10px; */
+  margin-bottom: 0.75em;
 }
 
 p { margin-bottom: 1em; }
@@ -58,18 +62,18 @@ img {
 }
 
 a {
-  color: var(--cerulean-blue);
+  color: var(--fuschia);
   transition: all 0.25s;
 }
 
 a:visited {
-  color: var(--syrah);
+  color: var(--deep-purple);
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(--jazzberry);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -104,54 +108,61 @@ a:active {
 }
 
 .button-filled {
-    background-color: yellow;
+    background-color: var(--fuschia);
     color: #ffffff !important;
     padding: 10px 30px;
     transition: all 0.25s;
 }
 
+.button-filled.button-purple { background-color: var(--deep-purple); }
+
 .button-ghost {
-    background-color: white;
-    color: black !important;
-    border: 1.5px solid black;
+    color: white !important;
+    border: 1.5px solid white;
     padding: 8.5px 28.5px;
     transition: all 0.25s;
 }
 
-.button-filled.button-blue { background-color: var(--cerulean-blue); }
-
-.button-ghost.button-blue {
-  color: var(--cerulean-blue) !important;
-  border-color: var(--cerulean-blue);
+.button-ghost.button-fuschia {
+  color: var(--fuschia) !important;
+  border-color: var(--fuschia);
+  background-color: white
 }
 
-.button-ghost.button-blue:hover,
-.button-ghost.button-blue:active {
-  background-color:  var(--cerulean-blue);
-  border-color: var(--cerulean-blue);
-  color: #FFFFFF !important;
+.button-ghost.button-purple {
+  color: var(--deep-purple) !important;
+  border-color: var(--deep-purple);
+  background-color: white;
 }
 
-.button-ghost.button-red {
-  color: var(--jazzberry) !important;
-  border-color: var(--jazzberry);
-}
-
-.button-ghost.button-red:hover,
-.button-ghost.button-red:active {
-  background-color:  var(--jazzberry);
-  border-color: var(--jazzberry);
-  color: #FFFFFF !important;
-}
-
-.button-filled.work { background-color: var(--lizard-green); }
-
-.button-filled:hover,
 .button-ghost:hover,
-.button-filled:active,
+.button-ghost:active,
+.button-filled:hover,
+.button-filled:active {
+  -webkit-filter: brightness(115%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
+          filter: brightness(115%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
+}
+
+.button-ghost:hover,
 .button-ghost:active {
-  -webkit-filter: brightness(125%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
-          filter: brightness(125%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
+  background-color:  var(--fuschia);
+  border-color: var(--fuschia);
+  color: white !important;
+}
+
+.button-filled.button-purple:hover,
+.button-filled.button-purple:active,
+.button-ghost.button-purple:hover,
+.button-ghost.button-purple:active {
+  -webkit-filter: brightness(130%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
+          filter: brightness(130%) drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
+}
+
+.button-ghost.button-purple:hover,
+.button-ghost.button-purple:active {
+  background-color:  var(--deep-purple);
+  border-color: var(--deep-purple);
+  color: #FFFFFF !important;
 }
 
 .button-ghost ~ p {
@@ -174,50 +185,69 @@ a:active {
 /*----------------------------------------------------------------------------*/
 /* Header and top nav */
 /*----------------------------------------------------------------------------*/
-header,
-#menu-container { background-color: var(--jazzberry); }
 
-#menu-container { border-top: solid 5px var(--vaguely-violet); }
+#top-nav {
+  background-color: var(--fuschia);
+  border-bottom: 2px solid #FFFFFF;
+}
 
 #work { position: relative; }
 
 #work-anchor {
  position: absolute;
- top: -66px;
+ top: -60px;
 }
 
 /*----------------------------------------------------------------------------*/
 /* Layout styling */
 /*----------------------------------------------------------------------------*/
 
-section { padding: 30px 20px 40px 20px; }
+section { padding: 40px 20px; }
 
 p + h1 { margin-top: 30px; }
 
 .indented-quote {
     margin: 30px 10px 30px 20px;
-    border-left: solid 2px var(--cerulean-blue);
+    border-left: solid 2px var(--deep-purple);
     padding: .1em 0 .1em 0.75em;
     font-size: 1.1em;
     font-weight: bold;
-    color: var(--cerulean-blue);
+    color: var(--deep-purple);
 }
 
 .hide { display: none; }
 
-
+/*----------------------------------------------------------------------------*/
 /* Sections in index page */
 /*----------------------------------------------------------------------------*/
-#intro,
-#about-me { border-bottom: 5px solid var(--vaguely-violet); }
 
-.case-study:not(:last-of-type) { padding-bottom: 20px; }
+#hero {
+  position: relative;
+  background-image: url("../img/pixelated_background_small.png");
+  background-size: 100% 100%;
+}
 
-.grid-item p:last-of-type { margin-bottom: 0; }
+#hero .section-content {
+  position: relative;
+  z-index: 1;
+}
 
-#work .case-studies .case-study:not(:first-of-type) {
-  padding-top: 20px;
-  border-top: 1px solid var(--syrah);
+#hero h1,
+#hero p { color: #FFFFFF; }
+
+#hero .button-filled,
+#hero .button-ghost {
+  box-shadow: 0 1px 15px rgba(255,255,255,0.5);
+}
+
+#work h1,
+#contact h1 { font-size: 1.5em; }
+
+.case-study-card:not(:last-of-type) { padding-bottom: 30px; }
+
+.case-study-card:not(:first-of-type) {
+  padding-top: 30px;
+  border-top: 1px solid var(--deep-purple);
 }
 
 .project-picture {
@@ -231,7 +261,7 @@ p + h1 { margin-top: 30px; }
   bottom: 5px;
   right: 12px;
   font-size: 1.5rem;
-  color: var(--jazzberry);
+  color: var(--fuschia);
   align-items: center;
 }
 
@@ -243,16 +273,12 @@ p + h1 { margin-top: 30px; }
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(125,11,91, 0.80);
+  background-color: rgba(68,6,117, 0.80); /* NOTE: deep purple with 80% opacity */
   -webkit-filter: opacity(0);
           filter: opacity(0);
   transition: all 0.25s;
   align-content: center;
 }
-
-#mev-logo-animation.project-picture:hover #play-animation-button { color: #FFFFFF; }
-
-#mev-logo-animation.project-picture { height: calc(63vw - 25.2px); }
 
 a.overlay { text-decoration: none; }
 
@@ -300,10 +326,15 @@ a.overlay { text-decoration: none; }
 
 #mev-logo-animation {
   /* padding: 20px; */
-  background-color: var(--jazzberry-light);
+  background-color: var(--light-pink);
 }
 
+#mev-logo-animation.project-picture { height: calc(63vw - 25.2px); }
 
+#mev-logo-animation.project-picture:hover #play-animation-button { color: #FFFFFF; }
+
+
+/*----------------------------------------------------------------------------*/
 /* Sections in about page */
 /*----------------------------------------------------------------------------*/
 
@@ -318,16 +349,16 @@ h1 > p {
   font-weight: normal;
 }
 
-#hero .intro h1 { margin-bottom: 0; }
+#hero-about { border-bottom: solid 7px var(--light-purple); }
 
-#hero .intro p {
-  color: var(--syrah);
+#hero-about .intro h1 { margin-bottom: 0; }
+
+#hero-about .intro p {
+  color: var(--fuschia);
   font-size: 1.1em;
   font-weight: 500;
   margin-top: 0;
 }
-
-#hero { border-bottom: 5px solid var(--syrah); }
 
 #skills-and-tools {
   display: grid;
@@ -336,7 +367,7 @@ h1 > p {
   grid-template-areas: "skills tools"
                        "resume resume";
   grid-gap: 0 25px;
-  background-color: var(--jazzberry-light);
+  background-color: var(--light-pink);
   padding: 20px;
   margin: 30px -20px;
 }
@@ -360,78 +391,18 @@ h1 > p {
 /* Footer */
 /*----------------------------------------------------------------------------*/
 
-#contact {
-  background-color: var(--vaguely-violet);
-  padding-bottom: 15px;
-}
+#contact { background-color: var(--light-purple); }
 
 #contact h1 { color: black; }
 
-#contact {
-  display: grid;
-  grid-template-areas: "title"
-                       "tagline"
-                       "button"
-                       "call-skype";
-  justify-items: center;
-}
-
-#contact h1 { grid-area: title;}
-#contact p { grid-area: tagline; text-align: center;}
-#contact a.button-ghost { grid-area: button; width: 100%; }
-
-#call-skype {
-  grid-area: call-skype;
-  margin: 20px 0;
-  text-align: center;
-}
-
-#call-skype p {
-  display: inline-block;
-  margin: 0;
-}
-
-#call-skype p:first-of-type::after { content: " | "; }
-
 .solid-footer {
-  margin: 0;
-  background-color: var(--cerulean-blue);
-  padding: 20px 20px 10px 20px;
-}
-
-.soc-media-icons {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-
-.soc-media-icons a {
-  display: inline-block;
-  justify-content: center;
-  color: var(--cerulean-blue);
-  line-height: 2.4em;
-  text-align: center;
-  background-color: white;
-  border-radius: 50%;
-  width: 2.2em;
-  height: 2.2em;
+  background-image: url("../img/pixelated_footer_small.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .soc-media-icons a:hover,
-.soc-media-icons a:active {
-  color: var(--jazzberry) !important;
-  /* box-shadow: inset 0 0 5px 1px rgba(178,15,92,.4); */
-}
-
-#mev-copyright p {
-  font-family: Arial, sans-serif;
-  font-size: 0.8125em;
-  color: white;
-  text-align: center;
-  margin-top: 15px;
-}
-
+.soc-media-icons a:active { color: var(--fuschia) !important; }
 
 /*----------------------------------------------------------------------------*/
 /* Media queries for tablets and larger */
@@ -454,30 +425,61 @@ h1 > p {
 
   /* Intro section in index page | tablets */
   /*--------------------------------------------------------------------------*/
-  #intro{ padding: 46px 57px 40px 136px; }
-  
-  #intro .section-content { max-width: 460px; }
 
-  #intro, #about-me { border-bottom: 7px solid var(--vaguely-violet); }
+  #hero {
+    background-image: url("../img/pixelated_background_large.png");
+    padding: 0;
+  }
+
+  #hero .section-content {
+    padding: 90px 57px 40px 136px;
+    max-width: 653px;
+  }
 
   /* My Work section in index page | tablets */
   /*--------------------------------------------------------------------------*/
-  #work-anchor { top: -82px; }
-  #work { border-bottom: none; }
+  #work-anchor { top: -75px; }
 
-  .case-study {
+  #work {
+    background-image: linear-gradient(var(--barely-pink) 85%, var(--light-purple));
+  }
+
+  .case-studies .case-study-card:last-of-type { margin-bottom: 0; }
+
+  .case-study-card {
     display: grid;
     grid-template-areas: "pic title"
                          "pic desc"
                          "button desc";
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 35px;
+    grid-template-columns: 260px 1fr;
+    grid-column-gap: 25px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    padding: 20px;
+    margin-bottom: 50px;
   }
 
-  .case-study h2 { grid-area: title; }
-  .case-study .project-picture { grid-area: pic;}
-  .case-study .case-desc { grid-area: desc; }
-  .case-study a { grid-area: button; }
+  .case-study-card h2 {
+    grid-area: title;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .case-study-card .project-picture { grid-area: pic;}
+  .case-study-card .case-desc { grid-area: desc; }
+  .case-study-card a { grid-area: button; }
+
+  .case-study-card:not(:first-of-type) {
+    border-top: unset;
+    padding-top: 20px;
+  }
+
+  .case-study-card:not(:last-of-type) { padding-bottom: 20px; }
+
+  .case-study-card p { margin-bottom: 10px; }
+  .case-study-card p:last-of-type { margin-bottom: 0; }
 
   .button-filled.work {
     width: 100%;
@@ -492,21 +494,22 @@ h1 > p {
     vertical-align: top;
   }
 
-  #mev-logo-animation.project-picture { height: calc(31.5vw - 36.225px); }
+  #mev-logo-animation.project-picture { height: 167px; }
 
 
   /* Hero section in about page | tablets */
   /*--------------------------------------------------------------------------*/
-  #hero { border-bottom: 7px solid var(--syrah); }
-
-  #hero .section-content {
+  #hero-about .section-content {
     display: grid;
     grid-template-areas: "pic hello"
                          "pic desc"
                          "pic buttons";
     grid-template-columns: 30% minmax(0, 445px);
     grid-column-gap: 30px;
+
   }
+
+  #hero-about { border-bottom: 2px solid var(--deep-purple); }
 
   #profile-pic {
     grid-area: pic;
@@ -516,19 +519,19 @@ h1 > p {
     margin-bottom: 0;
   }
 
-  #hero .intro {
+  #hero-about .intro {
     grid-area: hello;
     margin-top: 10px;
     margin-bottom: 0px;
     max-width: 310px;
   }
 
-  #hero .desc {
+  #hero-about .desc {
     grid-area: desc;
     margin: 0;
   }
 
-  #hero .button-container {
+  #hero-about .button-container {
     grid-area: buttons;
     margin: 0;
     align-self: end;
@@ -540,10 +543,14 @@ h1 > p {
   /*--------------------------------------------------------------------------*/
   #about-me .section-content {
     display: grid;
-    grid-template-areas: "skills-and-tools my-story"
-                         "skills-and-tools personal"
-                         "skills-and-tools fun";
-    grid-template-columns: 30% 1fr;
+    grid-template-areas: "my-story skills-and-tools"
+                         "personal skills-and-tools"
+                         "fun skills-and-tools";
+   /* grid-template-areas: "skills-and-tools my-story"
+                        "skills-and-tools personal"
+                        "skills-and-tools fun"; */ /* NOTE: sidebar on the left */
+    grid-template-columns: 1fr 30%;
+    /* grid-template-columns: 30% 1fr;  */ /* NOTE: sidebar on the left */
     grid-gap: 20px 30px;
   }
 
@@ -555,7 +562,8 @@ h1 > p {
     justify-content: space-between;
     min-height: 1080px;
     padding: 30px 30px 40px 40px;
-    margin: -30px 0px -40px -40px;
+    margin: -30px -40px -40px 0px;
+    /* margin: -30px 0px -40px -40px; */ /* NOTE: sidebar on the left */
   }
 
   #resume-button .button-ghost { margin-top: 0px; }
@@ -581,61 +589,19 @@ h1 > p {
 
   /* Footer | tablets */
   /*--------------------------------------------------------------------------*/
-  #contact {
-    grid-template-areas: "title ."
-                         "tagline call-skype"
-                         "button call-skype";
-    grid-template-columns: auto 1fr;
-    justify-items: start;
-    padding-bottom: 30px;
-  }
-
-  #contact > p {
-    margin-bottom: 0;
-    text-align: left;
-  }
-
-  #contact a.button-ghost { width: 16em; }
-
-  #call-skype {
-    justify-self: end;
-    align-self: end;
-    margin-bottom: 0;
-  }
-
-  #call-skype p {
-    display: block;
-    text-align: right;
-  }
-
-  #call-skype p:first-of-type::after { content: ""; }
-
   .solid-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 15px 0;
-  }
-
-  #mev-copyright p {
-    text-align: right;
-    margin: 0 40px 0 0;
-  }
-
-  .soc-media-icons {
-    margin-left: 40px;
-    font-size: 0.85em;
-    width: 21.17647em;
+    background-image: url("../img/pixelated_footer_large.png");
+    background-size: 100% 100%;
   }
 
 }
 
 /*----------------------------------------------------------------------------*/
-/* Special case for hero section buttons */
+/* Special case for hero-about section buttons */
 /*----------------------------------------------------------------------------*/
 @media only screen and (min-width: 760px) {
 
-  #hero .button-container { flex-direction: row; }
+  #hero-about .button-container { flex-direction: row; }
 
 }
 
@@ -649,7 +615,6 @@ h1 > p {
     padding-top: var(--topnav-height-lg);
     max-width: 1250px;
     margin: 0 auto;
-    background-color: #FFF5F8;/*#F8FCF8 (green); /*#FFF5F8 (pink);*/
     box-shadow: 1px 0 15px rgba(0,0,0,.4);
     -webkit-box-shadow: 1px 0 15px rgba(0,0,0,.4);
   }
@@ -663,47 +628,53 @@ h1 > p {
 
   /* Sections in index page | desktop */
   /*--------------------------------------------------------------------------*/
-  #intro { padding: 46px 177px 40px 150px; }
-  #intro .section-content { max-width: 510px; }
-  #intro, #about-me { border-bottom: 10px solid var(--vaguely-violet); }
 
-  #work-anchor { top: -95px; }
-  #work { padding: 30px 150px 40px 150px; }
-
-  .case-study {
-    grid-template-columns: 2fr 3fr;
-    max-width: 800px;
+  #hero .section-content {
+    padding: 90px 177px 40px 150px;
+    max-width: 837px;
   }
 
-  #mev-logo-animation.project-picture {
-    height: calc(26vw - 84.42px);
-    max-height: 192.766px;
+  #work-anchor { top: -84px; }
+  #work { padding: 70px 40px 40px 150px; }
 
+  .case-study-card {
+    grid-template-columns: 300px 1fr;
+    grid-column-gap: 35px;
+    padding-right: 40px;
+    min-width: 834px;
+    max-width: 950px;
   }
+
+  .case-study-card h2 {
+    font-size: 1.1em;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .case-study-card p { margin-bottom: 1em; }
+
+  #mev-logo-animation.project-picture { height: 189px; }
 
   /* Sections in about page | desktop */
   /*--------------------------------------------------------------------------*/
-  #hero { border-bottom: 10px solid var(--syrah); }
-
-  #hero .section-content {
+  #hero-about .section-content {
     grid-template-columns: 225px 490px;
     grid-column-gap: 90px;
   }
 
   #about-me .section-content {
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: 1fr 270px;
+    /* grid-template-columns: 270px 1fr; */ /* NOTE: sidebar on the left */
     grid-gap: 30px 50px;
   }
 
   #skills-and-tools {
     min-height: 1200px;
     padding: 30px 70px 40px 70px;
-    margin: -30px 0px -40px -70px;
+    margin: -30px -70px -40px 0px;
+    /* margin: -30px 0px -40px -70px; */ /* NOTE: sidebar on the left */
   }
 
-  /* Footer | desktop */
-  /*--------------------------------------------------------------------------*/
-  .soc-media-icons { margin-left: 70px; }
-  #mev-copyright p { margin-right: 70px; }
+
 
 }

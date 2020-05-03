@@ -60,35 +60,45 @@
     </header>
 
     <main>
-      <section id="intro">
-        <div class="section-content">
-          <h1>Hello! I'm Marie-Eve.</h1>
-          <p class="font-larger">
-            I'm a French-Canadian interaction designer and UX generalist based
-            in Chicago.
-          </p>
-          <p>
-            I take pride in creating elegant, intuitive, and functional designs
-            to help people be healthier, happier, and more efficient.
-          </p>
-          <p>
-            My strong analytical background and keen attention to detail allow me
-            to solve complex UX problems, and create delightful and thoughtful
-            visualizations.
-          </p>
-          <div class="button-container">
-            <a class="button-filled button-blue" href="about.html">Check out my full bio</a>
-            <a class="button-ghost button-blue" href="files/mev_resume.pdf" target="_blank" download>View my résumé</a>
+      <section id="hero">
+          <!-- <div class="background">
+            <picture>
+              <source media="(max-width:639px)" srcset="img/pixelated_background_small.png">
+              <img src="img/pixelated_background_large.png" alt="Pixelated background with bold shades of fuschia and dark purple">
+            </picture>
+          </div> -->
+
+          <div class="section-content">
+            <h1>Hello! I'm Marie-Eve.</h1>
+            <p class="font-larger">
+              I'm a French-Canadian interaction designer and UX generalist based
+              in Chicago.
+            </p>
+            <p>
+              I take pride in creating elegant, intuitive, and functional designs
+              to help people be healthier, happier, and more efficient.
+            </p>
+            <p>
+              My strong analytical background and keen attention to detail allow me
+              to solve complex UX problems, and create delightful and thoughtful
+              visualizations.
+            </p>
+            <div class="button-container">
+              <a class="button-filled button-purple" href="about.html">Check out my full bio</a>
+              <a class="button-ghost" href="files/mev_resume.pdf" target="_blank" download>View my résumé</a>
+            </div>
           </div>
-        </div>
-      </section><!-- END Intro section -->
+
+
+      </section><!-- END Hero section -->
+
 
       <section id="work">
         <div id="work-anchor">
         </div>
         <h1>My Work</h1>
         <div class="case-studies">
-          <div class="case-study"><!-- StreetCred case study -->
+          <div class="case-study-card"><!-- StreetCred case study -->
             <h2>StreetCred | <span class="font-medium">urban scavenger hunt app</span></h2>
             <div class="project-picture">
               <picture>
@@ -116,7 +126,7 @@
             </div>
           </div><!-- END StreetCred case study -->
 
-          <div id="branding-case-study" class="case-study"><!-- Animation case study -->
+          <div id="branding-case-study" class="case-study-card"><!-- Animation case study -->
             <h2>MEV Website | <span class="font-medium">personal branding</span></h2>
             <div id="mev-logo-animation" class="project-picture">
               <div class="image-container">
@@ -125,67 +135,67 @@
                     <title>mev_logo_animation</title>
                     <desc>Created with Sketch.</desc>
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="vesel" class="stroke" fill="#B20F5C" fill-rule="nonzero">
+                      <g id="vesel" class="stroke" fill="#AD0984" fill-rule="nonzero">
                         <path d="M501.024,142.672 L510.768,121.84 L506.4,121.84 L501.024,133.6 L495.648,121.84 L491.28,121.84 L501.024,142.672 Z M522.696,142.336 C527.064,142.336 529.71,140.362 530.256,139.9 L528.912,136.288 C527.316,137.422 525.174,138.304 522.78,138.304 C519.588,138.304 516.858,136.918 516.228,133.768 L531.474,133.768 C531.558,133.222 531.6,132.424 531.6,132.004 C531.6,125.452 527.484,121.504 522.15,121.504 C515.976,121.504 512.112,126.166 512.112,131.92 C512.112,137.59 515.64,142.336 522.696,142.336 Z M527.484,130.072 L516.228,130.072 C516.312,128.098 518.286,125.536 521.982,125.536 C525.804,125.536 527.4,128.098 527.484,130.072 Z M543.696,142.336 C548.946,142.336 551.76,139.69 551.76,135.7 C551.76,133.222 550.332,130.702 544.41,129.568 C542.058,129.106 539.664,128.812 539.664,127.3 C539.664,125.914 541.848,125.494 543.822,125.536 C546.3,125.578 548.82,126.544 549.744,127.216 L551.13,123.436 C548.4,121.966 545.628,121.504 543.822,121.504 C538.866,121.504 535.632,123.898 535.632,127.258 C535.632,130.492 537.186,132.424 543.78,133.6 C546.258,134.062 547.728,134.65 547.728,136.162 C547.728,137.38 546.174,138.346 543.57,138.304 C541.302,138.262 538.152,137.128 536.556,135.532 L534.96,139.48 C535.884,140.362 539.244,142.336 543.696,142.336 Z M565.368,142.336 C569.736,142.336 572.382,140.362 572.928,139.9 L571.584,136.288 C569.988,137.422 567.846,138.304 565.452,138.304 C562.26,138.304 559.53,136.918 558.9,133.768 L574.146,133.768 C574.23,133.222 574.272,132.424 574.272,132.004 C574.272,125.452 570.156,121.504 564.822,121.504 C558.648,121.504 554.784,126.166 554.784,131.92 C554.784,137.59 558.312,142.336 565.368,142.336 Z M570.156,130.072 L558.9,130.072 C558.984,128.098 560.958,125.536 564.654,125.536 C568.476,125.536 570.072,128.098 570.156,130.072 Z M582.336,142 L582.336,112.432 L578.304,112.432 L578.304,142 L582.336,142 Z"></path>
                       </g>
-                      <g id="hide-last-name" class="hide-stroke" fill="#FFE5EE">
+                      <g id="hide-last-name" class="hide-stroke" fill="#FADBEE">
                         <rect x="230" y="94" width="253" height="48"></rect>
                       </g>
-                      <g  id="marie-eve" class="stroke" fill="#B20F5C" fill-rule="nonzero">
+                      <g  id="marie-eve" class="stroke" fill="#AD0984" fill-rule="nonzero">
                         <path d="M295.056,142 L295.056,130.912 C295.056,127.468 297.492,125.536 299.928,125.536 C302.7,125.536 303.792,127.51 303.792,130.744 L303.792,142 L307.824,142 L307.824,130.912 C307.824,127.468 310.26,125.536 312.696,125.536 C315.468,125.536 316.56,127.51 316.56,130.744 L316.56,142 L320.592,142 L320.592,130.744 C320.592,124.78 317.904,121.504 313.452,121.504 C310.596,121.504 308.622,122.386 306.48,124.696 C305.262,122.596 303.288,121.504 300.684,121.504 C297.534,121.504 296.232,122.848 295.056,124.192 L295.056,121.84 L291.024,121.84 L291.024,142 L295.056,142 Z M334.704,142.336 C337.434,142.336 339.786,141.202 341.424,139.06 L341.424,142 L345.456,142 L345.456,121.84 L341.424,121.84 L341.424,124.78 C339.786,122.638 337.434,121.504 334.704,121.504 C328.824,121.504 324.624,126.166 324.624,131.92 C324.624,137.674 328.824,142.336 334.704,142.336 Z M335.04,138.304 C331.512,138.304 328.656,135.448 328.656,131.92 C328.656,128.392 331.512,125.536 335.04,125.536 C338.568,125.536 341.424,128.392 341.424,131.92 C341.424,135.448 338.568,138.304 335.04,138.304 Z M355.2,142 L355.2,133.012 C355.2,129.316 356.922,127.09 359.568,126.082 C360.828,125.62 362.298,125.62 363.264,125.914 L363.264,121.504 C359.484,121.504 356.586,123.268 355.2,126.166 L355.2,121.84 L351.168,121.84 L351.168,142 L355.2,142 Z M369.648,118.48 C371.328,118.48 372.672,117.136 372.672,115.456 C372.672,113.776 371.328,112.432 369.648,112.432 C367.968,112.432 366.624,113.776 366.624,115.456 C366.624,117.136 367.968,118.48 369.648,118.48 Z M371.664,142 L371.664,121.84 L367.632,121.84 L367.632,142 L371.664,142 Z M386.28,142.336 C390.648,142.336 393.294,140.362 393.84,139.9 L392.496,136.288 C390.9,137.422 388.758,138.304 386.364,138.304 C383.172,138.304 380.442,136.918 379.812,133.768 L395.058,133.768 C395.142,133.222 395.184,132.424 395.184,132.004 C395.184,125.452 391.068,121.504 385.734,121.504 C379.56,121.504 375.696,126.166 375.696,131.92 C375.696,137.59 379.224,142.336 386.28,142.336 Z M391.068,130.072 L379.812,130.072 C379.896,128.098 381.87,125.536 385.566,125.536 C389.388,125.536 390.984,128.098 391.068,130.072 Z M410.64,132.592 L410.64,129.232 L399.216,129.232 L399.216,132.592 L410.64,132.592 Z M425.256,142.336 C429.624,142.336 432.27,140.362 432.816,139.9 L431.472,136.288 C429.876,137.422 427.734,138.304 425.34,138.304 C422.148,138.304 419.418,136.918 418.788,133.768 L434.034,133.768 C434.118,133.222 434.16,132.424 434.16,132.004 C434.16,125.452 430.044,121.504 424.71,121.504 C418.536,121.504 414.672,126.166 414.672,131.92 C414.672,137.59 418.2,142.336 425.256,142.336 Z M430.044,130.072 L418.788,130.072 C418.872,128.098 420.846,125.536 424.542,125.536 C428.364,125.536 429.96,128.098 430.044,130.072 Z M445.248,142.672 L454.992,121.84 L450.624,121.84 L445.248,133.6 L439.872,121.84 L435.504,121.84 L445.248,142.672 Z M466.92,142.336 C471.288,142.336 473.934,140.362 474.48,139.9 L473.136,136.288 C471.54,137.422 469.398,138.304 467.004,138.304 C463.812,138.304 461.082,136.918 460.452,133.768 L475.698,133.768 C475.782,133.222 475.824,132.424 475.824,132.004 C475.824,125.452 471.708,121.504 466.374,121.504 C460.2,121.504 456.336,126.166 456.336,131.92 C456.336,137.59 459.864,142.336 466.92,142.336 Z M471.708,130.072 L460.452,130.072 C460.536,128.098 462.51,125.536 466.206,125.536 C470.028,125.536 471.624,128.098 471.708,130.072 Z"></path>
                       </g>
-                      <g id="hide-full-name" class="hide-stroke" fill="#FFE5EE">
+                      <g id="hide-full-name" class="hide-stroke" fill="#FADBEE">
                         <rect x="0" y="94" width="230" height="48"></rect>
                       </g>
-                      <g id="v-vertical" class="stroke" transform="translate(229.996509, 62.137406)" fill="#B20F5C">
+                      <g id="v-vertical" class="stroke" transform="translate(229.996509, 62.137406)" fill="#AD0984">
                         <polygon id="Rectangle" transform="translate(8.689170, 30.230568) rotate(90.000000) translate(-8.689170, -30.230568) " points="-21 22 38.3783395 22 38.3783395 38.4611356 -21 38.4611356"></polygon>
                       </g>
-                      <g id="hide-v-vertical" class="hide-stroke" transform="translate(224.000000, 62.000000)" fill="#FFE5EE">
+                      <g id="hide-v-vertical" class="hide-stroke" transform="translate(224.000000, 62.000000)" fill="#FADBEE">
                         <rect x="0" y="0" width="27" height="56"></rect>
                       </g>
-                      <g id="v-diagonal" class="stroke" transform="translate(230.454793, 1.246829)" fill="#B20F5C">
+                      <g id="v-diagonal" class="stroke" transform="translate(230.454793, 1.246829)" fill="#AD0984">
                         <path d="M96.9335241,2.30926389e-14 L109.516844,10.6338637 L-7.10542736e-15,140.749 L-7.10542736e-15,115.165 L96.9335241,2.30926389e-14 Z"></path>
                       </g>
-                      <g id="hide-v-diagonal" class="hide-stroke" transform="translate(211, 16.5)" fill="#FFE5EE">
+                      <g id="hide-v-diagonal" class="hide-stroke" transform="translate(211, 16.5)" fill="#FADBEE">
                         <rect x="0" y="0" width="126" height="126"></rect>
                       </g>
-                      <g id="e-bottom" class="stroke" transform="translate(134.980525, 125.355064)" fill="#B20F5C">
+                      <g id="e-bottom" class="stroke" transform="translate(134.980525, 125.355064)" fill="#AD0984">
                         <rect x="4.97379915e-14" y="-7.10542736e-15" width="72.4289967" height="16.4939832"></rect>
                       </g>
-                      <g id="e-middle" class="stroke" transform="translate(134.980525, 62.677928)" fill="#B20F5C">
+                      <g id="e-middle" class="stroke" transform="translate(134.980525, 62.677928)" fill="#AD0984">
                         <rect id="stroke-horiz-2" x="-6.39488462e-14" y="-7.10542736e-15" width="72.4289967" height="16.4939832"></rect>
                       </g>
-                      <g id="e-top" class="stroke" transform="translate(134.980525, 0.001668)" fill="#B20F5C">
+                      <g id="e-top" class="stroke" transform="translate(134.980525, 0.001668)" fill="#AD0984">
                         <path d="M214.986,-0.000668437977 L201.133,16.4933316 L0,16.4939832 L0,-9.54965274e-15 L214.986,-0.000668437977 Z"></path>
                       </g>
-                      <g id="hide-e" class="hide-stroke" transform="translate(130, -1)" fill="#FFE5EE">
+                      <g id="hide-e" class="hide-stroke" transform="translate(130, -1)" fill="#FADBEE">
                         <rect  x="0" y="0" width="220" height="145"></rect>
                       </g>
-                      <g id="m-right" class="stroke" transform="translate(95.473062, 19.000792)" fill="#B20F5C">
+                      <g id="m-right" class="stroke" transform="translate(95.473062, 19.000792)" fill="#AD0984">
                         <rect x="0.000737399071" y="0.849131763" width="16.4611356" height="122"></rect>
                       </g>
-                      <g id="hide-m-right" class="hide-stroke" transform="translate(94.000000, 0.000000)" fill="#FFE5EE">
+                      <g id="hide-m-right" class="hide-stroke" transform="translate(94.000000, 0.000000)" fill="#FADBEE">
                         <rect x="0" y="0" width="19" height="145"></rect>
                       </g>
-                      <g id="m-diagonal2" class="stroke"  transform="translate(45.532152, -0.274230)" fill="#B20F5C">
+                      <g id="m-diagonal2" class="stroke"  transform="translate(45.532152, -0.274230)" fill="#AD0984">
                         <path d="M66.3247264,0.274230238 L66.397,0.335230238 L66.397,25.8422302 L21.486,79.4502302 L-0.005,79.4502302 L66.3247264,0.274230238 Z"></path>
                       </g>
-                      <g id="hide-m-diagonal2" class="hide-stroke" transform="translate(33.000000, 0.000000)" fill="#FFE5EE">
+                      <g id="hide-m-diagonal2" class="hide-stroke" transform="translate(33.000000, 0.000000)" fill="#FADBEE">
                         <rect x="0" y="0" width="83" height="80"></rect>
                       </g>
-                      <g id="m-diagonal1" transform="translate(-52.000000, -47.000000)" fill="#B20F5C">
+                      <g id="m-diagonal1" transform="translate(-52.000000, -47.000000)" fill="#AD0984">
                           <path d="M12.6099615,-7.10542736e-15 L66.272,64.08 L44.784,64.08 L-2.06057393e-13,10.602128 L12.6099615,-7.10542736e-15 Z" id="m-ghost-stroke"></path>
                       </g>
-                      <g  id="hide-m-diagonal1" class="hide-stroke" fill="#FFE5EE" transform="translate(41.00000, 79.00000)">
+                      <g  id="hide-m-diagonal1" class="hide-stroke" fill="#FADBEE" transform="translate(41.00000, 79.00000)">
                         <rect width="76" height="60"></rect>
                       </g>
-                      <g id="m-left" class="stroke"  transform="translate(-0.000938, 0.003792)" fill="#B20F5C">
+                      <g id="m-left" class="stroke"  transform="translate(-0.000938, 0.003792)" fill="#AD0984">
                         <path d="M9.23705556e-14,1.42108547e-14 L16.461,19.599 L16.4612863,141.846132 L0.000938336985,141.846132 L9.23705556e-14,1.42108547e-14 Z"></path>
                       </g>
-                      <g id="hide-m-left" class="hide-stroke" transform="translate(-3, 0)" fill="#FFE5EE">
+                      <g id="hide-m-left" class="hide-stroke" transform="translate(-3, 0)" fill="#FADBEE">
                         <rect x="0" y="0" width="20" height="145"></rect>
                       </g>
-                      <g id="hide-top" transform="translate(-50, -50)" fill="#FFE5EE">
+                      <g id="hide-top" transform="translate(-50, -50)" fill="#FADBEE">
                         <rect x="0" y="0" width="50" height="100"></rect>
                       </g>
                     </g>
@@ -213,7 +223,7 @@
             </div>
           </div><!-- END Animation case study -->
 
-          <div class="case-study"><!-- My Word case study -->
+          <div class="case-study-card"><!-- My Word case study -->
             <h2>My Word! | <span class="font-medium">flashcard learning app</span></h2>
             <div class="project-picture">
               <picture>
@@ -227,8 +237,7 @@
             <div class="case-desc">
               <p>
                 There's so much to learn! My Word is an app that allows students
-                and learners of all ages to create and organize flashcards. It
-                includes a study mode to test concepts learned and track progress.
+                and learners of all ages to create and organize flashcards.
               </p>
               <p>
                 That was my very first UX design project, in which I learned about
@@ -250,18 +259,9 @@
       <section id="contact">
         <h1>Contact Me</h1>
         <p class="font-medium">
-          Like what you see? Let's get in touch!
+          Like what you see? Let's get in&nbsp;touch!
         </p>
-        <a class="button-ghost button-blue" href="mailto:info@mevesel.design">Send me an Email</a>
-        <div id="call-skype">
-          <p>
-            Call me: <a href="tel:13128881726">1-312-888-1726</a>
-          </p>
-          <p>
-            Skype me: <a href="skype:me.vesel">me.vesel</a>
-          </p>
-        </div>
-
+        <a href="mailto:ux@mevesel.design">ux@mevesel.design</a>
       </section>
 
       <div class="solid-footer"><!-- Section with social media icons and copyright -->
@@ -269,10 +269,11 @@
           <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
             <span class="fab fa-linkedin-in"></span></a>
           <a href="https://www.behance.net/marie-evevesel" target="_blank">
-            <span class="fab fa-behance"></span></a>
-          <a href=""><span class="fab fa-dribbble"></span></a>
-          <a href="mailto:info@mevesel.design">
-            <span class="far fa-envelope"></span></a>
+            <span class="fab fa-behance"></span>
+          </a>
+          <a href="mailto:ux@mevesel.design">
+            <span class="far fa-envelope"></span>
+          </a>
         </div>
         <div id="mev-copyright">
           <p>
