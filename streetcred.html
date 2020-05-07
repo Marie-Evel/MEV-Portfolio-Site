@@ -30,12 +30,16 @@
   <link rel="stylesheet" type="text/css" href="css/metrisch.css">
   <link rel="stylesheet" type="text/css" href="css/project.css">
   <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
+
 
 
 </head>
 
 <body>
   <header>
+    <div id="nav-background">
+    </div>
     <div id="top-nav">
       <div id="mev-logo">
         <a href="index.html">
@@ -64,15 +68,19 @@
   </header>
 
   <main>
+    <div class="reveal-page">
+      <!-- NOTE: Intentionally blank -->
+    </div>
 
     <!-- INTRO ------------------------------------------------------------->
     <section class="indent-top-nav">
+      <div id="top-anchor" class="anchor"></div>
       <p class="font-medium">
         UX/UI CASE STUDY
       </p>
     </section>
 
-    <section class="intro background-fill">
+    <section id="intro" class="background-fill">
       <div id="intro-grid">
         <div class="screen-shot">
           <picture class="shadow-white">
@@ -103,8 +111,153 @@
       </div>
     </section><!-- END of Intro -->
 
+    <!-- TOC ------------------------------------------------------------------>
+
+    <section class="indent-top-nav">
+      <div id="project-nav-handle" onclick="openProjectNav()">
+        <span class="far fa-chevron-double-right"></span>
+      </div>
+      <div id="project-nav" class="visible">
+        <div class="title">
+          <h2>Content</h2>
+        </div>
+        <div class="close" onclick="closeProjectNav()">
+          <span class="far fa-times"></span>
+        </div>
+        <div class="toc menu-container">
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#overview-anchor" onclick="closeProjectNav()"><span>01</span>Project Overview</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(1)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#problem-anchor" onclick="closeProjectNav()">the problem</a>
+              <a href="#solution-anchor" onclick="closeProjectNav()">potential solution</a>
+              <a href="#target-audience-anchor" onclick="closeProjectNav()">target audience</a>
+              <a href="#sneak-peek-anchor" onclick="closeProjectNav()">sneak peek</a>
+              <a href="#video-demo-anchor" onclick="closeProjectNav()">video demo</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#research-anchor" onclick="closeProjectNav()"><span>02</span>Exploratory Research</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(2)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#research-anchor" onclick="closeProjectNav()">competitive analysis</a>
+              <a href="#opp-strategy-anchor" onclick="closeProjectNav()">opportunities & strategy</a>
+              <a href="#surveys-anchor" onclick="closeProjectNav()">user survey</a>
+              <a href="#interviews-anchor" onclick="closeProjectNav()">user interviews</a>
+              <a href="#key-insights-anchor" onclick="closeProjectNav()">insights</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#user-anchor" onclick="closeProjectNav()"><span>03</span>Understanding the User</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(3)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#user-anchor" onclick="closeProjectNav()">user personas</a>
+              <a href="#journey-maps-anchor" onclick="closeProjectNav()">journey maps</a>
+              <a href="#user-flows-anchor" onclick="closeProjectNav()">user flows</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#ia-anchor" onclick="closeProjectNav()"><span>04</span>Information Architecture</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(4)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#nav-structure-anchor" onclick="closeProjectNav()">navigation structure</a>
+              <a href="#card-sorting-anchor" onclick="closeProjectNav()">card sorting</a>
+              <a href="#sitemap-anchor" onclick="closeProjectNav()">sitemap</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#wires-anchor" onclick="closeProjectNav()"><span>05</span>Wireframing & Prototyping</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(5)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#low-fid-wires-anchor" onclick="closeProjectNav()">low-fidelity wireframes</a>
+              <a href="#wires-anchor" onclick="closeProjectNav()">rapid prototyping</a>
+              <a href="#design-iterations-anchor" onclick="closeProjectNav()">design iterations</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#testing-anchor" onclick="closeProjectNav()"><span>06</span>Usability Testing</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(6)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#test-plan-anchor" onclick="closeProjectNav()">usability test plan</a>
+              <a href="#test-objective-anchor" onclick="closeProjectNav()">test objective</a>
+              <a href="#test-participants-anchor" onclick="closeProjectNav()">test participants</a>
+              <a href="#test-results-anchor" onclick="closeProjectNav()">test results</a>
+              <a href="#test-issues-anchor" onclick="closeProjectNav()">issues & solutions</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#fine-tuning-anchor" onclick="closeProjectNav()"><span>07</span>Fine-Tuning the Design</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(7)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#fine-tuning-anchor" onclick="closeProjectNav()">color scheme</a>
+              <a href="#design-language-anchor" onclick="closeProjectNav()">design language</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#accessibility-anchor" onclick="closeProjectNav()"><span>08</span>Accessibility</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(8)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#accessibility-anchor" onclick="closeProjectNav()">contrast & readability</a>
+              <a href="#beyond-contrast-anchor" onclick="closeProjectNav()">beyond contrast</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#final-designs-anchor" onclick="closeProjectNav()"><span>09</span>Final Designs</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(9)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#prototype-anchor" onclick="closeProjectNav()">interactive prototype</a>
+              <a href="#final-mockups-anchor" onclick="closeProjectNav()">final mockups</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="top-menu">
+              <a href="#final-thoughts-anchor" onclick="closeProjectNav()"><span>10</span>Final Thoughts</a>
+              <span class="fa fa-caret-down" onclick="toggleDropdown(10)"></span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#final-thoughts-anchor" onclick="closeProjectNav()">future improvements</a>
+              <a href="#learnings-anchor" onclick="closeProjectNav()">learnings</a>
+            </div>
+          </div>
+
+        </div><!-- END of menu-container -->
+      </div>
+
+
+    </section>
+
+
+
     <!-- 01 OVERVIEW ---------------------------------------------------------->
     <section>
+      <div id="overview-anchor" class="anchor"></div>
       <div id="overview-grid">
         <div class="section-num">
           <h1>01</h1>
@@ -117,6 +270,8 @@
             <li>the problem</li>
             <li>potential solution</li>
             <li>target audience</li>
+            <li>sneak peek</li>
+            <li>video demo</li>
           </ul>
         </div>
         <div class="main-text">
@@ -130,6 +285,7 @@
             </p>
           </div>
           <div>
+            <div id="problem-anchor" class="anchor"></div>
             <h2>WHAT'S THE PROBLEM?</h2>
             <p>
               Peo­ple like to play games. Peo­ple like to play games on their
@@ -139,6 +295,7 @@
             </p>
           </div>
           <div>
+            <div id="solution-anchor" class="anchor"></div>
             <h2>POTENTIAL SOLUTION</h2>
             <p>
               I be­lieve that cre­at­ing an app that pro­vides ready-made
@@ -152,12 +309,13 @@
             </p>
           </div>
           <div>
+            <div id="target-audience-anchor" class="anchor"></div>
             <h2>TARGET AUDIENCE</h2>
             <p>
               The tar­get au­di­ence for this app con­sists of late baby boomers,
               gen­er­a­tion Xers, and mil­len­ni­als be­tween the ages of 18 and 60
               years old. Re­gard­less of age, the app con­cept must ap­peal to
-              ad­ven­tur­ous peo­ple who like to travel, and are in­ter­ested in
+              ad­ven­tur­ous peo­ple who like to travel, and who are in­ter­ested in
               culture and his­tory.
             </p>
           </div>
@@ -201,6 +359,7 @@
     </section><!-- END of 01 Overview -->
 
     <section id="sneak-peek-intro" class="background-fill sc-light-blue">
+      <div id="sneak-peek-anchor" class="anchor"></div>
       <div class="centered-content">
         <h1>SNEAK PEEK</h1>
         <p>
@@ -249,17 +408,44 @@
       </div>
     </section><!-- END of Sneak Peak-->
 
-    <section id="sneak-peek-outro" class="background-fill sc-med-blue">
-      <div  class="centered-content">
-        <p class="font-white">
-          Want to see how I got there?
-          <br>Let’s dig in.
+    <section id="demo-video" class="indent-top-nav background-fill sc-med-blue">
+      <div id="video-demo-anchor" class="anchor"></div>
+      <div class="centered-content">
+        <p >
+          And here's a slighlty longer preview
+          <br>(7 minutes and 13 seconds, to&nbsp;be&nbsp;exact).
         </p>
+
+        <div class="youtube-video">
+          <iframe src="https://www.youtube.com/embed/SUKf17ilS20"
+                  allowfullscreen="allowfullscreen"
+                  mozallowfullscreen="mozallowfullscreen"
+                  msallowfullscreen="msallowfullscreen"
+                  oallowfullscreen="oallowfullscreen"
+                  webkitallowfullscreen="webkitallowfullscreen">
+          </iframe>
+        </div>
+        <p class="tip">
+          TIP: if you only have 3 minutes and 37 seconds to spare,
+          change the playback speed to 2x (and try not to laugh too hard when
+          you&nbsp;hear&nbsp;my&nbsp;fast&#8209;forwarded&nbsp;voice).
+        </p>
+      </div>
+    </section>
+
+    <section id="sneak-peek-outro" class="inner-section background-fill sc-med-blue">
+      <div class="centered-content">
+        <p class="font-white">
+          Want to see my process?
+        </p>
+        <a href="#research-anchor" class="button-ghost">Yes, let’s dig in!</a>
+        <a href="#final-designs-anchor">Nah, let's jump to conclusions</a>
       </div>
     </section>
 
     <!-- 02 RESEARCH ---------------------------------------------------------->
     <section>
+      <div id="research-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>02</h1>
@@ -382,6 +568,7 @@
     </section>
 
     <section class="indented-md wide-section-lg inner-section">
+      <div id="opp-strategy-anchor" class="anchor"></div>
       <div class="opp-grid">
         <div id="sc-logo">
           <img src="img/streetcred/sec2_research/streetcred_logo.png" alt="StreetCred logo with tagline: urban scavenger hunt">
@@ -429,6 +616,7 @@
     </section>
 
     <section id="survey-section" class="background-fill sc-light-blue">
+      <div id="surveys-anchor" class="anchor"></div>
       <div class="indented">
         <h2>USER SURVEYS</h2>
         <div>
@@ -446,7 +634,7 @@
         <div class="survey-goals">
           <h3>Travel & Leisure</h3>
           <div>
-            <ul class="bullets sc-med-blue font-medium">
+            <ul class="bullets sc-blue font-medium">
               <li>Determine if people want to spend more time outside.</li>
               <li>Identify what people like to do when they travel.</li>
               <li>Assess how adventurous people are in terms of trying new
@@ -460,7 +648,7 @@
             <p>
               Understand people’s gaming /social media habits and usage:
             </p>
-            <ul class="bullets sc-med-blue font-medium">
+            <ul class="bullets sc-blue font-medium">
               <li>What type of games do people like to play on their phones?
                 Why?</li>
               <li>How much do people use social media, and for what purpose?</li>
@@ -470,7 +658,7 @@
         <div class="survey-goals">
           <h3>Scavenger Hunts</h3>
           <div>
-            <ul class="bullets sc-med-blue font-medium">
+            <ul class="bullets sc-blue font-medium">
               <li>Determine if users would turn to a scavenger hunt game as a
                 way to explore their city, or as a means to discover a new city
                 while traveling.</li>
@@ -494,6 +682,7 @@
     </section>
 
     <section>
+      <div id="interviews-anchor" class="anchor"></div>
       <div id="interviews">
         <div>
           <h2>USER INTERVIEWS</h2>
@@ -592,12 +781,13 @@
       </div>
     </section><!-- END of User Interviews-->
 
-    <div id="research-equation" class="transition background-fill sc-light-pink">
+    <section id="research-equation" class="transition background-fill sc-light-pink">
       <img src="img/streetcred/sec2_research/equation.png" alt="1269 observations from survey + 506 quotes from interviews = a lot to process">
-    </div>
+    </section>
 
 
     <section class="indented"><!-- Key Insights -->
+      <div id="key-insights-anchor" class="anchor"></div>
       <div>
         <h2>KEY INSIGHTS</h2>
         <p class>
@@ -640,6 +830,7 @@
 
     <!-- 03 UNDERSTANDING THE USER -------------------------------------------->
     <section>
+      <div id="user-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>03</h1>
@@ -717,6 +908,7 @@
     </section>
 
     <section>
+      <div id="journey-maps-anchor" class="anchor"></div>
       <div id="dereck-journey">
         <div>
           <h2>HOW WILL THE APP BE USED?</h2>
@@ -823,6 +1015,7 @@
   </section><!-- END of Secondary user journey section -->
 
   <section class=""><!-- User flow section -->
+    <div id="user-flows-anchor" class="anchor"></div>
     <div id="user-flows" class="wide-picture">
       <h2>DOWN TO THE NITTY-GRITTY</h2>
       <p>
@@ -881,6 +1074,7 @@
   </section>
 
   <section id="ia-transition" class="background-fill">
+    <div id="ia-anchor" class="anchor"></div>
     <!-- <div id="ia-transition">-->
       <!-- <picture >
         <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
@@ -912,6 +1106,7 @@
             screens to include in the app. Let’s contemplate navigation and
             hierarchy to determine how the various screens are connected.
           </p>
+          <div id="nav-structure-anchor" class="anchor"></div>
           <h2>NAVIGATION STRUCTURE</h2>
           <p>
             I want to keep the navigation as simple as possible to focus on the
@@ -933,6 +1128,7 @@
     </section>
 
     <section id="card-sorting" class="background-fill">
+      <div id="card-sorting-anchor" class="anchor"></div>
       <div class="indented">
         <h2>CARD SORTING</h2>
         <p>
@@ -996,6 +1192,7 @@
     </section><!-- END of Container for Card Sorting section -->
 
     <section>
+      <div id="sitemap-anchor" class="anchor"></div>
       <div class="indented">
         <h2>FINAL SITEMAP <span class="title-suffix">(for now)</span></h2>
         <p>
@@ -1024,6 +1221,7 @@
     </section>
 
     <div id="low-fid-transition" class="transition">
+      <div id="low-fid-wires-anchor" class="anchor"></div>
       <picture>
         <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/low-fid_transition_small.png">
         <img src="img/streetcred/sec5_wireframing/low-fid_transition_large.png" alt="Series of low-fidelity sketched wireframes">
@@ -1032,6 +1230,7 @@
 
     <!-- 05 WIREFREAMING & PROTOTYPING ---------------------------------------->
     <section id="sc-wires">
+      <div id="wires-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>05</h1>
@@ -1163,6 +1362,7 @@
     </section><!-- END of #index-card-example -->
 
     <section class="background-fill sc-light-blue">
+      <div id="design-iterations-anchor" class="anchor"></div>
       <div id="design-iterations-intro" class="centered-content-md">
         <h2>DESIGN ITERATIONS</h2>
         <p>
@@ -1519,6 +1719,7 @@
 
     <!-- 06 USABILITY TESTING ------------------------------------------------->
     <section id="testing">
+      <div id="testing-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>06</h1>
@@ -1553,6 +1754,7 @@
 
       <div id="test-content" class="indented-md wide-section-lg indented-wide-xl">
         <div id="test-plan">
+          <div id="test-plan-anchor" class="anchor"></div>
           <h2>USABILITY TEST PLAN</h2>
           <p>
             ­­I pre­pared a us­abil­ity test plan to out­line the scope of the test­ing
@@ -1582,6 +1784,7 @@
 
         <div id="test-other">
           <div id="test-objectives">
+            <div id="test-objective-anchor" class="anchor"></div>
             <h2>TEST OBJECTIVE</h2>
             <p>
               The goal of the testing was to measure StreetCred’s usability for
@@ -1592,6 +1795,7 @@
           </div>
 
           <div id="test-participants">
+            <div id="test-participants-anchor" class="anchor"></div>
             <h2>THE PARTICIPANTS</h2>
             <p>
               I re­cruited 6 par­tic­i­pants from my per­sonal and pro­fes­sional net­work
@@ -1629,6 +1833,7 @@
     </section><!-- END of Transition section with stats -->
 
     <section class="wide-section-md">
+      <div id="test-results-anchor" class="anchor"></div>
       <div class="wide-picture-lg">
         <h2>TEST RESULTS</h2>
         <div id="test-results">
@@ -1754,6 +1959,7 @@
     </section>
 
     <section class="background-fill sc-light-blue">
+      <div id="test-issues-anchor" class="anchor"></div>
       <div class="indented">
         <h2>IDENTIFYING, PRIORITIZING, AND FIXING ISSUES</h2>
         <p class="font-medium">
@@ -1981,6 +2187,7 @@
 
     <!-- 07 FINE-TUNING THE DESIGN -------------------------------------------->
     <section>
+      <div id="fine-tuning-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>07</h1>
@@ -2040,6 +2247,7 @@
     </section>
 
     <section class="background-fill sc-light-blue ">
+      <div id="design-language-anchor" class="anchor"></div>
       <div id="design-language" class="centered-content-md wide-picture">
         <h2>DESIGN LANGUAGE</h2>
         <p>
@@ -2066,6 +2274,7 @@
 
     <!-- 08 ACCESSIBILITY ----------------------------------------------------->
     <section id="sc-accessibility">
+      <div id="accessibility-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>08</h1>
@@ -2103,6 +2312,7 @@
     </section>
 
     <section id="beyond-contrast" class="indented">
+      <div id="beyond-contrast-anchor" class="anchor"></div>
       <h2>ACCESSIBILITY BEYOND CONTRAST</h2>
       <p>
         Accessibility is so much more than contrast and readability. For
@@ -2204,15 +2414,18 @@
         </div><!-- END of accessibility-grid2 -->
     </section>
 
-    <div class="transition"><!-- Final Designs Transition -->
+    <section class="transition"><!-- Final Designs Transition -->
+      <div id="final-designs-anchor" class="anchor">
+      </div>
       <picture>
         <source media="(max-width: 767px)" srcset="img/streetcred/sec9_final_designs/montage_small.jpg">
         <img src="img/streetcred/sec9_final_designs/montage_large.jpg" alt="Montage of various StreetCred screens on iPhone XS">
-    </picture>
-    </div>
+      </picture>
+    </section>
 
     <!-- 09 FINAL DESIGNS ----------------------------------------------------->
     <section>
+      <div id="prototype-anchor" class="anchor"></div>
       <div id="final-designs-header">
         <div>
           <h1>09</h1>
@@ -2263,6 +2476,7 @@
 
     <!-- 10 FINAL THOUGHTS ---------------------------------------------------->
     <section id="sc-final-thoughts" class="background-fill sc-light-blue">
+      <div id="final-thoughts-anchor" class="anchor"></div>
       <div class="section-header">
         <div>
           <h1>10</h1>
@@ -2286,8 +2500,10 @@
           </p>
           <h2>FUTURE IMPROVEMENTS</h2>
           <p>
-            After developing <em class="sc-red">5 core features</em>
-            and designing <em class="sc-red">30 different screens</em>,
+            After developing
+            <em class="sc-red"><span class="big-number sc-red-font">5
+            </span> core features</em> and designing <em class="sc-red">
+            <span class="big-number sc-red-font">30</span> different screens</em>,
             I feel like I’ve only scratched the surface. There’s so much
             more I’m planning on doing with StreetCred!
           </p>
@@ -2378,6 +2594,7 @@
     </section>
 
     <section>
+      <div id="learnings-anchor" class="anchor"></div>
       <div class="indented">
         <h2>LEARNINGS</h2>
         <p>
@@ -2407,15 +2624,22 @@
 
     </section><!-- END of Learnings -->
 
+    <div id="back-to-top">
+      <a href="#top-anchor"><span class="far fa-chevron-up"></span></a>
+    </div>
+
   </main>
 
   <footer>
-    <section id="contact" class="background-fill sc-light-pink">
+    <section id="contact" class="background-fill sc-light-blue">
       <h1>Contact Me</h1>
       <p class="font-medium">
         Like what you see? Let's get in&nbsp;touch!
       </p>
-      <a href="mailto:ux@mevesel.design">ux@mevesel.design</a>
+      <div class="">
+        <a href="mailto:ux@mevesel.design">ux@mevesel.design</a>
+      </div>
+
     </section>
 
     <div class="solid-footer"><!-- Section with social media icons and copyright -->
@@ -2442,7 +2666,8 @@
     integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
     crossorigin="anonymous">
   </script>
-  <script src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
 </body>
 
 </html>
