@@ -1,7 +1,6 @@
 
 :root {
   /* Color palette: */
-  --fuschia: #AD0984;
   --light-pink: #FADBEE;
   --barely-pink: #FEFBFD;
   --deep-purple: #440675;
@@ -186,17 +185,9 @@ a:active {
 /* Header and top nav */
 /*----------------------------------------------------------------------------*/
 
-#top-nav {
-  background-color: var(--fuschia);
-  border-bottom: 2px solid #FFFFFF;
-}
+#top-nav { background-color: var(--fuschia); }
 
-#work { position: relative; }
-
-#work-anchor {
- position: absolute;
- top: -60px;
-}
+#menu-container { background-color: var(--fuschia); }
 
 /*----------------------------------------------------------------------------*/
 /* Layout styling */
@@ -238,6 +229,13 @@ p + h1 { margin-top: 30px; }
 #hero .button-filled,
 #hero .button-ghost {
   box-shadow: 0 1px 15px rgba(255,255,255,0.5);
+}
+
+#work { position: relative; }
+
+#work-anchor {
+ position: absolute;
+ top: -60px;
 }
 
 #work h1,
@@ -393,7 +391,7 @@ h1 > p {
 
 #contact { background-color: var(--light-purple); }
 
-#contact h1 { color: black; }
+/* #contact h1 { color: black; } */
 
 .solid-footer {
   background-image: url("../img/pixelated_footer_small.png");
@@ -410,8 +408,6 @@ h1 > p {
 @media only screen and (min-width: 640px) {
 
   body { padding-top: var(--topnav-height-md); }
-
-  #menu-container { border-top: none; }
 
   section { padding: 30px 40px 40px 40px; }
 
@@ -432,7 +428,7 @@ h1 > p {
   }
 
   #hero .section-content {
-    padding: 90px 57px 40px 136px;
+    padding: 50px 57px 50px 136px;
     max-width: 653px;
   }
 
@@ -630,7 +626,7 @@ h1 > p {
   /*--------------------------------------------------------------------------*/
 
   #hero .section-content {
-    padding: 90px 177px 40px 150px;
+    padding: 70px 177px 70px 150px;
     max-width: 837px;
   }
 
