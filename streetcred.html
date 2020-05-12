@@ -38,24 +38,26 @@
 
 <body>
   <header>
-    <div id="nav-background">
+    <div class="nav-background prior">
+    </div>
+    <div class="nav-background current">
     </div>
     <div id="top-nav">
       <div id="mev-logo">
-        <a href="index.html">
+        <a href="index.html" class="outer-link">
           <img src="img/logo/logo_white.svg" alt="M E V logo">
         </a>
       </div>
       <nav>
         <ul id="menu-container" class="">
           <li class="menu-item">
-            <a href="index.html#work-anchor">Work</a>
+            <a href="index.html#work-anchor" class="outer-link">Work</a>
           </li>
           <li class="menu-item">
-            <a href="about.html">About</a>
+            <a href="about.html" class="outer-link">About</a>
           </li>
           <li class="menu-item">
-            <a href="#contact" onclick="toggleMenu()">Contact</a>
+            <a href="#contact" class="within-link" onclick="toggleMenu()">Contact</a>
           </li>
         </ul>
       </nav>
@@ -68,13 +70,13 @@
   </header>
 
   <main>
-    <div class="reveal-page">
+    <div id="reveal-page">
       <!-- NOTE: Intentionally blank -->
     </div>
 
     <!-- INTRO ------------------------------------------------------------->
     <section class="indent-top-nav">
-      <div id="top-anchor" class="anchor"></div>
+      <div id="top-anchor" class="anchor section-anchor"></div>
       <p class="font-medium">
         UX/UI CASE STUDY
       </p>
@@ -112,144 +114,144 @@
     </section><!-- END of Intro -->
 
     <!-- TOC ------------------------------------------------------------------>
-
     <section class="indent-top-nav">
       <div id="project-nav-handle" onclick="openProjectNav()">
         <span class="far fa-chevron-double-right"></span>
       </div>
-      <div id="project-nav" class="visible">
-        <div class="title">
-          <h2>Content</h2>
-        </div>
-        <div class="close" onclick="closeProjectNav()">
-          <span class="far fa-times"></span>
-        </div>
-        <div class="toc menu-container">
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#overview-anchor" onclick="closeProjectNav()"><span>01</span>Project Overview</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(1)"></span>
-            </div>
-            <div class="dropdown-content">
-              <a href="#problem-anchor" onclick="closeProjectNav()">the problem</a>
-              <a href="#solution-anchor" onclick="closeProjectNav()">potential solution</a>
-              <a href="#target-audience-anchor" onclick="closeProjectNav()">target audience</a>
-              <a href="#sneak-peek-anchor" onclick="closeProjectNav()">sneak peek</a>
-              <a href="#video-demo-anchor" onclick="closeProjectNav()">video demo</a>
+      <div id="project-nav">
+        <div class="scrollable">
+          <div class="title">
+            <h2>Content</h2>
+            <div class="close" onclick="closeProjectNav()">
+              <span class="far fa-times"></span>
             </div>
           </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#research-anchor" onclick="closeProjectNav()"><span>02</span>Exploratory Research</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(2)"></span>
+          <div class="menu-container">
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#overview-anchor" class="within-link"><span>01</span>Project Overview</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(1)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#problem-anchor" class="within-link">the problem</a>
+                <a href="#solution-anchor" class="within-link">potential solution</a>
+                <a href="#target-audience-anchor" class="within-link">target audience</a>
+                <a href="#sneak-peek-anchor" class="within-link">sneak peek</a>
+                <a href="#video-demo-anchor" class="within-link">video demo</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#research-anchor" onclick="closeProjectNav()">competitive analysis</a>
-              <a href="#opp-strategy-anchor" onclick="closeProjectNav()">opportunities & strategy</a>
-              <a href="#surveys-anchor" onclick="closeProjectNav()">user survey</a>
-              <a href="#interviews-anchor" onclick="closeProjectNav()">user interviews</a>
-              <a href="#key-insights-anchor" onclick="closeProjectNav()">insights</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#user-anchor" onclick="closeProjectNav()"><span>03</span>Understanding the User</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(3)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#research-anchor" class="within-link"><span>02</span>Exploratory Research</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(2)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#research-anchor" class="within-link">competitive analysis</a>
+                <a href="#opp-strategy-anchor" class="within-link">opportunities & strategy</a>
+                <a href="#surveys-anchor" class="within-link">user survey</a>
+                <a href="#interviews-anchor" class="within-link">user interviews</a>
+                <a href="#key-insights-anchor" class="within-link">insights</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#user-anchor" onclick="closeProjectNav()">user personas</a>
-              <a href="#journey-maps-anchor" onclick="closeProjectNav()">journey maps</a>
-              <a href="#user-flows-anchor" onclick="closeProjectNav()">user flows</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#ia-anchor" onclick="closeProjectNav()"><span>04</span>Information Architecture</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(4)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#user-anchor" class="within-link"><span>03</span>Understanding the User</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(3)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#user-anchor" class="within-link">user personas</a>
+                <a href="#journey-maps-anchor" class="within-link">journey maps</a>
+                <a href="#user-flows-anchor" class="within-link">user flows</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#nav-structure-anchor" onclick="closeProjectNav()">navigation structure</a>
-              <a href="#card-sorting-anchor" onclick="closeProjectNav()">card sorting</a>
-              <a href="#sitemap-anchor" onclick="closeProjectNav()">sitemap</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#wires-anchor" onclick="closeProjectNav()"><span>05</span>Wireframing & Prototyping</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(5)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#ia-anchor" class="within-link"><span>04</span>Information Architecture</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(4)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#nav-structure-anchor" class="within-link">navigation structure</a>
+                <a href="#card-sorting-anchor" class="within-link">card sorting</a>
+                <a href="#sitemap-anchor" class="within-link">sitemap</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#low-fid-wires-anchor" onclick="closeProjectNav()">low-fidelity wireframes</a>
-              <a href="#wires-anchor" onclick="closeProjectNav()">rapid prototyping</a>
-              <a href="#design-iterations-anchor" onclick="closeProjectNav()">design iterations</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#testing-anchor" onclick="closeProjectNav()"><span>06</span>Usability Testing</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(6)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#wires-anchor" class="within-link"><span>05</span>Wireframing & Prototyping</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(5)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#low-fid-wires-anchor" class="within-link">low-fidelity wireframes</a>
+                <a href="#wires-anchor" class="within-link">rapid prototyping</a>
+                <a href="#design-iterations-anchor" class="within-link">design iterations</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#test-plan-anchor" onclick="closeProjectNav()">usability test plan</a>
-              <a href="#test-objective-anchor" onclick="closeProjectNav()">test objective</a>
-              <a href="#test-participants-anchor" onclick="closeProjectNav()">test participants</a>
-              <a href="#test-results-anchor" onclick="closeProjectNav()">test results</a>
-              <a href="#test-issues-anchor" onclick="closeProjectNav()">issues & solutions</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#fine-tuning-anchor" onclick="closeProjectNav()"><span>07</span>Fine-Tuning the Design</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(7)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#testing-anchor" class="within-link"><span>06</span>Usability Testing</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(6)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#test-plan-anchor" class="within-link">usability test plan</a>
+                <a href="#test-objective-anchor" class="within-link">test objective</a>
+                <a href="#test-participants-anchor" class="within-link">test participants</a>
+                <a href="#test-results-anchor" class="within-link">test results</a>
+                <a href="#test-issues-anchor" class="within-link">issues & solutions</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#fine-tuning-anchor" onclick="closeProjectNav()">color scheme</a>
-              <a href="#design-language-anchor" onclick="closeProjectNav()">design language</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#accessibility-anchor" onclick="closeProjectNav()"><span>08</span>Accessibility</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(8)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#fine-tuning-anchor" class="within-link"><span>07</span>Fine-Tuning the Design</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(7)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#fine-tuning-anchor" class="within-link">color scheme</a>
+                <a href="#design-language-anchor" class="within-link">design language</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#accessibility-anchor" onclick="closeProjectNav()">contrast & readability</a>
-              <a href="#beyond-contrast-anchor" onclick="closeProjectNav()">beyond contrast</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#final-designs-anchor" onclick="closeProjectNav()"><span>09</span>Final Designs</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(9)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#accessibility-anchor" class="within-link"><span>08</span>Accessibility</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(8)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#accessibility-anchor" class="within-link">contrast & readability</a>
+                <a href="#beyond-contrast-anchor" class="within-link">beyond contrast</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#prototype-anchor" onclick="closeProjectNav()">interactive prototype</a>
-              <a href="#final-mockups-anchor" onclick="closeProjectNav()">final mockups</a>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="top-menu">
-              <a href="#final-thoughts-anchor" onclick="closeProjectNav()"><span>10</span>Final Thoughts</a>
-              <span class="fa fa-caret-down" onclick="toggleDropdown(10)"></span>
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#final-designs-anchor" class="within-link"><span>09</span>Final Designs</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(9)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#prototype-anchor" class="within-link">interactive prototype</a>
+                <a href="#final-mockups-anchor" class="within-link">final mockups</a>
+              </div>
             </div>
-            <div class="dropdown-content">
-              <a href="#final-thoughts-anchor" onclick="closeProjectNav()">future improvements</a>
-              <a href="#learnings-anchor" onclick="closeProjectNav()">learnings</a>
+
+            <div class="dropdown">
+              <div class="top-menu">
+                <a href="#final-thoughts-anchor" class="within-link"><span>10</span>Final Thoughts</a>
+                <span class="fa fa-caret-down" onclick="toggleDropdown(10)"></span>
+              </div>
+              <div class="dropdown-content">
+                <a href="#final-thoughts-anchor" class="within-link">future improvements</a>
+                <a href="#learnings-anchor" class="within-link">learnings</a>
+              </div>
             </div>
-          </div>
-
-        </div><!-- END of menu-container -->
-      </div>
-
+          </div><!-- END of .menu-container -->
+        </div><!-- END of .scrollable -->
+      </div><!-- END of #project-nav -->
 
     </section>
 
@@ -257,7 +259,7 @@
 
     <!-- 01 OVERVIEW ---------------------------------------------------------->
     <section>
-      <div id="overview-anchor" class="anchor"></div>
+      <div id="overview-anchor" class="anchor section-anchor"></div>
       <div id="overview-grid">
         <div class="section-num">
           <h1>01</h1>
@@ -267,11 +269,11 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>the problem</li>
-            <li>potential solution</li>
-            <li>target audience</li>
-            <li>sneak peek</li>
-            <li>video demo</li>
+            <li><a href="#problem-anchor" class="within-link">the problem</a></li>
+            <li><a href="#solution-anchor" class="within-link">potential solution</a></li>
+            <li><a href="#target-audience-anchor" class="within-link">target audience</a></li>
+            <li><a href="#sneak-peek-anchor" class="within-link">sneak peek</a></li>
+            <li><a href="#video-demo-anchor" class="within-link">video demo</a></li>
           </ul>
         </div>
         <div class="main-text">
@@ -438,14 +440,14 @@
         <p class="font-white">
           Want to see my process?
         </p>
-        <a href="#research-anchor" class="button-ghost">Yes, let’s dig in!</a>
-        <a href="#final-designs-anchor">Nah, let's jump to conclusions</a>
+        <a href="#research-anchor" class="within-link button-filled sc-red">Yes, let’s dig in!</a>
+        <a href="#final-designs-anchor" class="within-link">Nah, let's jump to conclusions</a>
       </div>
     </section>
 
     <!-- 02 RESEARCH ---------------------------------------------------------->
     <section>
-      <div id="research-anchor" class="anchor"></div>
+      <div id="research-anchor" class="anchor section-anchor"></div>
       <div class="section-header">
         <div>
           <h1>02</h1>
@@ -455,11 +457,11 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>competitive analysis</li>
-            <li>opportunities & strategy</li>
-            <li>user surveys</li>
-            <li>user interviews</li>
-            <li>key insights</li>
+            <li><a href="#research-anchor" class="within-link">competitive analysis</a></li>
+            <li><a href="#opp-strategy-anchor" class="within-link">opportunities & strategy</a></li>
+            <li><a href="#surveys-anchor" class="within-link">user survey</a></li>
+            <li><a href="#interviews-anchor" class="within-link">user interviews</a></li>
+            <li><a href="#key-insights-anchor" class="within-link">insights</a></li>
           </ul>
         </div>
         <div>
@@ -830,7 +832,7 @@
 
     <!-- 03 UNDERSTANDING THE USER -------------------------------------------->
     <section>
-      <div id="user-anchor" class="anchor"></div>
+      <div id="user-anchor" class="anchor section-anchor"></div>
       <div class="section-header">
         <div>
           <h1>03</h1>
@@ -840,9 +842,9 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>user personas</li>
-            <li>journey maps</li>
-            <li>user flows</li>
+            <li><a href="#user-anchor" class="within-link">user personas</a></li>
+            <li><a href="#journey-maps-anchor" class="within-link">journey maps</a></li>
+            <li><a href="#user-flows-anchor" class="within-link">user flows</a></li>
           </ul>
         </div>
         <div>
@@ -1074,7 +1076,7 @@
   </section>
 
   <section id="ia-transition" class="background-fill">
-    <div id="ia-anchor" class="anchor"></div>
+    <div id="ia-anchor" class="anchor section-anchor"></div>
     <!-- <div id="ia-transition">-->
       <!-- <picture >
         <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
@@ -1095,9 +1097,9 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>navigation structure</li>
-            <li>card sorting</li>
-            <li>sitemap</li>
+            <li><a href="#nav-structure-anchor" class="within-link">navigation structure</a></li>
+            <li><a href="#card-sorting-anchor" class="within-link">card sorting</a></li>
+            <li><a href="#sitemap-anchor" class="within-link">sitemap</a></li>
           </ul>
         </div>
         <div>
@@ -1221,7 +1223,7 @@
     </section>
 
     <div id="low-fid-transition" class="transition">
-      <div id="low-fid-wires-anchor" class="anchor"></div>
+      <div id="low-fid-wires-anchor" class="anchor section-anchor"></div>
       <picture>
         <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/low-fid_transition_small.png">
         <img src="img/streetcred/sec5_wireframing/low-fid_transition_large.png" alt="Series of low-fidelity sketched wireframes">
@@ -1240,9 +1242,9 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>low-fidelity wireframes</li>
-            <li>rapid prototyping</li>
-            <li>design iterations</li>
+            <li><a href="#low-fid-wires-anchor" class="within-link">low-fidelity wireframes</a></li>
+            <li><a href="#wires-anchor" class="within-link">rapid prototyping</a></li>
+            <li><a href="#design-iterations-anchor" class="within-link">design iterations</a></li>
           </ul>
         </div>
         <div>
@@ -1719,7 +1721,7 @@
 
     <!-- 06 USABILITY TESTING ------------------------------------------------->
     <section id="testing">
-      <div id="testing-anchor" class="anchor"></div>
+      <div id="testing-anchor" class="anchor section-anchor"></div>
       <div class="section-header">
         <div>
           <h1>06</h1>
@@ -1729,11 +1731,11 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>usability test plan</li>
-            <li>test objective</li>
-            <li>the participants</li>
-            <li>test results</li>
-            <li>issues & solutions</li>
+            <li><a href="#test-plan-anchor" class="within-link">usability test plan</a></li>
+            <li><a href="#test-objective-anchor" class="within-link">test objective</a></li>
+            <li><a href="#test-participants-anchor" class="within-link">test participants</a></li>
+            <li><a href="#test-results-anchor" class="within-link">test results</a></li>
+            <li><a href="#test-issues-anchor" class="within-link">issues & solutions</a></li>
           </ul>
         </div>
         <div>
@@ -2187,7 +2189,7 @@
 
     <!-- 07 FINE-TUNING THE DESIGN -------------------------------------------->
     <section>
-      <div id="fine-tuning-anchor" class="anchor"></div>
+      <div id="fine-tuning-anchor" class="anchor section-anchor"></div>
       <div class="section-header">
         <div>
           <h1>07</h1>
@@ -2197,8 +2199,8 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>color scheme</li>
-            <li>design language</li>
+            <li><a href="#fine-tuning-anchor" class="within-link">color scheme</a></li>
+            <li><a href="#design-language-anchor" class="within-link">design language</a></li>
           </ul>
         </div>
         <div>
@@ -2274,7 +2276,7 @@
 
     <!-- 08 ACCESSIBILITY ----------------------------------------------------->
     <section id="sc-accessibility">
-      <div id="accessibility-anchor" class="anchor"></div>
+      <div id="accessibility-anchor" class="anchor section-anchor"></div>
       <div class="section-header">
         <div>
           <h1>08</h1>
@@ -2284,8 +2286,8 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>contrast & readability</li>
-            <li>beyond contrast</li>
+            <li><a href="#accessibility-anchor" class="within-link">contrast & readability</a></li>
+            <li><a href="#beyond-contrast-anchor" class="within-link">beyond contrast</a></li>
           </ul>
         </div>
 
@@ -2415,7 +2417,7 @@
     </section>
 
     <section class="transition"><!-- Final Designs Transition -->
-      <div id="final-designs-anchor" class="anchor">
+      <div id="final-designs-anchor" class="anchor section-anchor">
       </div>
       <picture>
         <source media="(max-width: 767px)" srcset="img/streetcred/sec9_final_designs/montage_small.jpg">
@@ -2476,7 +2478,7 @@
 
     <!-- 10 FINAL THOUGHTS ---------------------------------------------------->
     <section id="sc-final-thoughts" class="background-fill sc-light-blue">
-      <div id="final-thoughts-anchor" class="anchor"></div>
+      <div id="final-thoughts-anchor" class="anchor section-anchor"></div>
       <div class="section-header">
         <div>
           <h1>10</h1>
@@ -2486,8 +2488,8 @@
         </div>
         <div class="sub-sections">
           <ul>
-            <li>future improvements</li>
-            <li>learnings</li>
+            <li><a href="#final-thoughts-anchor" class="within-link">future improvements</a></li>
+            <li><a href="#learnings-anchor" class="within-link">learnings</a></li>
           </ul>
         </div>
         <div>
@@ -2625,13 +2627,13 @@
     </section><!-- END of Learnings -->
 
     <div id="back-to-top">
-      <a href="#top-anchor"><span class="far fa-chevron-up"></span></a>
+      <a href="#top-anchor" class="within-link"><span class="far fa-chevron-up"></span></a>
     </div>
 
   </main>
 
   <footer>
-    <section id="contact" class="background-fill sc-light-blue">
+    <section id="contact" class="background-fill sc-light-blue section-anchor">
       <h1>Contact Me</h1>
       <p class="font-medium">
         Like what you see? Let's get in&nbsp;touch!
@@ -2644,9 +2646,11 @@
 
     <div class="solid-footer"><!-- Section with social media icons and copyright -->
       <div class="soc-media-icons">
-        <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer" target="_blank">
+        <a href="https://www.linkedin.com/in/marie-eve-vesel-ux-designer"
+           target="_blank"
+           class="outer-link">
           <span class="fab fa-linkedin-in"></span></a>
-        <a href="https://www.behance.net/marie-evevesel" target="_blank">
+        <a href="https://www.behance.net/marie-evevesel" target="_blank" class="outer-link">
           <span class="fab fa-behance"></span>
         </a>
         <a href="mailto:ux@mevesel.design">

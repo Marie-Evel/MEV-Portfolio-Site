@@ -1,18 +1,189 @@
 // Hamburger menu for mobile:
-var nav = document.getElementById('menu-container');
-var icon = document.getElementById('nav-icon');
-var navBackground = document.getElementById('nav-background');
+var nav = $('#menu-container');
+var icon = $('#nav-icon');
+var navBackground = $('#nav-background');
+
+
+// Set up static variables (those won't change):
+const projectNav = $('#project-nav');
+const projectNavHandle = $('#project-nav-handle');
+const topChevron = $('#back-to-top a').eq(0);
+const introSection = $('#intro');
+const overviewSection = $('#overview-anchor');
+const navHandleOffset = - 50;
+
+// Initialize variables that can change:
+var curScrollPosition = getScrollPosition();
+var overviewTopBeforeNavToggle = getTopPosition(overviewSection);
+var overviewTopAfterNavToggle;
+var positionOffset;
+var navToggled = false;
+var overviewTopAfterNavToggle;
+var didScroll = false;
+var isBelowIntro = false;
+var manualScroll = true;
+var linkClicked = false;
+
+var outerTransition = (function() {
+  // var anchorlinks = $('#menu-container a');
+
+  function init() {
+    return $('.outer-link').map(function(i, link) {
+      $(link).click(function() {
+        var newUrl = this.href;
+
+        $('#reveal-page').fadeIn("slow");
+        $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", function() {
+          location.href = newUrl;
+        });
+        return false;
+      });
+    });
+  }
+  return { init: init};
+})();
+
+outerTransition.init();
+
+function getParentAnchor(linkElement) {
+  var allParents = linkElement.parents();
+  var sectionAnchor;
+  var parentHash;
+
+  allParents.each( function(index, element) {
+    var parentType = $(element).get(0).tagName;
+
+    if (parentType == 'MAIN') {
+      return false;
+    } else {
+      sectionAnchor = $(element).find('.section-anchor');
+
+      if (sectionAnchor.length) {
+        parentHash = '#' + sectionAnchor.attr('id');
+        return false;
+      } else {
+        var prevSiblings = $(element).prevAll();
+        var sectionsFound = prevSiblings.find('.section-anchor');
+
+        if (sectionsFound.length) {
+          sectionAnchor = $(sectionsFound[sectionsFound.length - 1]);
+          parentHash = '#' + sectionAnchor.attr('id');
+          return false;
+        }
+      }
+    }
+  })
+  return parentHash;
+};
+
+function getCurAnchor() {
+  var anchorLinks = $('.anchor');
+  var curPosition = getScrollPosition() + window.innerHeight;
+  var anchorIndex;
+
+  anchorLinks.each( function(index, link) {
+    if ( curPosition < $(link).offset().top ) {
+      anchorIndex = index - 1;
+      return false;
+    }
+  });
+  var curAnchor = anchorLinks[anchorIndex];
+  var curAnchorHash = '#' + $(curAnchor).attr('id');
+  return curAnchorHash;
+};
+
+function convertHashToUrl(hash) {
+  return $(location).attr('origin') + $(location).attr('pathname') + hash;
+}
+
+function scrollIt(destinationHash) {
+  var curAnchor = getCurAnchor();
+  var curParent = getParentAnchor($(curAnchor));
+  var destinationParent = getParentAnchor($(destinationHash));
+  var newPosition = $(destinationHash).offset().top;
+  var curScrollPosition = getScrollPosition();
+  var destinationOffset = Math.abs(newPosition - curScrollPosition);
+  var scrollThreshold = 3 * window.innerHeight;
+
+  if ( ( !elementIsVisible(projectNav)
+      && (curParent === destinationParent || destinationOffset < scrollThreshold) )
+      || destinationHash === '#contact' ) {
+    return newPosition;
+  } else {
+    return null;
+  }
+};
+
+function fadeNavigate(destinationHash, destinationUrl) {
+  var targetElement = $(destinationHash);
+  var revealPage = $('#reveal-page');
+
+  if ( targetElement.hasClass('section-anchor') ) {
+    revealPage.fadeIn(400, function() {
+      location.href = destinationUrl;
+      revealPage.fadeOut(800);
+    });
+  } else {
+    var targetParent = getParentAnchor($(destinationHash));
+    var parentUrl = convertHashToUrl(targetParent);
+    revealPage.fadeIn(400, function() {
+      location.href = parentUrl;
+      revealPage.fadeOut(500, function() {
+        scrollNavigate(destinationHash, destinationUrl);
+      });
+    });
+  };
+};
+
+function scrollNavigate(destinationHash, destinationUrl) {
+  var targetPosition = $(destinationHash).offset().top;
+  $('html, body').animate( {
+    scrollTop: targetPosition
+  }, 500, function() {
+    location.href = destinationUrl;
+  });
+};
+
+function withinTransition() {
+  $('.within-link').each(function(i, link) {
+    $(link).click(function() {
+      var newUrl = this.href;
+      var newHash = this.hash;
+
+      if ( $(link).parents('#project-nav.show-menu').length ) {
+        closeProjectNav();
+      }
+
+      if ( scrollIt(newHash) ) {
+        scrollNavigate(newHash, newUrl);
+      } else {
+        fadeNavigate(newHash, newUrl);
+      }
+
+      refreshProjectNav(false);
+
+      return false;
+    });
+  });
+}
+
+
+$(document).ready(function() {
+  withinTransition();
+});
 
 function showMenu(targetMenu) {
-  targetMenu.classList.add('show-menu');
+  targetMenu.addClass('show-menu');
+  return true;
 };
 
 function hideMenu(targetMenu) {
-  targetMenu.classList.remove('show-menu');
+  targetMenu.removeClass('show-menu');
+  return true;
 }
 
 function menuIsVisible(targetMenu) {
-  if ( targetMenu.classList.contains('show-menu') ) {
+  if ( targetMenu.hasClass('show-menu') ) {
     return true;
   } else {
     return false;
@@ -23,75 +194,52 @@ function toggleMenu() {
   if ( menuIsVisible(nav) ) {
     hideMenu(nav);
     icon.className = 'hamburger';
+    return false;
   } else {
     showMenu(nav);
     icon.className = 'close';
+    return true;
   }
 };
 
 function getTopPosition(targetElement) {
-  return targetElement.getBoundingClientRect().top;
+  return targetElement.offset().top - getScrollPosition();
 };
 
 function getBottomPosition(targetElement) {
-  return targetElement.getBoundingClientRect().bottom;
+  return targetElement.offset().top + targetElement.outerHeight(true) - getScrollPosition();
 };
 
-function getElementHeight(targetElement) {
-  return targetElement.getBoundingClientRect().height;
-}
-
-// Set up static variables (those won't change):
-const projectNav = document.getElementById('project-nav');
-const projectNavHandle = document.getElementById('project-nav-handle');
-const topChevron = document.getElementById('back-to-top').getElementsByTagName('a')[0];
-const introSection = document.getElementById('intro');
-const overviewSection = document.getElementById('overview-anchor');
-
-// Initialize variables that can change:
-var curScrollPosition = getScrollPosition();
-var overviewTopBeforeNavToggle = getTopPosition(overviewSection);
-var overviewTopAfterNavToggle;
-var positionOffset;
-var navHandleMinPosition;
-var linkScroll = false;
-var navToggled = false;
-var overviewTopAfterNavToggle;
-var didScroll = false;
-var isBelowIntro = false;
 
 function makeVisible(targetElement) {
-  targetElement.classList.add('visible');
+  targetElement.addClass('visible');
+  return true;
 };
 
 function makeInvisible(targetElement) {
-  targetElement.classList.remove('visible');
+  // targetElement.classList.remove('visible');
+  targetElement.removeClass('visible');
+  return true;
 };
 
 function elementIsVisible(targetElement) {
-  if (targetElement.classList.contains('visible')) {
+  // if (targetElement.classList.contains('visible')) {
+  if ( targetElement.hasClass('visible') ) {
     return true;
   } else {
     return false;
   }
 };
 
-function refreshNavHandleMin () {
-  return getScrollPosition() + getTopPosition(overviewSection) - 30;
-}
-
 function initProjectNav() {
-  console.log('************** initProjectNav');
-  navHandleMinPosition = refreshNavHandleMin()
-  console.log('initial chevron trigger before init = ' + navHandleMinPosition );
-
+  // console.log('************* initProjectNav');
   if ( getScrollPosition() > overviewTopBeforeNavToggle ) {
     makeInvisible(projectNav);
   } else {
     makeVisible(projectNav);
   }
-
-  console.log('initial chevron trigger after init = ' + navHandleMinPosition );
+  refreshNavHandle();
+  return;
 }
 
 function getScrollPosition() {
@@ -100,11 +248,12 @@ function getScrollPosition() {
 };
 
 function setScrollPosition(targetPosition) {
+  manualScroll = false;
   document.body.scrollTop = document.documentElement.scrollTop = targetPosition;
 };
 
 function adjustScrollPosition(positionOffset) {
-  console.log('***************** ADJUSTING SCROLL POSITION BY ' + positionOffset);
+  // console.log('***************** ADJUSTING SCROLL POSITION BY ' + positionOffset);
   setScrollPosition(getScrollPosition() + positionOffset);
   getScrollPosition();
 }
@@ -114,80 +263,93 @@ function makeVisibleBelow(targetElement, triggerPosition) {
 // triggerPosition
   if(getScrollPosition() > triggerPosition) {
     makeVisible(targetElement);
+    return true;
   } else {
     makeInvisible(targetElement);
+    return false;
   }
 };
+
+function makeDropdownContentVisible() {
+  $('#project-nav .dropdown-content').each(function(index, element) {
+    if( $(element).css('display') == 'none' ) {
+      $(element).css('display','grid');
+    }
+  });
+  return;
+}
+
+function restoreDropdownContent() {
+  $('#project-nav .dropdown-content').each(function(index, element) {
+    if( $(element).css('display') == 'grid' ) {
+      $(element).css('display','none');
+    }
+  });
+  return;
+}
+
+function refreshNavHandle() {
+  if ( !menuIsVisible(projectNav) ) {
+    return makeVisibleBelow(projectNavHandle, overviewSection.offset().top + navHandleOffset);
+  }
+}
+
+function hideProjectNav() {
+  makeInvisible(projectNav);
+  makeVisible(projectNavHandle);
+  restoreDropdownContent();
+  return;
+}
+
+function unhideProjectNav() {
+  makeVisible(projectNav);
+  makeInvisible(projectNavHandle);
+  makeDropdownContentVisible();
+  return;
+}
 
 function toggleProjectNav() {
   navToggled = false;
   getScrollPosition();
-  // console.log('current scroll position: ' + curScrollPosition);
 
   overviewTopBeforeNavToggle = getTopPosition(overviewSection)
   if ( elementIsVisible(projectNav) ) {
-    // console.log('checking if overviewTop ' + overviewTopBeforeNavToggle + ' < -1');
-    if ( overviewTopBeforeNavToggle < -1 ) {
-      console.log('****************** HIDE PROJECT NAV');
-      makeInvisible(projectNav);
+    if ( overviewTopBeforeNavToggle <  1 - navHandleOffset) {
+      hideProjectNav()
       navToggled = true;
     }
-
   } else if ( !menuIsVisible(projectNav) ) {
-      // console.log('checking if overviewTop ' + overviewTopBeforeNavToggle + ' > 1');
-      if ( getTopPosition(overviewSection) > 1 ) {
-        console.log('****************** UNHIDE PROJECT NAV');
-        makeVisible(projectNav);
+      if ( getTopPosition(overviewSection) > 3 - navHandleOffset    ) {
+        unhideProjectNav();
         navToggled = true;
     }
   }
   return navToggled;
 };
 
+function refreshTopChevron() {
+  return makeVisibleBelow(topChevron, 85);
+}
+
 window.onload = function () {
   initProjectNav();
+  refreshTopChevron();
+  $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
+  $('#reveal-page').fadeOut();
 };
 
 window.onhashchange = function() {
-  console.log('onhsashchange');
-  linkScroll = true;
+  // console.log('onhsashchange');
 };
-
 
 window.onscroll = runScrollEvents;
 
 function runScrollEvents() {
   didScroll = true;
 
-  // Display scroll back to top chevron:
-  makeVisibleBelow(topChevron, 85);
+  refreshTopChevron();
 
-  // console.log('current scroll position: ' + getScrollPosition() );
-
-  // Verify if project nav section needs to be hidden or unhiden:
-  if ( toggleProjectNav() ) {
-    console.log('current scroll position: ' + curScrollPosition);
-    overviewTopAfterNavToggle = getTopPosition(overviewSection);
-    positionOffset = overviewTopAfterNavToggle - overviewTopBeforeNavToggle;
-    navHandleMinPosition = refreshNavHandleMin();
-    console.log('chevron trigger = ' + navHandleMinPosition);
-    console.log('current scroll position: ' + curScrollPosition + ' vs  calculated: ' + getScrollPosition() );
-    isBelowIntro = curScrollPosition > getBottomPosition(introSection);
-    console.log('linkScroll = ' + linkScroll + ' and scroll position is below intro ' + isBelowIntro);
-    if ( isBelowIntro ) {
-      adjustScrollPosition(positionOffset)
-
-    } else {
-      linkScroll = false;
-    }
-    navToggled = false;
-  };
-
-  // Display content handle for project nav:
-  if (!menuIsVisible(projectNav)) {
-    // console.log('trigger for chevron: ' + navHandleMinPosition);
-    makeVisibleBelow(projectNavHandle, navHandleMinPosition);
-  };
+  refreshProjectNav();
 
 };
 
@@ -200,50 +362,49 @@ setInterval(function() {
 // Project navigation:
 function closeProjectNav() {
   // console.log('************* CLOSING PROJECT NAV');
-  makeVisibleBelow(projectNavHandle, navHandleMinPosition);
-  hideMenu(projectNav);
-
+  if ( projectNav.hasClass('show-menu') ) {
+    makeVisibleBelow(projectNavHandle, overviewSection.offset().top + navHandleOffset);
+    projectNav.animate({ width: 'toggle'}, function() {
+      hideMenu(projectNav);
+      projectNav.removeAttr('style');
+    });
+    return true;
+  } else {
+    return false;
+  }
 };
+
 
 function openProjectNav() {
-  // projectNav.classList.remove('closing');
   makeInvisible(projectNavHandle);
   showMenu(projectNav);
+  projectNav.animate({ width: 'toggle'});
 };
 
-function toggleCaret(targetElement) {
-  var needToExpand;
-  if ( targetElement.classList.contains('fa-caret-down') ) {
-    targetElement.className = 'fa fa-caret-up';
-    needToExpand = true;
-  } else {
-    targetElement.className = 'fa fa-caret-down';
-    needToExpand = false;
-  }
-  return needToExpand;
-}
+function refreshProjectNav(adjustScrollFlag = true) {
+  if ( toggleProjectNav() && adjustScrollFlag ) {
+    overviewTopAfterNavToggle = getTopPosition(overviewSection);
+    positionOffset = overviewTopAfterNavToggle - overviewTopBeforeNavToggle;
+
+    isBelowIntro = curScrollPosition > getBottomPosition(introSection);
+    if ( isBelowIntro ) {
+      adjustScrollPosition(positionOffset)
+    }
+    navToggled = false;
+  };
+};
 
 function toggleDropdown(menuNumber) {
-  var dropdownMenus = projectNav.getElementsByClassName('dropdown');
-  var targetDropdown = dropdownMenus[menuNumber - 1];
-  var menuCaret = targetDropdown.getElementsByClassName('fa')[0];
+  var targetDropdown = $('#project-nav .dropdown').eq(menuNumber - 1);
+  var targetDropdownContent = targetDropdown.find('.dropdown-content').eq(0);
+  var menuCaret = targetDropdown.find('.fa').eq(0);
 
-  if ( toggleCaret(menuCaret) ) {
-    targetDropdown.classList.add('expanded');
-  } else {
-    targetDropdown.classList.remove('expanded');
+  menuCaret.toggleClass('fa-caret-down');
+  menuCaret.toggleClass('fa-caret-up');
+  if ( menuNumber === 10 && menuCaret.hasClass('fa-caret-up') ) {
+    $('#project-nav .scrollable').eq(0).animate( {
+      scrollTop: $('#project-nav .menu-container').eq(0).height() + 61
+    }, 0.5 );
   }
-
-  // Collapse all other menus:
-  // var i;
-  // for (i = 0; i < dropdownMenus.length - 1; i++) {
-  //   var curDropdown = dropdownMenus[i];
-  //   if ( curDropdown.classList.contains('expanded') && curDropdown !== targetDropdown ) {
-  //     var curCaret = curDropdown.getElementsByClassName('fa')[0];
-  //     toggleCaret(curCaret);
-  //     curDropdown.classList.remove('expanded');
-  //   }
-  // }
-
-
-}
+  targetDropdownContent.slideToggle();
+};
