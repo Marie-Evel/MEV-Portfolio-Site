@@ -80,7 +80,8 @@ var Global = function () {
     getScrollPosition: getScrollPosition,
     getTopPosition: getTopPosition,
     getBottomPosition: getBottomPosition,
-    makeVisibleBelow: makeVisibleBelow
+    makeVisibleBelow: makeVisibleBelow,
+    adjustScrollPosition: adjustScrollPosition
   };
 
 } ();
@@ -88,16 +89,43 @@ var Global = function () {
 // Hamburger menu for mobile:
 var Hamburger = function () {
   const nav = $('#menu-container'),
-      icon = $('#nav-icon'),
+        icon = $('#nav-icon'),
+        menuItems = $('#menu-container .menu-item'),
+
+  toggleMenuItems = function() {
+    menuItems.each( function(index, menu) {
+      let $curMenu = $(menu);
+        debugger;
+      setTimeout(function() {
+        $curMenu.animate( { margin: 0 }, 400);
+      }, 200 * index);
+    });
+  },
+
+  openNav = function() {
+    icon.toggleClass('hamburger close');
+    nav.slideDown();
+    // toggleMenuItems();
+    Global.showMenu(nav);
+    return;
+  },
+
+  closeNav = function() {
+    icon.toggleClass('hamburger close');
+    Global.hideMenu(nav);
+    // toggleMenuItems();
+    nav.slideUp(function() {
+      nav.removeAttr('style');
+    });
+    return;
+  },
 
   toggleMenu = function() {
     if ( Global.menuIsVisible(nav) ) {
-      Global.hideMenu(nav);
-      icon.className = 'hamburger';
+      closeNav();
       return false;
     } else {
-      Global.showMenu(nav);
-      icon.className = 'close';
+      openNav();
       return true;
     }
   };
@@ -139,7 +167,9 @@ var MainNav = function() {
 
   scrollNavigate = function(destinationHash, destinationUrl) {
     const targetPosition = $(destinationHash).offset().top;
-    $('html, body').animate( { scrollTop: targetPosition}, 500, goToUrl(destinationUrl));
+    $('html, body').animate( { scrollTop: targetPosition }, 500, function() {
+      goToUrl(destinationUrl);
+    });
   },
 
   goToUrl = function(destinationUrl) {
@@ -168,3 +198,17 @@ setInterval(function() {
     MainNav.didScroll = false;
   }
 }, 100);
+
+
+$(document).ready(function() {
+  $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
+  MainNav.refreshTopChevron();
+  $('#reveal-page').fadeOut();
+  return;
+});
+
+window.addEventListener('scroll', function() {
+  MainNav.didScroll = true;
+  MainNav.refreshTopChevron();
+  return;
+});
