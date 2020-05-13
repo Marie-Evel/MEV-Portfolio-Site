@@ -56,15 +56,8 @@ var LogoAnimation = function() {
 } ();
 
 window.addEventListener('scroll', function() {
-  MainNav.didScroll = true;
-  MainNav.refreshTopChevron();
+  // MainNav.didScroll = true;
+  // MainNav.refreshTopChevron();
   LogoAnimation.checkIfLogoPlayed()
-  return;
-});
-
-$(document).ready(function() {
-  $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
-  MainNav.refreshTopChevron();
-  $('#reveal-page').fadeOut();
   return;
 });
