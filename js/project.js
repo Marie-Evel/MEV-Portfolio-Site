@@ -27,7 +27,9 @@ var ProjectNav = function() {
         $(link).click(function() {
           let newUrl = this.href;
           $('#reveal-page').fadeIn("slow");
-          $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", MainNav.goToUrl(newUrl));
+          $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", function() {
+            MainNav.goToUrl(newUrl);
+          });
           return false;
         });
       });
@@ -35,7 +37,23 @@ var ProjectNav = function() {
 
   innerLinkClickEvent = function() {
     $('.within-link').each(function(i, link) {
-      $(link).click(__goToClickedLink(link));
+      $(link).click( function() {
+          const newUrl = this.href,
+                newHash = this.hash,
+                newPosition = scrollIt(newHash);
+
+          if ( $(link).parents('#project-nav.show-menu').length ) {
+            closeProjectNav();
+          };
+
+          if ( newPosition >=0 ) {
+            MainNav.scrollNavigate(newHash, newUrl);
+          } else {
+            fadeNavigate(newHash, newUrl);
+          };
+          refreshProjectNav(false);
+          return false;
+      });
     });
     return;
   },
@@ -55,7 +73,10 @@ var ProjectNav = function() {
   closeProjectNav = function() {
     if ( projectNav.hasClass('show-menu') ) {
       Global.makeVisibleBelow(projectNavHandle, overviewSection.offset().top + navHandleOffset);
-      projectNav.animate({ width: 'toggle'}, __doAfterOpeningProjectNav);
+      projectNav.animate({ width: 'toggle'}, function() {
+        Global.hideMenu(projectNav);
+        projectNav.removeAttr('style');
+      });
       return true; // projectNav was just closed
     } else {
       return false; // projectNav was already closed
@@ -78,13 +99,13 @@ var ProjectNav = function() {
   toggleProjectNav = function() {
     navToggled = false;
     Global.getScrollPosition();
-    overviewTopBeforeNavToggle = getTopPosition(overviewSection)
+    overviewTopBeforeNavToggle = Global.getTopPosition(overviewSection)
     if ( Global.elementIsVisible(projectNav) ) {
       if ( overviewTopBeforeNavToggle <  1 - navHandleOffset) {
         hideProjectNav()
         navToggled = true;
       }
-    } else if ( !menuIsVisible(projectNav) ) {
+    } else if ( !Global.menuIsVisible(projectNav) ) {
         if ( Global.getTopPosition(overviewSection) > 3 - navHandleOffset    ) {
           unhideProjectNav();
           navToggled = true;
@@ -151,10 +172,10 @@ var ProjectNav = function() {
 
     if ( ( !Global.elementIsVisible(projectNav)
         && (curParent === destinationParent || destinationOffset < scrollThreshold) )
-        || destinationHash === '#contact' ) {
+        || destinationHash === '#contact' || destinationHash === '#top-anchor' ) {
       return newPosition;
     } else {
-      return null;
+      return undefined;
     }
   },
 
@@ -164,14 +185,14 @@ var ProjectNav = function() {
 
     if ( targetElement.hasClass('section-anchor') ) {
       revealPage.fadeIn(400, function() {
-        MainNav.gotoUrl(destinationUrl);
+        MainNav.goToUrl(destinationUrl);
         revealPage.fadeOut(800);
       });
     } else {
       const targetParent = getParentAnchor($(destinationHash)),
             parentUrl = MainNav.convertHashToUrl(targetParent);
       revealPage.fadeIn(400, function() {
-        MainNav.gotoUrl(parentUrl);
+        MainNav.goToUrl(parentUrl);
         revealPage.fadeOut(500, function() {
           MainNav.scrollNavigate(destinationHash, destinationUrl);
         });
@@ -209,26 +230,6 @@ var ProjectNav = function() {
       }
     })
     return parentHash;
-  },
-
-  __goToClickedLink = function(link) {
-    const newUrl = this.href,
-          newHash = this.hash;
-    if ( $(link).parents('#project-nav.show-menu').length ) {
-      closeProjectNav();
-    };
-    if ( scrollIt(newHash) ) {
-      scrollNavigate(newHash, newUrl);
-    } else {
-      fadeNavigate(newHash, newUrl);
-    };
-    refreshProjectNav(false);
-    return false;
-  },
-
-  __doAfterOpeningProjectNav = function() {
-    hideMenu(projectNav);
-    projectNav.removeAttr('style');
   };
 
   return {
@@ -244,25 +245,18 @@ var ProjectNav = function() {
 } ();
 
 $(document).ready(function() {
-  $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
-  MainNav.refreshTopChevron();
+  // $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
+  // MainNav.refreshTopChevron();
   ProjectNav.init();
-  $('#reveal-page').fadeOut();
+  // $('#reveal-page').fadeOut();
   ProjectNav.innerLinkClickEvent();
   ProjectNav.outerLinkClickEvent();
   return;
 });
 
 window.addEventListener('scroll', function() {
-  MainNav.didScroll = true;
-  MainNav.refreshTopChevron();
+  // MainNav.didScroll = true;
+  // MainNav.refreshTopChevron();
   ProjectNav.refreshProjectNav();
   return;
 });
-
-// window.onload = function () {
-  // $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
-  // ProjectNav.init();
-  // MainNav.refreshTopChevron();
-  // $('#reveal-page').fadeOut();
-// };
