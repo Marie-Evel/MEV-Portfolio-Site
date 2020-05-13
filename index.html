@@ -42,17 +42,17 @@
         <nav>
           <ul id="menu-container">
             <li class="menu-item">
-              <a href="index.html#work-anchor" onclick="toggleMenu()">Work</a>
+              <a href="index.html#work-anchor" onclick="Hamburger.toggleMenu()">Work</a>
             </li>
             <li class="menu-item">
               <a href="about.html">About</a>
             </li>
             <li class="menu-item">
-              <a href="#contact" onclick="toggleMenu()">Contact</a>
+              <a href="#contact" onclick="Hamburger.toggleMenu()">Contact</a>
             </li>
           </ul>
         </nav>
-        <div id="nav-icon" onclick="toggleMenu()" class="hamburger">
+        <div id="nav-icon" onclick="Hamburger.toggleMenu()" class="hamburger">
           <span>
             <!-- NOTE: Intentionally blank; hamburger icon generated with CSS -->
           </span>
@@ -61,7 +61,7 @@
     </header>
 
     <main>
-      <div class="reveal-page">
+      <div id="reveal-page">
         <!-- NOTE: Intentionally blank -->
       </div>
 
@@ -202,7 +202,7 @@
               <a class="disabled overlay" href="">
                 <p>Front-End Web Development</p>
               </a>
-              <div id="play-animation-button" class="" onclick="animateLogo()">
+              <div id="play-animation-button" class="" onclick="LogoAnimation.animateLogo()">
                 <span class="fal fa-play-circle"></span>
               </div>
             </div>
@@ -251,6 +251,10 @@
 
       </section><!-- END My Work section -->
 
+      <div id="back-to-top">
+        <a href="#top-anchor" class="within-link"><span class="far fa-chevron-up"></span></a>
+      </div>
+
     </main>
 
     <footer>
@@ -286,8 +290,8 @@
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous">
     </script>
-    <script src="js/index.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/index.js"></script>
   </body>
 
 </html>

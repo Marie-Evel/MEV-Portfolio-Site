@@ -57,11 +57,11 @@
             <a href="about.html" class="outer-link">About</a>
           </li>
           <li class="menu-item">
-            <a href="#contact" class="within-link" onclick="toggleMenu()">Contact</a>
+            <a href="#contact" class="within-link" onclick="Hamburger.toggleMenu()">Contact</a>
           </li>
         </ul>
       </nav>
-      <div id="nav-icon" onclick="toggleMenu()" class="hamburger">
+      <div id="nav-icon" onclick="Hamburger.toggleMenu()" class="hamburger">
         <span>
           <!-- NOTE: Intentionally blank; hamburger icon generated with CSS -->
         </span>
@@ -115,14 +115,14 @@
 
     <!-- TOC ------------------------------------------------------------------>
     <section class="indent-top-nav">
-      <div id="project-nav-handle" onclick="openProjectNav()">
+      <div id="project-nav-handle" onclick="ProjectNav.openProjectNav()">
         <span class="far fa-chevron-double-right"></span>
       </div>
       <div id="project-nav">
         <div class="scrollable">
           <div class="title">
             <h2>Content</h2>
-            <div class="close" onclick="closeProjectNav()">
+            <div class="close" onclick="ProjectNav.closeProjectNav()">
               <span class="far fa-times"></span>
             </div>
           </div>
@@ -131,7 +131,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#overview-anchor" class="within-link"><span>01</span>Project Overview</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(1)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(1)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#problem-anchor" class="within-link">the problem</a>
@@ -145,7 +145,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#research-anchor" class="within-link"><span>02</span>Exploratory Research</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(2)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(2)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#research-anchor" class="within-link">competitive analysis</a>
@@ -159,7 +159,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#user-anchor" class="within-link"><span>03</span>Understanding the User</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(3)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(3)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#user-anchor" class="within-link">user personas</a>
@@ -171,7 +171,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#ia-anchor" class="within-link"><span>04</span>Information Architecture</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(4)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(4)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#nav-structure-anchor" class="within-link">navigation structure</a>
@@ -183,7 +183,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#wires-anchor" class="within-link"><span>05</span>Wireframing & Prototyping</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(5)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(5)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#low-fid-wires-anchor" class="within-link">low-fidelity wireframes</a>
@@ -195,7 +195,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#testing-anchor" class="within-link"><span>06</span>Usability Testing</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(6)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(6)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#test-plan-anchor" class="within-link">usability test plan</a>
@@ -209,7 +209,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#fine-tuning-anchor" class="within-link"><span>07</span>Fine-Tuning the Design</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(7)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(7)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#fine-tuning-anchor" class="within-link">color scheme</a>
@@ -220,7 +220,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#accessibility-anchor" class="within-link"><span>08</span>Accessibility</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(8)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(8)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#accessibility-anchor" class="within-link">contrast & readability</a>
@@ -231,7 +231,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#final-designs-anchor" class="within-link"><span>09</span>Final Designs</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(9)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(9)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#prototype-anchor" class="within-link">interactive prototype</a>
@@ -242,7 +242,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#final-thoughts-anchor" class="within-link"><span>10</span>Final Thoughts</a>
-                <span class="fa fa-caret-down" onclick="toggleDropdown(10)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(10)"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#final-thoughts-anchor" class="within-link">future improvements</a>
@@ -2671,6 +2671,7 @@
     crossorigin="anonymous">
   </script>
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/project.js"></script>
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
 </body>
 

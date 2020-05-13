@@ -1,47 +1,70 @@
+var LogoAnimation = function() {
 
-var logo = document.getElementById('mev-logo-animation');
-var play = document.getElementById('play-animation-button');
-var overlay = logo.getElementsByClassName('overlay')[0];
+  const logo = document.getElementById('mev-logo-animation'),
+        play = document.getElementById('play-animation-button'),
+        overlay = logo.getElementsByClassName('overlay')[0],
+        mevStudy = document.getElementById('branding-case-study'),
 
-function animateLogo() {
-  play.classList.add('hide');
-  logo.classList.add('animate');
-  overlay.classList.add('hide-overlay');
+  checkIfLogoPlayed = function() {
+    if ( isVisible(mevStudy, 250, 85, 80) && neverPlayed() ) {
+      animateLogo();
+      logo.classList.add('played-on-scroll');
+    };
+    return;
+  },
 
-  setTimeout( function() {
-    play.classList.remove('hide');
-    logo.classList.remove('animate');
-    overlay.classList.remove('hide-overlay');
-  }, 6000);
-}
+  animateLogo = function() {
+    play.classList.add('hide');
+    logo.classList.add('animate');
+    overlay.classList.add('hide-overlay');
 
-function isVisible(targetElement, elementHeight, offsetTop, offsetBottom) {
-  var gridTop = offsetTop;
-  var gridBottom = window.innerHeight - offsetBottom;
-  var elementTop = targetElement.getBoundingClientRect().top;
-  var elementBottom = targetElement.getBoundingClientRect().bottom;
+    setTimeout( function() {
+      play.classList.remove('hide');
+      logo.classList.remove('animate');
+      overlay.classList.remove('hide-overlay');
+    }, 6000);
 
-  if ( elementTop < gridTop || elementBottom < gridBottom ) {
-    return true;
-  } else {
-    return false;
-  }
-}
+    return;
+  },
 
-function neverPlayed() {
-  if ( logo.classList.contains('played-on-scroll') ) {
-    return false;
-  } else {
-    return true;
-  }
-}
+  isVisible = function(targetElement, elementHeight, offsetTop, offsetBottom) {
+    const gridTop = offsetTop,
+          gridBottom = window.innerHeight - offsetBottom,
+          elementTop = targetElement.getBoundingClientRect().top,
+          elementBottom = targetElement.getBoundingClientRect().bottom;
 
-var mevStudy = document.getElementById('branding-case-study');
+    if ( elementTop < gridTop || elementBottom < gridBottom ) {
+      return true;
+    } else {
+      return false;
+    }
+  },
 
-// window.addEventListener('scroll', function() {
-window.onscroll = function() {
-  if ( isVisible(mevStudy, 250, 85, 80) && neverPlayed() ) {
-    animateLogo()
-    logo.classList.add('played-on-scroll');
+  neverPlayed = function() {
+    if ( logo.classList.contains('played-on-scroll') ) {
+      return false;
+    } else {
+      return true;
+    }
   };
-}
+
+  return {
+    checkIfLogoPlayed: checkIfLogoPlayed,
+    animateLogo: animateLogo
+  };
+
+} ();
+
+window.addEventListener('scroll', function() {
+  MainNav.didScroll = true;
+  MainNav.refreshTopChevron();
+  LogoAnimation.checkIfLogoPlayed()
+  return;
+});
+
+$(document).ready(function() {
+  $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
+  MainNav.refreshTopChevron();
+  $('#reveal-page').fadeOut();
+  return;
+});
