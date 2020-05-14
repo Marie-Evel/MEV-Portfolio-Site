@@ -3,10 +3,9 @@ var LogoAnimation = function() {
   const logo = $('#mev-logo-animation'),
         play = $('#play-animation-button'),
         overlay = $('#mev-logo-animation .overlay'),
-        mevStudy = $('#branding-case-study'),
 
   checkIfLogoPlayed = function() {
-    if ( isVisible(mevStudy, 250, 85, 80) && neverPlayed() ) {
+    if ( isVisible(logo, 85, 80) && neverPlayed() ) {
       animateLogo();
       logo.addClass('played-on-scroll');
     };
@@ -27,13 +26,11 @@ var LogoAnimation = function() {
     return;
   },
 
-  isVisible = function(targetElement, elementHeight, offsetTop, offsetBottom) {
+  isVisible = function(targetElement, offsetTop, offsetBottom) {
     const gridTop = offsetTop,
           gridBottom = window.innerHeight - offsetBottom,
           elementTop = Global.getTopPosition(targetElement),
-          elementBottom = Global.getTopPosition(targetElement);
-          // elementTop = targetElement.getBoundingClientRect().top,
-          // elementBottom = targetElement.getBoundingClientRect().bottom;
+          elementBottom = Global.getBottomPosition(targetElement);
 
     if ( elementTop < gridTop || elementBottom < gridBottom ) {
       return true;
