@@ -88,40 +88,36 @@ var Global = function () {
 
 // Hamburger menu for mobile:
 var Hamburger = function () {
-  const nav = $('#menu-container'),
-        icon = $('#nav-icon'),
-        menuItems = $('#menu-container .menu-item'),
+  const icon = $('#nav-icon'),
 
-  toggleMenuItems = function() {
-    menuItems.each( function(index, menu) {
-      let $curMenu = $(menu);
-        debugger;
-      setTimeout(function() {
-        $curMenu.animate( { margin: 0 }, 400);
-      }, 200 * index);
-    });
-  },
+  // toggleMenuItems = function() {
+  //   Global.menuItems.each( function(index, menu) {
+  //     let $curMenu = $(menu);
+  //     setTimeout(function() {
+  //       $curMenu.animate( { margin: 0 }, 400);
+  //     }, 200 * index);
+  //   });
+  // },
 
   openNav = function() {
     icon.toggleClass('hamburger close');
-    nav.slideDown();
+    MainNav.nav.slideDown();
     // toggleMenuItems();
-    Global.showMenu(nav);
+    Global.showMenu(MainNav.nav);
     return;
   },
 
   closeNav = function() {
     icon.toggleClass('hamburger close');
-    Global.hideMenu(nav);
-    // toggleMenuItems();
-    nav.slideUp(function() {
-      nav.removeAttr('style');
+    Global.hideMenu(MainNav.nav);
+    MainNav.nav.slideUp(function() {
+      MainNav.nav.removeAttr('style');
     });
     return;
   },
 
   toggleMenu = function() {
-    if ( Global.menuIsVisible(nav) ) {
+    if ( Global.menuIsVisible(MainNav.nav) ) {
       closeNav();
       return false;
     } else {
@@ -131,7 +127,9 @@ var Hamburger = function () {
   };
 
   return {
-    toggleMenu: toggleMenu
+    icon: icon,
+    toggleMenu: toggleMenu,
+    closeNav: closeNav
   };
 } ();
 
@@ -139,7 +137,9 @@ var MainNav = function() {
   let didScroll = false;
 
   const navBackground = $('#nav-background'),
-        topChevron = $('#back-to-top a').eq(0),
+        nav = $('#menu-container'),
+        menuItems = $('#menu-container .menu-item'),
+        topChevron = $('#back-to-top a').eq(0);
 
   getCurAnchor = function() {
     const anchorLinks = $('.anchor'),
@@ -177,6 +177,43 @@ var MainNav = function() {
     return;
   },
 
+  hamburgerIsDisabled = function() {
+    return Hamburger.icon.css("display") === 'none';
+  }
+
+  innerLinkClickEvent = function() {
+    $('.within-link').each(function(i, link) {
+      $(link).click( function() {
+        const newUrl = this.href,
+              newHash = this.hash;
+
+        if ( !hamburgerIsDisabled() && Global.menuIsVisible(nav) ) {
+          Hamburger.closeNav();
+        };
+        scrollNavigate(newHash, newUrl);
+        return false;
+      });
+    });
+    return;
+  },
+
+  outerLinkClickEvent = function() {
+    $('.outer-link').each(function(i, link) {
+      $(link).click(function() {
+        const newUrl = this.href;
+
+        if ( !hamburgerIsDisabled() && Global.menuIsVisible(nav) ) {
+          Hamburger.closeNav();
+        };
+        $('#reveal-page').fadeIn("slow", function() {
+          MainNav.goToUrl(newUrl);
+        });
+
+        return false;
+      });
+    });
+  },
+
   refreshTopChevron = function() {
     return Global.makeVisibleBelow(topChevron, 85);
   };
@@ -184,6 +221,10 @@ var MainNav = function() {
   return {
     topChevron: topChevron,
     didScroll: didScroll,
+    nav: nav,
+    menuItems: menuItems,
+    innerLinkClickEvent: innerLinkClickEvent,
+    outerLinkClickEvent: outerLinkClickEvent,
     scrollNavigate: scrollNavigate,
     convertHashToUrl: convertHashToUrl,
     goToUrl: goToUrl,
@@ -202,6 +243,8 @@ setInterval(function() {
 
 $(document).ready(function() {
   $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
+  MainNav.innerLinkClickEvent();
+  MainNav.outerLinkClickEvent();
   MainNav.refreshTopChevron();
   $('#reveal-page').fadeOut();
   return;
