@@ -90,19 +90,9 @@ var Global = function () {
 var Hamburger = function () {
   const icon = $('#nav-icon'),
 
-  // toggleMenuItems = function() {
-  //   Global.menuItems.each( function(index, menu) {
-  //     let $curMenu = $(menu);
-  //     setTimeout(function() {
-  //       $curMenu.animate( { margin: 0 }, 400);
-  //     }, 200 * index);
-  //   });
-  // },
-
   openNav = function() {
     icon.toggleClass('hamburger close');
     MainNav.nav.slideDown();
-    // toggleMenuItems();
     Global.showMenu(MainNav.nav);
     return;
   },
@@ -138,7 +128,6 @@ var MainNav = function() {
 
   const navBackground = $('#nav-background'),
         nav = $('#menu-container'),
-        menuItems = $('#menu-container .menu-item'),
         topChevron = $('#back-to-top a').eq(0);
 
   getCurAnchor = function() {
@@ -182,7 +171,7 @@ var MainNav = function() {
   }
 
   innerLinkClickEvent = function() {
-    $('.within-link').each(function(i, link) {
+    $('body.main .within-link').each(function(i, link) {
       $(link).click( function() {
         const newUrl = this.href,
               newHash = this.hash;
@@ -198,7 +187,7 @@ var MainNav = function() {
   },
 
   outerLinkClickEvent = function() {
-    $('.outer-link').each(function(i, link) {
+    $('body.main .outer-link').each(function(i, link) {
       $(link).click(function() {
         const newUrl = this.href;
 
@@ -222,7 +211,6 @@ var MainNav = function() {
     topChevron: topChevron,
     didScroll: didScroll,
     nav: nav,
-    menuItems: menuItems,
     innerLinkClickEvent: innerLinkClickEvent,
     outerLinkClickEvent: outerLinkClickEvent,
     scrollNavigate: scrollNavigate,
