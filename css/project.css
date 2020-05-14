@@ -186,11 +186,6 @@ section h2:first-child { margin-top: 0;}
 /* Case study sections */
 /*----------------------------------------------------------------------------*/
 
-/* .anchor {
-  position: absolute;
-  top: -61px;
-} */
-
 .inner-section { padding-top: 0; }
 
 .centered-content {
@@ -1719,8 +1714,6 @@ body .sc a:visited { color: var(--sc-red); }
     padding-right: 40px;
   }
 
-  /* .anchor { top: -74px; } */
-
   .wide-section,
   .wide-section-md {
     padding-left: 60px;
@@ -3028,8 +3021,6 @@ body .sc a:visited { color: var(--sc-red); }
     grid-column-gap: 65px;
     padding: 0 250px 0 40px;
   }
-
-  /* .anchor { top: -84px; } */
 
   #opp-strategy-anchor,
   #beyond-contrast-anchor { top: -130px; }

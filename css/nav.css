@@ -41,7 +41,7 @@ header {
 
 .anchor {
   position: absolute;
-  top: -61px;
+  top: -59px;
 }
 
 #mev-logo {
@@ -250,7 +250,10 @@ footer h1 {
 
   #top-nav { padding: 0 40px; }
 
-  .menu-item a { font-size: 1em; }
+  .menu-item a {
+    font-size: 1em;
+    line-height: 27px;
+  }
 
   .menu-item {
     text-align: center;
@@ -262,7 +265,7 @@ footer h1 {
     display: flex;
     width: 62.5vw;
     max-width: 230px;
-    padding-bottom: 0.6rem;
+    padding-bottom: 10px;
   }
 
   nav ul {
@@ -273,7 +276,7 @@ footer h1 {
     width: 100%;
   }
 
-  .anchor { top: -74px; }
+  .anchor { top: -73px; }
 
   #mev-logo { height: 56%; }
 
@@ -361,7 +364,7 @@ footer h1 {
 
   nav { max-width: 268px; min-width: 268px; }
 
-  .anchor { top: -84px; }
+  .anchor { top: -82px; }
 
 }
 
