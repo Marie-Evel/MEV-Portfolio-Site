@@ -30,9 +30,8 @@
   <link rel="stylesheet" type="text/css" href="css/metrisch.css">
   <link rel="stylesheet" type="text/css" href="css/project.css">
   <link rel="stylesheet" type="text/css" href="css/nav.css">
-  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
-
-
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.css">
 
 </head>
 
@@ -51,10 +50,10 @@
       <nav>
         <ul id="menu-container" class="">
           <li class="menu-item">
-            <a href="index.html#work-anchor" class="outer-link">Work</a>
+            <a href="index.html#work-anchor" class="outer-link" onclick="Hamburger.toggleMenu()">Work</a>
           </li>
           <li class="menu-item">
-            <a href="about.html" class="outer-link">About</a>
+            <a href="about.html" class="outer-link" onclick="Hamburger.toggleMenu()">About</a>
           </li>
           <li class="menu-item">
             <a href="#contact" class="within-link" onclick="Hamburger.toggleMenu()">Contact</a>
@@ -85,10 +84,12 @@
     <section id="intro" class="background-fill">
       <div id="intro-grid">
         <div class="screen-shot">
+          <a href="#" data-featherlight="img/streetcred/sec1_overview/find_hunts_large.png">
           <picture class="shadow-white">
             <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
             <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="StreetCred home screen on iPhone XS">
           </picture>
+        </a>
         </div>
         <div class="hero-text-cell">
           <div class="hero-text">
@@ -2672,7 +2673,8 @@
   </script>
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/project.js"></script>
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"  charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js" charset="utf-8"></script>
 </body>
 
 </html>
