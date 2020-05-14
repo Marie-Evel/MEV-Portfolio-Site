@@ -1,27 +1,27 @@
 var LogoAnimation = function() {
 
-  const logo = document.getElementById('mev-logo-animation'),
-        play = document.getElementById('play-animation-button'),
-        overlay = logo.getElementsByClassName('overlay')[0],
-        mevStudy = document.getElementById('branding-case-study'),
+  const logo = $('#mev-logo-animation'),
+        play = $('#play-animation-button'),
+        overlay = $('#mev-logo-animation .overlay'),
+        mevStudy = $('#branding-case-study'),
 
   checkIfLogoPlayed = function() {
     if ( isVisible(mevStudy, 250, 85, 80) && neverPlayed() ) {
       animateLogo();
-      logo.classList.add('played-on-scroll');
+      logo.addClass('played-on-scroll');
     };
     return;
   },
 
   animateLogo = function() {
-    play.classList.add('hide');
-    logo.classList.add('animate');
-    overlay.classList.add('hide-overlay');
+    play.addClass('hide');
+    logo.addClass('animate');
+    overlay.addClass('hide-overlay');
 
     setTimeout( function() {
-      play.classList.remove('hide');
-      logo.classList.remove('animate');
-      overlay.classList.remove('hide-overlay');
+      play.removeClass('hide');
+      logo.removeClass('animate');
+      overlay.removeClass('hide-overlay');
     }, 6000);
 
     return;
@@ -30,8 +30,10 @@ var LogoAnimation = function() {
   isVisible = function(targetElement, elementHeight, offsetTop, offsetBottom) {
     const gridTop = offsetTop,
           gridBottom = window.innerHeight - offsetBottom,
-          elementTop = targetElement.getBoundingClientRect().top,
-          elementBottom = targetElement.getBoundingClientRect().bottom;
+          elementTop = Global.getTopPosition(targetElement),
+          elementBottom = Global.getTopPosition(targetElement);
+          // elementTop = targetElement.getBoundingClientRect().top,
+          // elementBottom = targetElement.getBoundingClientRect().bottom;
 
     if ( elementTop < gridTop || elementBottom < gridBottom ) {
       return true;
@@ -41,7 +43,7 @@ var LogoAnimation = function() {
   },
 
   neverPlayed = function() {
-    if ( logo.classList.contains('played-on-scroll') ) {
+    if ( logo.hasClass('played-on-scroll') ) {
       return false;
     } else {
       return true;
@@ -56,8 +58,6 @@ var LogoAnimation = function() {
 } ();
 
 window.addEventListener('scroll', function() {
-  // MainNav.didScroll = true;
-  // MainNav.refreshTopChevron();
   LogoAnimation.checkIfLogoPlayed()
   return;
 });
