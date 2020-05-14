@@ -186,11 +186,6 @@ section h2:first-child { margin-top: 0;}
 /* Case study sections */
 /*----------------------------------------------------------------------------*/
 
-/* .anchor {
-  position: absolute;
-  top: -61px;
-} */
-
 .inner-section { padding-top: 0; }
 
 .centered-content {
@@ -227,6 +222,11 @@ picture ~ p, img ~ p { margin-top: 2em; }
 ul.bullets {
   position: relative;
   margin-left: 25px;
+}
+
+.featherlight img {
+  max-height: calc(100vh - 100px);
+  width: auto;
 }
 
 .indented-quote {
