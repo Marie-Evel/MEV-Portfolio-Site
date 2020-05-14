@@ -25,7 +25,7 @@ var ProjectNav = function() {
     outerLinkClickEvent = function() {
       $('.outer-link').map(function(i, link) {
         $(link).click(function() {
-          let newUrl = this.href;
+          const newUrl = this.href;
           $('#reveal-page').fadeIn("slow");
           $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", function() {
             MainNav.goToUrl(newUrl);
@@ -39,14 +39,13 @@ var ProjectNav = function() {
     $('.within-link').each(function(i, link) {
       $(link).click( function() {
           const newUrl = this.href,
-                newHash = this.hash,
-                newPosition = scrollIt(newHash);
+                newHash = this.hash;
 
           if ( $(link).parents('#project-nav.show-menu').length ) {
             closeProjectNav();
           };
 
-          if ( newPosition >=0 ) {
+          if ( scrollIt(newHash) ) {
             MainNav.scrollNavigate(newHash, newUrl);
           } else {
             fadeNavigate(newHash, newUrl);
@@ -173,22 +172,24 @@ var ProjectNav = function() {
     if ( ( !Global.elementIsVisible(projectNav)
         && (curParent === destinationParent || destinationOffset < scrollThreshold) )
         || destinationHash === '#contact' || destinationHash === '#top-anchor' ) {
-      return newPosition;
+      return true;
     } else {
-      return undefined;
+      return false;
     }
   },
 
   fadeNavigate = function(destinationHash, destinationUrl) {
     const targetElement = $(destinationHash),
           revealPage = $('#reveal-page');
-
+    // debugger;
     if ( targetElement.hasClass('section-anchor') ) {
+      // debugger;
       revealPage.fadeIn(400, function() {
         MainNav.goToUrl(destinationUrl);
         revealPage.fadeOut(800);
       });
     } else {
+      // debugger;
       const targetParent = getParentAnchor($(destinationHash)),
             parentUrl = MainNav.convertHashToUrl(targetParent);
       revealPage.fadeIn(400, function() {
@@ -245,18 +246,13 @@ var ProjectNav = function() {
 } ();
 
 $(document).ready(function() {
-  // $('.nav-background.current').eq(0).animate({ width: '100%'}, "slow");
-  // MainNav.refreshTopChevron();
   ProjectNav.init();
-  // $('#reveal-page').fadeOut();
   ProjectNav.innerLinkClickEvent();
   ProjectNav.outerLinkClickEvent();
   return;
 });
 
 window.addEventListener('scroll', function() {
-  // MainNav.didScroll = true;
-  // MainNav.refreshTopChevron();
   ProjectNav.refreshProjectNav();
   return;
 });
