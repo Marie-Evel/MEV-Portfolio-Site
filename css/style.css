@@ -16,8 +16,6 @@
 /*----------------------------------------------------------------------------*/
 /* Global styles */
 /*----------------------------------------------------------------------------*/
-html { scroll-behavior: smooth; }
-
 * { box-sizing: border-box; }
 
 body {
@@ -321,7 +319,22 @@ a.overlay { text-decoration: none; }
   width: 100%;
 }
 
-#mev-logo-animation { background-color: var(--light-pink); }
+#mev-logo-animation .image-container {
+  background-color: rgba(243,165,213,0.4);
+  position: absolute;
+  top: 0;
+}
+
+#mev-logo-animation.animate .image-container { background-color: var(--light-pink); }
+
+#mev-logo-animation .wave {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#mev-logo-animation.animate .wave {
+  opacity: 0;
+}
 
 #mev-logo-animation.project-picture { height: calc(63vw - 25.2px); }
 
