@@ -28,10 +28,10 @@
   <!-- CSS files ------------------------------------------------------------>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/metrisch.css">
-  <link rel="stylesheet" type="text/css" href="css/project.css">
-  <link rel="stylesheet" type="text/css" href="css/nav.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.css">
+  <link rel="stylesheet" type="text/css" href="css/project.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
 
 </head>
 
@@ -74,7 +74,7 @@
     </div>
 
     <!-- INTRO ------------------------------------------------------------->
-    <section class="indent-top-nav">
+    <section id="project-line" class="indent-top-nav">
       <div id="top-anchor" class="anchor section-anchor"></div>
       <p class="font-medium">
         UX/UI CASE STUDY
@@ -85,11 +85,13 @@
       <div id="intro-grid">
         <div class="screen-shot">
           <a href="#" data-featherlight="#screen-home">
-          <picture id="screen-home" class="shadow-white">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
-            <img src="img/streetcred/sec1_overview/find_hunts_large.png" alt="StreetCred home screen on iPhone XS">
-          </picture>
-        </a>
+            <picture id="screen-home" class="shadow-white">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/find_hunts_small.png">
+              <img src="img/streetcred/sec1_overview/find_hunts_large.png"
+                   title="StreetCred home screen"
+                   alt="StreetCred home screen on iPhone XS">
+            </picture>
+          </a>
         </div>
         <div class="hero-text-cell">
           <div class="hero-text">
@@ -171,7 +173,7 @@
 
             <div class="dropdown">
               <div class="top-menu">
-                <a href="#ia-anchor" class="within-link"><span>04</span>Information Architecture</a>
+                <a href="#nav-structure-anchor" class="within-link"><span>04</span>Information Architecture</a>
                 <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(4)"></span>
               </div>
               <div class="dropdown-content">
@@ -373,39 +375,59 @@
     </section>
 
     <section id="sneak-peek" class="indent-top-nav background-fill">
-      <div>
+      <div data-featherlight-gallery data-featherlight-filter="a">
         <div id="screen-shots-row1">
           <div class="screen-shot">
-            <picture class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/benefit1_small.png">
-                <img src="img/streetcred/sec1_overview/benefit1_large.png" alt="Screenshot of sightseeing with a twist">
-            </picture>
+            <a href="#sneak-peek-1">
+              <picture id="sneak-peek-1" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/benefit1_small.png">
+                  <img src="img/streetcred/sec1_overview/benefit1_large.png"
+                       title="First of three onboarding screens"
+                       alt="Screenshot of sightseeing with a twist">
+              </picture>
+            </a>
           </div>
           <div class="screen-shot">
-            <picture class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/home_small.png">
-                <img src="img/streetcred/sec1_overview/home_large.png" alt="Screenshot of Find Hunts screen">
-            </picture>
+            <a href="#sneak-peek-2">
+              <picture id="sneak-peek-2" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/home_small.png">
+                  <img src="img/streetcred/sec1_overview/home_large.png"
+                       title="Home screen"
+                       alt="Screenshot of Find Hunts screen">
+              </picture>
+            </a>
           </div>
         </div>
         <div id="screen-shots-row2">
           <div class="sc screen-shot">
-            <picture class="shadow-white">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/hunt_detail_small.png">
-                <img src="img/streetcred/sec1_overview/hunt_detail_large.png" alt="Screenshot of Hunt Detail screen">
-            </picture>
+            <a href="#sneak-peek-3">
+              <picture id="sneak-peek-3" class="shadow-white">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/hunt_detail_small.png">
+                  <img src="img/streetcred/sec1_overview/hunt_detail_large.png"
+                       title="Hunt detail screen"
+                       alt="Screenshot of Hunt Detail screen">
+              </picture>
+            </a>
           </div>
           <div class="screen-shot">
-            <picture class="shadow-white">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/players_small.png">
-                <img src="img/streetcred/sec1_overview/players_large.png" alt="Screenshot of Players screen">
-            </picture>
+            <a href="#sneak-peek-4">
+              <picture id="sneak-peek-4" class="shadow-white">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/players_small.png">
+                  <img src="img/streetcred/sec1_overview/players_large.png"
+                       title="Players screen"
+                       alt="Screenshot of Players screen">
+              </picture>
+            </a>
           </div>
           <div class="screen-shot">
-            <picture class="shadow-white">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/pref1_small.png">
-                <img src="img/streetcred/sec1_overview/pref1_large.png" alt="Screenshot of first Preference screen">
-            </picture>
+            <a href="#sneak-peek-5">
+              <picture id="sneak-peek-5" class="shadow-white">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/pref1_small.png">
+                  <img src="img/streetcred/sec1_overview/pref1_large.png"
+                       title = "First of three preference screens"
+                       alt="Screenshot of first Preference screen">
+              </picture>
+            </a>
           </div>
         </div>
       </div>
@@ -873,10 +895,14 @@
 
     <section id="dereck-persona" class="inner-section">
         <div class="wide-picture">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_dereck_small.jpg">
-            <img src="img/streetcred/sec3_users/persona_dereck_large.jpg" alt="User persona sheet for Dereck">
-          </picture>
+          <a href="#" data-featherlight="#persona-1">
+            <picture id="persona-1" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_dereck_small.jpg">
+              <img src="img/streetcred/sec3_users/persona_dereck_large.jpg"
+                   title="Primary persona: Dereck"
+                   alt="User persona sheet for Dereck">
+            </picture>
+          </a>
         </div>
     </section>
 
@@ -893,21 +919,28 @@
     </section>
 
     <section class="inner-section background-fill sc-light-grey indent-top-nav">
-        <div id="malika-angie-personas">
-          <div>
-            <picture class="shadow-black">
+      <div id="malika-angie-personas" data-featherlight-gallery data-featherlight-filter="a">
+        <div>
+          <a href="#persona-2">
+            <picture id="persona-2" class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_malika_small.jpg">
-              <img src="img/streetcred/sec3_users/persona_malika_large.jpg" alt="User persona sheet for Malika">
+              <img src="img/streetcred/sec3_users/persona_malika_large.jpg"
+                   title="Secondary persona: Malika"
+                   alt="User persona sheet for Malika">
             </picture>
-          </div>
-          <div>
-            <picture class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_angie_small.jpg">
-              <img src="img/streetcred/sec3_users/persona_angie_large.jpg" alt="User persona sheet for Angie">
-            </picture>
-          </div>
+          </a>
         </div>
-
+        <div>
+          <a href="#persona-3">
+            <picture id="persona-3" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_angie_small.jpg">
+              <img src="img/streetcred/sec3_users/persona_angie_large.jpg"
+                   title="Secondary persona: Angie"
+                   alt="User persona sheet for Angie">
+            </picture>
+          </a>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -924,10 +957,14 @@
           </p>
         </div>
         <div id="dereck-journey-map">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
-            <img src="img/streetcred/sec3_users/journey_map_dereck_large.jpg" alt="Detailed user journey map for Dereck">
-          </picture>
+          <a href="#" data-featherlight="#journey-map-1">
+            <picture id="journey-map-1" class="shadow-black fit-width">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
+              <img src="img/streetcred/sec3_users/journey_map_dereck_large.jpg"
+                   title="Dereck's user journey map"
+                   alt="Detailed user journey map for Dereck">
+            </picture>
+          </a>
           <svg class="connector line dereck-red" height="200" width="10">
             <line x1="1" y1="0" x2="1" y2="100%" />
           </svg>
@@ -968,30 +1005,35 @@
 
   <section class="background-fill sc-light-grey"><!-- Secondary user journey section -->
     <div id="malika-angie-journey">
-      <div id="malika-angie-journey-title">
-        <h3>Opportunities from Malika’s and Angie’s Journeys</h3>
+      <h3>Opportunities from Malika’s and Angie’s Journeys</h3>
+
+      <div class="journey-maps" data-featherlight-gallery data-featherlight-filter="a">
+        <a href="#journey-map-2" id="malika-journey-map">
+          <picture id="journey-map-2" class="shadow-black">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_malika_small.jpg">
+            <img src="img/streetcred/sec3_users/journey_map_malika_large.jpg"
+                 title="Malika's user journey map"
+                 alt="Detailed user journey map for Malika">
+          </picture>
+        </a>
+        <a href="#journey-map-3" id="angie-journey-map">
+          <picture id="journey-map-3" class="shadow-black">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_angie_small.jpg">
+            <img src="img/streetcred/sec3_users/journey_map_angie_large.jpg"
+                 title="Angie's user journey map"
+                 alt="Detailed user journey map for Angie">
+          </picture>
+        </a>
       </div>
-      <div id="malika-journey-map">
-        <picture  class="shadow-black">
-          <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_malika_small.jpg">
-          <img src="img/streetcred/sec3_users/journey_map_malika_large.jpg" alt="Detailed user journey map for Malika">
-        </picture>
-      </div>
-      <div id="angie-journey-map">
-        <picture  class="shadow-black">
-          <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_angie_small.jpg">
-          <img src="img/streetcred/sec3_users/journey_map_angie_large.jpg" alt="Detailed user journey map for Angie">
-        </picture>
-      </div>
-      <div id="malika-angie-journey-intro">
-        <p>
-          Ad­di­tional op­por­tu­ni­ties were iden­ti­fied by ob­serv­ing how Ma­lika is
-          us­ing our app as a sub­sti­tute for a guided walk­ing tour in San
-          Fran­cisco, and how Angie re­lies on Street­Cred as a fun ac­tiv­ity to do
-          in her own city with her kids and guests from out town.
-        </p>
-      </div>
-      <div id="malika-opportunities">
+
+      <p>
+        Ad­di­tional op­por­tu­ni­ties were iden­ti­fied by ob­serv­ing how Ma­lika is
+        us­ing our app as a sub­sti­tute for a guided walk­ing tour in San
+        Fran­cisco, and how Angie re­lies on Street­Cred as a fun ac­tiv­ity to do
+        in her own city with her kids and guests from out town.
+      </p>
+      
+      <div class="opportunities">
         <ul class="bullets malika-blue">
           <li>Businesses we partner with (such as tour companies,
             restaurants, and museums) should be provided with a QR code so
@@ -999,8 +1041,6 @@
              could also be embedded with a specific hunt the vendor
              recommends and/or a discount code.</li>
         </ul>
-      </div>
-      <div id="angie-opportunities">
         <ul class="bullets angie-green">
           <li>Our app should be supported by a website to increase the
             likelihood it will show up in Google search results. We should
@@ -1042,30 +1082,44 @@
     </div>
   </section>
 
-  <section class="inner-section">
-    <div class="wide-picture">
-      <picture class="shadow-black user-flow">
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_dereck_small.jpg">
-        <img src="img/streetcred/sec3_users/user_flow_dereck_large.jpg" alt="User flow for Dereck">
-      </picture>
-    </div>
-  </section>
-  <section class="inner-section">
-    <div class="wide-picture">
-      <picture class="shadow-black user-flow">
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_malika_small.jpg">
-        <img src="img/streetcred/sec3_users/user_flow_malika_large.jpg" alt="User flow for Malika">
-      </picture>
-    </div>
-  </section>
-  <section class="inner-section">
-    <div class="wide-picture">
-      <picture class="shadow-black user-flow">
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_angie_small.jpg">
-        <img src="img/streetcred/sec3_users/user_flow_angie_large.jpg" alt="User flow for Angie">
-      </picture>
-    </div>
-  </section><!-- END of User flow section -->
+  <div data-featherlight-gallery data-featherlight-filter="a">
+    <section class="inner-section">
+      <div class="wide-picture">
+        <a href="#user-flow-1">
+          <picture id="user-flow-1" class="shadow-black user-flow fit-width">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_dereck_small.jpg">
+            <img src="img/streetcred/sec3_users/user_flow_dereck_large.jpg"
+                 title="Dereck's user flow"
+                 alt="User flow for Dereck">
+          </picture>
+        </a>
+      </div>
+    </section>
+    <section class="inner-section">
+      <div class="wide-picture">
+        <a href="#user-flow-2">
+          <picture id="user-flow-2" class="shadow-black user-flow fit-width">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_malika_small.jpg">
+            <img src="img/streetcred/sec3_users/user_flow_malika_large.jpg"
+                 title="Malika's user flow"
+                 alt="User flow for Malika">
+          </picture>
+        </a>
+      </div>
+    </section>
+    <section class="inner-section">
+      <div class="wide-picture">
+        <a href="#user-flow-3">
+          <picture id="user-flow-3" class="shadow-black user-flow fit-width">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_angie_small.jpg">
+            <img src="img/streetcred/sec3_users/user_flow_angie_large.jpg"
+                 title="Angie's user flow"
+                 alt="User flow for Angie">
+          </picture>
+        </a>
+      </div>
+    </section><!-- END of User flow section -->
+  </div>
 
   <section id="sc-overwhelmed" class="inner-section">
     <div class="centered-content">
@@ -1076,15 +1130,12 @@
     </div>
   </section>
 
-  <section id="ia-transition" class="background-fill">
+  <section class="transition">
     <div id="ia-anchor" class="anchor section-anchor"></div>
-    <!-- <div id="ia-transition">-->
-      <!-- <picture >
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
-        <img src="img/streetcred/sec4_ia/ia_transition_large.jpg" alt="Abstract of wires inter-connecting">
-      </picture> -->
-    <!-- </div> -->
-
+    <picture >
+      <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
+      <img src="img/streetcred/sec4_ia/ia_transition_large.jpg" alt="Abstract of wires inter-connecting">
+    </picture>
   </section>
 
     <!-- 04 INFORMATION ARCHITECTURE ------------------------------------------>
@@ -1208,10 +1259,14 @@
 
     <section id="sitemap" class="background-fill inner-section">
       <div class="indented">
-        <picture>
-          <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
-          <img src="img/streetcred/sec4_ia/wireflow_large.png" alt="Wireflow showing how StreetCred's mobile screens are connected">
-        </picture>
+        <a href="#" data-featherlight="#final-sitemap">
+          <picture id="final-sitemap" class="fit-width">
+            <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
+            <img src="img/streetcred/sec4_ia/wireflow_large.png"
+                 title="Final sitemap/wireflow (for now...)"
+                 alt="Wireflow showing how StreetCred's mobile screens are connected">
+          </picture>
+        </a>
       </div>
     </section>
 
@@ -1263,106 +1318,120 @@
       </div>
     </section>
 
-    <section class="indented inner-section">
-      <div id="my-hunts-grid">
-        <div class="low-fid">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
-            <img src="img/streetcred/sec5_wireframing/my_hunts_v1_large.png" alt="Low-fidelity sketched wireframe of My Hunts screen">
-          </picture>
-          <svg class="connector line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-          <svg class="connector line" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector line" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-        </div><!-- END of column 1 -->
-        <div class="caption caption1 caption-right">
-          <p>
-            Because there’s a grid, I was trying to align, distribute, and
-            center everything. For instance, I counted the dots to make each
-            row the same height (8 dots per row).
-          </p>
-        </div>
-        <div class="caption caption2 caption-bottom">
-          <p>
-            I counted the dots here too (14 for each half of the navigation
-            bar). I just couldn’t help it…
-          </p>
-        </div>
-      </div><!-- END of Row container-->
-    </section>
-
-    <section class="inner-section indented">
-      <p>
-        That was pure madness!
-      </p>
-      <p>
-        It was so time-con­sum­ing, and count­ing those tiny dots made my eyes
-        hurt. There had to be a bet­ter way. And that bet­ter way oc­curred to me
-        dur­ing a round of rapid pro­to­typ­ing. The an­swer:
-        <em>in­dex cards</em>! Ac­tu­ally, the back
-        of in­dex cards. No grid, no lines, just a blank can­vas.
-      </p>
-    </section>
-
-    <section id="index-card-example" class="inner-section indented stretch-right-lg">
-      <div>
-        <p>
-          Here’s the sec­ond it­er­a­tion of the ‘My Hunts’ screen:
-        </p>
-      </div>
-      <div class="grid">
-        <div class="pic">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/index_card_small.png">
-            <img src="img/streetcred/sec5_wireframing/index_card_large.png" alt="Lined index card">
-          </picture>
+    <div data-featherlight-gallery data-featherlight-filter="a">
+      <section class="indented inner-section">
+        <div id="my-hunts-grid">
           <div class="low-fid">
+            <a href="#my-hunts-1">
+              <picture id="my-hunts-1" class="gallery">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
+                <img src="img/streetcred/sec5_wireframing/my_hunts_v1_large.png"
+                     title="First drawing of 'My Hunts' screen"
+                     alt="Low-fidelity sketched wireframe of My Hunts screen">
+              </picture>
+            </a>
+            <svg class="connector line" height="200" width="10">
+              <line x1="1" y1="0" x2="1" y2="100%" />
+            </svg>
+            <svg class="connector line" height="10" width="200">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector line" height="10" width="200">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector line" height="200" width="10">
+              <line x1="1" y1="0" x2="1" y2="100%" />
+            </svg>
+          </div><!-- END of column 1 -->
+          <div class="caption caption1 caption-right">
+            <p>
+              Because there’s a grid, I was trying to align, distribute, and
+              center everything. For instance, I counted the dots to make each
+              row the same height (8 dots per row).
+            </p>
+          </div>
+          <div class="caption caption2 caption-bottom">
+            <p>
+              I counted the dots here too (14 for each half of the navigation
+              bar). I just couldn’t help it…
+            </p>
+          </div>
+        </div><!-- END of Row container-->
+      </section>
+
+      <section class="inner-section indented">
+        <p>
+          That was pure madness!
+        </p>
+        <p>
+          It was so time-con­sum­ing, and count­ing those tiny dots made my eyes
+          hurt. There had to be a bet­ter way. And that bet­ter way oc­curred to me
+          dur­ing a round of rapid pro­to­typ­ing. The an­swer:
+          <em>in­dex cards</em>! Ac­tu­ally, the back
+          of in­dex cards. No grid, no lines, just a blank can­vas.
+        </p>
+      </section>
+
+      <section id="index-card-example" class="inner-section indented stretch-right-lg">
+        <div>
+          <p>
+            Here’s the sec­ond it­er­a­tion of the ‘My Hunts’ screen:
+          </p>
+        </div>
+        <div class="grid">
+          <div class="pic">
             <picture class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v2_small.png">
-              <img src="img/streetcred/sec5_wireframing/my_hunts_v2_large.png" alt="Low-fidelity sketched wireframe of My Hunts screen on index card">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/index_card_small.png">
+              <img src="img/streetcred/sec5_wireframing/index_card_large.png" alt="Lined index card">
             </picture>
+            <div class="low-fid">
+              <a href="#my-hunts-2">
+                <picture id="my-hunts-2" class="shadow-black">
+                  <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v2_small.png">
+                  <img src="img/streetcred/sec5_wireframing/my_hunts_v2_large.png"
+                       title="Second drawing of 'My Hunts' screen (on the back of an index card)"
+                       alt="Low-fidelity sketched wireframe of My Hunts screen on index card">
+                </picture>
+            </a>
+            </div>
+          </div>
+          <div class="caption caption1 caption-right">
+            <p>
+              It took me less than 1 minute to sketch that screen. It’s ugly,
+              it’s messy, and it’s exactly what I needed in the early stages of
+              wireframing.
+            </p>
+          </div>
+          <div class="caption caption2 caption-left">
+            <p>
+              Rapid prototyping enabled me to capture the essence of the design
+              while setting aesthetics aside until the high-fidelity phase.
+            </p>
+          </div>
+          <div class="arrow">
+            <svg class="connector line" height="20" width="400">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
+            <svg class="connector triangle" height="20" width="20">
+              <polygon points="0,4 12,10 0,16" />
+            </svg>
+          </div>
+          <div class="final-mockup">
+            <a href="#my-hunts-3">
+              <picture id="my-hunts-3" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_final_small.jpg">
+                <img src="img/streetcred/sec5_wireframing/my_hunts_final_large.jpg"
+                     title="Final mockup of 'My Hunts' screen"
+                     alt="High-fidelity screen mockup of My Hunts screen on iPhone XS">
+              </picture>
+            </a>
           </div>
         </div>
-        <div class="caption caption1 caption-right">
-          <p>
-            It took me less than 1 minute to sketch that screen. It’s ugly,
-            it’s messy, and it’s exactly what I needed in the early stages of
-            wireframing.
-          </p>
-        </div>
-        <div class="caption caption2 caption-left">
-          <p>
-            Rapid prototyping enabled me to capture the essence of the design
-            while setting aesthetics aside until the high-fidelity phase.
-          </p>
-        </div>
-        <div class="arrow">
-          <svg class="connector line" height="20" width="400">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector circle" height="20" width="200">
-            <circle cx="50%" cy="50%" r="8" />
-          </svg>
-          <svg class="connector triangle" height="20" width="20">
-            <polygon points="0,4 12,10 0,16" />
-          </svg>
-        </div>
-        <div class="final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_final_small.jpg">
-            <img src="img/streetcred/sec5_wireframing/my_hunts_final_large.jpg" alt="High-fidelity screen mockup of My Hunts screen on iPhone XS">
-          </picture>
-        </div>
-      </div>
-    </section><!-- END of #index-card-example -->
+      </section><!-- END of #index-card-example -->
+    </div>
 
     <section class="background-fill sc-light-blue">
       <div id="design-iterations-anchor" class="anchor"></div>
@@ -1379,17 +1448,21 @@
 
     <section id="finding-a-hunt" class="design-iterations wide-section background-fill">
       <h4>A. Finding a hunt</h4>
-      <div class="design-iterations-grid">
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="background-rectangle">
           <svg width="200" height="100">
             <rect width="100%" height="100%" />
           </svg>
         </div>
         <div class="mockup low-fid">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_large.png" alt="First sketched iteration of Find Hunts wireframe">
-          </picture>
+          <a href="#find-hunts-1">
+            <picture id="find-hunts-1" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_large.png"
+                   title="'Find Hunts' screen | low-fidelity"
+                   alt="First sketched iteration of Find Hunts wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1401,10 +1474,14 @@
           </svg>
         </div>
         <div class="mockup mid-fid">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_large.png" alt="Second mid-fidelity iteration of Find Hunts wireframe">
-          </picture>
+          <a href="#find-hunts-2">
+            <picture id="find-hunts-2" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_large.png"
+                   title="'Find Hunts' screen | mid-fidelity"
+                   alt="Second mid-fidelity iteration of Find Hunts wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="61%" />
             <line x1="0" y1="60%" x2="50%" y2="60%" />
@@ -1421,10 +1498,14 @@
           </p>
         </div>
         <div class="mockup hi-fid1">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_large.png" alt="Third high-fidelity iteration of Find Hunts screen on iPhone XS">
-          </picture>
+          <a href="#find-hunts-3">
+            <picture id="find-hunts-3" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_large.png"
+                   title="'Find Hunts' screen | high-fidelity before testing"
+                   alt="Third high-fidelity iteration of Find Hunts screen on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1436,10 +1517,14 @@
           </svg>
         </div>
         <div class="mockup final-mockup">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_large.png" alt="Final high-fidelity iteration of Find Hunts screen on iPhone XS">
-          </picture>
+          <a href="#find-hunts-4">
+            <picture id="find-hunts-4" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_large.png"
+                   title="'Find Hunts' screen | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Find Hunts screen on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="61%" />
             <line x1="0" y1="60%" x2="50%" y2="60%" />
@@ -1470,17 +1555,21 @@
 
     <section id="hunt-info" class="design-iterations background-fill sc-light-blue wide-section">
       <h4>B. Getting info about a hunt</h4>
-      <div class="design-iterations-grid">
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="background-rectangle">
           <svg width="200" height="100">
             <rect width="100%" height="100%" />
           </svg>
         </div>
         <div class="mockup low-fid">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_large.png" alt="First sketched iteration of Hunt Detail wireframe">
-          </picture>
+          <a href="#hunt-detail-1">
+            <picture id="hunt-detail-1" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_large.png"
+                   title="'Hunt Detail' screen | low-fidelity"
+                   alt="First sketched iteration of Hunt Detail wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1496,10 +1585,14 @@
           </p>
         </div>
         <div class="mockup mid-fid">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_large.png" alt="Second mid-fidelity iteration of Hunt Detail wireframe">
-          </picture>
+          <a href="#hunt-detail-2">
+            <picture id="hunt-detail-2" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_large.png"
+                   title="'Hunt Detail' screen | mid-fidelity"
+                   alt="Second mid-fidelity iteration of Hunt Detail wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="61%" />
           </svg>
@@ -1511,10 +1604,14 @@
           </svg>
         </div>
         <div class="mockup hi-fid1">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_large.png" alt="Third high-fidelity iteration of Hunt Detail screen on iPhone XS">
-          </picture>
+          <a href="#hunt-detail-3">
+            <picture id="hunt-detail-3" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_large.png"
+                   title="'Hunt Detail' screen | high-fidelity before testing"
+                   alt="Third high-fidelity iteration of Hunt Detail screen on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line vert-line" height="90" width="200">
             <line x1="50%" y1="5%" x2="50%" y2="100%" />
           </svg>
@@ -1533,10 +1630,14 @@
           </p>
         </div>
         <div class="mockup final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_large.png" alt="Final high-fidelity iteration of Hunt Detail screen on iPhone XS">
-          </picture>
+          <a href="#hunt-detail-4">
+            <picture id="hunt-detail-4" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_large.png"
+                   title="'Hunt Detail' screen | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Hunt Detail screen on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line" height="200" width="200">
             <line x1="1" y1="10" x2="1" y2="100%" />
             <line x1="0%" y1="10" x2="100%" y2="10" />
@@ -1557,17 +1658,21 @@
 
     <section id="buy-hunt" class="design-iterations wide-section background-fill">
       <h4>C. Buying a hunt</h4>
-      <div class="design-iterations-grid">
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="background-rectangle">
           <svg width="200" height="100">
             <rect width="100%" height="100%" />
           </svg>
         </div>
         <div class="no-shell low-fid">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_large.png" alt="First sketched iteration of Buy Hunt wireframe">
-          </picture>
+          <a href="#buy-hunt-1">
+            <picture id="buy-hunt-1" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_large.png"
+                   title="'Buy Hunt' screen | low-fidelity"
+                   alt="First sketched iteration of Buy Hunt wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="180" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="73.5%" />
           </svg>
@@ -1579,10 +1684,14 @@
           </svg>
         </div>
         <div class="mockup low-fid">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_large.png" alt="First sketched iteration of Successful Purchase wireframe">
-          </picture>
+          <a href="#confirmation-1">
+            <picture id="confirmation-1" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_large.png"
+                   title="Confirmation modal after buying a hunt | low-fidelity"
+                   alt="First sketched iteration of Successful Purchase wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1599,16 +1708,24 @@
           </p>
         </div>
         <div class="no-shell hi-fid1">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_large.png" alt="Second high-fidelity iteration of Buy Hunt screen">
-          </picture>
+          <a href="#buy-hunt-2">
+            <picture id="buy-hunt-2" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_large.png"
+                   title="'Buy Hunt' screen | high-fidelity before testing"
+                   alt="Second high-fidelity iteration of Buy Hunt screen">
+            </picture>
+          </a>
         </div>
         <div class="mockup hi-fid1">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_large.png" alt="Second high-fidelity iteration of Successful Purchase modal on iPhone XS">
-          </picture>
+          <a href="#confirmation-2">
+            <picture id="confirmation-2" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_large.png"
+                   title="Confirmation modal after buying a hunt | high-fidelity before testing"
+                   alt="Second high-fidelity iteration of Successful Purchase modal on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="61%" />
           </svg>
@@ -1620,16 +1737,24 @@
           </svg>
         </div>
         <div class="no-shell final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_small.jpg">
-            <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_large.jpg" alt="Final high-fidelity iteration of Buy Hunt screen">
-          </picture>
+          <a href="#buy-hunt-3">
+            <picture id="buy-hunt-3" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_small.jpg">
+              <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_large.jpg"
+                   title="'Buy Hunt' screen | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Buy Hunt screen">
+            </picture>
+          </a>
         </div>
         <div class="mockup final-mockup">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_large.png" alt="Final high-fidelity iteration of Successful Purchase modal on iPhone XS">
-          </picture>
+          <a href="#confirmation-3">
+            <picture id="confirmation-3" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_large.png"
+                   title="Confirmation modal after buying a hunt | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Successful Purchase modal on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1653,17 +1778,21 @@
 
     <section id="select-pref" class="design-iterations wide-section background-fill sc-light-blue">
       <h4>D. Selecting preferences</h4>
-      <div class="design-iterations-grid">
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="background-rectangle">
           <svg width="200" height="100">
             <rect width="100%" height="100%" />
           </svg>
         </div>
         <div class="mockup low-fid">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_d/pref_1_large.png" alt="First sketched iteration of Restaurant Preferences wireframe">
-          </picture>
+          <a href="#pref-1">
+            <picture id="pref-1" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_1_large.png"
+                   title="Preference screen | low-fidelity"
+                   alt="First sketched iteration of Restaurant Preferences wireframe">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1680,22 +1809,34 @@
           </p>
         </div>
         <div class="mockup hi-fid1">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_d/pref_2_large.png" alt="Second high-fidelity iteration of Restaurant Preferences screen on iPhone XS">
-          </picture>
+          <a href="#pref-2">
+            <picture id="pref-2" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_2_large.png"
+                   title="Preference screen | high-fidelity before testing"
+                   alt="Second high-fidelity iteration of Restaurant Preferences screen on iPhone XS">
+            </picture>
+          </a>
         </div>
         <div id="select-pref-restaurants" class="no-shell final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.jpg">
-            <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3a_large.jpg" alt="Final high-fidelity iteration of Restaurant Preferences screen">
-          </picture>
+          <a href="#pref-3a">
+            <picture id="pref-3a" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.jpg">
+              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3a_large.jpg"
+                   title="First of three preference screens | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Restaurant Preferences screen">
+            </picture>
+          </a>
         </div>
         <div class="mockup final-mockup">
-          <picture class="shadow-black shadow-white-md">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
-            <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3b_large.png" alt="Final high-fidelity iteration of Place Preferences screen on iPhone XS">
-          </picture>
+          <a href="#pref-3b">
+            <picture id="pref-3b" class="shadow-black shadow-white-md">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
+              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3b_large.png"
+                   title="Second of three preference screens | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Place Preferences screen on iPhone XS">
+            </picture>
+          </a>
           <svg class="connector line" height="90" width="200">
             <line x1="50%" y1="10%" x2="50%" y2="100%" />
           </svg>
@@ -1704,10 +1845,14 @@
           </svg>
         </div>
         <div id="select-pref-events" class="no-shell final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.jpg">
-            <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3c_large.jpg" alt="Final high-fidelity iteration of Events & Interest Preferences screen">
-          </picture>
+          <a href="#pref-3c">
+            <picture id="pref-3c" class="shadow-black">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.jpg">
+              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3c_large.jpg"
+                   title="Third of three preference screens | high-fidelity after testing"
+                   alt="Final high-fidelity iteration of Events & Interest Preferences screen">
+            </picture>
+          </a>
         </div>
         <div class="caption caption2">
           <p>
@@ -1774,15 +1919,23 @@
           </ul>
         </div>
 
-        <div id="test-plan-docs">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_1_small.png">
-            <img src="img/streetcred/sec6_testing/test_plan_1_large.png" alt="Samples pages of test plan, including Usability Test Script, Informed Consent Form, and Scenarios & Tasks">
-          </picture>
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_2_small.png">
-            <img src="img/streetcred/sec6_testing/test_plan_2_large.png" alt="Samples pages of test plan, including Pre-Test Questions, Satisfaction Questionnaire, and Evaluation of Tasks">
-          </picture>
+        <div id="test-plan-docs" data-featherlight-gallery data-featherlight-filter="a">
+          <a href="#test-docs-1">
+            <picture id="test-docs-1" class="fit-width">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_1_small.png">
+              <img src="img/streetcred/sec6_testing/test_plan_1_large.png"
+                   title="Sample of testing plan documents (part 1)"
+                   alt="Samples pages of test plan, including Usability Test Script, Informed Consent Form, and Scenarios & Tasks">
+            </picture>
+          </a>
+          <a href="#test-docs-2">
+            <picture id="test-docs-2" class="fit-width">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_2_small.png">
+              <img src="img/streetcred/sec6_testing/test_plan_2_large.png"
+                   title="Sample of testing plan documents (part 2)"
+                   alt="Samples pages of test plan, including Pre-Test Questions, Satisfaction Questionnaire, and Evaluation of Tasks">
+            </picture>
+          </a>
         </div>
 
         <div id="test-other">
@@ -1985,200 +2138,231 @@
       </div>
     </section>
 
-    <section class="wide-section">
-      <h2>ISSUE #1<span class="title-suffix"> | critical</span></h2>
-      <p class="issue">
-        Users don’t want to have to join or log in to buy a hunt
-      </p>
-      <div id="test-issue1" class="testing">
-        <div class="mockup hi-fid1">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_old_small.png">
-            <img src="img/streetcred/sec6_testing/issue_1/join_old_large.png" alt="Hunt Detail screen on iPhone XS with Join or Log in pop up">
-          </picture>
-        </div>
-        <div class="caption caption1 caption-right">
-          <p>
-            Four of the ­6 testers did­n’t un­der­stand they had to join to
-            pur­chase a hunt and wanted the op­tion to check out as a guest.
-          </p>
-        </div>
-        <div class="quote">
-          <p>
-            Creating an account is a deal-breaker. I don’t want to have to
-            remember another password. Had this been a real app, I wouldn’t
-            have pur­chased the hunt.
-          </p>
-          <p>
-            —Rich (tester #1)
-          </p>
-        </div>
-        <div class="dereck-says-container">
-          <div class="dereck-says">
-            <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+    <div data-featherlight-gallery data-featherlight-filter="a">
+      <section class="wide-section">
+        <h2>ISSUE #1<span class="title-suffix"> | critical</span></h2>
+        <p class="issue">
+          Users don’t want to have to join or log in to buy a hunt
+        </p>
+        <div id="test-issue1" class="testing">
+          <div class="mockup hi-fid1">
+            <a href="#issue-1">
+              <picture id="issue-1" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_old_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/join_old_large.png"
+                     title="Buying a hunt (before testing)"
+                     alt="Hunt Detail screen on iPhone XS with Join or Log in pop up">
+              </picture>
+            </a>
+          </div>
+          <div class="caption caption1 caption-right">
             <p>
-              I don’t mind cre­at­ing a new ac­count, but I’d like to be able
-              to try the app be­fore join­ing. If I can poke around with­out
-              hav­ing to cre­ate an ac­count, it tells me the app has noth­ing
-              to hide.
+              Four of the ­6 testers did­n’t un­der­stand they had to join to
+              pur­chase a hunt and wanted the op­tion to check out as a guest.
+            </p>
+          </div>
+          <div class="quote">
+            <p>
+              Creating an account is a deal-breaker. I don’t want to have to
+              remember another password. Had this been a real app, I wouldn’t
+              have pur­chased the hunt.
+            </p>
+            <p>
+              —Rich (tester #1)
+            </p>
+          </div>
+          <div class="dereck-says-container">
+            <div class="dereck-says">
+              <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+              <p>
+                I don’t mind cre­at­ing a new ac­count, but I’d like to be able
+                to try the app be­fore join­ing. If I can poke around with­out
+                hav­ing to cre­ate an ac­count, it tells me the app has noth­ing
+                to hide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section><!-- END of Issue #1 -->
+
+      <section class="inner-section wide-section">
+        <h2 class="test-solution">SOLUTION</h2>
+        <div id="test-solution1" class="testing">
+          <div id="sol1-screen1" class="mockup final-mockup">
+            <a href="#solution-1a">
+              <picture id="solution-1a" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/checkout_options_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/checkout_options_large.png"
+                     title="Improved buying experience"
+                     alt="Checkout Options screen on iPhone XS">
+              </picture>
+            </a>
+            <svg class="connector line" height="20" width="400">
+              <line x1="5" y1="50%" x2="100%" y2="50%" />
+            </svg>
+            <svg class="connector circle" height="20" width="200">
+              <circle cx="50%" cy="50%" r="8" />
+            </svg>
+          </div>
+          <div class="caption caption1 caption-right">
+            <p>
+              Offer the option to checkout as a guest.
+            </p>
+          </div>
+          <div id="sol1-screen2" class="mockup final-mockup">
+            <a href="#solution-1b">
+              <picture id="solution-1b" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/guest_checkout_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/guest_checkout_large.png"
+                     title="Improved buying experience: guest checkout"
+                     alt="Guest Checkout screen on iPhone XS">
+              </picture>
+            </a>
+            <svg class="connector line" height="200" width="40">
+              <line x1="0" y1="15.13%" x2="100%" y2="15.13%" />
+            </svg>
+            <svg class="connector line vert-line" height="200" width="40">
+              <line x1="1" y1="15.13%" x2="1" y2="83%" />
+            </svg>
+          </div>
+          <div id="sol1-caption2" class="caption caption2 caption-right">
+            <p>
+              Only ask for the min­i­mum info re­quired to check­out and be
+              trans­par­ent about how that info will be used.
+            </p>
+          </div>
+          <div id="sol1-screen3" class="mockup final-mockup">
+            <a href="#solution-1c">
+              <picture id="solution-1c" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_new_small.png">
+                <img src="img/streetcred/sec6_testing/issue_1/join_new_large.png"
+                     title="Improved buying experience: encourage users to create an account after hunt is purchased"
+                     alt="New Join or Log in screen on iPhone XS">
+              </picture>
+            </a>
+          </div>
+          <div id="sol1-caption3" class="caption caption3 caption-left">
+            <p>
+              En­cour­age users to cre­ate an ac­count AF­TER they have suc­cess­fully
+              paid for&nbsp;a&nbsp;hunt.
             </p>
           </div>
         </div>
-      </div>
-    </section><!-- END of Issue #1 -->
+      </section><!-- END of Solution #1 -->
+    </div>
 
-    <section class="inner-section wide-section">
-      <h2 class="test-solution">SOLUTION</h2>
-      <div id="test-solution1" class="testing">
-        <div id="sol1-screen1" class="mockup final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/checkout_options_small.png">
-            <img src="img/streetcred/sec6_testing/issue_1/checkout_options_large.png" alt="Checkout Options screen on iPhone XS">
-          </picture>
-          <svg class="connector line" height="20" width="400">
-            <line x1="5" y1="50%" x2="100%" y2="50%" />
-          </svg>
-          <svg class="connector circle" height="20" width="200">
-            <circle cx="50%" cy="50%" r="8" />
-          </svg>
-        </div>
-        <div class="caption caption1 caption-right">
-          <p>
-            Offer the option to checkout as a guest.
-          </p>
-        </div>
-        <div id="sol1-screen2" class="mockup final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/guest_checkout_small.png">
-            <img src="img/streetcred/sec6_testing/issue_1/guest_checkout_large.png" alt="Guest Checkout screen on iPhone XS">
-          </picture>
-          <svg class="connector line" height="200" width="40">
-            <line x1="0" y1="15.13%" x2="100%" y2="15.13%" />
-          </svg>
-          <svg class="connector line vert-line" height="200" width="40">
-            <line x1="1" y1="15.13%" x2="1" y2="83%" />
-          </svg>
-        </div>
-        <div id="sol1-caption2" class="caption caption2 caption-right">
-          <p>
-            Only ask for the min­i­mum info re­quired to check­out and be
-            trans­par­ent about how that info will be used.
-          </p>
-        </div>
-        <div id="sol1-screen3" class="mockup final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_new_small.png">
-            <img src="img/streetcred/sec6_testing/issue_1/join_new_large.png" alt="New Join or Log in screen on iPhone XS">
-          </picture>
-        </div>
-        <div id="sol1-caption3" class="caption caption3 caption-left">
-          <p>
-            En­cour­age users to cre­ate an ac­count AF­TER they have suc­cess­fully
-            paid for&nbsp;a&nbsp;hunt.
-          </p>
-        </div>
-      </div>
-    </section><!-- END of Solution #1 -->
-
-    <section id="test-issue2-section" class="wide-section background-fill">
-      <h2>ISSUE #2<span class="title-suffix"> | medium priority</span></h2>
-      <p><span class="issue">
-        The Players screen is not very intuitive when it comes to splitting
-        players into&nbsp;teams.
-      </span></p>
-      <div id="test-issue2" class="testing">
-        <div class="caption caption1 caption-right">
-          <p>
-            Only 1 of the 6 par­tic­i­pants cre­ated a new team on first click
-            be­fore at­tempt­ing to move play­ers.
-          </p>
-        </div>
-        <div class="caption caption2 caption-right">
-          <p class="sc font-medium">
-            Four of the other 5 par­tic­i­pants thought the process was not very
-            in­tu­itive.
-          </p>
-        </div>
-        <div class="caption3 caption">
-          <p>
-            One par­tic­i­pant said she would­n't have known play­ers could be
-            split into teams had it not been a task she was asked to per­form.
-          </p>
-        </div>
-        <div class="mockup hi-fid1">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
-            <img src="img/streetcred/sec6_testing/issue_2/players_old_large.png" alt="Old Players screen on iPhone XS">
-          </picture>
-          <svg class="connector double-elbow top" height="200" width="200">
-            <line x1="0%" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector double-elbow bottom" height="20" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector double-elbow vert-line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-          <svg class="connector elbow top" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector elbow vert-line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-        </div>
-        <div class="caption caption4 caption-bottom">
-          <p>
-            Users didn’t understand the meaning of the asterisk icon and
-            didn’t notice there were team captains.
-          </p>
-        </div>
-      </div>
-    </section><!-- END of Issue #2 -->
-
-    <section class="inner-section wide-section">
-      <h2 class="test-solution">SOLUTION</h2>
-      <div id="test-solution2" class="testing">
-        <div class="caption caption1">
-          <p>
-            I re-de­signed the screen with clear team con­tain­ers, and added a
-            sec­ond empty team to in­di­cate play­ers can be split into&nbsp;teams.
-          </p>
-        </div>
-        <div id="sol2-screen1" class="mockup final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_new_small.png">
-            <img src="img/streetcred/sec6_testing/issue_2/players_new_large.png" alt="Final Players screen on iPhone XS">
-          </picture>
-        </div>
-        <div class="caption caption2 caption-right">
-          <p>
-            I changed the asterisk icon to a simple ‘C’ to identify the
-            captains, and added a popup to point out what the icon means
-            and&nbsp;how captains can be&nbsp;changed.
-          </p>
-        </div>
-        <div id="sol2-screen2" class="mockup final-mockup">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/captain_tip_small.png">
-            <img src="img/streetcred/sec6_testing/issue_2/captain_tip_large.png" alt="Final Players screen on iPhone XS with captain tip popup ">
-          </picture>
-        </div>
-        <div class="dereck-says-container" >
-          <div class="dereck-says">
-            <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+    <div data-featherlight-gallery data-featherlight-filter="a">
+      <section id="test-issue2-section" class="wide-section background-fill">
+        <h2>ISSUE #2<span class="title-suffix"> | medium priority</span></h2>
+        <p><span class="issue">
+          The Players screen is not very intuitive when it comes to splitting
+          players into&nbsp;teams.
+        </span></p>
+        <div id="test-issue2" class="testing">
+          <div class="caption caption1 caption-right">
             <p>
-              I’m not the type to read in­struc­tions; I just jump in and
-              fig­ure things out on my own. It’s nice that the app is
-              point­ing out the cap­tains, but I’m not in­ter­ested in the FAQ
-              right now. I’m sure the cap­tains will make sense when I start
-              the hunt. If it’s still un­clear, then I know to go to the FAQ
-              for an­swers.
+              Only 1 of the 6 par­tic­i­pants cre­ated a new team on first click
+              be­fore at­tempt­ing to move play­ers.
+            </p>
+          </div>
+          <div class="caption caption2 caption-right">
+            <p class="sc font-medium">
+              Four of the other 5 par­tic­i­pants thought the process was not very
+              in­tu­itive.
+            </p>
+          </div>
+          <div class="caption3 caption">
+            <p>
+              One par­tic­i­pant said she would­n't have known play­ers could be
+              split into teams had it not been a task she was asked to per­form.
+            </p>
+          </div>
+          <div class="mockup hi-fid1">
+            <a href="#players-1">
+              <picture id="players-1" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
+                <img src="img/streetcred/sec6_testing/issue_2/players_old_large.png"
+                     title="Original 'Players' screen (before testing)"
+                     alt="Old Players screen on iPhone XS">
+              </picture>
+            </a>
+            <svg class="connector double-elbow top" height="200" width="200">
+              <line x1="0%" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector double-elbow bottom" height="20" width="200">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector double-elbow vert-line" height="200" width="10">
+              <line x1="1" y1="0" x2="1" y2="100%" />
+            </svg>
+            <svg class="connector elbow top" height="10" width="200">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector elbow vert-line" height="200" width="10">
+              <line x1="1" y1="0" x2="1" y2="100%" />
+            </svg>
+          </div>
+          <div class="caption caption4 caption-bottom">
+            <p>
+              Users didn’t understand the meaning of the asterisk icon and
+              didn’t notice there were team captains.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section><!-- END of Issue #2 -->
 
+      <section class="inner-section wide-section">
+        <h2 class="test-solution">SOLUTION</h2>
+        <div id="test-solution2" class="testing">
+          <div class="caption caption1">
+            <p>
+              I re-de­signed the screen with clear team con­tain­ers, and added a
+              sec­ond empty team to in­di­cate play­ers can be split into&nbsp;teams.
+            </p>
+          </div>
+          <div id="sol2-screen1" class="mockup final-mockup">
+            <a href="#players-2">
+              <picture id="players-2" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_new_small.png">
+                <img src="img/streetcred/sec6_testing/issue_2/players_new_large.png"
+                     title="Improved 'Players' screen"
+                     alt="Final Players screen on iPhone XS">
+              </picture>
+            </a>
+          </div>
+          <div class="caption caption2 caption-right">
+            <p>
+              I changed the asterisk icon to a simple ‘C’ to identify the
+              captains, and added a popup to point out what the icon means
+              and&nbsp;how captains can be&nbsp;changed.
+            </p>
+          </div>
+          <div id="sol2-screen2" class="mockup final-mockup">
+            <a href="#players-3">
+              <picture id="players-3" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/captain_tip_small.png">
+                <img src="img/streetcred/sec6_testing/issue_2/captain_tip_large.png"
+                     title="New pop-up to point-out team captains"
+                     alt="Final Players screen on iPhone XS with captain tip popup ">
+              </picture>
+            </a>
+          </div>
+          <div class="dereck-says-container" >
+            <div class="dereck-says">
+              <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+              <p>
+                I’m not the type to read in­struc­tions; I just jump in and
+                fig­ure things out on my own. It’s nice that the app is
+                point­ing out the cap­tains, but I’m not in­ter­ested in the FAQ
+                right now. I’m sure the cap­tains will make sense when I start
+                the hunt. If it’s still un­clear, then I know to go to the FAQ
+                for an­swers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <div id="us-flag-transition" class="transition">
       <picture>
@@ -2267,10 +2451,14 @@
     </section>
     <section class="background-fill sc-light-blue inner-section">
         <div id="style-sheet" class="wide-picture">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/style_sheet_small.png">
-            <img src="img/streetcred/sec7_fine_tuning/style_sheet_large.png" alt="StreetCred style sheet with color scheme, typography, iconography, buttons, etc">
-          </picture>
+          <a href="#" data-featherlight="#style-sheet-zoom">
+            <picture id="style-sheet-zoom" class="shadow-black fit-width">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/style_sheet_small.png">
+              <img src="img/streetcred/sec7_fine_tuning/style_sheet_large.png"
+                   title="StreetCred style sheet"
+                   alt="StreetCred style sheet with color scheme, typography, iconography, buttons, etc">
+            </picture>
+          </a>
         </div>
     </section><!-- END of Design Language section -->
 
@@ -2306,15 +2494,19 @@
             if it already met the AA standard because the user will have to read
             a sig­nif­i­cant amount of text when play­ing a hunt.
           </p>
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/contrast_small.png">
-            <img src="img/streetcred/sec8_accessibility/contrast_large.png" alt="Various before and after StreetCred screens with callouts indicating improved contrast ratio of certain elements">
-          </picture>
+          <a href="#" data-featherlight="#contrast">
+            <picture id="contrast" class="fit-width">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/contrast_small.png">
+              <img src="img/streetcred/sec8_accessibility/contrast_large.png"
+                   title="Conforming to a minimum contrast ratio of 4.5:1"
+                   alt="Various before and after StreetCred screens with callouts indicating improved contrast ratio of certain elements">
+            </picture>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="beyond-contrast" class="indented">
+    <section id="beyond-contrast" class="indented inner-section">
       <div id="beyond-contrast-anchor" class="anchor"></div>
       <h2>ACCESSIBILITY BEYOND CONTRAST</h2>
       <p>
@@ -2324,82 +2516,18 @@
       </p>
     </section>
 
-    <section class="indented stretch-right inner-section">
-      <div id="accessibility1" class="accessibility-grid ">
-        <div id="accessibility-error">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/error_small.png">
-            <img src="img/streetcred/sec8_accessibility/error_large.png" alt="Example of input field with error icon and error message">
-          </picture>
-          <svg class="connector elbow top line-black" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector vert-line line-black" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-        </div>
-        <div class="caption caption1 caption-left">
-          <p>
-            A color-blind person can tell there’s an error here because they
-            can see the in-field icon and they can read the error&nbsp;message.
-          </p>
-        </div>
-        <div id="accessibility-buttons">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/buttons_small.png">
-            <img src="img/streetcred/sec8_accessibility/buttons_large.png" alt="Two buttons side-by-side: ghost button on left, filled button on right">
-          </picture>
-          <svg class="connector elbow top line-black" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector vert-line line-black" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-        </div>
-        <div class="caption caption2 caption-right">
-          <p>
-            Users can see the difference between the two buttons regardless
-            of color because the primary button is filled, while the other
-            is a ghost&nbsp;button.
-          </p>
-        </div>
-        <div id="accessibility-hyperlinks">
-          <picture class="shadow-black">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/link_small.png">
-            <img src="img/streetcred/sec8_accessibility/link_large.png" alt="Example of underlined link text within a paragraph">
-          </picture>
-          <svg class="connector elbow top line-black" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
-          <svg class="connector vert-line line-black" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
-          </svg>
-        </div>
-        <div class="caption caption3 caption-left">
-          <p>
-            Links are easy to differentiate from regular text based on more
-            than color because they are&nbsp;underlined.
-          </p>
-        </div>
-      </div><!-- END of accessibility-grid1 -->
-    </section>
-
-    <section class="indented stretch-right inner-section">
-        <div id="accessibility2" class="accessibility-grid">
-          <div class="caption1">
-            <p>
-              An­other way to make de­sign ac­ces­si­ble is to have bor­ders around in­put
-              fields so the user can tell where they’re ex­pected to en­ter text.
-              Ad­di­tion­ally place­holder text is used to sup­ple­ment the la­bel, not to
-              re­place it.
-            </p>
-          </div>
-
-          <div id="accessibility-input-field" class="">
-            <picture class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/input_field_small.png">
-              <img src="img/streetcred/sec8_accessibility/input_field_large.png" alt="Example of input field with border and label above field">
-            </picture>
+    <div data-featherlight-gallery data-featherlight-filter="a">
+      <section class="indented stretch-right inner-section">
+        <div id="accessibility1" class="accessibility-grid ">
+          <div id="accessibility-error">
+            <a href="#err-msg">
+              <picture id="err-msg" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/error_small.png">
+                <img src="img/streetcred/sec8_accessibility/error_large.png"
+                     title="Accessible error message"
+                     alt="Example of input field with error icon and error message">
+              </picture>
+            </a>
             <svg class="connector elbow top line-black" height="10" width="200">
               <line x1="0" y1="1" x2="100%" y2="1" />
             </svg>
@@ -2407,15 +2535,97 @@
               <line x1="1" y1="0" x2="1" y2="100%" />
             </svg>
           </div>
-          <div class="caption caption2 caption-left">
+          <div class="caption caption1 caption-left">
             <p>
-              The user is able to tell what the field is even when the
-              placeholder text is not available anymore because the label is
-              outside of the field and therefore always&nbsp;visible.
+              A color-blind person can tell there’s an error here because they
+              can see the in-field icon and they can read the error&nbsp;message.
             </p>
           </div>
-        </div><!-- END of accessibility-grid2 -->
-    </section>
+          <div id="accessibility-buttons">
+            <a href="#buttons">
+              <picture id="buttons" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/buttons_small.png">
+                <img src="img/streetcred/sec8_accessibility/buttons_large.png"
+                     title="Accessible primary and secondary buttons"
+                     alt="Two buttons side-by-side: ghost button on left, filled button on right">
+              </picture>
+            </a>
+            <svg class="connector elbow top line-black" height="10" width="200">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector vert-line line-black" height="200" width="10">
+              <line x1="1" y1="0" x2="1" y2="100%" />
+            </svg>
+          </div>
+          <div class="caption caption2 caption-right">
+            <p>
+              Users can see the difference between the two buttons regardless
+              of color because the primary button is filled, while the other
+              is a ghost&nbsp;button.
+            </p>
+          </div>
+          <div id="accessibility-hyperlinks">
+            <a href="#hyperlinks">
+              <picture id="hyperlinks" class="shadow-black">
+                <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/link_small.png">
+                <img src="img/streetcred/sec8_accessibility/link_large.png"
+                     title="Accessible hyperlinks"
+                     alt="Example of underlined link text within a paragraph">
+              </picture>
+            </a>
+            <svg class="connector elbow top line-black" height="10" width="200">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+            <svg class="connector vert-line line-black" height="200" width="10">
+              <line x1="1" y1="0" x2="1" y2="100%" />
+            </svg>
+          </div>
+          <div class="caption caption3 caption-left">
+            <p>
+              Links are easy to differentiate from regular text based on more
+              than color because they are&nbsp;underlined.
+            </p>
+          </div>
+        </div><!-- END of accessibility-grid1 -->
+      </section>
+
+      <section class="indented stretch-right inner-section">
+          <div id="accessibility2" class="accessibility-grid">
+            <div class="caption1">
+              <p>
+                An­other way to make de­sign ac­ces­si­ble is to have bor­ders around in­put
+                fields so the user can tell where they’re ex­pected to en­ter text.
+                Ad­di­tion­ally place­holder text is used to sup­ple­ment the la­bel, not to
+                re­place it.
+              </p>
+            </div>
+
+            <div id="accessibility-input-field" class="">
+              <a href="#input-field">
+                <picture id="input-field" class="shadow-black">
+                  <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/input_field_small.png">
+                  <img src="img/streetcred/sec8_accessibility/input_field_large.png"
+                       title="Accessible input field"
+                       alt="Example of input field with border and label above field">
+                </picture>
+              </a>
+              <svg class="connector elbow top line-black" height="10" width="200">
+                <line x1="0" y1="1" x2="100%" y2="1" />
+              </svg>
+              <svg class="connector vert-line line-black" height="200" width="10">
+                <line x1="1" y1="0" x2="1" y2="100%" />
+              </svg>
+            </div>
+            <div class="caption caption2 caption-left">
+              <p>
+                The user is able to tell what the field is even when the
+                placeholder text is not available anymore because the label is
+                outside of the field and therefore always&nbsp;visible.
+              </p>
+            </div>
+          </div><!-- END of accessibility-grid2 -->
+      </section>
+    </div>
 
     <section class="transition"><!-- Final Designs Transition -->
       <div id="final-designs-anchor" class="anchor section-anchor">
@@ -2513,7 +2723,7 @@
         </div>
       </div><!-- END of section header -->
 
-      <div id="improvements">
+      <div id="improvements" data-featherlight-gallery data-featherlight-filter="a">
         <div class="caption caption1 caption-right">
           <p>
             I’d like to give the users the abil­ity to add a hunt to their
@@ -2523,10 +2733,14 @@
           </p>
         </div>
         <div id="improv-hunt-detail" class="specimen">
-          <picture  class="shadow-black">
-            <source media="(max-width: 1023px)" srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.jpg">
-            <img src="img/streetcred/sec10_final_thoughts/hunt_detail_large.jpg" alt="Section of Hunt Detail screen">
-          </picture>
+          <a href="#add-to-calendar">
+            <picture id="add-to-calendar" class="shadow-black">
+              <source media="(max-width: 1023px)" srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.jpg">
+              <img src="img/streetcred/sec10_final_thoughts/hunt_detail_large.jpg"
+                   title="Future improvement: develop 'Add to calendar' feature"
+                   alt="Section of Hunt Detail screen">
+            </picture>
+          </a>
           <svg class="connector double-elbow top" height="10" width="200">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
@@ -2549,10 +2763,14 @@
           </p>
         </div>
         <div id="improv-join" class="specimen" >
-          <picture  class="shadow-black">
-            <source media="(max-width: 1023px)" srcset="img/streetcred/sec10_final_thoughts/join_small.jpg">
-            <img src="img/streetcred/sec10_final_thoughts/join_large.jpg" alt="Section of kebab menu to join or login">
-          </picture>
+          <a href="#join-login">
+            <picture id="join-login" class="shadow-black">
+              <source media="(max-width: 1023px)" srcset="img/streetcred/sec10_final_thoughts/join_small.jpg">
+              <img src="img/streetcred/sec10_final_thoughts/join_large.jpg"
+                   title="Future improvement: fine-tune join/log in process"
+                   alt="Section of kebab menu to join or login">
+            </picture>
+          </a>
           <svg class="connector line horiz-line" height="10" width="200">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
@@ -2565,10 +2783,14 @@
           </p>
         </div>
         <div id="improv-my-hunts" class="specimen" >
-          <picture class="shadow-black">
-            <source media="(max-width: 639px)" srcset="img/streetcred/sec10_final_thoughts/my_hunts_small.jpg">
-            <img src="img/streetcred/sec10_final_thoughts/my_hunts_large.jpg" alt="Section of Hunt Detail screen">
-          </picture>
+          <a href="#my-hunts">
+            <picture id="my-hunts" class="shadow-black">
+              <source media="(max-width: 639px)" srcset="img/streetcred/sec10_final_thoughts/my_hunts_small.jpg">
+              <img src="img/streetcred/sec10_final_thoughts/my_hunts_large.jpg"
+                   title="Future imporovements: develop functionality to play hunts, and create hunt demo"
+                   alt="Section of Hunt Detail screen">
+            </picture>
+          </a>
           <svg class="connector horiz-line" height="10" width="200">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
@@ -2675,6 +2897,7 @@
   <script type="text/javascript" src="js/project.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"  charset="utf-8"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/lightbox.js"></script>
 </body>
 
 </html>
