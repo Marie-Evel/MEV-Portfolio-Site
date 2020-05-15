@@ -183,6 +183,125 @@ section h2:first-child { margin-top: 0;}
 
 
 /*----------------------------------------------------------------------------*/
+/* Lightbox and gallery styles */
+/*----------------------------------------------------------------------------*/
+.featherlight img {
+  max-height: calc(100vh - 130px);
+  max-width: 100%;
+  width: auto;
+}
+
+.featherlight .fit-width img {
+  max-height: unset;
+}
+
+.featherlight .featherlight-content {
+  border-bottom: none;
+  padding: 10px;
+  /* margin-top: 35px; */
+  max-height: calc(100vh - 70px);
+  /* vertical-align: unset; */
+}
+
+.featherlight .featherlight-content .featherlight-caption {
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px 10px 3px;
+  background-color: rgba(95,130,216,0.9);
+  border-radius: 0 0 7px 7px;
+}
+
+.featherlight .featherlight-close-icon {
+  position: fixed;
+  color: white;
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background: none;
+}
+
+.featherlight .featherlight-slide-number {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 5px 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+.featherlight-previous,
+.featherlight-next {
+  position: fixed;
+  width: 40px;
+  height: 100%;
+  background: none;
+  top: 0;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  overflow-x: hidden;
+}
+
+.featherlight-previous:hover,
+.featherlight-next:hover {
+  background: unset;
+}
+
+.featherlight-previous { left: 0; }
+
+.featherlight-next { right: 0; }
+
+.featherlight-previous span,
+.featherlight-next span {
+  display: unset;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: unset;
+  width: 60px;
+  height: 60px;
+  line-height: 1;
+  font-size: 24px;
+  padding-top: 19px;
+  background-color: rgba(0,0,0,0.5) ;
+  background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+  border-radius: 50%;
+  margin-top: 0;
+  text-shadow: unset;
+  transition: all 0.25s;
+}
+
+.featherlight-previous span {
+  left: 0;
+  margin-left: -28px;
+  text-align: right;
+  padding-right: 14px;
+}
+
+.featherlight-next span {
+  right: 0;
+  margin-right: -28px;
+  text-align: left;
+  padding-left: 14px;
+}
+
+.featherlight-previous span:hover,
+.featherlight-next span:hover,
+.featherlight-previous span:active,
+.featherlight-next span:active {
+  transform: scale(1.2) translateY(-40%);
+  /* line-height: 2.5; */
+}
+
+
+
+/*----------------------------------------------------------------------------*/
 /* Case study sections */
 /*----------------------------------------------------------------------------*/
 
@@ -222,11 +341,6 @@ picture ~ p, img ~ p { margin-top: 2em; }
 ul.bullets {
   position: relative;
   margin-left: 25px;
-}
-
-.featherlight img {
-  max-height: calc(100vh - 100px);
-  width: auto;
 }
 
 .indented-quote {
@@ -372,12 +486,12 @@ ul.bullets {
 
 /* Intro */
 /*----------------------------------------------------------------------------*/
-main section:first-of-type { /* NOTE: this applies to the project line */
+#project-line {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
 }
 
-main section:first-of-type p { margin: 0;}
+#project-line p { margin: 0;}
 
 #intro { background-image: linear-gradient(var(--sc-med-blue) 0%, var(--sc-med-blue) 55vw, var(--sc-light-blue) 55vw); }
 
@@ -858,15 +972,6 @@ main section:first-of-type p { margin: 0;}
 
 /* 04 Information Architecture */
 /* -------------------------------------------------------------------------- */
-#ia-transition {
-  width: 100%;
-  height: 330px;
-  background-image: url('../img/streetcred/sec4_ia/ia_transition_small.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat:repeat-y;
-  /* background-size: cover; */
-}
 
 #card-sorting { background-image: linear-gradient(var(--sc-light-pink) 0%, white 25%, white 70%, var(--sc-light-pink) 100%); }
 
@@ -1055,6 +1160,11 @@ main section:first-of-type p { margin: 0;}
 #hunt-info .connector.circle { fill: var(--sc-light-blue); }
 #hunt-info .low-fid .connector,
 #hunt-info .final-mockup .connector { display: none; }
+
+.featherlight-content #hunt-detail-4 img {
+  max-width: calc(50vh - 65px);
+  max-height: unset;
+}
 
 /* 05C Buying a hunt */
 /* -------------------------------------------------------------------------- */
@@ -1436,6 +1546,9 @@ main section:first-of-type p { margin: 0;}
 
 /* 08 Accessibility */
 /*----------------------------------------------------------------------------*/
+
+#sc-accessibility p:last-of-type { margin-bottom: 1em; }
+
 .accessibility-grid {
   display: grid;
   /* padding-top: 20px; */
@@ -1719,8 +1832,6 @@ body .sc a:visited { color: var(--sc-red); }
     padding-right: 40px;
   }
 
-  /* .anchor { top: -74px; } */
-
   .wide-section,
   .wide-section-md {
     padding-left: 60px;
@@ -1745,6 +1856,83 @@ body .sc a:visited { color: var(--sc-red); }
   .centered-content-md h2 {
     font-size: 1.5em;
   }
+
+
+  /* Lightbox and gallery styles | tablets */
+  /*----------------------------------------------------------------------------*/
+  .featherlight img { max-height: calc(100vh - 100px); }
+
+  .featherlight .featherlight-content {
+    max-width: calc(100vw - 130px);
+    max-height: calc(100vh - 60px);
+    /* margin-top: 40px; */
+    padding: 15px;
+  }
+
+  .featherlight .featherlight-close-icon {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .featherlight .featherlight-content .featherlight-caption {
+    padding-top: 10px;
+    width: 80%;
+  }
+
+  .featherlight .featherlight-slide-number { padding: 10px 15px; }
+
+  .featherlight-previous,
+  .featherlight-next {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: none;
+    top: 0;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    overflow-x: hidden;
+  }
+
+  .featherlight-previous:hover,
+  .featherlight-next:hover {
+    background: unset;
+  }
+
+  .featherlight-previous { left: 0; }
+
+  .featherlight-next { right: 0; }
+
+  .featherlight-previous span,
+  .featherlight-next span {
+    width: 80px;
+    height: 80px;
+    padding-top: 22px;
+    font-size: 40px;
+    background-color: unset;
+  }
+
+  .featherlight-previous span {
+    left: 0;
+    margin-left: -30px;
+    text-align: right;
+    padding-right: 25px;
+  }
+
+  .featherlight-next span {
+    right: 0;
+    margin-right: -30px;
+    text-align: left;
+    padding-left: 25px;
+  }
+
+  .featherlight-previous span:hover,
+  .featherlight-next span:hover {
+    transform: scale(1.2) translateY(-40%);
+  }
+
 
 
   /* Case study sections | tablets */
@@ -1774,12 +1962,15 @@ body .sc a:visited { color: var(--sc-red); }
 
   .sub-sections > ul {
     font-size: 0.7em;
-    line-height: 2;
+    line-height: 1.3;
     margin: unset;
     text-align: right;
    }
 
-  .sub-sections > ul > li { display: block; }
+  .sub-sections > ul > li {
+    display: block;
+    margin-bottom: 12px;
+  }
 
   .sub-sections > ul > li::after { content: unset; }
 
@@ -2090,26 +2281,27 @@ body .sc a:visited { color: var(--sc-red); }
     display: grid;
     grid-template-areas: "title title"
                          "intro intro"
-                         "malika-map malika-opp"
-                         "angie-map angie-opp";
+                         "maps opps"
+                         "maps opps";
     grid-template-columns: 35% 1fr;
     grid-column-gap: 20px;
     padding: 0 60px 0 40px;
   }
 
-  #malika-angie-journey-title { grid-area: title; }
-  #malika-angie-journey-title h3 { margin-bottom: 0.625em; }
+  #malika-angie-journey h3 {
+    grid-area: title;
+    margin-bottom: 0.625em;
+  }
 
-  #malika-angie-journey-intro {
+  #malika-angie-journey > p {
     grid-area: intro;
     margin-bottom: 30px;
     padding-right: 25px;
   }
 
-  #malika-journey-map { grid-area: malika-map; }
-  #malika-opportunities { grid-area: malika-opp; }
-  #angie-journey-map { grid-area: angie-map; }
-  #angie-opportunities { grid-area: angie-opp; }
+  #malika-angie-journey .journey-maps { grid-area: maps; }
+  #malika-angie-journey .opportunities { grid-area: opps; }
+
 
   #malika-angie-journey ul li:first-child { margin-top: 0; }
 
@@ -2384,6 +2576,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #hunt-info .caption3 { margin-top: 0; }
 
+  .featherlight-content #hunt-detail-4 img { max-width: calc(50vh - 35px); }
 
   /* 05C Buying a hunt | tablets */
   /* ------------------------------------------------------------------------ */
@@ -3018,6 +3211,47 @@ body .sc a:visited { color: var(--sc-red); }
   h2 { margin-bottom: 0.75em; }
   p { margin-bottom: 1em; }
 
+  /* Lightbox and gallery styles | desktop */
+  /*----------------------------------------------------------------------------*/
+  .featherlight img { max-height: calc(100vh - 150px); }
+
+  .featherlight .featherlight-content {
+    max-width: calc(100vw - 140px);
+    max-height: calc(100vh - 45px);
+    padding: 25px;
+    /* margin-top: 35px; */
+  }
+
+  .featherlight .featherlight-content .featherlight-caption {
+    padding-top: 5px;
+    /* max-width: 80vw; */
+  }
+
+
+  .featherlight .featherlight-close-icon {
+    font-size: 40px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+
+  .featherlight .featherlight-slide-number { padding: 10px 20px; }
+
+  .featherlight-previous,
+  .featherlight-next {
+    width: 60px;
+  }
+
+  .featherlight-previous span {
+    margin-left: -35px;
+    padding-right: 20px;
+  }
+
+  .featherlight-next span {
+    margin-right: -35px;
+    padding-left: 20px;
+  }
+
 
   /* Case study sections | desktop */
   /*--------------------------------------------------------------------------*/
@@ -3028,8 +3262,6 @@ body .sc a:visited { color: var(--sc-red); }
     grid-column-gap: 65px;
     padding: 0 250px 0 40px;
   }
-
-  /* .anchor { top: -84px; } */
 
   #opp-strategy-anchor,
   #beyond-contrast-anchor { top: -130px; }
@@ -3373,6 +3605,8 @@ body .sc a:visited { color: var(--sc-red); }
     text-align: right;
   }
 
+  .featherlight-content #hunt-detail-4 img { max-width: calc(50vh - 60px); }
+
   /* 05C Buying a hunt | desktop */
   /*--------------------------------------------------------------------------*/
   #buy-hunt .design-iterations-grid {
@@ -3683,23 +3917,15 @@ body .sc a:visited { color: var(--sc-red); }
   }
 
   #malika-angie-journey {
-    grid-template-areas: "malika-map title"
-                         "malika-map intro"
-                         "malika-map malika-opp"
-                         "angie-map angie-opp";
+    grid-template-areas: "maps title"
+                         "maps intro"
+                         "maps opps";
     grid-template-columns: calc(42% - 25.2px) calc(58% - 34.8px);
     grid-column-gap: 60px;
     padding: 0 130px 0 60px;
   }
 
-  #malika-angie-journey-title { margin-top: 10px; }
 
-  #angie-journey-map img {
-    margin-bottom: 0;
-    margin-top: -20px;
-  }
-
-  #malika-journey-map img { margin-bottom: 0; }
 
   #test-plan-docs { margin-top: 1.5em; }
 
