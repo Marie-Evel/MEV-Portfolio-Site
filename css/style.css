@@ -307,8 +307,7 @@ a.overlay { text-decoration: none; }
   transition: all 0.5s;
 }
 
-.project-picture:hover img,
-#mev-logo-animation:hover svg { transform: scale(1.1); }
+.project-picture:hover img { transform: scale(1.1); }
 
 .image-container {
   position: relative;
