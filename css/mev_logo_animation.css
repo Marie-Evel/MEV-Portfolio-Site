@@ -42,13 +42,15 @@
 @-webkit-keyframes me-entrance {
   0%   { transform: translate(-200px, 0);
          opacity: 1; }
-  100% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0);
+         opacity: 1; } /* NOTE: added for Firefox */
 }
 
 @keyframes me-entrance {
   0%   { transform: translate(-200px, 0);
          opacity: 1; }
-  100% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0);
+         opacity: 1; } /* NOTE: added for Firefox */
 }
 
 .animate #vesel {
@@ -75,13 +77,15 @@
 @-webkit-keyframes vesel-entrance {
   0%   { transform: translate(-100px, 0);
          opacity: 1; }
-  100% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0);
+         opacity: 1; } /* NOTE: added for Firefox */
 }
 
 @keyframes vesel-entrance {
   0%   { transform: translate(-100px, 0);
          opacity: 1; }
-  100% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0);
+         opacity: 1; } /* NOTE: added for Firefox */
 }
 
 

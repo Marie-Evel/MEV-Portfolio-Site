@@ -175,9 +175,11 @@ a:active {
 .button-filled.disabled,
 .button-filled.disabled:hover,
 .button-filled.disabled:active {
-  opacity: 70%;
+  /* background-color: #C65CAA; */
+  background-color: rgba(168,4,125,0.65); /* NOTE: need to test how this behaves on ipad */
+  /* opacity: 70%;
   -webkit-filter: none;
-          filter: none;
+          filter: none; */
 }
 
 /*----------------------------------------------------------------------------*/
@@ -305,9 +307,8 @@ a.overlay { text-decoration: none; }
   transition: all 0.5s;
 }
 
-.project-picture:hover img {
-  transform: scale(1.1);
-}
+.project-picture:hover img,
+#mev-logo-animation:hover svg { transform: scale(1.1); }
 
 .image-container {
   position: relative;
@@ -329,11 +330,12 @@ a.overlay { text-decoration: none; }
 
 #mev-logo-animation.animate .image-container { background-color: var(--light-pink); }
 
-
 #mev-logo-animation .wave {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.75s;
 }
+
+#mev-logo-animation svg { transition: transform 0.5s; }
 
 #mev-logo-animation.animate .wave {
   opacity: 0;
