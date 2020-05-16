@@ -3,21 +3,21 @@
   --nav-background: #2C56B9;
   --med-grey: #606878;
   --sc-red: #C6395C;
-  --sc-med-red: #CE5573;
+  --sc-med-red: #CA4868; /* NOTE: was CE5573 */
   --sc-light-pink: #FAEFF2;
   --sc-blue: #3966D0;
   --sc-blue-on-dark: #85A8F9;
-  --sc-med-blue: #6286D9;
+  --sc-med-blue: #4872D3; /* NOTE: was #6286D9 */
   --sc-med-light-blue: #E6ECF9;
   --sc-light-blue: #F3F6FC;
   --sc-light-grey: #F4F5F6;
   --letsroam-orange: #E97824;
   --letsroam-light-orange: #F2B282;
-  --letsroam-orange-font: #DE6C16;
+  --letsroam-orange-font: #BC5B13; /* NOTE: was #DE6C16 */
   --uaq-blue-font: #007baf;
   --uaq-blue: #0091CF;
   --uaq-light-blue: #B0DDF0;
-  --dereck-red: #CD535F;
+  --dereck-red: #CA4A57; /* NOTE: was CD535F */
   --dereck-red-lighter: #E1A7AB;
   --malika-blue: #0F2D75;
   --malika-blue-lighter: #99B1D6;
