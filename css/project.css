@@ -87,9 +87,12 @@ em {
 em.sc-red {
   background-color: #F7E3E8;
 }
-picture img, img { display: block; }
 
-img { width: 100%; }
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 body a {
   color: var(--sc-red);
@@ -436,9 +439,16 @@ ul.bullets {
   padding-left: 2px;
 }
 
-.shadow-black img {
+
+.shadow-black img,
+.shadow-black-box img {
   filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
   -webkit-filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
+}
+
+/* NOTE: Safari fix (add light border in case shadow doesn't render properly) */
+.shadow-black-box img {
+  border: solid 1px rgba(200,200,200, 0.7);
 }
 
 .shadow-white img {
@@ -463,7 +473,8 @@ ul.bullets {
   font-size: 5rem;
   /* NOTE: Safari fix */
   /* opacity: 70%; */
-  filter: opacity(0.7);
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
   font-style: normal;
   vertical-align: text-bottom;
   margin-right: 5px;
