@@ -1,11 +1,11 @@
 var ProjectNav = function() {
-  const projectNav = $('#project-nav'),
-        projectNavHandle = $('#project-nav-handle'),
-        introSection = $('#intro'),
-        overviewSection = $('#overview-anchor'),
+  const $projectNav = $('#project-nav'),
+        $projectNavHandle = $('#project-nav-handle'),
+        $projectNavSlideout = $('#project-nav-slideout'),
+        $overviewSection = $('#overview-anchor'),
         navHandleOffset = - 50;
 
-  let overviewTopBeforeNavToggle = Global.getTopPosition(overviewSection),
+  let overviewTopBeforeNavToggle = Global.getTopPosition($overviewSection),
       overviewTopAfterNavToggle,
       positionOffset,
       navToggled = false,
@@ -14,9 +14,9 @@ var ProjectNav = function() {
   const
     init = function() {
       if ( Global.getScrollPosition() > overviewTopBeforeNavToggle ) {
-        Global.makeInvisible(projectNav);
+        Global.makeInvisible($projectNav);
       } else {
-        Global.makeVisible(projectNav);
+        Global.makeVisible($projectNav);
       }
       refreshNavHandle();
       return;
@@ -41,7 +41,7 @@ var ProjectNav = function() {
           const newUrl = this.href,
                 newHash = this.hash;
 
-          if ( $(link).parents('#project-nav.show-menu').length ) {
+          if ( $(link).parents('#project-nav-slideout.show-menu').length ) {
             closeProjectNav();
           };
 
@@ -50,7 +50,7 @@ var ProjectNav = function() {
           } else {
             fadeNavigate(newHash, newUrl);
           };
-          refreshProjectNav(false);
+          refreshNavHandle();
           return false;
       });
     });
@@ -58,23 +58,26 @@ var ProjectNav = function() {
   },
 
   refreshNavHandle = function() {
-    if ( !Global.menuIsVisible(projectNav) ) {
-      return Global.makeVisibleBelow(projectNavHandle, overviewSection.offset().top + navHandleOffset);
+    if ( !Global.menuIsVisible($projectNav) ) {
+      return Global.makeVisibleBelow($projectNavHandle, $overviewSection.offset().top + navHandleOffset);
     }
   },
 
+  cloneProjectNav = function() {
+    $projectNavSlideout.html($projectNav.html());
+  },
+
   openProjectNav = function() {
-    Global.makeInvisible(projectNavHandle);
-    Global.showMenu(projectNav);
-    projectNav.animate({ width: 'toggle'});
+    Global.makeInvisible($projectNavHandle);
+    Global.showMenu($projectNavSlideout);
+    $projectNavSlideout.animate({ width: 'toggle'});
   },
 
   closeProjectNav = function() {
-    if ( projectNav.hasClass('show-menu') ) {
-      Global.makeVisibleBelow(projectNavHandle, overviewSection.offset().top + navHandleOffset);
-      projectNav.animate({ width: 'toggle'}, function() {
-        Global.hideMenu(projectNav);
-        projectNav.removeAttr('style');
+    if ( $projectNavSlideout.hasClass('show-menu') ) {
+      Global.makeVisibleBelow($projectNavHandle, $overviewSection.offset().top + navHandleOffset);
+      $projectNavSlideout.animate({ width: 'toggle'}, function() {
+        Global.hideMenu($projectNavSlideout);
       });
       return true; // projectNav was just closed
     } else {
@@ -82,53 +85,8 @@ var ProjectNav = function() {
     }
   },
 
-  refreshProjectNav = function(adjustScrollFlag = true) {
-    if ( toggleProjectNav() && adjustScrollFlag ) {
-      overviewTopAfterNavToggle = Global.getTopPosition(overviewSection);
-      positionOffset = overviewTopAfterNavToggle - overviewTopBeforeNavToggle;
-
-      isBelowIntro = Global.getScrollPosition() > Global.getBottomPosition(introSection);
-      if ( isBelowIntro ) {
-        Global.adjustScrollPosition(positionOffset)
-      }
-      navToggled = false;
-    };
-  },
-
-  toggleProjectNav = function() {
-    navToggled = false;
-    Global.getScrollPosition();
-    overviewTopBeforeNavToggle = Global.getTopPosition(overviewSection)
-    if ( Global.elementIsVisible(projectNav) ) {
-      if ( overviewTopBeforeNavToggle <  1 - navHandleOffset) {
-        hideProjectNav()
-        navToggled = true;
-      }
-    } else if ( !Global.menuIsVisible(projectNav) ) {
-        if ( Global.getTopPosition(overviewSection) > 3 - navHandleOffset    ) {
-          unhideProjectNav();
-          navToggled = true;
-      }
-    }
-    return navToggled;
-  },
-
-  hideProjectNav = function() {
-    Global.makeInvisible(projectNav);
-    Global.makeVisible(projectNavHandle);
-    restoreDropdownContent();
-    return;
-  },
-
-  unhideProjectNav = function() {
-    Global.makeVisible(projectNav);
-    Global.makeInvisible(projectNavHandle);
-    makeDropdownContentVisible();
-    return;
-  },
-
   toggleDropdown = function(menuNumber) {
-    const targetDropdown = $('#project-nav .dropdown').eq(menuNumber - 1),
+    const targetDropdown = $('#project-nav-slideout .dropdown').eq(menuNumber - 1),
           targetDropdownContent = targetDropdown.find('.dropdown-content').eq(0),
           menuCaret = targetDropdown.find('.fa').eq(0);
 
@@ -136,20 +94,11 @@ var ProjectNav = function() {
     menuCaret.toggleClass('fa-caret-up');
 
     if ( menuNumber === 10 && menuCaret.hasClass('fa-caret-up') ) {
-      $('#project-nav .scrollable').eq(0).animate( {
-        scrollTop: $('#project-nav .menu-container').eq(0).height() + 61
+      $('#project-nav-slideout .scrollable').eq(0).animate( {
+        scrollTop: $('#project-nav-slideout .menu-container').eq(0).height() + 61
       }, 0.5 );
     }
     targetDropdownContent.slideToggle();
-  },
-
-  restoreDropdownContent = function() {
-    $('#project-nav .dropdown-content').each(function(index, element) {
-      if( $(element).css('display') == 'grid' ) {
-        $(element).css('display','none');
-      }
-    });
-    return;
   },
 
   makeDropdownContentVisible = function() {
@@ -169,8 +118,7 @@ var ProjectNav = function() {
           destinationOffset = Math.abs(newPosition - Global.getScrollPosition()),
           scrollThreshold = 3 * window.innerHeight;
 
-    if ( ( !Global.elementIsVisible(projectNav)
-        && (curParent === destinationParent || destinationOffset < scrollThreshold) )
+    if ( curParent === destinationParent || destinationOffset < scrollThreshold
         || destinationHash === '#contact' || destinationHash === '#top-anchor' ) {
       return true;
     } else {
@@ -181,17 +129,16 @@ var ProjectNav = function() {
   fadeNavigate = function(destinationHash, destinationUrl) {
     const targetElement = $(destinationHash),
           revealPage = $('#reveal-page');
-    // debugger;
+
     if ( targetElement.hasClass('section-anchor') ) {
-      // debugger;
       revealPage.fadeIn(400, function() {
         MainNav.goToUrl(destinationUrl);
         revealPage.fadeOut(800);
       });
     } else {
-      // debugger;
       const targetParent = getParentAnchor($(destinationHash)),
             parentUrl = MainNav.convertHashToUrl(targetParent);
+
       revealPage.fadeIn(400, function() {
         MainNav.goToUrl(parentUrl);
         revealPage.fadeOut(500, function() {
@@ -234,11 +181,12 @@ var ProjectNav = function() {
   },
 
   renderShadow = function() {
-    const shadowElements = $('.shadow-black-box img')
-    shadowElements.css("opacity", 0.99);
-    setTimeout( function() {
-      shadowElements.css("opacity", 1);
-    }, 20);
+    const curWindowWidth = $(window).width()
+          curWindowHeight = $(window).height();
+    // This is kind of hacky, but resizing the window is the only thing
+    // that works to render the shadows properly in Safari...
+    window.resizeTo(curWindowWidth - 1, curWindowHeight);
+    window.resizeTo(curWindowWidth, curWindowHeight);
   };
 
   return {
@@ -246,9 +194,10 @@ var ProjectNav = function() {
     toggleDropdown: toggleDropdown,
     innerLinkClickEvent: innerLinkClickEvent,
     outerLinkClickEvent: outerLinkClickEvent,
-    refreshProjectNav: refreshProjectNav,
+    refreshNavHandle: refreshNavHandle,
     openProjectNav: openProjectNav,
     closeProjectNav: closeProjectNav,
+    cloneProjectNav: cloneProjectNav,
     renderShadow: renderShadow
   };
 
@@ -256,13 +205,15 @@ var ProjectNav = function() {
 
 $(document).ready(function() {
   ProjectNav.init();
+  ProjectNav.cloneProjectNav();
   ProjectNav.innerLinkClickEvent();
   ProjectNav.outerLinkClickEvent();
   ProjectNav.renderShadow();
+
   return;
 });
 
 window.addEventListener('scroll', function() {
-  ProjectNav.refreshProjectNav();
+  ProjectNav.refreshNavHandle();
   return;
 });

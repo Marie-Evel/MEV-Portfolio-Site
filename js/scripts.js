@@ -78,6 +78,7 @@ var Global = function () {
     showMenu: showMenu,
     hideMenu: hideMenu,
     getScrollPosition: getScrollPosition,
+    setScrollPosition: setScrollPosition,
     getTopPosition: getTopPosition,
     getBottomPosition: getBottomPosition,
     makeVisibleBelow: makeVisibleBelow,
@@ -88,26 +89,26 @@ var Global = function () {
 
 // Hamburger menu for mobile:
 var Hamburger = function () {
-  const icon = $('#nav-icon'),
+  const $icon = $('#nav-icon'),
 
   openNav = function() {
-    icon.toggleClass('hamburger close');
-    MainNav.nav.slideDown();
-    Global.showMenu(MainNav.nav);
+    $icon.toggleClass('hamburger close');
+    MainNav.$nav.slideDown();
+    Global.showMenu(MainNav.$nav);
     return;
   },
 
   closeNav = function() {
-    icon.toggleClass('hamburger close');
-    Global.hideMenu(MainNav.nav);
-    MainNav.nav.slideUp(function() {
-      MainNav.nav.removeAttr('style');
+    $icon.toggleClass('hamburger close');
+    Global.hideMenu(MainNav.$nav);
+    MainNav.$nav.slideUp(function() {
+      MainNav.$nav.removeAttr('style');
     });
     return;
   },
 
   toggleMenu = function() {
-    if ( Global.menuIsVisible(MainNav.nav) ) {
+    if ( Global.menuIsVisible(MainNav.$nav) ) {
       closeNav();
       return false;
     } else {
@@ -117,7 +118,7 @@ var Hamburger = function () {
   };
 
   return {
-    icon: icon,
+    $icon: $icon,
     toggleMenu: toggleMenu,
     closeNav: closeNav
   };
@@ -126,32 +127,42 @@ var Hamburger = function () {
 var MainNav = function() {
   let didScroll = false;
 
-  const navBackground = $('#nav-background'),
-        nav = $('#menu-container'),
-        topChevron = $('#back-to-top a').eq(0);
+  const $nav = $('#menu-container'),
+        $topChevron = $('#back-to-top a').eq(0);
 
   getCurAnchor = function() {
-    const anchorLinks = $('.anchor'),
+    const $anchorLinks = $('.anchor'),
           curPosition = Global.getScrollPosition() + window.innerHeight;
 
     let anchorIndex,
-        curAnchor,
+        $curAnchor,
         curAnchorHash;
 
-    anchorLinks.each( function(index, link) {
+    $anchorLinks.each( function(index, link) {
       if ( curPosition < $(link).offset().top ) {
         anchorIndex = index - 1;
         return false;
       }
     });
 
-    curAnchor = anchorLinks[anchorIndex];
-    curAnchorHash = '#' + $(curAnchor).attr('id');
+    $curAnchor = $anchorLinks[anchorIndex];
+    curAnchorHash = '#' + $($curAnchor).attr('id');
     return curAnchorHash;
   },
 
   convertHashToUrl = function(hash) {
-    return $(location).attr('origin') + $(location).attr('pathname') + hash;
+    const origin = $(location).attr('origin'),
+          path = $(location).attr('pathname');
+    let finalUrl;
+
+    if (origin === 'null') {
+      const protocol = $(location).attr('protocol');
+      finalUrl = protocol + '//' + path + hash;
+    } else {
+      finalUrl = origin + path + hash;
+    }
+
+    return finalUrl;
   },
 
   scrollNavigate = function(destinationHash, destinationUrl) {
@@ -167,7 +178,7 @@ var MainNav = function() {
   },
 
   hamburgerIsDisabled = function() {
-    return Hamburger.icon.css("display") === 'none';
+    return Hamburger.$icon.css("display") === 'none';
   }
 
   innerLinkClickEvent = function() {
@@ -176,7 +187,7 @@ var MainNav = function() {
         const newUrl = this.href,
               newHash = this.hash;
 
-        if ( !hamburgerIsDisabled() && Global.menuIsVisible(nav) ) {
+        if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
         };
         scrollNavigate(newHash, newUrl);
@@ -191,7 +202,7 @@ var MainNav = function() {
       $(link).click(function() {
         const newUrl = this.href;
 
-        if ( !hamburgerIsDisabled() && Global.menuIsVisible(nav) ) {
+        if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
         };
         $('#reveal-page').fadeIn("slow", function() {
@@ -204,13 +215,13 @@ var MainNav = function() {
   },
 
   refreshTopChevron = function() {
-    return Global.makeVisibleBelow(topChevron, 85);
+    return Global.makeVisibleBelow($topChevron, 85);
   };
 
   return {
-    topChevron: topChevron,
     didScroll: didScroll,
-    nav: nav,
+    $topChevron: $topChevron,
+    $nav: $nav,
     innerLinkClickEvent: innerLinkClickEvent,
     outerLinkClickEvent: outerLinkClickEvent,
     scrollNavigate: scrollNavigate,
