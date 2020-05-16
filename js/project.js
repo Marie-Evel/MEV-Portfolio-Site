@@ -231,6 +231,14 @@ var ProjectNav = function() {
       }
     })
     return parentHash;
+  },
+
+  renderShadow = function() {
+    const shadowElements = $('.shadow-black-box img')
+    shadowElements.css("opacity", 0.99);
+    setTimeout( function() {
+      shadowElements.css("opacity", 1);
+    }, 20);
   };
 
   return {
@@ -240,7 +248,8 @@ var ProjectNav = function() {
     outerLinkClickEvent: outerLinkClickEvent,
     refreshProjectNav: refreshProjectNav,
     openProjectNav: openProjectNav,
-    closeProjectNav: closeProjectNav
+    closeProjectNav: closeProjectNav,
+    renderShadow: renderShadow
   };
 
 } ();
@@ -249,6 +258,7 @@ $(document).ready(function() {
   ProjectNav.init();
   ProjectNav.innerLinkClickEvent();
   ProjectNav.outerLinkClickEvent();
+  ProjectNav.renderShadow();
   return;
 });
 
