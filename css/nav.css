@@ -317,7 +317,7 @@ footer h1 {
   #menu-container li a:after {
     position: absolute;
     left: calc(50% + 10px);
-    bottom: -4px;
+    bottom: -1px;
     width: 0%;
     height: 4px;
     content: "";
@@ -371,7 +371,10 @@ footer h1 {
 
   #menu-container li { padding-left: 45px; }
 
-  #menu-container li a:after { left: calc(50% + 23px); }
+  #menu-container li a:after {
+    left: calc(50% + 23px);
+    bottom: -3px;
+  }
 
   #menu-container li a:hover:after {
     width: calc(100% - 39px);
