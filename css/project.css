@@ -105,6 +105,11 @@ a:active {
   /* text-shadow: 1px 1px 2px rgba(0,0,0,0.4); */
 }
 
+::selection {
+  color: white;
+  background: var(--sc-med-blue);
+}
+
 
 /*----------------------------------------------------------------------------*/
 /* General layout styles */
@@ -188,6 +193,8 @@ section h2:first-child { margin-top: 0;}
 /*----------------------------------------------------------------------------*/
 /* Lightbox and gallery styles */
 /*----------------------------------------------------------------------------*/
+a[data-featherlight] { display: block; }
+
 .featherlight img {
   max-height: calc(100vh - 130px);
   max-width: 100%;
@@ -201,9 +208,7 @@ section h2:first-child { margin-top: 0;}
 .featherlight .featherlight-content {
   border-bottom: none;
   padding: 10px;
-  /* margin-top: 35px; */
   max-height: calc(100vh - 70px);
-  /* vertical-align: unset; */
 }
 
 .featherlight .featherlight-content .featherlight-caption {
@@ -226,8 +231,9 @@ section h2:first-child { margin-top: 0;}
   font-size: 25px;
   width: 35px;
   height: 35px;
-  line-height: 35px;
-  background: none;
+  line-height: 36px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 50%;
 }
 
 .featherlight .featherlight-slide-number {
@@ -316,6 +322,15 @@ section h2:first-child { margin-top: 0;}
   margin-right: auto;
 }
 
+#overview-grid .anchor,
+#test-content .anchor {
+  position: relative;
+  top: -80px;
+}
+
+#opp-strategy-anchor,
+#beyond-contrast-anchor { top: -80px; }
+
 .sub-sections > ul {
   margin: 8px 0 20px 0;
   font-size: 0.75em;
@@ -337,7 +352,9 @@ section h2:first-child { margin-top: 0;}
   color: var(--med-grey);
 }
 
-p ~ picture img, p ~ img { margin-top: 2em; }
+p ~ picture img,
+p ~ img,
+p ~ a[data-featherlight] { margin-top: 2em; }
 
 picture ~ p, img ~ p { margin-top: 2em; }
 
@@ -446,9 +463,16 @@ ul.bullets {
   -webkit-filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
 }
 
-/* NOTE: Safari fix (add light border in case shadow doesn't render properly) */
+/* NOTE: Safari fix:
+   1) add light border in case shadow doesn't render properly
+   2) change thickness of transparent border to force element to repaint */
 .shadow-black-box img {
   border: solid 1px rgba(200,200,200, 0.7);
+  outline: 10px solid transparent;
+}
+
+.shadow-black-box.refresh img {
+  outline: 12px solid transparent;
 }
 
 .shadow-white img {
@@ -882,6 +906,7 @@ ul.bullets {
   display: grid;
   grid-template-areas: "title"
                        "detail";
+  margin-bottom: 1em;
   transition: all 1s ease-out;
 }
 
@@ -1862,7 +1887,6 @@ body .sc a:visited { color: var(--sc-red); }
   .featherlight .featherlight-content {
     max-width: calc(100vw - 130px);
     max-height: calc(100vh - 60px);
-    /* margin-top: 40px; */
     padding: 15px;
   }
 
@@ -1870,7 +1894,7 @@ body .sc a:visited { color: var(--sc-red); }
     font-size: 30px;
     width: 40px;
     height: 40px;
-    line-height: 40px;
+    line-height: 41px;
   }
 
   .featherlight .featherlight-content .featherlight-caption {
@@ -1956,6 +1980,15 @@ body .sc a:visited { color: var(--sc-red); }
 
   .section-header .sub-sections { grid-area: sub; }
   .section-header div:last-of-type { grid-area: content; }
+
+  #overview-grid .anchor,
+  #test-content .anchor {
+    position: absolute;
+    top: -100px; }
+
+  #opp-strategy-anchor,
+  #beyond-contrast-anchor { top: -100px; }
+
 
   .sub-sections > ul {
     font-size: 0.7em;
@@ -3255,9 +3288,12 @@ body .sc a:visited { color: var(--sc-red); }
     padding: 0 250px 0 40px;
   }
 
+  #overview-grid .anchor,
+  #test-content .anchor { top: -82px; }
+
   #opp-strategy-anchor,
   #beyond-contrast-anchor { top: -130px; }
-  #test-participants-anchor { top: -110px; }
+  #test-participants-anchor.anchor { top: -110px; }
 
   .indented-md { max-width: unset; }
 
