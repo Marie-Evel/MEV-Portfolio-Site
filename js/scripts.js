@@ -53,11 +53,6 @@ var Global = function () {
     return targetElement.offset().top + targetElement.outerHeight(true) - getScrollPosition();
   },
 
-  adjustScrollPosition = function(positionOffset) {
-    setScrollPosition(getScrollPosition() + positionOffset);
-    return getScrollPosition();
-  },
-
   makeVisibleBelow = function(targetElement, triggerPosition) {
   // Makes the target element visible when scroll position is below the
   // triggerPosition
@@ -68,6 +63,10 @@ var Global = function () {
       makeInvisible(targetElement);
       return false; // targetElement is now hidden
     }
+  }
+
+  browserIsSafari = function() {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   };
 
   return {
@@ -82,7 +81,7 @@ var Global = function () {
     getTopPosition: getTopPosition,
     getBottomPosition: getBottomPosition,
     makeVisibleBelow: makeVisibleBelow,
-    adjustScrollPosition: adjustScrollPosition
+    browserIsSafari: browserIsSafari
   };
 
 } ();
@@ -130,13 +129,20 @@ var MainNav = function() {
   const $nav = $('#menu-container'),
         $topChevron = $('#back-to-top a').eq(0);
 
-  getCurAnchor = function() {
-    const $anchorLinks = $('.anchor'),
-          curPosition = Global.getScrollPosition() + window.innerHeight;
+  getCurAnchor = function(basedOnTop = false) {
+    const $anchorLinks = $('.anchor');
 
-    let anchorIndex,
+    let curPosition = Global.getScrollPosition(),
+        anchorIndex,
         $curAnchor,
         curAnchorHash;
+
+    if ( basedOnTop ) {
+      curPosition = Global.getScrollPosition() + 0.4 * window.innerHeight;
+
+    } else {
+      curPosition = curPosition + window.innerHeight;
+    };
 
     $anchorLinks.each( function(index, link) {
       if ( curPosition < $(link).offset().top ) {
@@ -228,7 +234,8 @@ var MainNav = function() {
     convertHashToUrl: convertHashToUrl,
     goToUrl: goToUrl,
     refreshTopChevron: refreshTopChevron,
-    getCurAnchor: getCurAnchor
+    getCurAnchor: getCurAnchor,
+    hamburgerIsDisabled: hamburgerIsDisabled
   };
 
 } ();

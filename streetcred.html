@@ -50,13 +50,16 @@
       <nav>
         <ul id="menu-container" class="">
           <li class="menu-item">
-            <a href="index.html#work-anchor" class="outer-link" onclick="Hamburger.toggleMenu()">Work</a>
+            <a href="index.html#work-anchor" class="outer-link">Work</a>
           </li>
           <li class="menu-item">
-            <a href="about.html" class="outer-link" onclick="Hamburger.toggleMenu()">About</a>
+            <a href="about.html" class="outer-link">About</a>
           </li>
           <li class="menu-item">
-            <a href="#contact" class="within-link" onclick="Hamburger.toggleMenu()">Contact</a>
+            <a href="files/mev_resume.pdf" target="_blank" class="outer-link" download>Résumé</a>
+          </li>
+          <li class="menu-item">
+            <a href="#contact" class="within-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -136,7 +139,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#overview-anchor" class="within-link"><span>01</span>Project Overview</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(1)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#problem-anchor" class="within-link">the problem</a>
@@ -150,7 +153,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#research-anchor" class="within-link"><span>02</span>Exploratory Research</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(2)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#research-anchor" class="within-link">competitive analysis</a>
@@ -164,7 +167,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#user-anchor" class="within-link"><span>03</span>Understanding the User</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(3)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#user-anchor" class="within-link">user personas</a>
@@ -175,8 +178,8 @@
 
             <div class="dropdown">
               <div class="top-menu">
-                <a href="#nav-structure-anchor" class="within-link"><span>04</span>Information Architecture</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(4)"></span>
+                <a href="#ia-anchor" class="within-link"><span>04</span>Information Architecture</a>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#nav-structure-anchor" class="within-link">navigation structure</a>
@@ -187,8 +190,8 @@
 
             <div class="dropdown">
               <div class="top-menu">
-                <a href="#wires-anchor" class="within-link"><span>05</span>Wireframing & Prototyping</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(5)"></span>
+                <a href="#low-fid-wires-anchor" class="within-link"><span>05</span>Wireframing & Prototyping</a>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#low-fid-wires-anchor" class="within-link">low-fidelity wireframes</a>
@@ -200,7 +203,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#testing-anchor" class="within-link"><span>06</span>Usability Testing</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(6)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#test-plan-anchor" class="within-link">usability test plan</a>
@@ -214,7 +217,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#fine-tuning-anchor" class="within-link"><span>07</span>Fine-Tuning the Design</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(7)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#fine-tuning-anchor" class="within-link">color scheme</a>
@@ -225,7 +228,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#accessibility-anchor" class="within-link"><span>08</span>Accessibility</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(8)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#accessibility-anchor" class="within-link">contrast & readability</a>
@@ -236,7 +239,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#final-designs-anchor" class="within-link"><span>09</span>Final Designs</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(9)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#prototype-anchor" class="within-link">interactive prototype</a>
@@ -247,7 +250,7 @@
             <div class="dropdown">
               <div class="top-menu">
                 <a href="#final-thoughts-anchor" class="within-link"><span>10</span>Final Thoughts</a>
-                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown(10)"></span>
+                <span class="fa fa-caret-down" onclick="ProjectNav.toggleDropdown()"></span>
               </div>
               <div class="dropdown-content">
                 <a href="#final-thoughts-anchor" class="within-link">future improvements</a>
@@ -1175,10 +1178,14 @@
             Here’s an initial and very basic sitemap to illustrate the
             navigation structure I have in mind:
           </p>
-          <picture id="navigation-structure">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/sitemap_small.png">
-            <img src="img/streetcred/sec4_ia/sitemap_large.png" alt="Simple StreetCred sitemap">
-          </picture>
+          <a href="#" data-featherlight="#navigation-structure">
+            <picture id="navigation-structure">
+              <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/sitemap_small.png">
+              <img src="img/streetcred/sec4_ia/sitemap_large.png"
+                   title="Initial navigation structure focusing on finding a hunt and playing a hunt"
+                   alt="Simple StreetCred sitemap">
+            </picture>
+          </a>
         </div>
       </div>
     </section>
@@ -1265,7 +1272,7 @@
           <picture id="final-sitemap" class="fit-width">
             <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
             <img src="img/streetcred/sec4_ia/wireflow_large.png"
-                 title="Final sitemap/wireflow (for now...)"
+                 title="Final sitemap/wireflow"
                  alt="Wireflow showing how StreetCred's mobile screens are connected">
           </picture>
         </a>
@@ -1523,7 +1530,7 @@
             <picture id="find-hunts-4" class="shadow-black shadow-white-md">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_4_large.png"
-                   title="'Find Hunts' screen | high-fidelity after testing"
+                   title="'Find Hunts' screen | final mockup"
                    alt="Final high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
           </a>
@@ -1636,7 +1643,7 @@
             <picture id="hunt-detail-4" class="shadow-black">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_large.png"
-                   title="'Hunt Detail' screen | high-fidelity after testing"
+                   title="'Hunt Detail' screen | final mockup"
                    alt="Final high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
           </a>
@@ -1743,7 +1750,7 @@
             <picture id="buy-hunt-3" class="shadow-black-box">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_3_large.jpg"
-                   title="'Buy Hunt' screen | high-fidelity after testing"
+                   title="'Buy Hunt' screen | final mockup"
                    alt="Final high-fidelity iteration of Buy Hunt screen">
             </picture>
           </a>
@@ -1753,7 +1760,7 @@
             <picture id="confirmation-3" class="shadow-black shadow-white-md">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_large.png"
-                   title="Confirmation modal after buying a hunt | high-fidelity after testing"
+                   title="Confirmation modal after buying a hunt | final mockup"
                    alt="Final high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
           </a>
@@ -1825,7 +1832,7 @@
             <picture id="pref-3a" class="shadow-black-box">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3a_large.jpg"
-                   title="First of three preference screens | high-fidelity after testing"
+                   title="First of three preference screens | final mockup"
                    alt="Final high-fidelity iteration of Restaurant Preferences screen">
             </picture>
           </a>
@@ -1835,7 +1842,7 @@
             <picture id="pref-3b" class="shadow-black shadow-white-md">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3b_large.png"
-                   title="Second of three preference screens | high-fidelity after testing"
+                   title="Second of three preference screens | final mockup"
                    alt="Final high-fidelity iteration of Place Preferences screen on iPhone XS">
             </picture>
           </a>
@@ -1851,7 +1858,7 @@
             <picture id="pref-3c" class="shadow-black-box">
               <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.jpg">
               <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3c_large.jpg"
-                   title="Third of three preference screens | high-fidelity after testing"
+                   title="Third of three preference screens | final mockup"
                    alt="Final high-fidelity iteration of Events & Interest Preferences screen">
             </picture>
           </a>
@@ -2405,10 +2412,14 @@
     <section  class="indented inner-section">
       <div id="color-scheme">
         <div id="color-transition">
-          <picture>
-            <source media="(max-width: 639px)" srcset="img/streetcred/sec7_fine_tuning/color_scheme_small.png">
-            <img src="img/streetcred/sec7_fine_tuning/color_scheme_large.png" alt="StreetCred sample screen and logo with U.S. flag colors and with final color scheme">
-          </picture>
+          <a href="#" data-featherlight="#color-scheme-zoom">
+            <picture id="color-scheme-zoom">
+              <source media="(max-width: 639px)" srcset="img/streetcred/sec7_fine_tuning/color_scheme_small.png">
+              <img src="img/streetcred/sec7_fine_tuning/color_scheme_large.png"
+                   title="From color inspiration (the American flag) to the final color scheme (brighter and more vibrant colors)"
+                   alt="StreetCred sample screen and logo with U.S. flag colors and with final color scheme">
+            </picture>
+          </a>
         </div>
         <div class="caption caption1 caption-right">
           <p>

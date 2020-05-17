@@ -5,19 +5,9 @@ var ProjectNav = function() {
         $overviewSection = $('#overview-anchor'),
         navHandleOffset = - 50;
 
-  let overviewTopBeforeNavToggle = Global.getTopPosition($overviewSection),
-      overviewTopAfterNavToggle,
-      positionOffset,
-      navToggled = false,
-      isBelowIntro = false;
-
   const
     init = function() {
-      if ( Global.getScrollPosition() > overviewTopBeforeNavToggle ) {
-        Global.makeInvisible($projectNav);
-      } else {
-        Global.makeVisible($projectNav);
-      }
+      let lastScrollPosition = Global.getScrollPosition();
       refreshNavHandle();
       return;
     },
@@ -26,6 +16,11 @@ var ProjectNav = function() {
       $('.outer-link').map(function(i, link) {
         $(link).click(function() {
           const newUrl = this.href;
+
+          if ( !MainNav.hamburgerIsDisabled() && Global.menuIsVisible(MainNav.$nav) ) {
+            Hamburger.closeNav();
+          };
+
           $('#reveal-page').fadeIn("slow");
           $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", function() {
             MainNav.goToUrl(newUrl);
@@ -40,6 +35,10 @@ var ProjectNav = function() {
       $(link).click( function() {
           const newUrl = this.href,
                 newHash = this.hash;
+
+          if ( !MainNav.hamburgerIsDisabled() && Global.menuIsVisible(MainNav.$nav) ) {
+            Hamburger.closeNav();
+          };
 
           if ( $(link).parents('#project-nav-slideout.show-menu').length ) {
             closeProjectNav();
@@ -71,6 +70,7 @@ var ProjectNav = function() {
     Global.makeInvisible($projectNavHandle);
     Global.showMenu($projectNavSlideout);
     $projectNavSlideout.animate({ width: 'toggle'});
+    expandCurrentSection();
   },
 
   closeProjectNav = function() {
@@ -85,20 +85,68 @@ var ProjectNav = function() {
     }
   },
 
-  toggleDropdown = function(menuNumber) {
-    const targetDropdown = $('#project-nav-slideout .dropdown').eq(menuNumber - 1),
-          targetDropdownContent = targetDropdown.find('.dropdown-content').eq(0),
-          menuCaret = targetDropdown.find('.fa').eq(0);
+  expandCurrentSection = function() {
+    const curAnchor = MainNav.getCurAnchor(true),
+          $priorSection = $projectNavSlideout.find('.current-section'),
+          $menuItem = $projectNavSlideout.find('a[href="' + curAnchor + '"]');
 
-    menuCaret.toggleClass('fa-caret-down');
-    menuCaret.toggleClass('fa-caret-up');
 
-    if ( menuNumber === 10 && menuCaret.hasClass('fa-caret-up') ) {
-      $('#project-nav-slideout .scrollable').eq(0).animate( {
-        scrollTop: $('#project-nav-slideout .menu-container').eq(0).height() + 61
-      }, 0.5 );
+    if ( $menuItem.parentsUntil('.dropdown').length ) {
+      const $targetDropdown = $menuItem.parents('.dropdown');
+
+      if ( $priorSection.length ) {
+        if( $priorSection[0] !== $targetDropdown[0] ) {
+          if ( dropdownIsExpanded($priorSection) ) {
+            toggleDropdown($priorSection);
+          };
+          $priorSection.removeClass('current-section');
+        };
+      };
+
+      if ( !dropdownIsExpanded($targetDropdown) ) {
+        toggleDropdown($targetDropdown);
+        $targetDropdown.addClass('current-section');
+      };
+    };
+  },
+
+
+  getMenuCaret = function($targetDropdown) {
+    if ($targetDropdown.find('.fa').length) {
+      return $targetDropdown.find('.fa').eq(0);
+    } else {
+      return false;
     }
-    targetDropdownContent.slideToggle();
+  },
+
+  dropdownIsExpanded = function($targetDropdown) {
+    const $menuCaret = getMenuCaret($targetDropdown);
+
+    if ( $menuCaret.hasClass('fa-caret-up') ) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  toggleDropdown = function($targetDropdown) {
+    $targetDropdown = $targetDropdown || $(event.target).parents('.dropdown');
+
+    const $targetDropdownContent = $targetDropdown.find('.dropdown-content').eq(0),
+          $menuCaret = getMenuCaret($targetDropdown);
+
+    $menuCaret.toggleClass('fa-caret-down');
+    $menuCaret.toggleClass('fa-caret-up');
+
+    // NOTE: Doesn't work...
+    // I was trying to scroll the bottom of the pullout nav when the user
+    // the last menu.
+    // if ( menuNumber === 10 && $menuCaret.hasClass('fa-caret-up') ) {
+    //   $('#project-nav-slideout .scrollable').eq(0).animate( {
+    //     scrollTop: $('#project-nav-slideout .menu-container').eq(0).height() + 61
+    //   }, 0.5 );
+    // }
+    $targetDropdownContent.slideToggle();
   },
 
   makeDropdownContentVisible = function() {
@@ -178,15 +226,14 @@ var ProjectNav = function() {
       }
     })
     return parentHash;
-  },
+  };
 
   renderShadow = function() {
-    const curWindowWidth = $(window).width()
-          curWindowHeight = $(window).height();
-    // This is kind of hacky, but resizing the window is the only thing
-    // that works to render the shadows properly in Safari...
-    window.resizeTo(curWindowWidth - 1, curWindowHeight);
-    window.resizeTo(curWindowWidth, curWindowHeight);
+    // This is very hacky, but the only way I found that renders the shadow
+    // properly in Safary is to add a transparent outline to the element and
+    // refresh it on scroll...
+    $('.shadow-black-box').toggleClass('refresh');
+    return false;
   };
 
   return {
@@ -208,8 +255,6 @@ $(document).ready(function() {
   ProjectNav.cloneProjectNav();
   ProjectNav.innerLinkClickEvent();
   ProjectNav.outerLinkClickEvent();
-  ProjectNav.renderShadow();
-
   return;
 });
 
@@ -217,3 +262,9 @@ window.addEventListener('scroll', function() {
   ProjectNav.refreshNavHandle();
   return;
 });
+
+if ( Global.browserIsSafari() ) {
+  window.addEventListener('scroll', function() {
+    ProjectNav.renderShadow();
+  });
+};
