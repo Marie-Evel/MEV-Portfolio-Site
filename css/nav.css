@@ -75,7 +75,8 @@ main { position: relative; }
 
 
  #menu-container .menu-item:first-of-type { margin-right: 40vw; }
- #menu-container .menu-item:nth-of-type(2) { margin-right: 65vw; }
+ #menu-container .menu-item:nth-of-type(2) { margin-right: 55vw; }
+ #menu-container .menu-item:nth-of-type(3) { margin-right: 70vw; }
  #menu-container .menu-item:last-of-type { margin-right: 85vw; }
 
 
@@ -83,7 +84,6 @@ main { position: relative; }
     text-align: right;
     margin-top: 30px;
     opacity: 0;
-    margin-right: 100vw;
     transition: all 0.5s ease-in-out;
   }
 
@@ -261,10 +261,12 @@ footer h1 {
   }
 
   nav {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
     display: flex;
-    width: 62.5vw;
-    max-width: 230px;
-    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    padding-bottom: 7px;
   }
 
   nav ul {
@@ -289,9 +291,9 @@ footer h1 {
     transition: unset;
   }
 
-  #menu-container,
-  #menu-container.show-menu {
+  #menu-container {
     display: flex;
+    flex-wrap: nowrap;
     opacity: 1;
     position: relative;
     width: 100%;
@@ -304,13 +306,17 @@ footer h1 {
   #menu-container .menu-item { opacity: 1; }
   #menu-container .menu-item:first-of-type,
   #menu-container .menu-item:nth-of-type(2),
+  #menu-container .menu-item:nth-of-type(3),
   #menu-container .menu-item:last-of-type { margin: 0; }
 
-  #menu-container li { position: relative; }
+  #menu-container li {
+    position: relative;
+    padding-left: 20px;
+  }
 
   #menu-container li a:after {
     position: absolute;
-    left: 50%;
+    left: calc(50% + 10px);
     bottom: -4px;
     width: 0%;
     height: 4px;
@@ -322,8 +328,8 @@ footer h1 {
 
   #menu-container li a:hover:after {
     opacity: 1;
-    width: calc(100% + 6px);
-    left: -3px;
+    width: calc(100% - 14px);
+    left: 17px;
   }
 
   #menu-container { border-top: unset; }
@@ -361,7 +367,18 @@ footer h1 {
 
   header { height: var(--topnav-height-lg); }
 
-  nav { max-width: 268px; min-width: 268px; }
+  nav { padding-bottom: 9px; }
+
+  #menu-container li { padding-left: 45px; }
+
+  #menu-container li a:after { left: calc(50% + 23px); }
+
+  #menu-container li a:hover:after {
+    width: calc(100% - 39px);
+    left: 42px;
+  }
+
+
 
   .anchor { top: -82px; }
 
