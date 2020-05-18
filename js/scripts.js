@@ -1,4 +1,4 @@
-var Global = function () {
+var Global = (function () {
   const
   elementIsVisible = function(targetElement) {
     if ( targetElement.hasClass('visible') ) {
@@ -63,7 +63,7 @@ var Global = function () {
       makeInvisible(targetElement);
       return false; // targetElement is now hidden
     }
-  }
+  },
 
   browserIsSafari = function() {
     return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -84,10 +84,10 @@ var Global = function () {
     browserIsSafari: browserIsSafari
   };
 
-} ();
+}) ();
 
 // Hamburger menu for mobile:
-var Hamburger = function () {
+var Hamburger = (function () {
   const $icon = $('#nav-icon'),
 
   openNav = function() {
@@ -121,13 +121,13 @@ var Hamburger = function () {
     toggleMenu: toggleMenu,
     closeNav: closeNav
   };
-} ();
+}) ();
 
-var MainNav = function() {
+var MainNav = (function() {
   let didScroll = false;
 
   const $nav = $('#menu-container'),
-        $topChevron = $('#back-to-top a').eq(0);
+        $topChevron = $('#back-to-top a').eq(0),
 
   getCurAnchor = function(basedOnTop = false) {
     const $anchorLinks = $('.anchor');
@@ -142,7 +142,7 @@ var MainNav = function() {
 
     } else {
       curPosition = curPosition + window.innerHeight;
-    };
+    }
 
     $anchorLinks.each( function(index, link) {
       if ( curPosition < $(link).offset().top ) {
@@ -185,7 +185,7 @@ var MainNav = function() {
 
   hamburgerIsDisabled = function() {
     return Hamburger.$icon.css("display") === 'none';
-  }
+  },
 
   innerLinkClickEvent = function() {
     $('body.main .within-link').each(function(i, link) {
@@ -195,7 +195,7 @@ var MainNav = function() {
 
         if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
-        };
+        }
         scrollNavigate(newHash, newUrl);
         return false;
       });
@@ -210,7 +210,7 @@ var MainNav = function() {
 
         if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
-        };
+        }
         $('#reveal-page').fadeIn("slow", function() {
           MainNav.goToUrl(newUrl);
         });
@@ -238,7 +238,7 @@ var MainNav = function() {
     hamburgerIsDisabled: hamburgerIsDisabled
   };
 
-} ();
+}) ();
 
 setInterval(function() {
   if(MainNav.didScroll) {
@@ -253,11 +253,9 @@ $(document).ready(function() {
   MainNav.outerLinkClickEvent();
   MainNav.refreshTopChevron();
   $('#reveal-page').fadeOut();
-  return;
 });
 
 window.addEventListener('scroll', function() {
   MainNav.didScroll = true;
   MainNav.refreshTopChevron();
-  return;
 });

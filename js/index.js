@@ -8,7 +8,7 @@ var LogoAnimation = function() {
     if ( isVisible($logo, 85, 80) && neverPlayed() ) {
       animateLogo();
       $logo.addClass('played-on-scroll');
-    };
+    }
     return;
   },
 
@@ -55,6 +55,6 @@ var LogoAnimation = function() {
 } ();
 
 window.addEventListener('scroll', function() {
-  LogoAnimation.checkIfLogoPlayed()
+  LogoAnimation.checkIfLogoPlayed();
   return;
 });

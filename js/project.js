@@ -6,12 +6,6 @@ var ProjectNav = function() {
         navHandleOffset = - 50;
 
   const
-    init = function() {
-      let lastScrollPosition = Global.getScrollPosition();
-      refreshNavHandle();
-      return;
-    },
-
     outerLinkClickEvent = function() {
       $('.outer-link').map(function(i, link) {
         $(link).click(function() {
@@ -19,7 +13,7 @@ var ProjectNav = function() {
 
           if ( !MainNav.hamburgerIsDisabled() && Global.menuIsVisible(MainNav.$nav) ) {
             Hamburger.closeNav();
-          };
+          }
 
           $('#reveal-page').fadeIn("slow");
           $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", function() {
@@ -38,17 +32,17 @@ var ProjectNav = function() {
 
           if ( !MainNav.hamburgerIsDisabled() && Global.menuIsVisible(MainNav.$nav) ) {
             Hamburger.closeNav();
-          };
+          }
 
           if ( $(link).parents('#project-nav-slideout.show-menu').length ) {
             closeProjectNav();
-          };
+          }
 
           if ( scrollIt(newHash) ) {
             MainNav.scrollNavigate(newHash, newUrl);
           } else {
             fadeNavigate(newHash, newUrl);
-          };
+          }
           refreshNavHandle();
           return false;
       });
@@ -98,16 +92,16 @@ var ProjectNav = function() {
         if( $priorSection[0] !== $targetDropdown[0] ) {
           if ( dropdownIsExpanded($priorSection) ) {
             toggleDropdown($priorSection);
-          };
+          }
           $priorSection.removeClass('current-section');
-        };
-      };
+        }
+      }
 
       if ( !dropdownIsExpanded($targetDropdown) ) {
         toggleDropdown($targetDropdown);
         $targetDropdown.addClass('current-section');
-      };
-    };
+      }
+    }
   },
 
 
@@ -149,53 +143,6 @@ var ProjectNav = function() {
     $targetDropdownContent.slideToggle();
   },
 
-  makeDropdownContentVisible = function() {
-    $('#project-nav .dropdown-content').each(function(index, element) {
-      if( $(element).css('display') == 'none' ) {
-        $(element).css('display','grid');
-      }
-    });
-    return;
-  },
-
-  scrollIt = function(destinationHash) {
-    const curAnchor = MainNav.getCurAnchor(),
-          curParent = getParentAnchor($(curAnchor)),
-          destinationParent = getParentAnchor($(destinationHash)),
-          newPosition = $(destinationHash).offset().top,
-          destinationOffset = Math.abs(newPosition - Global.getScrollPosition()),
-          scrollThreshold = 3 * window.innerHeight;
-
-    if ( curParent === destinationParent || destinationOffset < scrollThreshold
-        || destinationHash === '#contact' || destinationHash === '#top-anchor' ) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-
-  fadeNavigate = function(destinationHash, destinationUrl) {
-    const targetElement = $(destinationHash),
-          revealPage = $('#reveal-page');
-
-    if ( targetElement.hasClass('section-anchor') ) {
-      revealPage.fadeIn(400, function() {
-        MainNav.goToUrl(destinationUrl);
-        revealPage.fadeOut(800);
-      });
-    } else {
-      const targetParent = getParentAnchor($(destinationHash)),
-            parentUrl = MainNav.convertHashToUrl(targetParent);
-
-      revealPage.fadeIn(400, function() {
-        MainNav.goToUrl(parentUrl);
-        revealPage.fadeOut(500, function() {
-          MainNav.scrollNavigate(destinationHash, destinationUrl);
-        });
-      });
-    };
-  },
-
   getParentAnchor = function(linkElement) {
     const allParents = linkElement.parents();
     let parentType,
@@ -224,9 +171,49 @@ var ProjectNav = function() {
           }
         }
       }
-    })
+    });
     return parentHash;
-  };
+  },
+
+  scrollIt = function(destinationHash) {
+    const curAnchor = MainNav.getCurAnchor(),
+          curParent = getParentAnchor($(curAnchor)),
+          destinationParent = getParentAnchor($(destinationHash)),
+          newPosition = $(destinationHash).offset().top,
+          destinationOffset = Math.abs(newPosition - Global.getScrollPosition()),
+          scrollThreshold = 3 * window.innerHeight;
+
+    if ( curParent === destinationParent ||
+         destinationOffset < scrollThreshold ||
+         destinationHash === '#contact' ||
+         destinationHash === '#top-anchor' ) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  fadeNavigate = function(destinationHash, destinationUrl) {
+    const targetElement = $(destinationHash),
+          revealPage = $('#reveal-page');
+
+    if ( targetElement.hasClass('section-anchor') ) {
+      revealPage.fadeIn(400, function() {
+        MainNav.goToUrl(destinationUrl);
+        revealPage.fadeOut(800);
+      });
+    } else {
+      const targetParent = getParentAnchor($(destinationHash)),
+            parentUrl = MainNav.convertHashToUrl(targetParent);
+
+      revealPage.fadeIn(400, function() {
+        MainNav.goToUrl(parentUrl);
+        revealPage.fadeOut(500, function() {
+          MainNav.scrollNavigate(destinationHash, destinationUrl);
+        });
+      });
+    }
+  },
 
   renderShadow = function() {
     // This is very hacky, but the only way I found that renders the shadow
@@ -234,6 +221,11 @@ var ProjectNav = function() {
     // refresh it on scroll...
     $('.shadow-black-box').toggleClass('refresh');
     return false;
+  },
+
+  init = function() {
+    refreshNavHandle();
+    return;
   };
 
   return {
@@ -267,4 +259,4 @@ if ( Global.browserIsSafari() ) {
   window.addEventListener('scroll', function() {
     ProjectNav.renderShadow();
   });
-};
+}
