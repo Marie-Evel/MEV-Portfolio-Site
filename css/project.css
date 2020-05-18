@@ -3,7 +3,7 @@
   --nav-background: #2C56B9;
   --med-grey: #606878;
   --sc-red: #C6395C;
-  --sc-med-red: #CA4868; /* NOTE: was CE5573 */
+  --sc-med-red: #CA4868; /* NOTE: was #CE5573 */
   --sc-light-pink: #FAEFF2;
   --sc-blue: #3966D0;
   --sc-blue-on-dark: #85A8F9;
@@ -17,7 +17,7 @@
   --uaq-blue-font: #007baf;
   --uaq-blue: #0091CF;
   --uaq-light-blue: #B0DDF0;
-  --dereck-red: #CA4A57; /* NOTE: was CD535F */
+  --dereck-red: #CA4A57; /* NOTE: was #CD535F */
   --dereck-red-lighter: #E1A7AB;
   --malika-blue: #0F2D75;
   --malika-blue-lighter: #99B1D6;
@@ -232,7 +232,7 @@ a[data-featherlight] { display: block; }
   width: 35px;
   height: 35px;
   line-height: 36px;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.5);
   border-radius: 50%;
 }
 
@@ -3257,7 +3257,7 @@ body .sc a:visited { color: var(--sc-red); }
     font-size: 40px;
     width: 55px;
     height: 55px;
-    line-height: 55px;
+    line-height: 56px;
   }
 
   .featherlight .featherlight-slide-number { padding: 10px 20px; }
