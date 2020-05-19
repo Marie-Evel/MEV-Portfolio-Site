@@ -63,7 +63,7 @@ var Global = (function () {
       makeInvisible(targetElement);
       return false; // targetElement is now hidden
     }
-  },
+  }
 
   return {
     elementIsVisible: elementIsVisible,
@@ -152,16 +152,9 @@ var MainNav = (function() {
   },
 
   convertHashToUrl = function(hash) {
-    const origin = $(location).attr('origin'),
-          path = $(location).attr('pathname');
-    let finalUrl;
-
-    if (origin === 'null') {
-      const protocol = $(location).attr('protocol');
-      finalUrl = protocol + '//' + path + hash;
-    } else {
-      finalUrl = origin + path + hash;
-    }
+    const protocol = $(location).attr('protocol'),
+          path = $(location).attr('pathname'),
+          finalUrl = protocol + '//' + path + hash;
 
     return finalUrl;
   },
