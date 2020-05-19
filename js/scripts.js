@@ -65,10 +65,6 @@ var Global = (function () {
     }
   },
 
-  browserIsSafari = function() {
-    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  };
-
   return {
     elementIsVisible: elementIsVisible,
     makeVisible: makeVisible,
@@ -80,8 +76,7 @@ var Global = (function () {
     setScrollPosition: setScrollPosition,
     getTopPosition: getTopPosition,
     getBottomPosition: getBottomPosition,
-    makeVisibleBelow: makeVisibleBelow,
-    browserIsSafari: browserIsSafari
+    makeVisibleBelow: makeVisibleBelow
   };
 
 }) ();

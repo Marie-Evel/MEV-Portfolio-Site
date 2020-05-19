@@ -214,15 +214,7 @@ var ProjectNav = function() {
       });
     }
   },
-
-  renderShadow = function() {
-    // This is very hacky, but the only way I found that renders the shadow
-    // properly in Safary is to add a transparent outline to the element and
-    // refresh it on scroll...
-    $('.shadow-black-box').toggleClass('refresh');
-    return false;
-  },
-
+  
   init = function() {
     refreshNavHandle();
     return;
@@ -236,8 +228,7 @@ var ProjectNav = function() {
     refreshNavHandle: refreshNavHandle,
     openProjectNav: openProjectNav,
     closeProjectNav: closeProjectNav,
-    cloneProjectNav: cloneProjectNav,
-    renderShadow: renderShadow
+    cloneProjectNav: cloneProjectNav
   };
 
 } ();
@@ -254,9 +245,3 @@ window.addEventListener('scroll', function() {
   ProjectNav.refreshNavHandle();
   return;
 });
-
-if ( Global.browserIsSafari() ) {
-  window.addEventListener('scroll', function() {
-    ProjectNav.renderShadow();
-  });
-}

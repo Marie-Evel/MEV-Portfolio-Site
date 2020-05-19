@@ -461,24 +461,13 @@ ul.bullets {
 .shadow-black-box img {
   filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
   -webkit-filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
-}
-
-/* NOTE: Safari fix:
-   1) add light border in case shadow doesn't render properly
-   2) change thickness of transparent border to force element to repaint */
-.shadow-black-box img {
-  border: solid 1px rgba(200,200,200, 0.7);
-  outline: 10px solid transparent;
-}
-
-.shadow-black-box.refresh img {
-  outline: 12px solid transparent;
+  -webkit-transform: translateZ(0);
 }
 
 .shadow-white img {
   filter: drop-shadow(0 0.1em 0.25em rgba(250,250,250,.6));
   -webkit-filter: drop-shadow(0 0.1em 0.25em rgba(250,250,250,.6));
-
+  -webkit-transform: translateZ(0);
 }
 
 .quote p:first-of-type {
@@ -1402,8 +1391,6 @@ ul.bullets {
 #positive-quotes div:first-child { margin-top: -20px; }
 
 .tester-quote p:first-of-type::before {
-  /* NOTE: Safari fix */
-  /* opacity: 20%; */
   filter: opacity(20%);
   color: var(--sc-blue);
 }
