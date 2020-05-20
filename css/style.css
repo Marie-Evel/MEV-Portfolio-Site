@@ -5,12 +5,6 @@
   --barely-pink: #FEFBFD;
   --deep-purple: #440675;
   --light-purple: #F4EBFB;
-
-  /* Top nav spacing: */
-  /* --topnav-height-sm: 61px;
-  --topnav-height-md: 75px;
-  --topnav-height-lg: 85px; */
-
 }
 
 /*----------------------------------------------------------------------------*/
@@ -222,10 +216,20 @@ p + h1 { margin-top: 30px; }
 
 #hero {
   position: relative;
-  background-color: var(--fuschia); /* NOTE: setting background color in case
-                                       background image doesn't load */
-  background-image: url("../img/pixelated_background_small.png");
-  background-size: 100% 100%;
+  /* NOTE: setting background color in case background image doesn't load */
+  background-color: var(--fuschia);
+  /* background-image: url("../img/pixelated_background_small.png");
+  background-size: 100% 100%; */
+  overflow: hidden;
+}
+
+#hero img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
 }
 
 #hero .section-content {
@@ -402,6 +406,8 @@ h1 > p {
 #tools { grid-area: tools; }
 #resume-button { grid-area: resume; }
 
+#resume-button a { padding: 8.5px 15px; }
+
 #tools,
 #skills { font-size: .9em; }
 
@@ -452,10 +458,10 @@ h1 > p {
   /* Intro section in index page | tablets */
   /*--------------------------------------------------------------------------*/
 
-  #hero {
+  /* #hero {
     background-image: url("../img/pixelated_background_large.png");
     padding: 0;
-  }
+  } */
 
   #hero .section-content {
     padding: 50px 57px 50px 136px;

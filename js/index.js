@@ -54,7 +54,47 @@ var LogoAnimation = function() {
 
 } ();
 
+var Parallax = function() {
+  const $container = $('#hero'),
+        $img = $container.find('img'),
+
+  applyParallax = function (strength = 0.5) {
+    // strength must be between 0 and 1:
+    // 0: no parallax effect; image moves with its container
+    // 1: full parallax effect; image doesn't move at all (looks like it's
+    //    pinned to the background behind the text)
+
+    if ( strength < 0 ) {
+      strength = 0;
+    } else if ( strength > 1 ) {
+      strength = 1;
+    }
+
+    let windowTop = Global.getScrollPosition(),
+          windowBottom = windowTop + window.innerHeight,
+          containerTopY = $container.offset().top,
+          containerHeight = $container.innerHeight(),
+          containerBottomY = containerTopY + containerHeight;
+
+    if ( containerTopY < windowBottom && containerBottomY > windowTop ) {
+      let newTop = 100 * windowTop / containerHeight,
+            vertOffset = (strength - 1) * newTop;
+      $img.css({
+        top: newTop + '%',
+        transform: 'translateY(' + vertOffset + '%)'
+      });
+    }
+  };
+
+  return {
+    applyParallax: applyParallax
+  }
+
+} ();
+
+
 window.addEventListener('scroll', function() {
   LogoAnimation.checkIfLogoPlayed();
+  Parallax.applyParallax(0.5);
   return;
 });
