@@ -134,7 +134,7 @@ var ProjectNav = function() {
 
     // NOTE: Doesn't work...
     // I was trying to scroll the bottom of the pullout nav when the user
-    // the last menu.
+    // expands the last menu.
     // if ( menuNumber === 10 && $menuCaret.hasClass('fa-caret-up') ) {
     //   $('#project-nav-slideout .scrollable').eq(0).animate( {
     //     scrollTop: $('#project-nav-slideout .menu-container').eq(0).height() + 61
@@ -214,7 +214,7 @@ var ProjectNav = function() {
       });
     }
   },
-  
+
   init = function() {
     refreshNavHandle();
     return;
@@ -233,11 +233,222 @@ var ProjectNav = function() {
 
 } ();
 
+
+
+var Carousel = (function() {
+  const $content = $('.carousel-content'),
+        $carouselItems = $('.carousel-content li'),
+        itemCount = $carouselItems.length,
+        $prevButton = $('.carousel-wrapper button.previous'),
+        $nextButton = $('.carousel-wrapper button.next'),
+        $groupBar = $('.group-bar-wrapper'),
+        $groups = $('.mockup-groups'),
+        $prevGroupsButton = $groupBar.find('button.previous'),
+        $nextGroupsButton = $groupBar.find('button.next');
+
+  let itemFinalWidth = 0,
+      itemsPerPage = 1,
+      curItem = 1,
+      carouselPaddingLeft = 0,
+      availCarouselWidth = 0;
+
+  const mockupGroupClick = function() {
+    $('.mockup-groups li').each( function(index, group) {
+      $(group).click( function() {
+        let itemNum = $content.find('li[mockup-group="' + (index + 1) + '"]').index() + 1;
+        slideCarousel(itemNum, true);
+      })
+    })
+  };
+
+  const disableButton = function($targetButton) {
+    if ( !$targetButton.hasClass('disabled') ) {
+      $targetButton.addClass('disabled');
+    }
+  };
+
+  const enableButton = function($targetButton) {
+    if ( $targetButton.hasClass('disabled') ) {
+      $targetButton.removeClass('disabled');
+    }
+  };
+
+  const getCurGroupPage = function() {
+    return parseInt( $groupBar.attr('group-page') );
+  };
+
+  const goToPrevGroups = function() {
+    const curGroupPage = getCurGroupPage();
+    if ( curGroupPage > 1 ) {
+      $groupBar.attr('group-page', curGroupPage - 1);
+    }
+  };
+
+  const goToNextGroups = function() {
+    const curGroupPage = getCurGroupPage();
+    if ( curGroupPage < 5 ) {
+      $groupBar.attr('group-page', curGroupPage + 1);
+    }
+  };
+
+  const refreshButtons = function() {
+    if ( curItem === 1 ) {
+      disableButton($prevButton);
+    } else {
+      enableButton($prevButton);
+    }
+    if ( curItem + itemsPerPage -1 < itemCount ) {
+      enableButton($nextButton);
+    } else {
+      disableButton($nextButton);
+    }
+  };
+
+  const groupInWindow = function(groupNum) {
+  // returns 0 if groupNum is within visible window
+  // returns -1 if groupNum is to the left of visible window
+  // returns 1 if groupNum is to the right of visible window
+
+    const $group = $groups.find('li').eq(groupNum - 1),
+          groupStart = $group.offset().left + 1,
+          parentWidth = $groups.innerWidth();
+
+    if ( groupStart < 0 ) {
+      return -1;
+    } else if (groupStart > parentWidth ) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
+  const getGroupNum = function() {
+    return parseInt($carouselItems.eq(curItem - 1).attr('mockup-group'), 10);
+  };
+
+  const refreshMockupGroup = function() {
+    if ( curItem > 0 ) {
+      const $curGroup = $groups.find('.selected'),
+            curGroupNum = $curGroup.index() + 1,
+            newGroupNum = getGroupNum();
+
+      if ( newGroupNum !== curGroupNum ) {
+        const newGroupPosition = groupInWindow(newGroupNum);
+        let wait = false,
+            waitTime = 500;
+
+        // NOTE: I was trying to highlight each group in turn between
+        // curGroupNum and newGroupNum, but it's not working...
+        // const increment = 1 - 2 * (newGroupNum < curGroupNum);
+        // for ( i = curGroupNum + 1; i < newGroupNum; i += increment ) {
+        //   $groups.find('li').eq(i - 1).addClass('selected');
+        //   setTimeout( function() {
+        //     $groups.find('li').eq(i - 1).removeClass('selected');
+        //   }, 1000 );
+        //   debugger;
+        // }
+
+        if ( newGroupPosition === -1 ) {
+          goToPrevGroups();
+          wait = true;
+        } else if (newGroupPosition === 1) {
+          goToNextGroups();
+          wait = true;
+        }
+
+        if ( !wait ) { waitTime = 0; }
+
+        setTimeout( function() {
+          $curGroup.removeClass('selected');
+          $groups.find('li').eq(newGroupNum - 1).addClass('selected');
+        }, waitTime);
+      }
+    }
+  };
+
+  const slideCarousel = function(targetItem, slide) {
+    const offset = (targetItem - 1) * itemFinalWidth;
+    if ( slide ) {
+      $content.css('transition','transform 0.75s ease');
+    } else {
+      $content.css('transition','none');
+    }
+    $content.css('transform', 'translateX(-' + offset + 'px)');
+    curItem = targetItem;
+    refreshMockupGroup()
+    refreshButtons();
+    return;
+  };
+
+  const init = function() {
+    mockupGroupClick();
+    carouselPaddingLeft = $content.innerWidth() - $content.width();
+    availCarouselWidth = $content.width() - carouselPaddingLeft;
+    const itemWidth = $carouselItems.eq(0).width();
+    itemsPerPage = Math.trunc(availCarouselWidth / itemWidth);
+
+    if ( itemsPerPage === 1 ) {
+      itemFinalWidth = availCarouselWidth;
+    } else {
+      const itemMoreWidth = Math.round((availCarouselWidth - itemsPerPage * itemWidth) / (itemsPerPage - 1));
+      itemFinalWidth = itemWidth + itemMoreWidth;
+    }
+
+    $content.css('grid-auto-columns', itemFinalWidth + 'px');
+    slideCarousel(curItem, false);
+
+    $groups.css('transition','none');
+    $groupBar.attr('group-page', 1);
+
+    const curGroupNum = getGroupNum();
+
+    setTimeout(10);
+    if ( groupInWindow(curGroupNum) !== 0) {
+
+      for ( i = 2; i < 6; i++ ) {
+        $groupBar.attr('group-page', i);
+        if ( groupInWindow(curGroupNum) === 0 ) {
+          break;
+          return false;
+        }
+      }
+    }
+    $groups.removeAttr('style');
+  };
+
+  const prevPage = function() {
+      if ( curItem !== 1 ) {
+        curItem -= itemsPerPage;
+        if (curItem < 1) {
+          curItem = 1;
+        }
+        slideCarousel(curItem, true);
+      }
+    };
+
+  const nextPage = function() {
+      if ( curItem + itemsPerPage - 1 < itemCount ) {
+        curItem += itemsPerPage;
+        slideCarousel(curItem, true);
+      }
+    };
+
+  return {
+    init: init,
+    prevPage: prevPage,
+    nextPage: nextPage,
+    goToPrevGroups: goToPrevGroups,
+    goToNextGroups: goToNextGroups
+  }
+
+})();
+
 $(document).ready(function() {
   ProjectNav.init();
   ProjectNav.cloneProjectNav();
   ProjectNav.innerLinkClickEvent();
   ProjectNav.outerLinkClickEvent();
+  Carousel.init();
   return;
 });
 
@@ -245,3 +456,7 @@ window.addEventListener('scroll', function() {
   ProjectNav.refreshNavHandle();
   return;
 });
+
+window.addEventListener('resize', function() {
+  Carousel.init();
+})

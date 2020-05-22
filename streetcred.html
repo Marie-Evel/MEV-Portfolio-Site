@@ -2650,53 +2650,400 @@
     </section>
 
     <!-- 09 FINAL DESIGNS ----------------------------------------------------->
-    <section>
+    <section class="stretch-right">
       <div id="prototype-anchor" class="anchor"></div>
-      <div id="final-designs-header">
+      <div id="final-designs-header" class="section-header">
         <div>
           <h1>09</h1>
         </div>
         <div>
-          <h1>Final Designs &
-            <br>Interactive&nbsp;Prototype</h1>
+          <h1>Final Designs</h1>
         </div>
+        <div class="sub-sections">
+          <ul>
+            <li><a href="#prototype-anchor" class="within-link">interactive prototype</a></li>
+            <li><a href="#final-mockups-anchor" class="within-link">final mockups</a></li>
+          </ul>
+        </div>
+        <div id="final-designs-grid">
+          <div class="intro">
+            <p>
+              This is the big payoff! Nothing is more rewarding than seeing your
+              final screens in action.
+            </p>
+            <p>
+              Thanks for sticking around till the end! And I don’t blame you if
+              you skipped a few sections to scroll all the way down here.
+              <span class="fal fa-smile"></span>
+            </p>
+          </div>
+          <div id="demo">
+            <img src="img/streetcred/sec9_final_designs/streetcred_demo.gif" alt="Animation of what happends when you open StreetCred on iPhone (from splash screen to home screen)">
+          </div>
+          <div class="prototype">
+            <h2>Interactive Prototype</h2>
+            <p>
+              Now it’s time to have some fun! Please check out the prototype I
+              created in InVision Studio. It’s fully interactive with animations,
+              and supports common gestures you’d find in a real app. Swipe,
+              scroll, and drag & drop to your heart’s content!
+            </p>
+          </div>
+          <div id="prototype-button">
+            <a href="https://projects.invisionapp.com/prototype/ck6s71ktw003ro501dhfr73wd/play"
+               target="_blank"
+               class="button-filled sc-blue">
+              Check out the prototype
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="final-mockups-intro" class="background-fill">
+      <div id="final-mockups-anchor" class="anchor"></div>
+      <h2>Final Mockups</h2>
+      <div class="group-bar-wrapper" group-page="1">
+        <ol class="mockup-groups">
+          <li class="selected">onboarding</li>
+          <li>find hunts</li>
+          <li>hunt detail</li>
+          <li>buy hunt</li>
+          <li>join</li>
+          <li>invite players</li>
+          <li>manage players</li>
+          <li>my hunts</li>
+          <li>log in</li>
+          <li>preferences</li>
+        </ol>
+
+        <button class="previous" aria-label="Previous" onclick="Carousel.goToPrevGroups()">
+          <span class="fa fa-caret-left"></span>
+        </button>
+        <button class="next" aria-label="Next" onclick="Carousel.goToNextGroups()">
+          <span class="fa fa-caret-right"></span>
+        </button>
       </div>
     </section>
 
-    <section class="indented stretch-right inner-section">
-      <div id="final-designs-grid">
-        <div class="p1">
-          <p>
-            This is the big payoff! Nothing is more rewarding than seeing your
-            final screens in action.
-          </p>
-        </div>
-        <div class="p2">
-          <p>
-            Thanks for sticking around till the end! And I don’t blame you if
-            you skipped a few sections to scroll all the way down here.
-            <span class="fal fa-smile"></span>
-          </p>
-        </div>
-        <div id="demo">
-          <img src="img/streetcred/sec9_final_designs/streetcred_demo.gif" alt="Animation of what happends when you open StreetCred on iPhone (from splash screen to home screen)">
-        </div>
-        <div class="p3">
-          <p>
-            Now it’s time to have some fun! Please check out the prototype I
-            created in InVision Studio. It’s fully interactive with animations,
-            and supports common gestures you’d find in a real app. Swipe,
-            scroll, and drag & drop to your heart’s content!
-          </p>
-        </div>
-        <div id="prototype-button">
-          <a href="https://projects.invisionapp.com/prototype/ck6s71ktw003ro501dhfr73wd/play"
-             target="_blank"
-             class="button-filled sc-blue">
-            Check out the prototype
-          </a>
-        </div>
+    <section id="final-mockups"  class="inner-section">
+      <div class="carousel-wrapper">
+        <ul class="carousel-content">
+          <!-- ONBOARDING ----------------------------------------------------->
+          <li class="iphone-x" mockup-group="1">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/0_splash.jpg">
+              <img src="img/streetcred/screenshots/0_onboarding/0_splash_large.jpg"
+                   alt="SteetCred splash screen with illustration of modern city and logo">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="1">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/1a_benefit.jpg">
+              <img src="img/streetcred/screenshots/0_onboarding/1a_benefit_large.jpg"
+                   alt="Onboarding screen #1: sightseeing with a twist">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="1">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/1b_benefit.jpg">
+              <img src="img/streetcred/screenshots/0_onboarding/1b_benefit_large.jpg"
+                   alt="Onboarding screen #2: culture immersion">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="1">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/1c_benefit.jpg">
+              <img src="img/streetcred/screenshots/0_onboarding/1c_benefit_large.jpg"
+                   alt="Onboarding screen #3: play anytime">
+            </picture>
+          </li>
+
+          <!-- FIND HUNTS ----------------------------------------------------->
+          <li class="iphone-x" mockup-group="2">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/0_loading.jpg">
+              <img src="img/streetcred/screenshots/1_find_hunts/0_loading_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="2">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/2_demo.jpg">
+              <img src="img/streetcred/screenshots/0_onboarding/2_demo_large.jpg"
+                   alt="Scavenger hunt demo">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="2">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/1_philly.jpg">
+              <img src="img/streetcred/screenshots/1_find_hunts/1_philly_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="2">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/2_search.jpg">
+              <img src="img/streetcred/screenshots/1_find_hunts/2_search_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="2">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/3_sf.jpg">
+              <img src="img/streetcred/screenshots/1_find_hunts/3_sf_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- HUNT DETAIL ----------------------------------------------------->
+          <li class="iphone-x" mockup-group="3">
+            <div class="scrollable-screen">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/1_body_buy_hunt.jpg">
+                <img src="img/streetcred/screenshots/2_hunt_detail/1_body_buy_hunt_large.jpg"
+                     alt="Allow location modal">
+              </picture>
+            </div>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/0a_buy_hunt.png">
+              <img src="img/streetcred/screenshots/2_hunt_detail/0a_buy_hunt_large.png"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- CHECKOUT ------------------------------------------------------->
+          <li class="iphone-x" mockup-group="4">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/0_checkout_options.jpg">
+              <img src="img/streetcred/screenshots/3_checkout_options/0_checkout_options_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="4">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/3_guest.jpg">
+              <img src="img/streetcred/screenshots/3_checkout_options/3_guest_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- BUY HUNT ------------------------------------------------------->
+          <li class="iphone-x" mockup-group="4">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/3_apple_pay.jpg">
+              <img src="img/streetcred/screenshots/4_buy_hunt/3_apple_pay_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="4">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/2a_credit_card.jpg">
+              <img src="img/streetcred/screenshots/4_buy_hunt/2a_credit_card_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="4">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/2b_scan_card.jpg">
+              <img src="img/streetcred/screenshots/4_buy_hunt/2b_scan_card_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="4">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/4_payment_confirmation.jpg">
+              <img src="img/streetcred/screenshots/4_buy_hunt/4_payment confirmation_large.jpg"
+                   alt="Payment confirmation">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="5">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/5_join.jpg">
+              <img src="img/streetcred/screenshots/4_buy_hunt/5_join_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <!-- JOIN ----------------------------------------------------------->
+          <li class="iphone-x" mockup-group="5">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/1a_join.jpg">
+              <img src="img/streetcred/screenshots/3_checkout_options/1a_join_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="5">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/1c_welcome.jpg">
+              <img src="img/streetcred/screenshots/3_checkout_options/1c_welcome_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- INVITE PLAYERS ------------------------------------------------->
+          <li class="iphone-x" mockup-group="6">
+            <div class="scrollable-screen longer">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/2_body_purchased.jpg">
+                <img src="img/streetcred/screenshots/2_hunt_detail/2_body_purchased.jpg"
+                     alt="Allow location modal">
+              </picture>
+            </div>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt.png">
+              <img src="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt_large.png"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <li class="iphone-x" mockup-group="6">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/5_invite_players/1_invite_players.jpg">
+              <img src="img/streetcred/screenshots/5_invite_players/1_invite_players_large.jpg"
+                   alt="Invite Players">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="6">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/5_invite_players/2_message_players.jpg">
+              <img src="img/streetcred/screenshots/5_invite_players/2_message_players_large.jpg"
+                   alt="Invite Players">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="6">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/5_invite_players/3_invite_confirmation.jpg">
+              <img src="img/streetcred/screenshots/5_invite_players/3_invite_confirmation_large.jpg"
+                   alt="Invite Players">
+            </picture>
+          </li>
+
+          <!-- MANAGE PLAYERS ------------------------------------------------->
+          <li class="iphone-x" mockup-group="7">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/0_captain_tip.jpg">
+              <img src="img/streetcred/screenshots/6_manage_players/0_captain_tip_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="7">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/1a_players.jpg">
+              <img src="img/streetcred/screenshots/6_manage_players/1a_players_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="7">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/1b_2teams.jpg">
+              <img src="img/streetcred/screenshots/6_manage_players/1b_2teams_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="7">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/2_edit_team_name.jpg">
+              <img src="img/streetcred/screenshots/6_manage_players/2_edit_team_name_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- <li class="iphone-x" mockup-group="7">
+            <div class="scrollable-screen">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/3_body_invited.jpg">
+                <img src="img/streetcred/screenshots/2_hunt_detail/3_body_invited_large.jpg"
+                     alt="Allow location modal">
+              </picture>
+            </div>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt.png">
+              <img src="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt_large.png"
+                   alt="Allow location modal">
+            </picture>
+          </li> -->
+
+          <!-- MY HUNTS ------------------------------------------------------->
+          <li class="iphone-x" mockup-group="8">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in.jpg">
+              <img src="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- LOG IN --------------------------------------------------------->
+          <li class="iphone-x" mockup-group="9">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/0b_kebab.jpg">
+              <img src="img/streetcred/screenshots/7_my_hunts/0b_kebab_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="9">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/2a_login.jpg">
+              <img src="img/streetcred/screenshots/3_checkout_options/2a_login_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="9">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/2b_check_email.jpg">
+              <img src="img/streetcred/screenshots/3_checkout_options/2b_check_email_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- MY HUNTS (logged in) ------------------------------------------->
+          <li class="iphone-x" mockup-group="9">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/1_my_hunts.jpg">
+              <img src="img/streetcred/screenshots/7_my_hunts/1_my_hunts_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="9">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/2_kebab.jpg">
+              <img src="img/streetcred/screenshots/7_my_hunts/2_kebab_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+
+          <!-- PREFERENCES ---------------------------------------------------->
+          <li class="iphone-x" mockup-group="10">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/8_preferences/1_restaurants.jpg">
+              <img src="img/streetcred/screenshots/8_preferences/1_restaurants_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="10">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/8_preferences/2_places.jpg">
+              <img src="img/streetcred/screenshots/8_preferences/2_places_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+          <li class="iphone-x" mockup-group="10">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/8_preferences/3_events.jpg">
+              <img src="img/streetcred/screenshots/8_preferences/3_events_large.jpg"
+                   alt="Allow location modal">
+            </picture>
+          </li>
+        </ul>
+        <div class="block-hover"></div>
+        <button class="previous" aria-label="Previous" onclick="Carousel.prevPage()">
+          <span class="far fa-chevron-left"></span>
+        </button>
+        <button class="next" aria-label="Next" onclick="Carousel.nextPage()">
+          <span class="far fa-chevron-right"></span>
+        </button>
       </div>
+
     </section><!-- END of Section 9 -->
 
 
@@ -2906,8 +3253,8 @@
     integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
     crossorigin="anonymous">
   </script>
-  <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="js/project.js"></script>
+  <script type="text/javascript" src="js/scripts.js" async></script>
+  <script type="text/javascript" src="js/project.js" async></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"  charset="utf-8"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="js/lightbox.js"></script>
