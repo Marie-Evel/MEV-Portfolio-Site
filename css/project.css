@@ -1907,13 +1907,13 @@ ul.bullets {
 
 .carousel-wrapper button.previous {
   margin-left: -28px;
-  padding-left: 26px;
+  padding-left: 28px;
 }
 
 .carousel-wrapper button.next {
   right: 0;
   margin-right: -28px;
-  padding-right: 26px;
+  padding-right: 28px;
 }
 
 .carousel-wrapper .block-hover {
@@ -2205,7 +2205,11 @@ body .sc a:visited { color: var(--sc-red); }
       padding-bottom: 1em;
     }
 
-  .section-header .sub-sections { grid-area: sub; }
+  .section-header .sub-sections {
+    grid-area: sub;
+    margin-top: 0.2em;
+  }
+
   .section-header div:last-of-type { grid-area: content; }
 
   #overview-grid .anchor,
@@ -3409,12 +3413,12 @@ body .sc a:visited { color: var(--sc-red); }
 
   .carousel-wrapper button.previous {
     margin-left: -35px;
-    padding-left: 30px;
+    padding-left: 35px;
   }
 
   .carousel-wrapper button.next {
     margin-right: -35px;
-    padding-right: 30px;
+    padding-right: 35px;
   }
 
 
