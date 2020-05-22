@@ -5,8 +5,7 @@ var ProjectNav = function() {
         $overviewSection = $('#overview-anchor'),
         navHandleOffset = - 50;
 
-  const
-    outerLinkClickEvent = function() {
+  const outerLinkClickEvent = function() {
       $('.outer-link').map(function(i, link) {
         $(link).click(function() {
           const newUrl = this.href;
@@ -22,9 +21,9 @@ var ProjectNav = function() {
           return false;
         });
       });
-    },
+    };
 
-  innerLinkClickEvent = function() {
+  const innerLinkClickEvent = function() {
     $('.within-link').each(function(i, link) {
       $(link).click( function() {
           const newUrl = this.href,
@@ -39,7 +38,8 @@ var ProjectNav = function() {
           }
 
           if ( scrollIt(newHash) ) {
-            MainNav.scrollNavigate(newHash, newUrl);
+            MainNav.scrollNavigate(newHash);
+            // MainNav.scrollNavigate(newHash, newUrl);
           } else {
             fadeNavigate(newHash, newUrl);
           }
@@ -48,26 +48,26 @@ var ProjectNav = function() {
       });
     });
     return;
-  },
+  };
 
-  refreshNavHandle = function() {
+  const refreshNavHandle = function() {
     if ( !Global.menuIsVisible($projectNav) ) {
       return Global.makeVisibleBelow($projectNavHandle, $overviewSection.offset().top + navHandleOffset);
     }
-  },
+  };
 
-  cloneProjectNav = function() {
+  const cloneProjectNav = function() {
     $projectNavSlideout.html($projectNav.html());
-  },
+  };
 
-  openProjectNav = function() {
+  const openProjectNav = function() {
     Global.makeInvisible($projectNavHandle);
     Global.showMenu($projectNavSlideout);
     $projectNavSlideout.animate({ width: 'toggle'});
     expandCurrentSection();
-  },
+  };
 
-  closeProjectNav = function() {
+  const closeProjectNav = function() {
     if ( $projectNavSlideout.hasClass('show-menu') ) {
       Global.makeVisibleBelow($projectNavHandle, $overviewSection.offset().top + navHandleOffset);
       $projectNavSlideout.animate({ width: 'toggle'}, function() {
@@ -77,9 +77,9 @@ var ProjectNav = function() {
     } else {
       return false; // projectNav was already closed
     }
-  },
+  };
 
-  expandCurrentSection = function() {
+  const expandCurrentSection = function() {
     const curAnchor = MainNav.getCurAnchor(true),
           $priorSection = $projectNavSlideout.find('.current-section'),
           $menuItem = $projectNavSlideout.find('a[href="' + curAnchor + '"]');
@@ -102,18 +102,18 @@ var ProjectNav = function() {
         $targetDropdown.addClass('current-section');
       }
     }
-  },
+  };
 
 
-  getMenuCaret = function($targetDropdown) {
+  const getMenuCaret = function($targetDropdown) {
     if ($targetDropdown.find('.fa').length) {
       return $targetDropdown.find('.fa').eq(0);
     } else {
       return false;
     }
-  },
+  };
 
-  dropdownIsExpanded = function($targetDropdown) {
+  const dropdownIsExpanded = function($targetDropdown) {
     const $menuCaret = getMenuCaret($targetDropdown);
 
     if ( $menuCaret.hasClass('fa-caret-up') ) {
@@ -121,9 +121,9 @@ var ProjectNav = function() {
     } else {
       return false;
     }
-  },
+  };
 
-  toggleDropdown = function($targetDropdown) {
+  const toggleDropdown = function($targetDropdown) {
     $targetDropdown = $targetDropdown || $(event.target).parents('.dropdown');
 
     const $targetDropdownContent = $targetDropdown.find('.dropdown-content').eq(0),
@@ -141,9 +141,9 @@ var ProjectNav = function() {
     //   }, 0.5 );
     // }
     $targetDropdownContent.slideToggle();
-  },
+  };
 
-  getParentAnchor = function(linkElement) {
+  const getParentAnchor = function(linkElement) {
     const allParents = linkElement.parents();
     let parentType,
         sectionAnchor,
@@ -173,9 +173,9 @@ var ProjectNav = function() {
       }
     });
     return parentHash;
-  },
+  };
 
-  scrollIt = function(destinationHash) {
+  const scrollIt = function(destinationHash) {
     const curAnchor = MainNav.getCurAnchor(),
           curParent = getParentAnchor($(curAnchor)),
           destinationParent = getParentAnchor($(destinationHash)),
@@ -191,31 +191,34 @@ var ProjectNav = function() {
     } else {
       return false;
     }
-  },
+  };
 
-  fadeNavigate = function(destinationHash, destinationUrl) {
+  // const fadeNavigate = function(destinationHash, destinationUrl) {
+  const fadeNavigate = function(destinationHash) {
     const targetElement = $(destinationHash),
           revealPage = $('#reveal-page');
 
     if ( targetElement.hasClass('section-anchor') ) {
       revealPage.fadeIn(400, function() {
-        MainNav.goToUrl(destinationUrl);
+        // MainNav.goToUrl(destinationUrl);
+        MainNav.refreshLocation(destinationHash);
         revealPage.fadeOut(800);
       });
     } else {
-      const targetParent = getParentAnchor($(destinationHash)),
-            parentUrl = MainNav.convertHashToUrl(targetParent);
-
+      const targetParent = getParentAnchor($(destinationHash));
+            // parentUrl = MainNav.convertHashToUrl(targetParent);
       revealPage.fadeIn(400, function() {
-        MainNav.goToUrl(parentUrl);
+        MainNav.refreshLocation(targetParent);
+        // MainNav.goToUrl(parentUrl);
         revealPage.fadeOut(500, function() {
-          MainNav.scrollNavigate(destinationHash, destinationUrl);
+          // MainNav.scrollNavigate(destinationHash, destinationUrl);
+          MainNav.scrollNavigate(destinationHash);
         });
       });
     }
-  },
+  };
 
-  init = function() {
+  const init = function() {
     refreshNavHandle();
     return;
   };

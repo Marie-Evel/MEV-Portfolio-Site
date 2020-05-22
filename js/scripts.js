@@ -1,59 +1,58 @@
 var Global = (function () {
-  const
-  elementIsVisible = function(targetElement) {
+  const elementIsVisible = function(targetElement) {
     if ( targetElement.hasClass('visible') ) {
       return true;
     } else {
       return false;
     }
-  },
+  };
 
-  makeVisible = function(targetElement) {
+  const makeVisible = function(targetElement) {
     targetElement.addClass('visible');
     return true;
-  },
+  };
 
-  makeInvisible = function(targetElement) {
+  const makeInvisible = function(targetElement) {
     targetElement.removeClass('visible');
     return true;
-  },
+  };
 
-  menuIsVisible = function(targetMenu) {
+  const menuIsVisible = function(targetMenu) {
     if ( targetMenu.hasClass('show-menu') ) {
       return true;
     } else {
       return false;
     }
-  },
+  };
 
-  showMenu = function(targetMenu) {
+  const showMenu = function(targetMenu) {
     targetMenu.addClass('show-menu');
     return true;
-  },
+  };
 
-  hideMenu = function(targetMenu) {
+  const hideMenu = function(targetMenu) {
     targetMenu.removeClass('show-menu');
     return true;
-  },
+  };
 
-  getScrollPosition = function() {
+  const getScrollPosition = function() {
     return window.pageYOffset || document.documentElement.scrollTop;
-  },
+  };
 
-  setScrollPosition = function(targetPosition) {
+  const setScrollPosition = function(targetPosition) {
     document.body.scrollTop = document.documentElement.scrollTop = targetPosition;
     return;
-  },
+  };
 
-  getTopPosition = function(targetElement) {
+  const getTopPosition = function(targetElement) {
     return targetElement.offset().top - getScrollPosition();
-  },
+  };
 
-  getBottomPosition = function(targetElement) {
+  const getBottomPosition = function(targetElement) {
     return targetElement.offset().top + targetElement.outerHeight(true) - getScrollPosition();
-  },
+  };
 
-  makeVisibleBelow = function(targetElement, triggerPosition) {
+  const makeVisibleBelow = function(targetElement, triggerPosition) {
   // Makes the target element visible when scroll position is below the
   // triggerPosition
     if(getScrollPosition() > triggerPosition) {
@@ -63,7 +62,7 @@ var Global = (function () {
       makeInvisible(targetElement);
       return false; // targetElement is now hidden
     }
-  }
+  };
 
   return {
     elementIsVisible: elementIsVisible,
@@ -83,25 +82,25 @@ var Global = (function () {
 
 // Hamburger menu for mobile:
 var Hamburger = (function () {
-  const $icon = $('#nav-icon'),
+  const $icon = $('#nav-icon');
 
-  openNav = function() {
+  const openNav = function() {
     $icon.toggleClass('hamburger close');
     MainNav.$nav.slideDown();
     Global.showMenu(MainNav.$nav);
     return;
-  },
+  };
 
-  closeNav = function() {
+  const closeNav = function() {
     $icon.toggleClass('hamburger close');
     Global.hideMenu(MainNav.$nav);
     MainNav.$nav.slideUp(function() {
       MainNav.$nav.removeAttr('style');
     });
     return;
-  },
+  };
 
-  toggleMenu = function() {
+  const toggleMenu = function() {
     if ( Global.menuIsVisible(MainNav.$nav) ) {
       closeNav();
       return false;
@@ -122,9 +121,9 @@ var MainNav = (function() {
   let didScroll = false;
 
   const $nav = $('#menu-container'),
-        $topChevron = $('#back-to-top a').eq(0),
+        $topChevron = $('#back-to-top a').eq(0);
 
-  getCurAnchor = function(basedOnTop = false) {
+  const getCurAnchor = function(basedOnTop = false) {
     const $anchorLinks = $('.anchor');
 
     let curPosition = Global.getScrollPosition(),
@@ -149,49 +148,57 @@ var MainNav = (function() {
     $curAnchor = $anchorLinks[anchorIndex];
     curAnchorHash = '#' + $($curAnchor).attr('id');
     return curAnchorHash;
-  },
+  };
 
-  convertHashToUrl = function(hash) {
+  const convertHashToUrl = function(hash) {
     const protocol = $(location).attr('protocol'),
           path = $(location).attr('pathname'),
           finalUrl = protocol + '//' + path + hash;
 
     return finalUrl;
-  },
+  };
 
-  scrollNavigate = function(destinationHash, destinationUrl) {
+  const scrollNavigate = function(destinationHash) {
+  // const scrollNavigate = function(destinationHash, destinationUrl) {
     const targetPosition = $(destinationHash).offset().top;
     $('html, body').animate( { scrollTop: targetPosition }, 500, function() {
-      goToUrl(destinationUrl);
+      // goToUrl(destinationUrl);
+      refreshLocation(destinationHash);
     });
-  },
+  };
 
-  goToUrl = function(destinationUrl) {
+  const goToUrl = function(destinationUrl) {
     location.href = destinationUrl;
     return;
-  },
+  };
 
-  hamburgerIsDisabled = function() {
+  const refreshLocation = function (destinationHash) {
+    location.hash = destinationHash;
+    return;
+  };
+
+  const hamburgerIsDisabled = function() {
     return Hamburger.$icon.css("display") === 'none';
-  },
+  };
 
-  innerLinkClickEvent = function() {
+  const innerLinkClickEvent = function() {
     $('body.main .within-link').each(function(i, link) {
       $(link).click( function() {
-        const newUrl = this.href,
-              newHash = this.hash;
+        const newHash = this.hash;
+              // newUrl = this.href;
 
         if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
         }
-        scrollNavigate(newHash, newUrl);
+        // scrollNavigate(newHash, newUrl);
+        scrollNavigate(newHash);
         return false;
       });
     });
     return;
-  },
+  };
 
-  outerLinkClickEvent = function() {
+  const outerLinkClickEvent = function() {
     $('body.main .outer-link').each(function(i, link) {
       $(link).click(function() {
         const newUrl = this.href;
@@ -206,9 +213,9 @@ var MainNav = (function() {
         return false;
       });
     });
-  },
+  };
 
-  refreshTopChevron = function() {
+  const refreshTopChevron = function() {
     return Global.makeVisibleBelow($topChevron, 85);
   };
 
@@ -220,6 +227,7 @@ var MainNav = (function() {
     outerLinkClickEvent: outerLinkClickEvent,
     scrollNavigate: scrollNavigate,
     convertHashToUrl: convertHashToUrl,
+    refreshLocation: refreshLocation,
     goToUrl: goToUrl,
     refreshTopChevron: refreshTopChevron,
     getCurAnchor: getCurAnchor,

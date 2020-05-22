@@ -2,17 +2,17 @@ var LogoAnimation = function() {
 
   const $logo = $('#mev-logo-animation'),
         $play = $('#play-animation-button'),
-        $overlay = $('#mev-logo-animation .overlay'),
+        $overlay = $('#mev-logo-animation .overlay');
 
-  checkIfLogoPlayed = function() {
+  const checkIfLogoPlayed = function() {
     if ( isVisible($logo, 85, 80) && neverPlayed() ) {
       animateLogo();
       $logo.addClass('played-on-scroll');
     }
     return;
-  },
+  };
 
-  animateLogo = function() {
+  const animateLogo = function() {
     $play.addClass('hide');
     $logo.addClass('animate');
     $overlay.addClass('hide-overlay');
@@ -24,9 +24,9 @@ var LogoAnimation = function() {
     }, 6000);
 
     return;
-  },
+  };
 
-  isVisible = function(targetElement, offsetTop, offsetBottom) {
+  const isVisible = function(targetElement, offsetTop, offsetBottom) {
     const gridTop = offsetTop,
           gridBottom = window.innerHeight - offsetBottom,
           elementTop = Global.getTopPosition(targetElement),
@@ -37,9 +37,9 @@ var LogoAnimation = function() {
     } else {
       return false;
     }
-  },
+  };
 
-  neverPlayed = function() {
+  const neverPlayed = function() {
     if ( $logo.hasClass('played-on-scroll') ) {
       return false;
     } else {
@@ -56,9 +56,9 @@ var LogoAnimation = function() {
 
 var Parallax = function() {
   const $container = $('#hero'),
-        $img = $container.find('img'),
+        $img = $container.find('img')
 
-  applyParallax = function (strength = 0.5) {
+  const applyParallax = function (strength = 0.5) {
     // strength must be between 0 and 1:
     // 0: no parallax effect; image moves with its container
     // 1: full parallax effect; image doesn't move at all (looks like it's
