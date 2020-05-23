@@ -1923,13 +1923,13 @@ ul.bullets {
 
 .carousel-wrapper button.previous {
   margin-left: -28px;
-  padding-left: 28px;
+  padding-left: 23px;
 }
 
 .carousel-wrapper button.next {
   right: 0;
   margin-right: -28px;
-  padding-right: 28px;
+  padding-right: 23px;
 }
 
 .carousel-wrapper .block-hover {
@@ -3170,7 +3170,7 @@ body .sc a:visited { color: var(--sc-red); }
   /* NOTE: Ideally, this should be applied to only the first line of the
      paragraph, but doesn't work in Safari and Firefox */
    }
-   
+
   #test-issue2 .caption3 p { font-size: 0.89em; }
 
   #test-issue2 .caption4 { margin-top: 47px; }
@@ -3452,12 +3452,12 @@ body .sc a:visited { color: var(--sc-red); }
 
   .carousel-wrapper button.previous {
     margin-left: -35px;
-    padding-left: 30px;
+    padding-left: 27px;
   }
 
   .carousel-wrapper button.next {
     margin-right: -35px;
-    padding-right: 30px;
+    padding-right: 27px;
   }
 
 
