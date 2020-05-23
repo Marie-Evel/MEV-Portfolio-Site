@@ -150,14 +150,14 @@ main { position: relative; }
   position: absolute;
   opacity: 0;
   bottom: 0px;
-  right: 5px;
+  right: 10px;
   text-shadow: 0 0 5px white;
   cursor: default;
   border-radius: 25% 25% 0 0;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 25px;
+  line-height: 1.5;
   transition: all 1s;
-  padding: 3px 10px 0;
+  padding: 3px 15px 0;
   background-color: rgba(255,255,255,0.4);
 }
 
@@ -227,6 +227,13 @@ footer h1 {
   background-color: #FFFFFF;
   text-shadow: unset;
 }
+
+.soc-media-icons .fa,
+.soc-media-icons .fab,
+.soc-media-icons .fal,
+.soc-media-icons .far,
+.soc-media-icons .fad,
+.soc-media-icons .fas { line-height: inherit; }
 
 #mev-copyright p {
   font-family: Arial, sans-serif;
