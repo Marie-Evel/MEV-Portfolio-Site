@@ -121,6 +121,8 @@ a:active {
 /*----------------------------------------------------------------------------*/
 header, footer { font-family: 'Metrisch', Arial, sans-serif; }
 
+/* .fa, .fab, .fal, .far, .fad, .fas { line-height: inherit; } */
+
 #menu-container,
 .solid-footer { background-color: var(--nav-background); }
 
@@ -135,6 +137,8 @@ section.transition { padding: 0; }
 
 section h2:first-child,
 section div.anchor + h2 { margin-top: 0; }
+
+#overview-grid div.anchor + h2 { margin-top: 1.5em; }
 
 .centered-container {
   position: relative;
@@ -832,6 +836,12 @@ ul.bullets {
 
 #sneak-peek-outro a:not(.button-filled) {
   color: white;
+  padding: 5px 5px;
+}
+
+#sneak-peek-outro a:not(.button-filled):hover {
+  color: var(--sc-red);
+  background-color: white;
 }
 
 /* 02 Research */
@@ -1891,12 +1901,19 @@ ul.bullets {
   height: 56px;
   background-color: var(--sc-blue);
   border: transparent;
+  padding: 0;
   color: white;
   border-radius: 50%;
   box-shadow: 0px 1px 5px rgba(0,0,0, 0.4);
   cursor: pointer;
   z-index: 2;
   transition: opacity 1s;
+}
+
+.carousel-wrapper button span {
+  height: 100%;
+  line-height: 1;
+  padding-top: 19px;
 }
 
 .carousel-wrapper button.disabled {
@@ -3147,8 +3164,13 @@ body .sc a:visited { color: var(--sc-red); }
 
   #test-issue2 .caption1 { margin-top: 11px; }
 
-  #test-issue2 .caption1 p::first-line { text-align: justify; }
-
+  /* #test-issue2 .caption1 p::first-line { text-align: justify; } */
+  #test-issue2 .caption1 p {
+    text-align: justify;
+  /* NOTE: Ideally, this should be applied to only the first line of the
+     paragraph, but doesn't work in Safari and Firefox */
+   }
+   
   #test-issue2 .caption3 p { font-size: 0.89em; }
 
   #test-issue2 .caption4 { margin-top: 47px; }
@@ -3424,14 +3446,18 @@ body .sc a:visited { color: var(--sc-red); }
     transition: opacity 1s;
   }
 
+  .carousel-wrapper button span {
+    padding-top: 23px;
+  }
+
   .carousel-wrapper button.previous {
     margin-left: -35px;
-    padding-left: 35px;
+    padding-left: 30px;
   }
 
   .carousel-wrapper button.next {
     margin-right: -35px;
-    padding-right: 35px;
+    padding-right: 30px;
   }
 
 
@@ -3462,7 +3488,13 @@ body .sc a:visited { color: var(--sc-red); }
   }
 
   #improvements .caption1 { margin-top: calc(91px - 0.6em); }
-  #improvements .caption1 p::first-line { text-align: justify; }
+
+  /* #improvements .caption1 p::first-line { text-align: justify; } */
+  #improvements .caption1 p {
+    text-align: justify;
+    /* NOTE: Ideally, this should be applied to only the first line of the
+       paragraph, but doesn't work in Safari and Firefox */
+  }
 
   #improv-join .line {
     display: grid;
@@ -3576,7 +3608,6 @@ body .sc a:visited { color: var(--sc-red); }
     padding: 0 250px 0 40px;
   }
 
-  #overview-grid .anchor,
   #test-content .anchor { top: -82px; }
 
   #opp-strategy-anchor,
