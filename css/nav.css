@@ -213,7 +213,6 @@ footer h1 {
 .soc-media-icons a {
   display: inline-block;
   color: #FFFFFF;
-  line-height: 2.4em;
   text-align: center;
   border-radius: 50%;
   width: 2.2em;
@@ -228,12 +227,10 @@ footer h1 {
   text-shadow: unset;
 }
 
-.soc-media-icons .fa,
-.soc-media-icons .fab,
-.soc-media-icons .fal,
-.soc-media-icons .far,
-.soc-media-icons .fad,
-.soc-media-icons .fas { line-height: inherit; }
+.soc-media-icons span {
+  line-height: 1;
+  padding-top: 0.6em;
+}
 
 #mev-copyright p {
   font-family: Arial, sans-serif;
