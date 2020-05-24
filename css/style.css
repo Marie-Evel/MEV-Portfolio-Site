@@ -488,7 +488,7 @@ h1 > p {
     background-color: #FFFFFF;
     border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-    padding: 20px;
+    padding: 20px 40px 20px 20px;
     margin-bottom: 50px;
   }
 
@@ -674,18 +674,18 @@ h1 > p {
   .case-study-card {
     grid-template-columns: 300px 1fr;
     grid-column-gap: 35px;
-    padding-right: 40px;
+    padding-right: 30px;
     min-width: 834px;
     max-width: 950px;
   }
 
   .case-study-card h2 {
     font-size: 1.1em;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0.75em;
   }
 
-  .case-study-card p { margin-bottom: 1em; }
+  .case-study-card p { margin-bottom: 0.75em; }
 
   #mev-logo-animation.project-picture { height: 189px; }
 
