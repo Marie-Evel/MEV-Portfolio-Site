@@ -1670,7 +1670,8 @@ ul.bullets {
   padding: 30px 0;
 }
 
-#demo img {
+#demo img,
+#demo video {
   width: 70vw;
   height: auto;
   -o-object-fit: cover;
@@ -3385,7 +3386,8 @@ body .sc a:visited { color: var(--sc-red); }
     padding: 0;
   }
 
-  #demo img { width: 100%; }
+  #demo img,
+  #demo video { width: 100%; }
 
   #final-mockups-intro { padding-bottom: 60px; }
 
