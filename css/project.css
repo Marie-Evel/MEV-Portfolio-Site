@@ -1923,13 +1923,13 @@ ul.bullets {
 
 .carousel-wrapper button.previous {
   margin-left: -28px;
-  padding-left: 23px;
+  padding-left: 20px;
 }
 
 .carousel-wrapper button.next {
   right: 0;
   margin-right: -28px;
-  padding-right: 23px;
+  padding-right: 20px;
 }
 
 .carousel-wrapper .block-hover {
