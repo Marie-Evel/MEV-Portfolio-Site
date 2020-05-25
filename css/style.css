@@ -425,7 +425,8 @@ h1 > p {
 .resume-container embed {
   width: 100%;
   height: calc(100vh - 61px);
-  margin-bottom: -10px;
+  max-height: 1175px;
+  margin-bottom: -6px;
 }
 
 /*----------------------------------------------------------------------------*/
