@@ -24,7 +24,6 @@
   --angie-green: #587330;
   --angie-green-lighter: #AFBC9F;
   --old-glory-red: #B22234;
-
 }
 
 /*----------------------------------------------------------------------------*/
@@ -396,9 +395,11 @@ ul.bullets {
 
 .connector {
   position: absolute;
-  stroke-width: 1.5;
+  stroke-width: 2;
   stroke: var(--sc-blue);
 }
+
+.connector.edge { stroke-width: 4; }
 
 .bullet-asterisk::before {
   content: "*";
@@ -1037,29 +1038,29 @@ ul.bullets {
 }
 
 #my-hunts-grid .low-fid .connector:nth-of-type(1) {
-  top: 18vw;
-  left: calc(35vw + 5px);
-  height: 29vw;
+  top: 24.3%;
+  left: calc(100% + 5px);
+  height: 40%;
 }
 
 #my-hunts-grid .low-fid .connector:nth-of-type(2) {
-  top: calc(18vw + 0.5em);
-  left: calc(35vw + 5px);
+  top: calc(24.6% + 0.5em);
+  left: calc(100% + 5px);
   width: 20px;
 }
 
 #my-hunts-grid .caption1 p { margin-top: 18vw; }
 
 #my-hunts-grid .low-fid .connector:nth-of-type(3) {
-  top: calc(66.4vw + 5px);
-  left: 0.69vw;
-  width: 33.47vw;
+  top: calc(91% + 5px);
+  left: 2%;
+  width: 95.2%;
 }
 
 #my-hunts-grid .low-fid .connector:nth-of-type(4) {
-  top: calc(66.4vw + 5px);
-  left: 5vw;
-  height: calc(5vw + 17px);
+  top: calc(91% + 5px);
+  left: 15%;
+  height: calc(9% + 10px);
 }
 
 #my-hunts-grid .caption2 { margin: 15px 0 0 0; }
@@ -1098,6 +1099,8 @@ ul.bullets {
 /* 05 Design iterations */
 /*----------------------------------------------------------------------------*/
 .design-iterations h4 { margin-top: 0; }
+
+.rect-position { display: none; }
 
 /* Set up grid for all 4 design iteration sub-sections */
 .design-iterations-grid {
@@ -1238,7 +1241,9 @@ ul.bullets {
 #buy-hunt .mockup.final-mockup .connector.line,
 #select-pref .mockup .connector.line { height: 48px; }
 
-#buy-hunt .mockup.final-mockup .connector.line.horiz-middle { display: none; }
+#buy-hunt .mockup.final-mockup .connector.line.horiz-middle,
+#buy-hunt .hide-line { display: none; }
+
 
 #buy-hunt .caption2,
 #select-pref .caption { margin-top: 35px; }
@@ -1507,15 +1512,15 @@ ul.bullets {
 }
 
 #test-issue2 .double-elbow.vert-line {
-  top: 15.8%;
+  top: 15.45%;
   left: calc(100% + 4px);
-  height: 36.15%;
+  height: calc(35.65% + 2px);
 }
 
 #test-issue2 .double-elbow.bottom {
-  top: calc(52% - 2px);
+  top: 51.1%;
   left: 40%;
-  width: calc(61.2% + 4px);
+  width: calc(60% + 6px);
 }
 
 #test-solution2 {
@@ -1621,7 +1626,7 @@ ul.bullets {
 
 #accessibility-error .elbow.top {
   left: 70.5%;
-  width: calc(30% + 10vw); }
+  width: calc(29.5% + 10vw + 2px); }
 
 #accessibility-error .vert-line {
   left: calc(100% + 10vw);
@@ -1641,11 +1646,11 @@ ul.bullets {
 #accessibility-hyperlinks .vert-line { top: 74%; }
 
 #accessibility-hyperlinks .elbow.top {
-  right: -10vw;
+  right: calc(1px - 10vw);
   width: calc(3% + 10vw); }
 
 #accessibility-hyperlinks .vert-line {
-  left: calc(100% + 10vw);
+  left: calc(100% + 10vw - 1px);
   height: calc(26% + 19px);
 }
 
@@ -1655,11 +1660,11 @@ ul.bullets {
 #accessibility-input-field .vert-line { top: 60%; }
 
 #accessibility-input-field .elbow.top {
-  right: -10vw;
-  width: calc(5% + 10vw); }
+  right: calc(1px - 10vw);
+  width: calc(5% + 10vw - 1px); }
 
 #accessibility-input-field .vert-line {
-  left: calc(100% + 10vw);
+  left: calc(100% + 10vw - 1px);
   height: calc(40% + 19px);
 }
 
@@ -1878,7 +1883,7 @@ ul.bullets {
 }
 
 .iphone-x .scrollable-screen,
-.iphone-x .scrollable-screen img  { width: calc(35.4vh - 23px); }
+.iphone-x .scrollable-screen img  { width: calc(33.62vh - 21px); }
 
 .iphone-x .scrollable-screen img {
   transform: translate(-50%, 0);
@@ -1888,10 +1893,10 @@ ul.bullets {
 }
 
 .iphone-x:hover .scrollable-screen img,
-.iphone-x:active .scrollable-screen img { transform: translate(-50%, -61.3%); }
+.iphone-x:active .scrollable-screen img { transform: translate(-50%, -60%); }
 
 .iphone-x:hover .scrollable-screen.longer img,
-.iphone-x:active .scrollable-screen.longer img { transform: translate(-50%, -62%); }
+.iphone-x:active .scrollable-screen.longer img { transform: translate(-50%, -60.6%); }
 
 .carousel-wrapper button {
   position: absolute;
@@ -1974,14 +1979,14 @@ ul.bullets {
 
 #improv-hunt-detail .double-elbow.vert-line {
   top: 0.5em;
-  left: calc(100% + 7px);
-  height: calc(33.3% - 0.5em);
+  left: calc(100% + 8px);
+  height: calc(32.5% - 0.5em + 2px);
 }
 
 #improv-hunt-detail .double-elbow.bottom {
   top: 32.5%;
   left: 50%;
-  width: calc(50.4% + 8px);
+  width: calc(50.4% + 9px);
 }
 
 #improv-hunt-detail .line.vert-line {
@@ -2280,6 +2285,14 @@ body .sc a:visited { color: var(--sc-red); }
     -webkit-filter: drop-shadow(0 0.1em 0.25em rgba(0,0,0,.4));
     -webkit-transform: translateZ(0);
   }
+
+  .hide-line {
+    display: grid;
+    fill: white;
+    width: 100%;
+  }
+
+  .hide-line rect { stroke: transparent; }
 
   /* Intro | tablets */
   /*--------------------------------------------------------------------------*/
@@ -2718,12 +2731,10 @@ body .sc a:visited { color: var(--sc-red); }
   #index-card-example .arrow .connector.triangle {
     display: grid;
     left: calc(100% + 3px);
-    top: 1.5px;
   }
 
   #index-card-example .arrow .connector.line {
     display: grid;
-    top: 10px;
     width: calc(100% + 15px);
   }
 
@@ -2766,21 +2777,34 @@ body .sc a:visited { color: var(--sc-red); }
     max-width: unset;
   }
 
-  .design-iterations-grid .background-rectangle svg {
+  .rect-position {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+  }
+
+  .rect-container {
     position: absolute;
-    fill: var(--sc-med-blue);
+    width: 100%;
+    top: 30px;
+  }
+
+
+  .background-rectangle {
+    position: absolute;
+    background-color: var(--sc-med-blue);
     left: -60px;
     top: 23%;
-    width: 100vw;
+    width: calc(100% + 120px);
     max-width: 1250px;
     height: 54%;
   }
 
-  .design-iterations-grid .background-rectangle {
-    display: grid;
-    grid-area: band;
-    position: relative;
-    height: 100%;
+  .rect-container img {
+    width: 19.325%;
+    max-width: 140.3px;
+    height: auto;
   }
 
   .design-iterations-grid .mockup.low-fid img,
@@ -2805,10 +2829,10 @@ body .sc a:visited { color: var(--sc-red); }
   /* 05A Finding a hunt | tablets */
   /* ------------------------------------------------------------------------ */
   #finding-a-hunt .design-iterations-grid {
-    grid-template-areas: "band low-fid . mid-fid . hi-fid1 . final"
-                         ". caption1 caption1 caption1 . caption2 caption2 caption2"
-                         ". . . . dereck-says dereck-says dereck-says dereck-says";
-    grid-template-columns: 0px 18.36% 1fr 19.073% 1fr 19.325% 1fr 19.325%;
+    grid-template-areas: "low-fid . mid-fid . hi-fid1 . final"
+                         "caption1 caption1 caption1 . caption2 caption2 caption2"
+                         ". . . dereck-says dereck-says dereck-says dereck-says";
+    grid-template-columns: 18.36% 1fr 19.073% 1fr 19.325% 1fr 19.325%;
     grid-column-gap: 0;
   }
 
@@ -2882,7 +2906,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #buy-hunt .no-shell.low-fid .connector.line.horiz-middle { width: 103.75%; }
 
-  #buy-hunt .mockup.hi-fid1 .connector.line.horiz-middle { width: 175%; }
+  #buy-hunt .mockup.hi-fid1 .connector.line.horiz-middle { width: 250%; }
 
   #buy-hunt .mockup.final-mockup .connector.line { height: 80px; }
 
@@ -2890,6 +2914,11 @@ body .sc a:visited { color: var(--sc-red); }
     display: grid;
     left: -50%;
     width: 100%;
+  }
+
+  #buy-hunt .final-mockup .hide-line {
+    left: 1px;
+    top: calc(100% + 35px);
   }
 
   #buy-hunt .caption1,
@@ -3131,7 +3160,7 @@ body .sc a:visited { color: var(--sc-red); }
   }
 
   #sol1-screen1 .connector.line {
-    width: calc(50vw - 348px);
+    width: 115%;
     left: calc(100% + 15px);
   }
 
@@ -3140,6 +3169,13 @@ body .sc a:visited { color: var(--sc-red); }
     top: 0;
     height: 100%;
     width: 40px;
+  }
+
+  #sol1-screen2 .hide-line {
+    top: 75%;
+    left: -43px;
+    width: 40px;
+    height: auto;
   }
 
   #test-solution1 .caption {
@@ -3359,11 +3395,12 @@ body .sc a:visited { color: var(--sc-red); }
 
   /* 09 Final Designs | tablets */
   /*--------------------------------------------------------------------------*/
+  #final-designs-header { padding-right: 0; }
 
   #final-designs-grid {
     display: grid;
     grid-template-areas: "intro demo"
-                         "prototype prototype"
+                         "prototype demo"
                          "button .";
     grid-template-columns: 7fr 3fr;
     grid-template-rows: auto;
@@ -3423,12 +3460,12 @@ body .sc a:visited { color: var(--sc-red); }
   .iphone-x .scrollable-screen,
   .iphone-x .scrollable-screen img {
     width: calc(33.62vh - 29px);
-    max-width: 147px;
+    max-width: 180px;
   }
 
   .iphone-x .scrollable-screen {
     height: calc(72.8vh - 62px);
-    max-height: 319px;
+    max-height: 391px;
   }
 
   .iphone-x:hover .scrollable-screen img,
@@ -3880,7 +3917,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #index-card-example .arrow .connector.line {
     left: 139px;
-    top: 49.5px;
+    bottom: 0;
     width: calc(100% - 124px);
   }
 
@@ -3904,7 +3941,14 @@ body .sc a:visited { color: var(--sc-red); }
     max-width: unset;
   }
 
+  .rect-container img {
+    width: 185px;
+    max-width: unset;
+    height: auto;
+  }
+
   .design-iterations-grid .connector.line.horiz-middle { max-width: 280px; }
+
 
   /* 05A Finding a hunt | desktop */
   /*--------------------------------------------------------------------------*/
@@ -3978,6 +4022,14 @@ body .sc a:visited { color: var(--sc-red); }
   #buy-hunt .mockup.hi-fid1 { justify-self: start; }
 
   #buy-hunt .caption { padding: 0; }
+
+  #buy-hunt .rect-container img {
+    width: 15.55%;
+    max-width: 175px;
+    height: auto;
+  }
+
+  #buy-hunt .design-iterations-grid .connector.line.horiz-middle { max-width: unset; }
 
 
   /* 05D Selecting preferences | desktop */
@@ -4104,11 +4156,6 @@ body .sc a:visited { color: var(--sc-red); }
     margin: 20px 0px 0 -40px;
   }
 
-  #sol1-screen1 .connector.line {
-    width: calc(50vw - 416px);
-    max-width: 209px;
-  }
-
   /* 06d Issue #2 | desktop */
   /*----------------------------------------------------------------------------*/
   #test-issue2 {
@@ -4181,9 +4228,6 @@ body .sc a:visited { color: var(--sc-red); }
   /* 09 Final Designs | desktop */
   /*--------------------------------------------------------------------------*/
   #final-designs-grid {
-    grid-template-areas: "intro demo"
-                         "prototype demo"
-                         "button .";
     grid-template-columns: auto minmax(175px, 205px);
     grid-column-gap: 60px;
     width: calc(100vw - 500px);

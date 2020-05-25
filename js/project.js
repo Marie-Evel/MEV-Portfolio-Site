@@ -463,3 +463,5 @@ window.addEventListener('scroll', function() {
 window.addEventListener('resize', function() {
   Carousel.init();
 });
+
+// scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;

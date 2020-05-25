@@ -3,14 +3,14 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153406944-2"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153406944-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-153406944-2', { 'anonymize_ip': true });
-  </script>
+  </script> -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -980,8 +980,8 @@
                    alt="Detailed user journey map for Dereck">
             </picture>
           </a>
-          <svg class="connector line dereck-red" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
+          <svg class="connector line edge dereck-red" height="200" width="10">
+            <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
         </div>
         <div class="caption caption-bottom">
@@ -1349,17 +1349,17 @@
                      alt="Low-fidelity sketched wireframe of My Hunts screen">
               </picture>
             </a>
-            <svg class="connector line" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector line edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
-            <svg class="connector line" height="10" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector line edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector line" height="10" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector line edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector line" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector line edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
           </div><!-- END of column 1 -->
           <div class="caption caption1 caption-right">
@@ -1429,7 +1429,7 @@
           </div>
           <div class="arrow">
             <svg class="connector line" height="20" width="400">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+              <line x1="0" y1="50%" x2="100%" y2="50%" />
             </svg>
             <svg class="connector circle" height="20" width="200">
               <circle cx="50%" cy="50%" r="8" />
@@ -1467,12 +1467,14 @@
 
     <section id="finding-a-hunt" class="design-iterations wide-section background-fill">
       <h4>A. Finding a hunt</h4>
-      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
-        <div class="background-rectangle">
-          <svg width="200" height="100">
-            <rect width="100%" height="100%" />
-          </svg>
+      <div class="rect-position">
+        <div class="rect-container">
+          <div class="background-rectangle"></div>
+          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
+      </div>
+
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="mockup low-fid">
           <a href="#find-hunts-1">
             <picture id="find-hunts-1" class="shadow-black shadow-white-md">
@@ -1574,12 +1576,13 @@
 
     <section id="hunt-info" class="design-iterations background-fill sc-light-blue wide-section">
       <h4>B. Getting info about a hunt</h4>
-      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
-        <div class="background-rectangle">
-          <svg width="200" height="100">
-            <rect width="100%" height="100%" />
-          </svg>
+      <div class="rect-position">
+        <div class="rect-container">
+          <div class="background-rectangle"></div>
+          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
+      </div>
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="mockup low-fid">
           <a href="#hunt-detail-1">
             <picture id="hunt-detail-1" class="shadow-black">
@@ -1677,12 +1680,13 @@
 
     <section id="buy-hunt" class="design-iterations wide-section background-fill">
       <h4>C. Buying a hunt</h4>
-      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
-        <div class="background-rectangle">
-          <svg width="200" height="100">
-            <rect width="100%" height="100%" />
-          </svg>
+      <div class="rect-position">
+        <div class="rect-container">
+          <div class="background-rectangle"></div>
+          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
+      </div>
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="no-shell low-fid">
           <a href="#buy-hunt-1">
             <picture id="buy-hunt-1" class="shadow-black">
@@ -1780,8 +1784,8 @@
           <svg class="connector circle" height="20" width="200">
             <circle cx="50%" cy="50%" r="8" />
           </svg>
-          <svg class="connector line horiz-middle" height="90" width="50">
-            <line x1="0" y1="60%" x2="100%" y2="60%" />
+          <svg class="connector hide-line" height="50" width="100">
+            <rect x="50%" y="0" height="50" width="100" />
           </svg>
         </div>
         <div class="caption caption2">
@@ -1797,12 +1801,13 @@
 
     <section id="select-pref" class="design-iterations wide-section background-fill sc-light-blue">
       <h4>D. Selecting preferences</h4>
-      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
-        <div class="background-rectangle">
-          <svg width="200" height="100">
-            <rect width="100%" height="100%" />
-          </svg>
+      <div class="rect-position">
+        <div class="rect-container">
+          <div class="background-rectangle"></div>
+          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
+      </div>
+      <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="mockup low-fid">
           <a href="#pref-1">
             <picture id="pref-1" class="shadow-black shadow-white-md">
@@ -2237,11 +2242,14 @@
                      alt="Guest Checkout screen on iPhone XS">
               </picture>
             </a>
+            <svg class="connector hide-line" height="50" width="40">
+              <rect x="0" y="0" height="50" width="40" />
+            </svg>
             <svg class="connector line" height="200" width="40">
               <line x1="0" y1="15.13%" x2="100%" y2="15.13%" />
             </svg>
-            <svg class="connector line vert-line" height="200" width="40">
-              <line x1="1" y1="15.13%" x2="1" y2="83%" />
+            <svg class="connector line vert-line edge" height="200" width="40">
+              <line x1="0" y1="15.13%" x2="0" y2="83%" />
             </svg>
           </div>
           <div id="sol1-caption2" class="caption caption2 caption-right">
@@ -2305,20 +2313,20 @@
                      alt="Old Players screen on iPhone XS">
               </picture>
             </a>
-            <svg class="connector double-elbow top" height="200" width="200">
-              <line x1="0%" y1="1" x2="100%" y2="1" />
+            <svg class="connector double-elbow top edge" height="200" width="200">
+              <line x1="0%" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector double-elbow bottom" height="20" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector double-elbow bottom edge" height="20" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector double-elbow vert-line" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector double-elbow vert-line edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
-            <svg class="connector elbow top" height="10" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector elbow top edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector elbow vert-line" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector elbow vert-line edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
           </div>
           <div class="caption caption4 caption-bottom">
@@ -2551,11 +2559,11 @@
                      alt="Example of input field with error icon and error message">
               </picture>
             </a>
-            <svg class="connector elbow top line-black" height="10" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector elbow top line-black edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector vert-line line-black" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector vert-line line-black edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
           </div>
           <div class="caption caption1 caption-left">
@@ -2573,11 +2581,11 @@
                      alt="Two buttons side-by-side: ghost button on left, filled button on right">
               </picture>
             </a>
-            <svg class="connector elbow top line-black" height="10" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector elbow top line-black edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector vert-line line-black" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector vert-line line-black edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
           </div>
           <div class="caption caption2 caption-right">
@@ -2596,11 +2604,11 @@
                      alt="Example of underlined link text within a paragraph">
               </picture>
             </a>
-            <svg class="connector elbow top line-black" height="10" width="200">
-              <line x1="0" y1="1" x2="100%" y2="1" />
+            <svg class="connector elbow top line-black edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
-            <svg class="connector vert-line line-black" height="200" width="10">
-              <line x1="1" y1="0" x2="1" y2="100%" />
+            <svg class="connector vert-line line-black edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
             </svg>
           </div>
           <div class="caption caption3 caption-left">
@@ -2632,11 +2640,11 @@
                        alt="Example of input field with border and label above field">
                 </picture>
               </a>
-              <svg class="connector elbow top line-black" height="10" width="200">
-                <line x1="0" y1="1" x2="100%" y2="1" />
+              <svg class="connector elbow top line-black edge" height="10" width="200">
+                <line x1="0" y1="0" x2="100%" y2="0" />
               </svg>
-              <svg class="connector vert-line line-black" height="200" width="10">
-                <line x1="1" y1="0" x2="1" y2="100%" />
+              <svg class="connector vert-line line-black edge" height="200" width="10">
+                <line x1="0" y1="0" x2="0" y2="100%" />
               </svg>
             </div>
             <div class="caption caption2 caption-left">
@@ -3123,17 +3131,17 @@
                    alt="Section of Hunt Detail screen">
             </picture>
           </a>
-          <svg class="connector double-elbow top" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
+          <svg class="connector double-elbow top edge" height="10" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
           </svg>
-          <svg class="connector double-elbow bottom" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
+          <svg class="connector double-elbow bottom edge" height="10" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
           </svg>
-          <svg class="connector double-elbow vert-line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
+          <svg class="connector double-elbow vert-line edge" height="200" width="10">
+            <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
-          <svg class="connector line vert-line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
+          <svg class="connector line vert-line edge" height="200" width="10">
+            <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
         </div>
         <div class="caption caption2 caption-right">
@@ -3153,8 +3161,8 @@
                    alt="Section of kebab menu to join or login">
             </picture>
           </a>
-          <svg class="connector line horiz-line" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
+          <svg class="connector line horiz-line edge" height="10" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
           </svg>
         </div>
         <div class="caption caption3 caption-left">
@@ -3173,11 +3181,11 @@
                    alt="Section of Hunt Detail screen">
             </picture>
           </a>
-          <svg class="connector horiz-line" height="10" width="200">
-            <line x1="0" y1="1" x2="100%" y2="1" />
+          <svg class="connector horiz-line edge" height="10" width="200">
+            <line x1="0" y1="0" x2="100%" y2="0" />
           </svg>
-          <svg class="connector vert-line" height="200" width="10">
-            <line x1="1" y1="0" x2="1" y2="100%" />
+          <svg class="connector vert-line edge" height="200" width="10">
+            <line x1="0" y1="0" x2="0" y2="100%" />
           </svg>
         </div>
         <div class="caption caption4 caption-right">
