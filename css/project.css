@@ -3160,22 +3160,29 @@ body .sc a:visited { color: var(--sc-red); }
   }
 
   #sol1-screen1 .connector.line {
-    width: 115%;
+    width: calc(33vw - 165px);
+    max-width: 250px;
     left: calc(100% + 15px);
   }
 
+  #sol1-screen2 { width: 100%; }
+
+  #sol1-screen2 img { margin: 0 auto; }
+
   #sol1-screen2 .connector {
-    left: -45px;
     top: 0;
     height: 100%;
+  }
+
+  #sol1-screen2 .vert-line,
+  #sol1-screen2 .line.top {
+    left: calc(50% - 115px);
     width: 40px;
   }
 
-  #sol1-screen2 .hide-line {
-    top: 75%;
-    left: -43px;
-    width: 40px;
-    height: auto;
+  #sol1-screen2 .bottom {
+    left: -37px;
+    width: calc(50% - 76px);
   }
 
   #test-solution1 .caption {
@@ -4154,6 +4161,17 @@ body .sc a:visited { color: var(--sc-red); }
     grid-template-columns: 40px 185.391px 40px 40px 1fr 40px 40px 185.391px 40px;
     grid-gap: 20px 0;
     margin: 20px 0px 0 -40px;
+  }
+
+  #sol1-screen2 .vert-line,
+  #sol1-screen2 .line.top {
+    left: calc(50% - 138px);
+    width: 40px;
+  }
+
+  #sol1-screen2 .bottom {
+    left: -57px;
+    width: calc(50% - 79px);
   }
 
   /* 06d Issue #2 | desktop */
