@@ -1242,7 +1242,7 @@ ul.bullets {
 #select-pref .mockup .connector.line { height: 48px; }
 
 #buy-hunt .mockup.final-mockup .connector.line.horiz-middle,
-#buy-hunt .hide-line { display: none; }
+.hide-line { display: none; }
 
 
 #buy-hunt .caption2,
