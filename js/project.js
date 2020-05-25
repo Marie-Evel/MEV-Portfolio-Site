@@ -462,4 +462,4 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('resize', function() {
   Carousel.init();
-})
+});
