@@ -1146,15 +1146,31 @@ ul.bullets {
 .design-iterations-grid .mockup svg,
 .design-iterations-grid .no-shell svg  { position: absolute; }
 
-.design-iterations-grid .connector.line { height: 80px; }
+.design-iterations-grid .line { height: 80px; }
 
-.design-iterations-grid .connector {
-  top: calc(100% + 10px);
-  left: 0;
-  width: 100%;
+.design-iterations-grid .circle,
+.design-iterations-grid .vert-line { top: calc(100% + 10px); }
+
+.design-iterations-grid .circle {
+  width: 20px;
+  left: calc(50% - 10px);
 }
 
-.design-iterations-grid .connector.line.horiz-middle { left: 50%; }
+.design-iterations-grid .vert-line.long { height: 80px; }
+
+.design-iterations-grid .vert-line,
+.design-iterations-grid .horiz-middle.wide { left: calc(50% - 1px); }
+
+.design-iterations-grid .vert-line.short { height: 50px; }
+
+.design-iterations-grid .horiz-middle { top: calc(100% + 58px); }
+
+.design-iterations-grid .horiz-middle.wide { width: 100%; }
+
+.design-iterations-grid .horiz-middle.narrow {
+  left: 0;
+  width: calc(50% + 1px);
+}
 
 /* 05A Finding a hunt */
 /* -------------------------------------------------------------------------- */
@@ -1187,7 +1203,9 @@ ul.bullets {
   max-width: unset;
 }
 
-#hunt-info .connector.circle { fill: var(--sc-light-blue); }
+#hunt-info .circle,
+#select-pref .circle { fill: var(--sc-light-blue); }
+
 #hunt-info .low-fid .connector,
 #hunt-info .final-mockup .connector { display: none; }
 
@@ -1229,19 +1247,17 @@ ul.bullets {
   height: auto;
 }
 
-#buy-hunt .no-shell.low-fid .connector.line { height: calc(16.3538873994638% + 80px); }
+#buy-hunt .no-shell.low-fid .vert-line { height: calc(16.3538873994638% + 80px); }
 
-#buy-hunt .no-shell.low-fid .connector.line.horiz-middle { width: 105%; }
-
-#buy-hunt .mockup.low-fid .connector.horiz-middle {
-  left: -30%;
-  width: 80%;
+#buy-hunt .mockup.low-fid .horiz-middle.wide {
+  left: unset;
+  right: calc(50% - 1px);
+  width: calc(94.89% - 2px);
 }
 
-#buy-hunt .mockup.final-mockup .connector.line,
-#select-pref .mockup .connector.line { height: 48px; }
+#buy-hunt .mockup.final-mockup .line,
+#select-pref .mockup .line { height: 48px; }
 
-#buy-hunt .mockup.final-mockup .connector.line.horiz-middle,
 .hide-line { display: none; }
 
 
@@ -1271,8 +1287,6 @@ ul.bullets {
   max-width: 33vw;
   height: auto;
 }
-
-#select-pref .connector.circle { fill: var(--sc-light-grey); }
 
 #select-pref .mockup.final-mockup {
   justify-self: end;
@@ -2289,7 +2303,9 @@ body .sc a:visited { color: var(--sc-red); }
   .hide-line {
     display: grid;
     fill: white;
-    width: 100%;
+    left: calc(50% + 1px);
+    top: calc(100% + 35px);
+    width: 50%;
   }
 
   .hide-line rect { stroke: transparent; }
@@ -2821,8 +2837,12 @@ body .sc a:visited { color: var(--sc-red); }
   .design-iterations-grid .no-shell.final-mockup img,
   #buy-hunt .no-shell.final-mockup img { max-width: 113.203px; }
 
-  .design-iterations-grid .connector { top: calc(100% + 15px); }
-  .design-iterations-grid .connector.line.horiz-middle { width: calc(25vw - 30px); }
+  .design-iterations-grid .circle,
+  .design-iterations-grid .vert-line { top: calc(100% + 15px); }
+
+  .design-iterations-grid .horiz-middle { top: calc(100% + 63px); }
+
+  .design-iterations-grid .horiz-middle.wide { width: 130%; }
 
   .design-iterations-grid .caption { margin-top: 70px; }
 
@@ -2864,7 +2884,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #hunt-info .caption2 { max-width: 330px; }
 
-  #hunt-info .hi-fid1 .connector.vert-line { height: 195px; }
+  #hunt-info .hi-fid1 .vert-line { height: 195px; }
 
   #hunt-info .caption2 {
     margin-top: 0;
@@ -2877,12 +2897,12 @@ body .sc a:visited { color: var(--sc-red); }
     top: 92%;
   }
 
-  #hunt-info .final-mockup .connector.circle {
-    width: 20px;
+  #hunt-info .final-mockup .circle {
+    /* width: 20px; */
     left: -25px;
   }
 
-  #hunt-info .final-mockup .connector.line {
+  #hunt-info .final-mockup .line {
     width: 48px;
     left: -55px;
     height: 77px;
@@ -2904,22 +2924,11 @@ body .sc a:visited { color: var(--sc-red); }
 
   #buy-hunt .no-shell.low-fid img { max-width: 117.335px; }
 
-  #buy-hunt .no-shell.low-fid .connector.line.horiz-middle { width: 103.75%; }
+  #buy-hunt .no-shell.low-fid .horiz-middle.wide { top: calc(116.35% + 61px); }
 
-  #buy-hunt .mockup.hi-fid1 .connector.line.horiz-middle { width: 250%; }
+  #buy-hunt .mockup.hi-fid1 .horiz-middle { width: 250%; }
 
-  #buy-hunt .mockup.final-mockup .connector.line { height: 80px; }
-
-  #buy-hunt .mockup.final-mockup .connector.line.horiz-middle {
-    display: grid;
-    left: -50%;
-    width: 100%;
-  }
-
-  #buy-hunt .final-mockup .hide-line {
-    left: 1px;
-    top: calc(100% + 35px);
-  }
+  #buy-hunt .mockup.final-mockup .line { height: 80px; }
 
   #buy-hunt .caption1,
   #buy-hunt .caption2 {
@@ -3954,7 +3963,7 @@ body .sc a:visited { color: var(--sc-red); }
     height: auto;
   }
 
-  .design-iterations-grid .connector.line.horiz-middle { max-width: 280px; }
+  .design-iterations-grid .horiz-middle { max-width: 282px; }
 
 
   /* 05A Finding a hunt | desktop */
@@ -3984,11 +3993,11 @@ body .sc a:visited { color: var(--sc-red); }
     margin-right: 0;
   }
 
-  #hunt-info .hi-fid1 .connector.vert-line { height: 182px; }
+  #hunt-info .hi-fid1 .vert-line { height: 182px; }
 
   #hunt-info .final-mockup .connector { top: 75%; }
 
-  #hunt-info .final-mockup .connector.line {
+  #hunt-info .final-mockup .line {
     width: 100px;
     height: 48px;
     left: -107px;
@@ -4036,7 +4045,7 @@ body .sc a:visited { color: var(--sc-red); }
     height: auto;
   }
 
-  #buy-hunt .design-iterations-grid .connector.line.horiz-middle { max-width: unset; }
+  #buy-hunt .design-iterations-grid .horiz-middle { max-width: unset; }
 
 
   /* 05D Selecting preferences | desktop */
