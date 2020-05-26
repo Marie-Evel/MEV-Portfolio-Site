@@ -1251,7 +1251,7 @@ ul.bullets {
 
 #buy-hunt .mockup.low-fid .horiz-middle.wide {
   left: unset;
-  right: calc(50% - 1px);
+  right: 50%;
   width: 95%;
 }
 
@@ -2938,6 +2938,7 @@ body .sc a:visited { color: var(--sc-red); }
   #buy-hunt .mockup.final-mockup .line { height: 80px; }
 
   #buy-hunt .mockup.final-mockup .hide-line {
+    display: grid;
     top: calc(100% + 35px);
     left: calc(50% + 1px);
   }
