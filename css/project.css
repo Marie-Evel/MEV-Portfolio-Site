@@ -1252,13 +1252,28 @@ ul.bullets {
 #buy-hunt .mockup.low-fid .horiz-middle.wide {
   left: unset;
   right: calc(50% - 1px);
-  width: calc(94.89% - 2px);
+  width: 95%;
 }
 
 #buy-hunt .mockup.final-mockup .line,
 #select-pref .mockup .line { height: 48px; }
 
-.hide-line { display: none; }
+.hide-line {
+  display: grid;
+  fill: white;
+  width: calc(50% - 1px);
+  top: calc(100% + 30px);
+}
+
+.hide-line rect { stroke: transparent; }
+
+#buy-hunt .no-shell.low-fid .hide-line {
+  top: calc(100% + 70px);
+  left: 0;
+  z-index: 1;
+}
+
+#buy-hunt .mockup.final-mockup .hide-line { display: none; }
 
 
 #buy-hunt .caption2,
@@ -2300,16 +2315,6 @@ body .sc a:visited { color: var(--sc-red); }
     -webkit-transform: translateZ(0);
   }
 
-  .hide-line {
-    display: grid;
-    fill: white;
-    left: calc(50% + 1px);
-    top: calc(100% + 35px);
-    width: 50%;
-  }
-
-  .hide-line rect { stroke: transparent; }
-
   /* Intro | tablets */
   /*--------------------------------------------------------------------------*/
   #intro-grid {
@@ -2924,11 +2929,18 @@ body .sc a:visited { color: var(--sc-red); }
 
   #buy-hunt .no-shell.low-fid img { max-width: 117.335px; }
 
+  #buy-hunt .no-shell.low-fid .hide-line { left: 0; }
+
   #buy-hunt .no-shell.low-fid .horiz-middle.wide { top: calc(116.35% + 61px); }
 
   #buy-hunt .mockup.hi-fid1 .horiz-middle { width: 250%; }
 
   #buy-hunt .mockup.final-mockup .line { height: 80px; }
+
+  #buy-hunt .mockup.final-mockup .hide-line {
+    top: calc(100% + 35px);
+    left: calc(50% + 1px);
+  }
 
   #buy-hunt .caption1,
   #buy-hunt .caption2 {
