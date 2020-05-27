@@ -1246,8 +1246,12 @@ ul.bullets {
   max-width: 33vw;
   height: auto;
 }
+#buy-hunt .no-shell.low-fid .circle { z-index: 3; }
 
-#buy-hunt .no-shell.low-fid .vert-line { height: calc(16.3538873994638% + 80px); }
+#buy-hunt .no-shell.low-fid .vert-line {
+  height: calc(16.3538873994638% + 80px);
+  z-index: 2;
+}
 
 #buy-hunt .mockup.low-fid .horiz-middle.wide {
   left: unset;
@@ -3191,21 +3195,25 @@ body .sc a:visited { color: var(--sc-red); }
 
   #sol1-screen2 img { margin: 0 auto; }
 
-  #sol1-screen2 .connector {
-    top: 0;
-    height: 100%;
+  #sol1-screen2 .line.top,
+  #sol1-screen2 .vert-line { top: 15%; }
+
+  #sol1-screen2 .line.top {
+    right: calc(50% + 75px);
+    width: calc(50% - 53px);
+    max-width: 40px;
   }
+
+  #sol1-screen2 .vert-line { height: calc(68% + 1px); }
 
   #sol1-screen2 .vert-line,
-  #sol1-screen2 .line.top {
-    left: calc(50% - 115px);
-    width: 40px;
-  }
-
   #sol1-screen2 .bottom {
     left: -37px;
     width: calc(50% - 76px);
+    min-width: 17px;
   }
+
+  #sol1-screen2 .bottom { top: calc(82.5% + 1px); }
 
   #test-solution1 .caption {
     margin: 0;
@@ -3255,16 +3263,16 @@ body .sc a:visited { color: var(--sc-red); }
   }
 
   #test-issue2 .double-elbow.top {
-    top: calc(10px + 0.7em);
+    top: 22px;
     right: unset;
     left: -40px;
-    width: 20px;
+    width: 22px;
   }
 
   #test-issue2 .double-elbow.vert-line {
-    top: calc(10px + 0.7em); /* NOTE: should be the same as for .double-elbow.top */
+    top: 24px;
     left: -20px;
-    height: calc(51.75% - 12px - 0.7em);
+    height: calc(51.75% - 25px);
   }
 
   #test-issue2 .double-elbow.bottom {
@@ -4190,9 +4198,14 @@ body .sc a:visited { color: var(--sc-red); }
     margin: 20px 0px 0 -40px;
   }
 
-  #sol1-screen2 .vert-line,
   #sol1-screen2 .line.top {
-    left: calc(50% - 138px);
+    /* left: unset; */
+    right: calc(50% + 98px);
+    /* max-width: 40px; */
+  }
+
+  #sol1-screen2 .vert-line {
+    left: calc(50% - 176px);
     width: 40px;
   }
 
@@ -4223,7 +4236,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #test-issue2 .double-elbow.top {
     left: -60px;
-    width: 40px;
+    width: 42px;
   }
 
   #test-issue2 .caption4 { margin-top: 65px; }
