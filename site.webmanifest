@@ -1,6 +1,6 @@
 {
-    "name": "MEV Design",
-    "short_name": "MEV Design",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#b20f5c",
-    "background_color": "#b20f5c",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
