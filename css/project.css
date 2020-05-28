@@ -1899,15 +1899,17 @@ ul.bullets {
 .iphone-x img,
 .iphone-x .scrollable-screen {
   position: absolute;
-  z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.iphone-x .scrollable-screen { z-index: -2; }
+
 .iphone-x img {
   width: auto;
   height: 91%;
+  z-index: -1;
 }
 
 .iphone-x .scrollable-screen {
@@ -1926,10 +1928,14 @@ ul.bullets {
 }
 
 .iphone-x:hover .scrollable-screen img,
-.iphone-x:active .scrollable-screen img { transform: translate(-50%, -60%); }
+.iphone-x:active .scrollable-screen img {
+  transform: translate(-50%, -60%);
+}
 
 .iphone-x:hover .scrollable-screen.longer img,
-.iphone-x:active .scrollable-screen.longer img { transform: translate(-50%, -60.6%); }
+.iphone-x:active .scrollable-screen.longer img {
+  transform: translate(-50%, -60.6%);
+}
 
 .carousel-wrapper button {
   position: absolute;
