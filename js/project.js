@@ -253,11 +253,13 @@ var Carousel = (function() {
       itemsPerPage = 1,
       curItem = 1,
       carouselPaddingLeft = 0,
-      availCarouselWidth = 0;
+      availCarouselWidth = 0,
+      groupClicked = false;
 
   const mockupGroupClick = function() {
     $('.mockup-groups li').each( function(index, group) {
       $(group).click( function() {
+        groupClicked = true;
         let itemNum = $content.find('li[mockup-group="' + (index + 1) + '"]').index() + 1;
         slideCarousel(itemNum, true);
       })
@@ -313,8 +315,9 @@ var Carousel = (function() {
   // returns 1 if groupNum is to the right of visible window
 
     const $group = $groups.find('li').eq(groupNum - 1),
-          groupStart = $group.offset().left + 1,
-          parentWidth = $groups.innerWidth();
+          parentWidth = $groups.innerWidth(),
+          parentLeft = Math.max($groups.offset().left, 0),
+          groupStart = $group.offset().left - parentLeft + 1;
 
     if ( groupStart < 0 ) {
       return -1;
@@ -323,7 +326,7 @@ var Carousel = (function() {
     } else {
       return 0;
     }
-  }
+  };
 
   const getGroupNum = function() {
     return parseInt($carouselItems.eq(curItem - 1).attr('mockup-group'), 10);
@@ -331,42 +334,60 @@ var Carousel = (function() {
 
   const refreshMockupGroup = function() {
     if ( curItem > 0 ) {
-      const $curGroup = $groups.find('.selected'),
-            curGroupNum = $curGroup.index() + 1,
-            newGroupNum = getGroupNum();
+      let $curGroup = $groups.find('.selected'),
+          curGroupNum = $curGroup.index() + 1,
+          increment = 0,
+          newGroupPosition = 0;
 
-      if ( newGroupNum !== curGroupNum ) {
-        const newGroupPosition = groupInWindow(newGroupNum);
+      const newGroupNum = getGroupNum(),
+            groupJump = Math.abs(newGroupNum - curGroupNum);
+
+      const goToGroup = function(targetGroupNum) {
+        const groupPosition = groupInWindow(targetGroupNum);
         let wait = false,
             waitTime = 500;
 
-        // NOTE: I was trying to highlight each group in turn between
-        // curGroupNum and newGroupNum, but it's not working...
-        // const increment = 1 - 2 * (newGroupNum < curGroupNum);
-        // for ( i = curGroupNum + 1; i < newGroupNum; i += increment ) {
-        //   $groups.find('li').eq(i - 1).addClass('selected');
-        //   setTimeout( function() {
-        //     $groups.find('li').eq(i - 1).removeClass('selected');
-        //   }, 1000 );
-        //   debugger;
-        // }
-
-        if ( newGroupPosition === -1 ) {
+        if ( groupPosition === -1 ) {
           goToPrevGroups();
           wait = true;
-        } else if (newGroupPosition === 1) {
+        } else if (groupPosition === 1) {
           goToNextGroups();
           wait = true;
         }
 
         if ( !wait ) { waitTime = 0; }
-
         setTimeout( function() {
-          $curGroup.removeClass('selected');
-          $groups.find('li').eq(newGroupNum - 1).addClass('selected');
+          $groups.find('.selected').removeClass('selected');
+          $groups.find('li').eq(targetGroupNum - 1).addClass('selected');
         }, waitTime);
+
+      };
+
+      const staggerGroups = function() {
+        setTimeout( function() {
+          curGroupNum += increment;
+
+          goToGroup(curGroupNum);
+
+          if ( curGroupNum !== newGroupNum ) {
+            staggerGroups();
+          }
+        }, 750/groupJump)
+      };
+
+      if ( newGroupNum !== curGroupNum ) {
+        increment = 1 - 2 * (newGroupNum < curGroupNum);
+
+        if ( groupClicked || groupJump === 1 ) {
+          goToGroup(newGroupNum);
+          // $curGroup.removeClass('selected');
+          // $groups.find('li').eq(newGroupNum - 1).addClass('selected');
+        } else {
+          staggerGroups();
+        }
       }
     }
+    groupClicked = false;
   };
 
   const slideCarousel = function(targetItem, slide) {
@@ -441,6 +462,9 @@ var Carousel = (function() {
     prevPage: prevPage,
     nextPage: nextPage,
     goToPrevGroups: goToPrevGroups,
+
+    groupClicked: groupClicked,
+
     goToNextGroups: goToNextGroups
   }
 
