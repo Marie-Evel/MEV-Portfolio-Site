@@ -14,7 +14,7 @@ var ProjectNav = function() {
             Hamburger.closeNav();
           }
 
-          $('#reveal-page').fadeIn("slow");
+          $('.reveal-page').fadeIn("slow");
           $('.nav-background.current').eq(0).animate({ width: '0%'}, "slow", function() {
             MainNav.goToUrl(newUrl);
           });
@@ -196,7 +196,7 @@ var ProjectNav = function() {
   // const fadeNavigate = function(destinationHash, destinationUrl) {
   const fadeNavigate = function(destinationHash) {
     const targetElement = $(destinationHash),
-          revealPage = $('#reveal-page');
+          revealPage = $('.reveal-page');
 
     if ( targetElement.hasClass('section-anchor') ) {
       revealPage.fadeIn(400, function() {

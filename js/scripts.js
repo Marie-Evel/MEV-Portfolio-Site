@@ -206,7 +206,7 @@ var MainNav = (function() {
         if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
         }
-        $('#reveal-page').fadeIn("slow", function() {
+        $('.reveal-page').fadeIn("slow", function() {
           MainNav.goToUrl(newUrl);
         });
 
@@ -248,10 +248,26 @@ $(document).ready(function() {
   MainNav.innerLinkClickEvent();
   MainNav.outerLinkClickEvent();
   MainNav.refreshTopChevron();
-  $('#reveal-page').fadeOut();
+  // $('.reveal-page').fadeOut();
+});
+
+$(window).on('load', function() {
+  $('.reveal-page').fadeOut();
 });
 
 window.addEventListener('scroll', function() {
   MainNav.didScroll = true;
   MainNav.refreshTopChevron();
+});
+
+// This ensures that when the back or forward buttons are used, the page gets
+// reloaded (if not reloaded, .reveal-page is not faded out and it makes the
+// page look blank). This is necessary because Safari (being a pain again)
+// retrieves the prior or next page from cache, which was saved right after the
+// .reveal page was faded in, therefore blocking the content of the page.
+$(window).bind("pageshow", function(event) {
+  if (event.originalEvent.persisted) {
+    console.log('persisted');
+    window.location.reload();
+  }
 });

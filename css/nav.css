@@ -63,14 +63,14 @@ nav ul li a {
 
 main { position: relative; }
 
-#reveal-page {
+.reveal-page {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: white;
-  z-index: 3;
+  z-index: 10000;
  }
 
 
@@ -243,7 +243,6 @@ footer h1 {
 }
 
 
-
 /*----------------------------------------------------------------------------*/
 /* Media queries for tablets and larger */
 /*----------------------------------------------------------------------------*/
@@ -307,7 +306,11 @@ footer h1 {
     padding: 0;
   }
 
-  #menu-container .menu-item { opacity: 1; }
+  #menu-container .menu-item {
+    opacity: 1;
+    transition: none;
+  }
+
   #menu-container .menu-item:first-of-type,
   #menu-container .menu-item:nth-of-type(2),
   #menu-container .menu-item:nth-of-type(3),
@@ -394,9 +397,13 @@ footer h1 {
 /*----------------------------------------------------------------------------*/
 @media only screen and (min-width: 1250px) {
 
-  #reveal-page {
+  .reveal-page.max-width {
     width: 1250px;
     left: calc(50% - 625px);
+    box-shadow: 1px 0 15px rgba(0,0,0,.4);
+    -webkit-box-shadow: 1px 0 15px rgba(0,0,0,.4);
+    /* left: 50%;
+    transform: translateX(-50%); */
    }
 
 
