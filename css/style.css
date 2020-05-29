@@ -430,7 +430,8 @@ h1 > p {
 }
 
 .resume-container iframe {
-
+  width: 1px;
+  min-width: 100%;
   margin-bottom: -6px;
 }
 
