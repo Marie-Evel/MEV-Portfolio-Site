@@ -686,7 +686,6 @@ ul.bullets {
   bottom: 0;
   width: auto;
   z-index: 3;
-  /* margin-left: -20px; */
   background-color: rgba(246,226,231,0.95);
   overflow: hidden;
 }
@@ -705,7 +704,6 @@ ul.bullets {
 
 #project-nav-slideout .title {
   top: 0;
-  /* margin-top: -30px; */
   background-image: linear-gradient(rgba(246,226,231, 1)   50%,
                                     rgba(246,226,231, 0.9) 80%,
                                     rgba(246,226,231, 0)  100%);
@@ -1901,18 +1899,18 @@ ul.bullets {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(0);
 }
-
-.iphone-x .scrollable-screen { z-index: -2; }
 
 .iphone-x img {
   width: auto;
   height: 91%;
-  z-index: -1;
 }
 
+.iphone-x > picture img { z-index: -1; }
+
 .iphone-x .scrollable-screen {
+  z-index: -2;
   overflow: hidden;
   height: calc(72.8vh - 44.6px);
 }
