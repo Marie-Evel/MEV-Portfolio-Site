@@ -430,10 +430,6 @@ h1 > p {
 }
 
 .resume-container iframe {
-  overflow: scroll;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  display: -webkit-box;
   width: 1px;
   min-width: 100%;
   margin-bottom: -6px;
@@ -513,9 +509,22 @@ h1 > p {
     margin-bottom: 10px;
   }
 
+  .case-study-card h2 a {
+    text-decoration: none;
+    color: unset;
+  }
+
+  .case-study-card h2 a:hover,
+  .case-study-card h2 a:focus,
+  .case-study-card h2 a:active {
+    color: var(--fuschia);
+    text-decoration: underline;
+    text-shadow: unset;
+  }
+
   .case-study-card .project-picture { grid-area: pic;}
   .case-study-card .case-desc { grid-area: desc; }
-  .case-study-card a { grid-area: button; }
+  .case-study-card > div > a { grid-area: button; }
 
   .case-study-card:not(:first-of-type) {
     border-top: unset;
