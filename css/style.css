@@ -430,6 +430,10 @@ h1 > p {
 }
 
 .resume-container iframe {
+  overflow: scroll;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -webkit-box;
   width: 1px;
   min-width: 100%;
   margin-bottom: -6px;
