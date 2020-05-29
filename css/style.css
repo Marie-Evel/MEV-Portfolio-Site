@@ -422,10 +422,15 @@ h1 > p {
 /*----------------------------------------------------------------------------*/
 /* resume page */
 /*----------------------------------------------------------------------------*/
-.resume-container iframe {
+.resume-container {
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   height: calc(100vh - 61px);
   max-height: 1175px;
+}
+
+.resume-container iframe {
+
   margin-bottom: -6px;
 }
 
