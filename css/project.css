@@ -685,7 +685,7 @@ ul.bullets {
   top: 61px;
   bottom: 0;
   width: auto;
-  z-index: 3;
+  z-index: 10000;
   background-color: rgba(246,226,231,0.95);
   overflow: hidden;
 }
@@ -4083,7 +4083,7 @@ body .sc a:visited { color: var(--sc-red); }
   #select-pref .design-iterations-grid {
     grid-template-areas: "band low-fid hi-fid1 final-no-shell1 final final-no-shell"
                          ". caption1 caption1 caption2 caption2 caption2";
-    grid-template-columns: 0 minmax(0, 167.64px) 1fr minmax(0, 149.258px) minmax(0, 185px) minmax(0, 149.258px);
+    grid-template-columns: 0 minmax(0, 176.17px) 1fr minmax(0, 149.258px) minmax(0, 185px) minmax(0, 149.258px);
     grid-column-gap: 0;
   }
 
