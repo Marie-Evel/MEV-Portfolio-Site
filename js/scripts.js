@@ -1,4 +1,6 @@
 var Global = (function () {
+  let didScroll = false;
+
   const elementIsVisible = function(targetElement) {
     if ( targetElement.hasClass('visible') ) {
       return true;
@@ -65,6 +67,7 @@ var Global = (function () {
   };
 
   return {
+    didScroll: didScroll,
     elementIsVisible: elementIsVisible,
     makeVisible: makeVisible,
     makeInvisible: makeInvisible,
@@ -118,8 +121,6 @@ var Hamburger = (function () {
 }) ();
 
 var MainNav = (function() {
-  let didScroll = false;
-
   const $nav = $('#menu-container'),
         $topChevron = $('#back-to-top a').eq(0);
 
@@ -220,7 +221,6 @@ var MainNav = (function() {
   };
 
   return {
-    didScroll: didScroll,
     $topChevron: $topChevron,
     $nav: $nav,
     innerLinkClickEvent: innerLinkClickEvent,
@@ -236,9 +236,66 @@ var MainNav = (function() {
 
 }) ();
 
+var Parallax = function() {
+  const applyParallax = function ($container, strength = 0.5) {
+    // For the effect to work, the container must have a specific height, with
+    // overflow hidden, and its position must be set to relative.
+    // The container must contain an img tag, and the image's position must be
+    // set to absolute.
+    //**********************************
+    // strength must be between 0 and 1:
+    // 0: no parallax effect; image moves with its container
+    // 1: full parallax effect; image is pinned to the background behind the
+    //    text
+
+    strength = Math.max(Math.min(strength, 1), 0);
+
+    let parallaxInEffect = false,
+        headerHeight = $('header').outerHeight(),
+        windowTop = Global.getScrollPosition(),
+        windowBottom = windowTop + window.innerHeight,
+        containerTopY = $container.offset().top,
+        containerHeight = $container.innerHeight(),
+        containerBottomY = containerTopY + containerHeight,
+        newTop = 0,
+        newBottom =0,
+        vertOffset = 0;
+
+    if ( windowTop + headerHeight >= containerTopY && windowTop + headerHeight <= containerBottomY ) {
+      parallaxInEffect = true;
+      newBottom = 0;
+      newTop = 100 * (windowTop + headerHeight - containerTopY) / containerHeight;
+      vertOffset = (strength - 1) * newTop;
+    }
+    // else if ( containerBottomY >= windowBottom && containerTopY <= windowBottom ) {
+    //   parallaxInEffect = true;
+    //   newTop = 0;
+    //   newBottom = 100 * (containerBottomY - windowBottom) / containerHeight;
+    //   vertOffset = -strength * newBottom;
+    // }
+
+    if ( parallaxInEffect ) {
+      $container.find('img').css({
+        top: newTop + '%',
+        bottom: newBottom + '%',
+        transform: 'translateY(' + vertOffset + '%)'
+      });
+    } else {
+      $container.removeAttr('style');
+    }
+
+  };
+
+  return {
+    applyParallax: applyParallax
+  }
+
+} ();
+
+
 setInterval(function() {
-  if(MainNav.didScroll) {
-    MainNav.didScroll = false;
+  if(Global.didScroll) {
+    Global.didScroll = false;
   }
 }, 100);
 
@@ -256,7 +313,7 @@ $(window).on('load', function() {
 });
 
 window.addEventListener('scroll', function() {
-  MainNav.didScroll = true;
+  Global.didScroll = true;
   MainNav.refreshTopChevron();
 });
 

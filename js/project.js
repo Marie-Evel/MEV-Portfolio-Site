@@ -481,6 +481,7 @@ $(document).ready(function() {
 
 window.addEventListener('scroll', function() {
   ProjectNav.refreshNavHandle();
+  Parallax.applyParallax($('#ia-transition'), 0.75);
   return;
 });
 
