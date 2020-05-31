@@ -193,25 +193,21 @@ var ProjectNav = function() {
     }
   };
 
-  // const fadeNavigate = function(destinationHash, destinationUrl) {
   const fadeNavigate = function(destinationHash) {
     const targetElement = $(destinationHash),
           revealPage = $('.reveal-page');
 
     if ( targetElement.hasClass('section-anchor') ) {
       revealPage.fadeIn(400, function() {
-        // MainNav.goToUrl(destinationUrl);
         MainNav.refreshLocation(destinationHash);
         revealPage.fadeOut(800);
       });
     } else {
       const targetParent = getParentAnchor($(destinationHash));
-            // parentUrl = MainNav.convertHashToUrl(targetParent);
+
       revealPage.fadeIn(400, function() {
         MainNav.refreshLocation(targetParent);
-        // MainNav.goToUrl(parentUrl);
         revealPage.fadeOut(500, function() {
-          // MainNav.scrollNavigate(destinationHash, destinationUrl);
           MainNav.scrollNavigate(destinationHash);
         });
       });
@@ -380,8 +376,6 @@ var Carousel = (function() {
 
         if ( groupClicked || groupJump === 1 ) {
           goToGroup(newGroupNum);
-          // $curGroup.removeClass('selected');
-          // $groups.find('li').eq(newGroupNum - 1).addClass('selected');
         } else {
           staggerGroups();
         }
@@ -462,9 +456,6 @@ var Carousel = (function() {
     prevPage: prevPage,
     nextPage: nextPage,
     goToPrevGroups: goToPrevGroups,
-
-    groupClicked: groupClicked,
-
     goToNextGroups: goToNextGroups
   }
 
@@ -481,7 +472,7 @@ $(document).ready(function() {
 
 window.addEventListener('scroll', function() {
   ProjectNav.refreshNavHandle();
-  Parallax.applyParallax($('#ia-transition'), 0.75);
+  Parallax.applyParallax($('#ia-transition'), 0.5);
   return;
 });
 
