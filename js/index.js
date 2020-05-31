@@ -56,6 +56,6 @@ var LogoAnimation = function() {
 
 window.addEventListener('scroll', function() {
   LogoAnimation.checkIfLogoPlayed();
-  Parallax.applyParallax($('#hero'), 0.75);
+  Parallax.applyParallax($('#hero'), 0.5);
   return;
 });
