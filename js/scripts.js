@@ -186,12 +186,11 @@ var MainNav = (function() {
     $('body.main .within-link').each(function(i, link) {
       $(link).click( function() {
         const newHash = this.hash;
-              // newUrl = this.href;
 
         if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
         }
-        // scrollNavigate(newHash, newUrl);
+        
         scrollNavigate(newHash);
         return false;
       });
