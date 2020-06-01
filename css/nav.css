@@ -65,6 +65,8 @@ main { position: relative; }
 
 .reveal-page {
   position: fixed;
+  display: grid;
+  align-content: center;
   top: 0;
   left: 0;
   width: 100vw;
@@ -73,6 +75,65 @@ main { position: relative; }
   z-index: 10000;
  }
 
+/*----------------------------------------------------------------------------*/
+/* Loader styles */
+/*----------------------------------------------------------------------------*/
+.loader-content {
+  display: none;
+  font-family: 'Metrisch', Arial, sans-serif;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.loader-content.visible {
+  display: block;
+}
+
+.loader-content p {
+  max-width: 30ch;
+  margin: 0 auto;
+}
+
+.loader-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 40px);
+ grid-template-rows: repeat(3, 40px);
+ grid-gap: 10px;
+ margin: 40px auto;
+ justify-content: center;
+}
+
+.loader-grid div {
+ width: 100%;
+ height: 100%;
+ background: var(--fuschia);
+}
+
+.visible .loader-grid div {
+  animation: loader 1.2s linear infinite;
+}
+
+.loader-grid div:nth-child(1) { animation-delay: 0s; }
+
+.loader-grid div:nth-child(2),
+.loader-grid div:nth-child(4) { animation-delay: -0.4s; }
+
+.loader-grid div:nth-child(3),
+.loader-grid div:nth-child(5),
+.loader-grid div:nth-child(7) { animation-delay: -0.8s; }
+
+
+.loader-grid div:nth-child(6),
+.loader-grid div:nth-child(8) { animation-delay: -1.2s; }
+
+.loader-grid div:nth-child(9) { animation-delay: -1.6s; }
+
+@keyframes loader {
+ 0%, 100% { opacity: 1; }
+50% { opacity: 0.3; }
+}
+
+/*----------------------------------------------------------------------------*/
 
  #menu-container .menu-item:first-of-type { margin-right: 40vw; }
  #menu-container .menu-item:nth-of-type(2) { margin-right: 55vw; }
@@ -342,6 +403,13 @@ footer h1 {
   #menu-container { border-top: unset; }
 
   #nav-icon { display: none; }
+
+
+  /* Loader styles | tablets */
+  /*--------------------------------------------------------------------------*/
+  .loader-content p { max-width: 40ch; }
+
+  .loader-grid { margin: 50px auto; }
 
   /* Footer | tablets */
   /*--------------------------------------------------------------------------*/
