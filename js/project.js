@@ -474,10 +474,10 @@ window.addEventListener('scroll', function() {
   ProjectNav.refreshNavHandle();
   Parallax.applyParallax($('#ia-transition'), 0.5);
   return;
-});
+}, {passive: true});
 
 window.addEventListener('resize', function() {
   Carousel.init();
-});
+}, {passive: true});
 
 // scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;

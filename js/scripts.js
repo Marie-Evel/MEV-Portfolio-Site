@@ -190,7 +190,7 @@ var MainNav = (function() {
         if ( !hamburgerIsDisabled() && Global.menuIsVisible($nav) ) {
           Hamburger.closeNav();
         }
-        
+
         scrollNavigate(newHash);
         return false;
       });
@@ -314,7 +314,7 @@ $(window).on('load', function() {
 window.addEventListener('scroll', function() {
   Global.didScroll = true;
   MainNav.refreshTopChevron();
-});
+}, {passive: true});
 
 // This ensures that when the back or forward buttons are used, the page gets
 // reloaded (if not reloaded, .reveal-page is not faded out and it makes the

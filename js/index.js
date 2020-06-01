@@ -58,4 +58,4 @@ window.addEventListener('scroll', function() {
   LogoAnimation.checkIfLogoPlayed();
   Parallax.applyParallax($('#hero'), 0.5);
   return;
-});
+}, {passive: true});

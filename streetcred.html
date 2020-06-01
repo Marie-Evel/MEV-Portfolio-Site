@@ -83,9 +83,21 @@
 
   <main>
     <div class="reveal-page">
-      <!-- <div class="reveal-page max-width"> -->
-        <!-- NOTE: Intentionally blank -->
-      <!-- </div> -->
+      <div class="reveal-page max-width">
+        <div class="loader">
+          <p>Please excuse the delay while I load screen mockups and other visual
+             artifacts.
+          </p>
+          <div class="loader-wrapper">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+          </div>
+          <p>Thanks for your patience!
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- INTRO ------------------------------------------------------------->
@@ -397,8 +409,9 @@
           <div class="screen-shot">
             <a href="#sneak-peek-1">
               <picture id="sneak-peek-1" class="shadow-black shadow-white-md">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/benefit1_small.png">
-                  <img src="img/streetcred/sec1_overview/benefit1.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/benefit1_small.png">
+                  <img class="lazyload"
+                       data-src="img/streetcred/sec1_overview/benefit1.png"
                        title="First of three onboarding screens"
                        alt="Screenshot of sightseeing with a twist">
               </picture>
@@ -407,8 +420,9 @@
           <div class="screen-shot">
             <a href="#sneak-peek-2">
               <picture id="sneak-peek-2" class="shadow-black shadow-white-md">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/home_philly_small.png">
-                  <img src="img/streetcred/sec1_overview/home_philly.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/home_philly_small.png">
+                  <img class="lazyload"
+                       data-src="img/streetcred/sec1_overview/home_philly.png"
                        title="Home screen"
                        alt="Screenshot of Find Hunts screen">
               </picture>
@@ -419,8 +433,9 @@
           <div class="sc screen-shot">
             <a href="#sneak-peek-3">
               <picture id="sneak-peek-3" class="shadow-white">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/hunt_detail_small.png">
-                  <img src="img/streetcred/sec1_overview/hunt_detail.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/hunt_detail_small.png">
+                  <img class="lazyload"
+                       data-src="img/streetcred/sec1_overview/hunt_detail.png"
                        title="Hunt detail screen"
                        alt="Screenshot of Hunt Detail screen">
               </picture>
@@ -429,8 +444,9 @@
           <div class="screen-shot">
             <a href="#sneak-peek-4">
               <picture id="sneak-peek-4" class="shadow-white">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/players_small.png">
-                  <img src="img/streetcred/sec1_overview/players.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/players_small.png">
+                  <img class="lazyload"
+                       data-src="img/streetcred/sec1_overview/players.png"
                        title="Players screen"
                        alt="Screenshot of Players screen">
               </picture>
@@ -439,8 +455,9 @@
           <div class="screen-shot">
             <a href="#sneak-peek-5">
               <picture id="sneak-peek-5" class="shadow-white">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/pref1_small.png">
-                  <img src="img/streetcred/sec1_overview/pref1.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/pref1_small.png">
+                  <img class="lazyload"
+                       data-src="img/streetcred/sec1_overview/pref1.png"
                        title = "First of three preference screens"
                        alt="Screenshot of first Preference screen">
               </picture>
@@ -531,7 +548,8 @@
     <section class="indented-md wide-section-lg inner-section">
       <div class="st-wk-grid letsroam">
         <div class="competitor-logo">
-          <img src="img/streetcred/sec2_research/letsroam_icon.png" alt="Let's Roam app icon">
+          <img class="lazyload"
+               data-src="img/streetcred/sec2_research/letsroam_icon.png" alt="Let's Roam app icon">
         </div>
         <div class="title-strengths">
           <h3>Strengths</h3>
@@ -548,7 +566,8 @@
           </ul>
         </div>
         <div class="competitor-logo2">
-          <img src="img/streetcred/sec2_research/letsroam_icon.png" alt="Let's Roam app icon">
+          <img class="lazyload"
+               data-src="img/streetcred/sec2_research/letsroam_icon.png" alt="Let's Roam app icon">
         </div>
         <div class="title-weaknesses">
           <h3>Weaknesses</h3>
@@ -572,7 +591,8 @@
     <section class="indented-md wide-section-lg inner-section">
       <div class="st-wk-grid uaq">
         <div class="competitor-logo">
-          <img src="img/streetcred/sec2_research/uaq_icon.png" alt="Urban Adventure Quest icon">
+          <img class="lazyload"
+               data-src="img/streetcred/sec2_research/uaq_icon.png" alt="Urban Adventure Quest icon">
         </div>
         <div class="title-strengths">
           <h3>Strengths</h3>
@@ -592,7 +612,8 @@
           </ul>
         </div>
         <div class="competitor-logo2">
-          <img src="img/streetcred/sec2_research/uaq_icon.png" alt="Urban Adventure Quest logo">
+          <img class="lazyload"
+               data-src="img/streetcred/sec2_research/uaq_icon.png" alt="Urban Adventure Quest logo">
         </div>
         <div class="title-weaknesses">
           <h3>Weaknesses</h3>
@@ -613,7 +634,8 @@
       <div id="opp-strategy-anchor" class="anchor"></div>
       <div class="opp-grid">
         <div id="sc-logo">
-          <img src="img/streetcred/sec2_research/streetcred_logo.png" alt="StreetCred logo with tagline: urban scavenger hunt">
+          <img class="lazyload"
+               data-src="img/streetcred/sec2_research/streetcred_logo.png" alt="StreetCred logo with tagline: urban scavenger hunt">
         </div>
         <div class="title">
           <h2>Opportunities & Business Strategy</h2>
@@ -628,7 +650,8 @@
           </p>
         </div>
         <div id="sc-hunt-graphic">
-          <img src="img/streetcred/sec2_research/route.svg" alt="Infographic of scavenger hunt starting point and ending point">
+          <img class="lazyload"
+               data-src="img/streetcred/sec2_research/route.svg" alt="Infographic of scavenger hunt starting point and ending point">
         </div>
         <div class="bus-strategy">
           <p>
@@ -824,7 +847,8 @@
     </section><!-- END of User Interviews-->
 
     <section id="research-equation" class="transition background-fill sc-light-pink">
-      <img src="img/streetcred/sec2_research/equation.png"
+      <img class="lazyload"
+           data-src="img/streetcred/sec2_research/equation.png"
            alt="1269 observations from survey + 506 quotes from interviews = a lot to process">
     </section>
 
@@ -866,8 +890,9 @@
     <!-- Affinity mapping transition ------------------------------------------>
     <section id="affinity-transition" class="transition">
       <picture>
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec2_research/affinity_mapping_small.png">
-        <img src="img/streetcred/sec2_research/affinity_mapping.png"
+        <source media="(max-width: 767px)" data-srcset="img/streetcred/sec2_research/affinity_mapping_small.png">
+        <img class="lazyload"
+             data-src="img/streetcred/sec2_research/affinity_mapping.png"
              alt="Dry-erase board with sticky notes in various colors (faded)">
       </picture>
     </section>
@@ -916,8 +941,9 @@
         <div class="wide-picture">
           <a href="#" data-featherlight="#persona-1">
             <picture id="persona-1" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_dereck_small.jpg">
-              <img src="img/streetcred/sec3_users/persona_dereck.jpg"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/persona_dereck_small.jpg">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec3_users/persona_dereck.jpg"
                    title="Primary persona: Dereck"
                    alt="User persona sheet for Dereck">
             </picture>
@@ -942,8 +968,9 @@
         <div>
           <a href="#persona-2">
             <picture id="persona-2" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_malika_small.jpg">
-              <img src="img/streetcred/sec3_users/persona_malika.jpg"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/persona_malika_small.jpg">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec3_users/persona_malika.jpg"
                    title="Secondary persona: Malika"
                    alt="User persona sheet for Malika">
             </picture>
@@ -952,8 +979,9 @@
         <div>
           <a href="#persona-3">
             <picture id="persona-3" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/persona_angie_small.jpg">
-              <img src="img/streetcred/sec3_users/persona_angie.jpg"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/persona_angie_small.jpg">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec3_users/persona_angie.jpg"
                    title="Secondary persona: Angie"
                    alt="User persona sheet for Angie">
             </picture>
@@ -978,8 +1006,9 @@
         <div id="dereck-journey-map">
           <a href="#" data-featherlight="#journey-map-1">
             <picture id="journey-map-1" class="shadow-black fit-width">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
-              <img src="img/streetcred/sec3_users/journey_map_dereck.jpg"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/journey_map_dereck_small.jpg">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec3_users/journey_map_dereck.jpg"
                    title="Dereck's user journey map"
                    alt="Detailed user journey map for Dereck">
             </picture>
@@ -1029,16 +1058,18 @@
       <div class="journey-maps" data-featherlight-gallery data-featherlight-filter="a">
         <a href="#journey-map-2" id="malika-journey-map">
           <picture id="journey-map-2" class="shadow-black fit-width">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_malika_small.jpg">
-            <img src="img/streetcred/sec3_users/journey_map_malika.jpg"
+            <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/journey_map_malika_small.jpg">
+            <img class="lazyload"
+                 data-src="img/streetcred/sec3_users/journey_map_malika.jpg"
                  title="Malika's user journey map"
                  alt="Detailed user journey map for Malika">
           </picture>
         </a>
         <a href="#journey-map-3" id="angie-journey-map">
           <picture id="journey-map-3" class="shadow-black fit-width">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/journey_map_angie_small.jpg">
-            <img src="img/streetcred/sec3_users/journey_map_angie.jpg"
+            <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/journey_map_angie_small.jpg">
+            <img class="lazyload"
+                 data-src="img/streetcred/sec3_users/journey_map_angie.jpg"
                  title="Angie's user journey map"
                  alt="Detailed user journey map for Angie">
           </picture>
@@ -1106,8 +1137,9 @@
       <div class="wide-picture">
         <a href="#user-flow-1">
           <picture id="user-flow-1" class="shadow-black user-flow fit-width">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_dereck_small.jpg">
-            <img src="img/streetcred/sec3_users/user_flow_dereck.jpg"
+            <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/user_flow_dereck_small.jpg">
+            <img class="lazyload"
+                 data-src="img/streetcred/sec3_users/user_flow_dereck.jpg"
                  title="Dereck's user flow"
                  alt="User flow for Dereck">
           </picture>
@@ -1118,8 +1150,9 @@
       <div class="wide-picture">
         <a href="#user-flow-2">
           <picture id="user-flow-2" class="shadow-black user-flow fit-width">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_malika_small.jpg">
-            <img src="img/streetcred/sec3_users/user_flow_malika.jpg"
+            <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/user_flow_malika_small.jpg">
+            <img class="lazyload"
+                 data-src="img/streetcred/sec3_users/user_flow_malika.jpg"
                  title="Malika's user flow"
                  alt="User flow for Malika">
           </picture>
@@ -1130,8 +1163,9 @@
       <div class="wide-picture">
         <a href="#user-flow-3">
           <picture id="user-flow-3" class="shadow-black user-flow fit-width">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec3_users/user_flow_angie_small.jpg">
-            <img src="img/streetcred/sec3_users/user_flow_angie.jpg"
+            <source media="(max-width: 767px)" data-srcset="img/streetcred/sec3_users/user_flow_angie_small.jpg">
+            <img class="lazyload"
+                 data-src="img/streetcred/sec3_users/user_flow_angie.jpg"
                  title="Angie's user flow"
                  alt="User flow for Angie">
           </picture>
@@ -1152,8 +1186,9 @@
   <section id="ia-transition" class="transition parallax-container">
     <div id="ia-anchor" class="anchor section-anchor"></div>
     <picture >
-      <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
-      <img src="img/streetcred/sec4_ia/ia_transition.jpg"
+      <source media="(max-width: 767px)" data-srcset="img/streetcred/sec4_ia/ia_transition_small.jpg">
+      <img class="lazyload"
+           data-src="img/streetcred/sec4_ia/ia_transition.jpg"
            alt="Abstract of wires inter-connecting">
     </picture>
   </section>
@@ -1195,7 +1230,8 @@
           </p>
           <a href="#" data-featherlight="#navigation-structure">
             <div id="navigation-structure">
-              <img src="img/streetcred/sec4_ia/sitemap.png"
+              <img class="lazyload"
+                   data-src="img/streetcred/sec4_ia/sitemap.png"
                    title="Initial navigation structure focusing on finding a hunt and playing a hunt"
                    alt="Simple StreetCred sitemap">
             </div>
@@ -1224,7 +1260,8 @@
           <h3 class="sc-blue-font">Hypothetical similarity matrix</h3>
         </div>
         <div class="ideal pic">
-          <img src="img/streetcred/sec4_ia/sim_matrix_desired.png"
+          <img class="lazyload"
+               data-src="img/streetcred/sec4_ia/sim_matrix_desired.png"
                alt="Example of ideal similarity matrix with clusters by the diagonal">
         </div>
         <div class="ideal desc">
@@ -1239,7 +1276,8 @@
           <h3 class="sc-red-font">StreetCred similarity matrix</h3>
         </div>
         <div class="actual pic">
-          <img src="img/streetcred/sec4_ia/sim_matrix_actual.png"
+          <img class="lazyload"
+               data-src="img/streetcred/sec4_ia/sim_matrix_actual.png"
                alt="StreetCred similarity matrix with no clear clusters">
         </div>
         <div class="actual desc">
@@ -1280,8 +1318,9 @@
       <div class="indented">
         <a href="#" data-featherlight="#final-sitemap">
           <picture id="final-sitemap" class="fit-width">
-            <source media="(max-width: 767px)" srcset="img/streetcred/sec4_ia/wireflow_small.png">
-            <img src="img/streetcred/sec4_ia/wireflow.png"
+            <source media="(max-width: 767px)" data-srcset="img/streetcred/sec4_ia/wireflow_small.png">
+            <img class="lazyload"
+                 data-src="img/streetcred/sec4_ia/wireflow.png"
                  title="Final sitemap/wireflow"
                  alt="Wireflow showing how StreetCred's mobile screens are connected">
           </picture>
@@ -1300,8 +1339,9 @@
     <div id="low-fid-transition" class="transition">
       <div id="low-fid-wires-anchor" class="anchor section-anchor"></div>
       <picture>
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/low-fid_transition_small.png">
-        <img src="img/streetcred/sec5_wireframing/low-fid_transition.png"
+        <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/low-fid_transition_small.png">
+        <img class="lazyload"
+             data-src="img/streetcred/sec5_wireframing/low-fid_transition.png"
              alt="Series of low-fidelity sketched wireframes">
       </picture>
     </div>
@@ -1344,8 +1384,9 @@
           <div class="low-fid">
             <a href="#my-hunts-1">
               <picture id="my-hunts-1" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
-                <img src="img/streetcred/sec5_wireframing/my_hunts_v1.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/my_hunts_v1_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec5_wireframing/my_hunts_v1.png"
                      title="First drawing of 'My Hunts' screen"
                      alt="Low-fidelity sketched wireframe of My Hunts screen">
               </picture>
@@ -1401,13 +1442,14 @@
         <div class="grid">
           <div class="pic">
             <div class="shadow-black">
-              <img src="img/streetcred/sec5_wireframing/index_card.png" alt="Lined index card">
+              <img  class="lazyload" data-src="img/streetcred/sec5_wireframing/index_card.png" alt="Lined index card">
             </div>
             <div class="low-fid">
               <a href="#my-hunts-2">
                 <picture id="my-hunts-2" class="shadow-black">
-                  <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/my_hunts_v2_small.png">
-                  <img src="img/streetcred/sec5_wireframing/my_hunts_v2.png"
+                  <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/my_hunts_v2_small.png">
+                  <img class="lazyload"
+                       data-src="img/streetcred/sec5_wireframing/my_hunts_v2.png"
                        title="Second drawing of 'My Hunts' screen (on the back of an index card)"
                        alt="Low-fidelity sketched wireframe of My Hunts screen on index card">
                 </picture>
@@ -1441,8 +1483,9 @@
           <div class="final-mockup">
             <a href="#my-hunts-3">
               <picture id="my-hunts-3" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_small.png">
-                <img src="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in.png"
                      title="Final mockup of 'My Hunts' screen"
                      alt="High-fidelity screen mockup of My Hunts screen on iPhone XS">
               </picture>
@@ -1470,7 +1513,7 @@
       <div class="rect-position">
         <div class="rect-container">
           <div class="background-rectangle"></div>
-          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
+          <img class="lazyload" data-src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
       </div>
 
@@ -1478,8 +1521,9 @@
         <div class="mockup low-fid">
           <a href="#find-hunts-1">
             <picture id="find-hunts-1" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_1.png"
                    title="'Find Hunts' screen | low-fidelity"
                    alt="First sketched iteration of Find Hunts wireframe">
             </picture>
@@ -1497,8 +1541,9 @@
         <div class="mockup mid-fid">
           <a href="#find-hunts-2">
             <picture id="find-hunts-2" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_2.png"
                    title="'Find Hunts' screen | mid-fidelity"
                    alt="Second mid-fidelity iteration of Find Hunts wireframe">
             </picture>
@@ -1523,8 +1568,9 @@
         <div class="mockup hi-fid1">
           <a href="#find-hunts-3">
             <picture id="find-hunts-3" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_a/find_hunts_3.png"
                    title="'Find Hunts' screen | high-fidelity before testing"
                    alt="Third high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
@@ -1542,8 +1588,9 @@
         <div class="mockup final-mockup">
           <a href="#find-hunts-4">
             <picture id="find-hunts-4" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/home_philly_small.png">
-              <img src="img/streetcred/sec1_overview/home_philly.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/home_philly_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec1_overview/home_philly.png"
                    title="'Find Hunts' screen | final mockup"
                    alt="Final high-fidelity iteration of Find Hunts screen on iPhone XS">
             </picture>
@@ -1567,7 +1614,8 @@
           </p>
         </div>
         <div class="dereck-says">
-          <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+          <img class="lazyload"
+               data-src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
           <p>
             I’m a visual person so I LOVE to be able to see the full-size
             map at all times. And it’s re­ally cool how the map moves to
@@ -1583,15 +1631,17 @@
       <div class="rect-position">
         <div class="rect-container">
           <div class="background-rectangle"></div>
-          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
+          <img class="lazyload"
+               data-src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
       </div>
       <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="mockup low-fid">
           <a href="#hunt-detail-1">
             <picture id="hunt-detail-1" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_1.png"
                    title="'Hunt Detail' screen | low-fidelity"
                    alt="First sketched iteration of Hunt Detail wireframe">
             </picture>
@@ -1613,8 +1663,9 @@
         <div class="mockup mid-fid">
           <a href="#hunt-detail-2">
             <picture id="hunt-detail-2" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2.png"
+              <source media="(max-width: 767px)" datas-srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_2.png"
                    title="'Hunt Detail' screen | mid-fidelity"
                    alt="Second mid-fidelity iteration of Hunt Detail wireframe">
             </picture>
@@ -1632,8 +1683,9 @@
         <div class="mockup hi-fid1">
           <a href="#hunt-detail-3">
             <picture id="hunt-detail-3" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_3.png"
                    title="'Hunt Detail' screen | high-fidelity before testing"
                    alt="Third high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
@@ -1658,8 +1710,9 @@
         <div class="mockup final-mockup">
           <a href="#hunt-detail-4">
             <picture id="hunt-detail-4" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_b/hunt_detail_4.png"
                    title="'Hunt Detail' screen | final mockup"
                    alt="Final high-fidelity iteration of Hunt Detail screen on iPhone XS">
             </picture>
@@ -1687,15 +1740,17 @@
       <div class="rect-position">
         <div class="rect-container">
           <div class="background-rectangle"></div>
-          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
+          <img class="lazyload"
+               data-src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
       </div>
       <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="no-shell low-fid">
           <a href="#buy-hunt-1">
             <picture id="buy-hunt-1" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1.png"
+              <source media="(max-width: 767px)" data- class="lazyload" data-srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_1.png"
                    title="'Buy Hunt' screen | low-fidelity"
                    alt="First sketched iteration of Buy Hunt wireframe">
             </picture>
@@ -1713,8 +1768,9 @@
         <div class="mockup low-fid">
           <a href="#confirmation-1">
             <picture id="confirmation-1" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_1.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_1_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_c/confirmation_1.png"
                    title="Confirmation modal after buying a hunt | low-fidelity"
                    alt="First sketched iteration of Successful Purchase wireframe">
             </picture>
@@ -1740,8 +1796,9 @@
         <div class="no-shell hi-fid1">
           <a href="#buy-hunt-2">
             <picture id="buy-hunt-2" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_c/buy_hunt_2.png"
                    title="'Buy Hunt' screen | high-fidelity before testing"
                    alt="Second high-fidelity iteration of Buy Hunt screen">
             </picture>
@@ -1750,8 +1807,9 @@
         <div class="mockup hi-fid1">
           <a href="#confirmation-2">
             <picture id="confirmation-2" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_2.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_2_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_c/confirmation_2.png"
                    title="Confirmation modal after buying a hunt | high-fidelity before testing"
                    alt="Second high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
@@ -1769,8 +1827,9 @@
         <div class="no-shell final-mockup">
           <a href="#buy-hunt-3">
             <picture id="buy-hunt-3" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/3_apple_pay_small.png">
-              <img src="img/streetcred/screenshots/4_buy_hunt/3_apple_pay.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/4_buy_hunt/3_apple_pay_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/4_buy_hunt/3_apple_pay.png"
                    title="'Buy Hunt' screen | final mockup"
                    alt="Final high-fidelity iteration of Buy Hunt screen">
             </picture>
@@ -1779,8 +1838,9 @@
         <div class="mockup final-mockup">
           <a href="#confirmation-3">
             <picture id="confirmation-3" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_c/confirmation_3_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_c/confirmation_3.png"
                    title="Confirmation modal after buying a hunt | final mockup"
                    alt="Final high-fidelity iteration of Successful Purchase modal on iPhone XS">
             </picture>
@@ -1811,15 +1871,17 @@
       <div class="rect-position">
         <div class="rect-container">
           <div class="background-rectangle"></div>
-          <img src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
+          <img class="lazyload"
+               data-src="img/streetcred/sec5_wireframing/iphone_x_ghost.png">
         </div>
       </div>
       <div class="design-iterations-grid" data-featherlight-gallery data-featherlight-filter="a">
         <div class="mockup low-fid">
           <a href="#pref-1">
             <picture id="pref-1" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_1.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_d/pref_1_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_d/pref_1.png"
                    title="Preference screen | low-fidelity"
                    alt="First sketched iteration of Restaurant Preferences wireframe">
             </picture>
@@ -1842,8 +1904,9 @@
         <div class="mockup hi-fid1">
           <a href="#pref-2">
             <picture id="pref-2" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_2.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_d/pref_2_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_d/pref_2.png"
                    title="Preference screen | high-fidelity before testing"
                    alt="Second high-fidelity iteration of Restaurant Preferences screen on iPhone XS">
             </picture>
@@ -1852,8 +1915,9 @@
         <div id="select-pref-restaurants" class="no-shell final-mockup">
           <a href="#pref-3a">
             <picture id="pref-3a" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3a.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3a_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_d/pref_3a.png"
                    title="First of three preference screens | final mockup"
                    alt="Final high-fidelity iteration of Restaurant Preferences screen">
             </picture>
@@ -1862,8 +1926,9 @@
         <div class="mockup final-mockup">
           <a href="#pref-3b">
             <picture id="pref-3b" class="shadow-black shadow-white-md">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3b.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3b_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_d/pref_3b.png"
                    title="Second of three preference screens | final mockup"
                    alt="Final high-fidelity iteration of Place Preferences screen on iPhone XS">
             </picture>
@@ -1878,8 +1943,9 @@
         <div id="select-pref-events" class="no-shell final-mockup">
           <a href="#pref-3c">
             <picture id="pref-3c" class="shadow-black">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.png">
-              <img src="img/streetcred/sec5_wireframing/iterations_d/pref_3c.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec5_wireframing/iterations_d/pref_3c_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec5_wireframing/iterations_d/pref_3c.png"
                    title="Third of three preference screens | final mockup"
                    alt="Final high-fidelity iteration of Events & Interest Preferences screen">
             </picture>
@@ -1953,16 +2019,18 @@
         <div id="test-plan-docs" data-featherlight-gallery data-featherlight-filter="a">
           <a href="#test-docs-1">
             <picture id="test-docs-1" class="fit-width">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_1.png">
-              <img src="img/streetcred/sec6_testing/test_plan_1_large.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/test_plan_1.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec6_testing/test_plan_1_large.png"
                    title="Sample of testing plan documents (part 1)"
                    alt="Samples pages of test plan, including Usability Test Script, Informed Consent Form, and Scenarios & Tasks">
             </picture>
           </a>
           <a href="#test-docs-2">
             <picture id="test-docs-2" class="fit-width">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/test_plan_2.png">
-              <img src="img/streetcred/sec6_testing/test_plan_2_large.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/test_plan_2.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec6_testing/test_plan_2_large.png"
                    title="Sample of testing plan documents (part 2)"
                    alt="Samples pages of test plan, including Pre-Test Questions, Satisfaction Questionnaire, and Evaluation of Tasks">
             </picture>
@@ -1988,8 +2056,8 @@
               I re­cruited 6 par­tic­i­pants from my per­sonal and pro­fes­sional net­work
               who gra­ciously ac­cepted to put my pro­to­type to the test.
             </p>
-            <img id="test-participants-icons"
-              src="img/streetcred/sec6_testing/participant_icons.png"
+            <img id="test-participants-icons" class="lazyload"
+              data-src="img/streetcred/sec6_testing/participant_icons.png"
               alt="3 male icons and 3 female icons, representing test participants">
             <p>
               When se­lect­ing the par­tic­i­pants, I made sure to cover a wide age
@@ -2004,16 +2072,16 @@
     <section class="background-fill sc-med-red"><!-- Transition section with stats -->
       <div id="tester-stats" class="wide-section">
         <div id="stat1">
-          <img src="img/streetcred/sec6_testing/participant_stats/gender.png" alt="3 males + 3 females = 6 participants">
+          <img class="lazyload" data-src="img/streetcred/sec6_testing/participant_stats/gender.png" alt="3 males + 3 females = 6 participants">
         </div>
         <div id="stat2">
-          <img src="img/streetcred/sec6_testing/participant_stats/age_range.png" alt="25 to 49 years old">
+          <img class="lazyload" data-src="img/streetcred/sec6_testing/participant_stats/age_range.png" alt="25 to 49 years old">
         </div>
         <div id="stat3">
-          <img src="img/streetcred/sec6_testing/participant_stats/session_type.png" alt="4 in-person sessions, 2 remote sessions">
+          <img class="lazyload" data-src="img/streetcred/sec6_testing/participant_stats/session_type.png" alt="4 in-person sessions, 2 remote sessions">
         </div>
         <div id="stat4">
-          <img src="img/streetcred/sec6_testing/participant_stats/session_length.png" alt="35 to 60 minutes per session">
+          <img class="lazyload" data-src="img/streetcred/sec6_testing/participant_stats/session_length.png" alt="35 to 60 minutes per session">
         </div>
       </div>
     </section><!-- END of Transition section with stats -->
@@ -2117,7 +2185,8 @@
           <div id="sus-score">
             <h4>Average SUS score</h4>
             <picture>
-              <img src="img/streetcred/sec6_testing/avg_satisfaction.png" alt="Graph showing average satisfaction score of 93%">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec6_testing/avg_satisfaction.png" alt="Graph showing average satisfaction score of 93%">
             </picture>
           </div>
           <div id="positive-quotes">
@@ -2178,8 +2247,9 @@
           <div class="mockup hi-fid1">
             <a href="#issue-1">
               <picture id="issue-1" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_old_small.png">
-                <img src="img/streetcred/sec6_testing/issue_1/join_old.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/issue_1/join_old_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec6_testing/issue_1/join_old.png"
                      title="Buying a hunt (before testing)"
                      alt="Hunt Detail screen on iPhone XS with Join or Log in pop up">
               </picture>
@@ -2203,7 +2273,8 @@
           </div>
           <div class="dereck-says-container">
             <div class="dereck-says">
-              <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+              <img class="lazyload"
+                   data-src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
               <p>
                 I don’t mind cre­at­ing a new ac­count, but I’d like to be able
                 to try the app be­fore join­ing. If I can poke around with­out
@@ -2221,15 +2292,13 @@
           <div id="sol1-screen1" class="mockup final-mockup">
             <a href="#solution-1a">
               <picture id="solution-1a" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/checkout_options_small.png">
-                <img src="img/streetcred/sec6_testing/issue_1/checkout_options.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/issue_1/checkout_options_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec6_testing/issue_1/checkout_options.png"
                      title="Improved buying experience"
                      alt="Checkout Options screen on iPhone XS">
               </picture>
             </a>
-            <!-- <svg class="connector line" height="20" width="400">
-              <line x1="5" y1="50%" x2="100%" y2="50%" />
-            </svg> -->
             <svg class="connector circle" height="20" width="200">
               <circle cx="50%" cy="50%" r="8" />
             </svg>
@@ -2242,8 +2311,9 @@
           <div id="sol1-screen2" class="mockup final-mockup">
             <a href="#solution-1b">
               <picture id="solution-1b" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/guest_checkout_small.png">
-                <img src="img/streetcred/sec6_testing/issue_1/guest_checkout.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/issue_1/guest_checkout_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec6_testing/issue_1/guest_checkout.png"
                      title="Improved buying experience: guest checkout"
                      alt="Guest Checkout screen on iPhone XS">
               </picture>
@@ -2268,8 +2338,8 @@
           <div id="sol1-screen3" class="mockup final-mockup">
             <a href="#solution-1c">
               <picture id="solution-1c" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_1/join_new_small.png">
-                <img src="img/streetcred/sec6_testing/issue_1/join_new.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/issue_1/join_new_small.png">
+                <img class="lazyload" data-src="img/streetcred/sec6_testing/issue_1/join_new.png"
                      title="Improved buying experience: encourage users to create an account after hunt is purchased"
                      alt="New Join or Log in screen on iPhone XS">
               </picture>
@@ -2314,8 +2384,9 @@
           <div class="mockup hi-fid1">
             <a href="#players-1">
               <picture id="players-1" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
-                <img src="img/streetcred/sec6_testing/issue_2/players_old.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/issue_2/players_old_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec6_testing/issue_2/players_old.png"
                      title="Original 'Players' screen (before testing)"
                      alt="Old Players screen on iPhone XS">
               </picture>
@@ -2357,8 +2428,9 @@
           <div id="sol2-screen1" class="mockup final-mockup">
             <a href="#players-2">
               <picture id="players-2" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec1_overview/players_small.png">
-                <img src="img/streetcred/sec1_overview/players.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec1_overview/players_small.png">
+                <img class="lazyload"
+                    data-src="img/streetcred/sec1_overview/players.png"
                      title="Improved 'Players' screen"
                      alt="Final Players screen on iPhone XS">
               </picture>
@@ -2374,8 +2446,9 @@
           <div id="sol2-screen2" class="mockup final-mockup">
             <a href="#players-3">
               <picture id="players-3" class="shadow-black">
-                <source media="(max-width: 767px)" srcset="img/streetcred/sec6_testing/issue_2/captain_tip_small.png">
-                <img src="img/streetcred/sec6_testing/issue_2/captain_tip.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/sec6_testing/issue_2/captain_tip_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec6_testing/issue_2/captain_tip.png"
                      title="New pop-up to point out team captains"
                      alt="Final Players screen on iPhone XS with captain tip popup ">
               </picture>
@@ -2383,7 +2456,8 @@
           </div>
           <div class="dereck-says-container" >
             <div class="dereck-says">
-              <img src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
+              <img class="lazyload"
+                   data-src="img/streetcred/dereck_circle.png" alt="Dereck smiling and looking to the side">
               <p>
                 I’m not the type to read in­struc­tions; I just jump in and
                 fig­ure things out on my own. It’s nice that the app is
@@ -2400,8 +2474,9 @@
 
     <div id="us-flag-transition" class="transition">
       <picture>
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/us_flag_small.jpg">
-        <img src="img/streetcred/sec7_fine_tuning/us_flag.jpg" alt="U.S. flag">
+        <source media="(max-width: 767px)" data-srcset="img/streetcred/sec7_fine_tuning/us_flag_small.jpg">
+        <img class="lazyload"
+             data-src="img/streetcred/sec7_fine_tuning/us_flag.jpg" alt="U.S. flag">
       </picture>
     </div>
 
@@ -2439,8 +2514,9 @@
         <div id="color-transition">
           <a href="#" data-featherlight="#color-scheme-zoom">
             <picture id="color-scheme-zoom">
-              <source media="(max-width: 639px)" srcset="img/streetcred/sec7_fine_tuning/color_scheme.png">
-              <img src="img/streetcred/sec7_fine_tuning/color_scheme_large.png"
+              <source media="(max-width: 639px)" data-srcset="img/streetcred/sec7_fine_tuning/color_scheme.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec7_fine_tuning/color_scheme_large.png"
                    title="From color inspiration (the American flag) to the final color scheme (brighter and more vibrant colors)"
                    alt="StreetCred sample screen and logo with U.S. flag colors and with final color scheme">
             </picture>
@@ -2491,8 +2567,9 @@
         <div id="style-sheet" class="wide-picture">
           <a href="#" data-featherlight="#style-sheet-zoom">
             <picture id="style-sheet-zoom" class="shadow-black fit-width">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec7_fine_tuning/style_sheet_small.png">
-              <img src="img/streetcred/sec7_fine_tuning/style_sheet.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec7_fine_tuning/style_sheet_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec7_fine_tuning/style_sheet.png"
                    title="StreetCred style sheet"
                    alt="StreetCred style sheet with color scheme, typography, iconography, buttons, etc">
             </picture>
@@ -2534,8 +2611,9 @@
           </p>
           <a href="#" data-featherlight="#contrast">
             <picture id="contrast" class="fit-width">
-              <source media="(max-width: 767px)" srcset="img/streetcred/sec8_accessibility/contrast_small.png">
-              <img src="img/streetcred/sec8_accessibility/contrast.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/sec8_accessibility/contrast_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec8_accessibility/contrast.png"
                    title="Conforming to a minimum contrast ratio of 4.5:1"
                    alt="Various before and after StreetCred screens with callouts indicating improved contrast ratio of certain elements">
             </picture>
@@ -2560,7 +2638,8 @@
           <div id="accessibility-error">
             <a href="#err-msg">
               <div id="err-msg" class="shadow-black">
-                <img src="img/streetcred/sec8_accessibility/error.png"
+                <img class="lazyload"
+                     data-src="img/streetcred/sec8_accessibility/error.png"
                      title="Accessible error message"
                      alt="Example of input field with error icon and error message">
               </div>
@@ -2581,7 +2660,8 @@
           <div id="accessibility-buttons">
             <a href="#buttons">
               <div id="buttons" class="shadow-black">
-                <img src="img/streetcred/sec8_accessibility/buttons.png"
+                <img class="lazyload"
+                     data-src="img/streetcred/sec8_accessibility/buttons.png"
                      title="Accessible primary and secondary buttons"
                      alt="Two buttons side-by-side: ghost button on left, filled button on right">
               </div>
@@ -2603,7 +2683,8 @@
           <div id="accessibility-hyperlinks">
             <a href="#hyperlinks">
               <div id="hyperlinks" class="shadow-black">
-                <img src="img/streetcred/sec8_accessibility/link.png"
+                <img class="lazyload"
+                     data-src="img/streetcred/sec8_accessibility/link.png"
                      title="Accessible hyperlinks"
                      alt="Example of underlined link text within a paragraph">
               </div>
@@ -2625,39 +2706,40 @@
       </section>
 
       <section class="indented stretch-right inner-section">
-          <div id="accessibility2" class="accessibility-grid">
-            <div class="caption1">
-              <p>
-                An­other way to make de­sign ac­ces­si­ble is to have bor­ders around in­put
-                fields so the user can tell where they’re ex­pected to en­ter text.
-                Ad­di­tion­ally place­holder text is used to sup­ple­ment the la­bel, not to
-                re­place it.
-              </p>
-            </div>
+        <div id="accessibility2" class="accessibility-grid">
+          <div class="caption1">
+            <p>
+              An­other way to make de­sign ac­ces­si­ble is to have bor­ders around in­put
+              fields so the user can tell where they’re ex­pected to en­ter text.
+              Ad­di­tion­ally place­holder text is used to sup­ple­ment the la­bel, not to
+              re­place it.
+            </p>
+          </div>
 
-            <div id="accessibility-input-field" class="">
-              <a href="#input-field">
-                <div id="input-field" class="shadow-black">
-                  <img src="img/streetcred/sec8_accessibility/input_field.png"
-                       title="Accessible input field"
-                       alt="Example of input field with border and label above field">
-                </div>
-              </a>
-              <svg class="connector elbow top line-black edge" height="10" width="200">
-                <line x1="0" y1="0" x2="100%" y2="0" />
-              </svg>
-              <svg class="connector vert-line line-black edge" height="200" width="10">
-                <line x1="0" y1="0" x2="0" y2="100%" />
-              </svg>
-            </div>
-            <div class="caption caption2 caption-left">
-              <p>
-                The user is able to tell what the field is even when the
-                placeholder text is not available anymore because the label is
-                outside of the field and therefore always&nbsp;visible.
-              </p>
-            </div>
-          </div><!-- END of accessibility-grid2 -->
+          <div id="accessibility-input-field" class="">
+            <a href="#input-field">
+              <div id="input-field" class="shadow-black">
+                <img class="lazyload"
+                     data-src="img/streetcred/sec8_accessibility/input_field.png"
+                     title="Accessible input field"
+                     alt="Example of input field with border and label above field">
+              </div>
+            </a>
+            <svg class="connector elbow top line-black edge" height="10" width="200">
+              <line x1="0" y1="0" x2="100%" y2="0" />
+            </svg>
+            <svg class="connector vert-line line-black edge" height="200" width="10">
+              <line x1="0" y1="0" x2="0" y2="100%" />
+            </svg>
+          </div>
+          <div class="caption caption2 caption-left">
+            <p>
+              The user is able to tell what the field is even when the
+              placeholder text is not available anymore because the label is
+              outside of the field and therefore always&nbsp;visible.
+            </p>
+          </div>
+        </div><!-- END of accessibility-grid2 -->
       </section>
     </div>
 
@@ -2665,8 +2747,9 @@
       <div id="final-designs-anchor" class="anchor section-anchor">
       </div>
       <picture>
-        <source media="(max-width: 767px)" srcset="img/streetcred/sec9_final_designs/montage_small.jpg">
-        <img src="img/streetcred/sec9_final_designs/montage.png"
+        <source media="(max-width: 767px)" data-srcset="img/streetcred/sec9_final_designs/montage_small.jpg">
+        <img class="lazyload"
+             data-src="img/streetcred/sec9_final_designs/montage.png"
              alt="Montage of various StreetCred screens on iPhone XS">
       </picture>
     </section>
@@ -2700,7 +2783,9 @@
             </p>
           </div>
           <div id="demo">
-            <video controls controlsList="nodownload nofullscreen" disablePictureInPicture autoplay loop muted inline
+            <video
+                   controls controlsList="nodownload nofullscreen"
+                   disablePictureInPicture autoplay loop muted inline
                    poster="img/streetcred/sec9_final_designs/splash.png">
               <!-- <source src="img/streetcred/sec9_final_designs/streetcred_demo.webm" type="video/webm"> -->
               <source src="img/streetcred/sec9_final_designs/streetcred_demo.mp4" type="video/mp4">
@@ -2760,29 +2845,33 @@
           <!-- ONBOARDING ----------------------------------------------------->
           <li class="iphone-x" mockup-group="1">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/0_splash_small.png">
-              <img src="img/streetcred/screenshots/0_onboarding/0_splash.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/0_onboarding/0_splash_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/0_onboarding/0_splash.png"
                    alt="SteetCred splash screen with illustration of modern city and logo">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="1">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/1a_benefit_small.png">
-              <img src="img/streetcred/screenshots/0_onboarding/1a_benefit.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/0_onboarding/1a_benefit_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/0_onboarding/1a_benefit.png"
                    alt="Onboarding screen #1: sightseeing with a twist">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="1">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/1b_benefit_small.png">
-              <img src="img/streetcred/screenshots/0_onboarding/1b_benefit.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/0_onboarding/1b_benefit_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/0_onboarding/1b_benefit.png"
                    alt="Onboarding screen #2: culture immersion">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="1">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/1c_benefit_small.png">
-              <img src="img/streetcred/screenshots/0_onboarding/1c_benefit.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/0_onboarding/1c_benefit_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/0_onboarding/1c_benefit.png"
                    alt="Onboarding screen #3: play anytime">
             </picture>
           </li>
@@ -2790,36 +2879,41 @@
           <!-- FIND HUNTS ----------------------------------------------------->
           <li class="iphone-x" mockup-group="2">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/0_loading_small.png">
-              <img src="img/streetcred/screenshots/1_find_hunts/0_loading.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/1_find_hunts/0_loading_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/1_find_hunts/0_loading.png"
                    alt="Modal asking to allow location services">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="2">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/0_onboarding/2_demo_small.png">
-              <img src="img/streetcred/screenshots/0_onboarding/2_demo.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/0_onboarding/2_demo_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/0_onboarding/2_demo.png"
                    alt="Scavenger hunt demo">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="2">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/1_philly_small.png">
-              <img src="img/streetcred/screenshots/1_find_hunts/1_philly.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/1_find_hunts/1_philly_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/1_find_hunts/1_philly.png"
                    alt="Find hunts screen showing hunts in Philadelphia">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="2">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/2_search_small.png">
-              <img src="img/streetcred/screenshots/1_find_hunts/2_search.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/1_find_hunts/2_search_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/1_find_hunts/2_search.png"
                    alt="Search screen">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="2">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/1_find_hunts/3_sf_small.png">
-              <img src="img/streetcred/screenshots/1_find_hunts/3_sf.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/1_find_hunts/3_sf_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/1_find_hunts/3_sf.png"
                    alt="Find hunts screen showing hunts in San Fransico">
             </picture>
           </li>
@@ -2828,14 +2922,16 @@
           <li class="iphone-x" mockup-group="3">
             <div class="scrollable-screen">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/1_body_buy_hunt_small.png">
-                <img src="img/streetcred/screenshots/2_hunt_detail/1_body_buy_hunt.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/2_hunt_detail/1_body_buy_hunt_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/screenshots/2_hunt_detail/1_body_buy_hunt.png"
                      alt="Hunt detail screen with buy hunt button in bottom nav">
               </picture>
             </div>
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/0a_buy_hunt_small.png">
-              <img src="img/streetcred/screenshots/2_hunt_detail/0a_buy_hunt.png">
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/2_hunt_detail/0a_buy_hunt_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/2_hunt_detail/0a_buy_hunt.png">
               <!-- NOTE: no alt text provided here because this is just the
                    sticky header and bottom nav, which are included in the prior
                    picture-->
@@ -2845,15 +2941,17 @@
           <!-- CHECKOUT ------------------------------------------------------->
           <li class="iphone-x" mockup-group="4">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/0_checkout_options_small.png">
-              <img src="img/streetcred/screenshots/3_checkout_options/0_checkout_options.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/3_checkout_options/0_checkout_options_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/3_checkout_options/0_checkout_options.png"
                    alt="Checkout options screen">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="4">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/3_guest_small.png">
-              <img src="img/streetcred/screenshots/3_checkout_options/3_guest.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/3_checkout_options/3_guest_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/3_checkout_options/3_guest.png"
                    alt="Guest checkout screen">
             </picture>
           </li>
@@ -2861,51 +2959,58 @@
           <!-- BUY HUNT ------------------------------------------------------->
           <li class="iphone-x" mockup-group="4">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/3_apple_pay_small.png">
-              <img src="img/streetcred/screenshots/4_buy_hunt/3_apple_pay.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/4_buy_hunt/3_apple_pay_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/4_buy_hunt/3_apple_pay.png"
                    alt="Buy hunt screen with Apple Pay selected">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="4">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/2a_credit_card_small.png">
-              <img src="img/streetcred/screenshots/4_buy_hunt/2a_credit_card.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/4_buy_hunt/2a_credit_card_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/4_buy_hunt/2a_credit_card.png"
                    alt="Credit card screen">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="4">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/2b_scan_card_small.png">
-              <img src="img/streetcred/screenshots/4_buy_hunt/2b_scan_card.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/4_buy_hunt/2b_scan_card_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/4_buy_hunt/2b_scan_card.png"
                    alt="Scan card screen">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="4">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/4_payment_confirmation_small.png">
-              <img src="img/streetcred/screenshots/4_buy_hunt/4_payment_confirmation.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/4_buy_hunt/4_payment_confirmation_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/4_buy_hunt/4_payment_confirmation.png"
                    alt="Payment confirmation">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="5">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/4_buy_hunt/5_join_small.png">
-              <img src="img/streetcred/screenshots/4_buy_hunt/5_join.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/4_buy_hunt/5_join_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/4_buy_hunt/5_join.png"
                    alt="Popup with incentives to join">
             </picture>
           </li>
           <!-- JOIN ----------------------------------------------------------->
           <li class="iphone-x" mockup-group="5">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/1a_join_small.png">
-              <img src="img/streetcred/screenshots/3_checkout_options/1a_join.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/3_checkout_options/1a_join_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/3_checkout_options/1a_join.png"
                    alt="Become a StreetCred member screen">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="5">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/1c_welcome_small.png">
-              <img src="img/streetcred/screenshots/3_checkout_options/1c_welcome.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/3_checkout_options/1c_welcome_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/3_checkout_options/1c_welcome.png"
                    alt="Welcome to StreetCred modal">
             </picture>
           </li>
@@ -2914,14 +3019,16 @@
           <li class="iphone-x" mockup-group="6">
             <div class="scrollable-screen longer">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/2_body_purchased_small.png">
-                <img src="img/streetcred/screenshots/2_hunt_detail/2_body_purchased.png"
+                <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/2_hunt_detail/2_body_purchased_small.png">
+                <img class="lazyload"
+                     data-src="img/streetcred/screenshots/2_hunt_detail/2_body_purchased.png"
                      alt="Hunt detail screen with paid badge and start hunt now button in bottom nav">
               </picture>
             </div>
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt_small.png">
-              <img src="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt.png">
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/2_hunt_detail/0b_play_hunt.png">
               <!-- NOTE: no alt text provided here because this is just the
                    sticky header and bottom nav, which are included in the prior
                    picture-->
@@ -2930,22 +3037,25 @@
 
           <li class="iphone-x" mockup-group="6">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/5_invite_players/1_invite_players_small.png">
-              <img src="img/streetcred/screenshots/5_invite_players/1_invite_players.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/5_invite_players/1_invite_players_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/5_invite_players/1_invite_players.png"
                    alt="Popup with messaging options to invite players">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="6">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/5_invite_players/2_message_players_small.png">
-              <img src="img/streetcred/screenshots/5_invite_players/2_message_players.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/5_invite_players/2_message_players_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/5_invite_players/2_message_players.png"
                    alt="Pre-filled iMessage to invite players">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="6">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/5_invite_players/3_invite_confirmation_small.png">
-              <img src="img/streetcred/screenshots/5_invite_players/3_invite_confirmation.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/5_invite_players/3_invite_confirmation_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/5_invite_players/3_invite_confirmation.png"
                    alt="Confirmation modal that invitations has been sent to players">
             </picture>
           </li>
@@ -2953,29 +3063,33 @@
           <!-- MANAGE PLAYERS ------------------------------------------------->
           <li class="iphone-x" mockup-group="7">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/0_captain_tip_small.png">
-              <img src="img/streetcred/screenshots/6_manage_players/0_captain_tip.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/6_manage_players/0_captain_tip_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/6_manage_players/0_captain_tip.png"
                    alt="Players screen with popup tip about captains">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="7">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/1a_players_small.png">
-              <img src="img/streetcred/screenshots/6_manage_players/1a_players.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/6_manage_players/1a_players_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/6_manage_players/1a_players.png"
                    alt="Players screen with all players in one team">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="7">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/1b_2teams_small.png">
-              <img src="img/streetcred/screenshots/6_manage_players/1b_2teams.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/6_manage_players/1b_2teams_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/6_manage_players/1b_2teams.png"
                    alt="Players screen with players divided into two teams">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="7">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/6_manage_players/2_edit_team_name_small.png">
-              <img src="img/streetcred/screenshots/6_manage_players/2_edit_team_name.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/6_manage_players/2_edit_team_name_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/6_manage_players/2_edit_team_name.png"
                    alt="Players screen while editing team name">
             </picture>
           </li>
@@ -2983,8 +3097,9 @@
           <!-- MY HUNTS ------------------------------------------------------->
           <li class="iphone-x" mockup-group="8">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_small.png">
-              <img src="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in.png"
                    alt="My hunts screen with demo and join or log in button">
             </picture>
           </li>
@@ -2992,22 +3107,25 @@
           <!-- LOG IN --------------------------------------------------------->
           <li class="iphone-x" mockup-group="9">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/0b_kebab_small.png">
-              <img src="img/streetcred/screenshots/7_my_hunts/0b_kebab.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/7_my_hunts/0b_kebab_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/7_my_hunts/0b_kebab.png"
                    alt="Kebab menu while not logged in">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="9">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/2a_login_small.png">
-              <img src="img/streetcred/screenshots/3_checkout_options/2a_login.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/3_checkout_options/2a_login_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/3_checkout_options/2a_login.png"
                    alt="Login screen">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="9">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/3_checkout_options/2b_check_email_small.png">
-              <img src="img/streetcred/screenshots/3_checkout_options/2b_check_email.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/3_checkout_options/2b_check_email_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/3_checkout_options/2b_check_email.png"
                    alt="Popup to open email for quick login link">
             </picture>
           </li>
@@ -3015,15 +3133,17 @@
           <!-- MY HUNTS (logged in) ------------------------------------------->
           <li class="iphone-x" mockup-group="9">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/1_my_hunts_small.png">
-              <img src="img/streetcred/screenshots/7_my_hunts/1_my_hunts.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/7_my_hunts/1_my_hunts_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/7_my_hunts/1_my_hunts.png"
                    alt="My hunts screen whit purchased hunt and demo">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="9">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/7_my_hunts/2_kebab_small.png">
-              <img src="img/streetcred/screenshots/7_my_hunts/2_kebab.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/7_my_hunts/2_kebab_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/7_my_hunts/2_kebab.png"
                    alt="Kebab menu while logged in">
             </picture>
           </li>
@@ -3031,22 +3151,25 @@
           <!-- PREFERENCES ---------------------------------------------------->
           <li class="iphone-x" mockup-group="10">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/8_preferences/1_restaurants_small.png">
-              <img src="img/streetcred/screenshots/8_preferences/1_restaurants.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/8_preferences/1_restaurants_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/8_preferences/1_restaurants.png"
                    alt="Preference screen for restaurants">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="10">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/8_preferences/2_places_small.png">
-              <img src="img/streetcred/screenshots/8_preferences/2_places.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/8_preferences/2_places_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/8_preferences/2_places.png"
                    alt="Preference screen for places">
             </picture>
           </li>
           <li class="iphone-x" mockup-group="10">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/streetcred/screenshots/8_preferences/3_events_small.png">
-              <img src="img/streetcred/screenshots/8_preferences/3_events.png"
+              <source media="(max-width: 767px)" data-srcset="img/streetcred/screenshots/8_preferences/3_events_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/screenshots/8_preferences/3_events.png"
                    alt="Preference screen for events & interests">
             </picture>
           </li>
@@ -3111,8 +3234,9 @@
         <div id="improv-hunt-detail" class="specimen">
           <a href="#add-to-calendar">
             <picture id="add-to-calendar" class="shadow-black">
-              <source media="(max-width: 1023px)" srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.png">
-              <img src="img/streetcred/sec10_final_thoughts/hunt_detail.png"
+              <source media="(max-width: 1023px)" data-srcset="img/streetcred/sec10_final_thoughts/hunt_detail_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec10_final_thoughts/hunt_detail.png"
                    title="Future improvement: develop 'Add to calendar' feature"
                    alt="Section of Hunt Detail screen">
             </picture>
@@ -3141,8 +3265,9 @@
         <div id="improv-join" class="specimen" >
           <a href="#join-login">
             <picture id="join-login" class="shadow-black">
-              <source media="(max-width: 1023px)" srcset="img/streetcred/sec10_final_thoughts/join_small.png">
-              <img src="img/streetcred/sec10_final_thoughts/join.png"
+              <source media="(max-width: 1023px)" data-srcset="img/streetcred/sec10_final_thoughts/join_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec10_final_thoughts/join.png"
                    title="Future improvement: fine-tune join/log in process"
                    alt="Section of kebab menu to join or login">
             </picture>
@@ -3161,8 +3286,9 @@
         <div id="improv-my-hunts" class="specimen" >
           <a href="#my-hunts">
             <picture id="my-hunts" class="shadow-black">
-              <source media="(max-width: 639px)" srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_small.png">
-              <img src="img/streetcred/sec10_final_thoughts/my_hunts.png"
+              <source media="(max-width: 639px)" data-srcset="img/streetcred/screenshots/7_my_hunts/0a_not_logged_in_small.png">
+              <img class="lazyload"
+                   data-src="img/streetcred/sec10_final_thoughts/my_hunts.png"
                    title="Future imporovements: develop functionality to play hunts, and create hunt demo"
                    alt="Section of Hunt Detail screen">
             </picture>
@@ -3269,6 +3395,7 @@
     integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
     crossorigin="anonymous">
   </script>
+  <script type="text/javascript" src="js/lazysizes.min.js" async></script>
   <script type="text/javascript" src="js/scripts.js?v=1.0" async></script>
   <script type="text/javascript" src="js/project.js?v=1.0" async></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"  charset="utf-8"></script>
