@@ -461,7 +461,13 @@ var Carousel = (function() {
 
 })();
 
+$(window).on('load', function() {
+  Global.makeInvisible($('.loader-content'));
+});
+
+
 $(document).ready(function() {
+  Global.makeVisible($('.loader-content'));
   ProjectNav.init();
   ProjectNav.cloneProjectNav();
   ProjectNav.innerLinkClickEvent();

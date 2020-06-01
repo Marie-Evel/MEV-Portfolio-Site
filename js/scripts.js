@@ -304,12 +304,10 @@ $(document).ready(function() {
   MainNav.innerLinkClickEvent();
   MainNav.outerLinkClickEvent();
   MainNav.refreshTopChevron();
-  Global.makeVisible($('.loader-content'));
 });
 
 $(window).on('load', function() {
   $('.reveal-page').fadeOut();
-  Global.makeInvisible($('.loader-content'));
 });
 
 window.addEventListener('scroll', function() {
