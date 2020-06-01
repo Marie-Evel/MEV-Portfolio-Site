@@ -733,10 +733,3 @@ h1 > p {
     margin: -30px -70px -40px 0px;
     /* margin: -30px 0px -40px -70px; */ /* NOTE: sidebar on the left */
   }
-
-  /* resume page | desktop */
-  /*----------------------------------------------------------------------------*/
-  .resume-container embed { height: calc(100vh - 85px); }
-
-
-}
