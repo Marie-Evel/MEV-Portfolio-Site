@@ -307,6 +307,7 @@ $(document).ready(function() {
 });
 
 $(window).on('load', function() {
+  Global.makeInvisible($('.loader-content'));
   $('.reveal-page').fadeOut();
 });
 
