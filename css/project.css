@@ -894,11 +894,23 @@ ul.bullets {
 .competitor-logo2 img {
   vertical-align: bottom;
   height: 2.5rem;
-  width: auto;
+  /* width: auto; */
 }
 
 .letsroam .competitor-logo,
-.letsroam .competitor-logo2 { padding-bottom: .4em; }
+.letsroam .competitor-logo2 {
+  padding-bottom: .4em;
+}
+
+.letsroam .competitor-logo img,
+.letsroam .competitor-logo2 img {
+  width: 2.5rem;
+}
+
+.uaq .competitor-logo img,
+.uaq .competitor-logo2 img {
+  width: 6.3rem;
+}
 
 /*----------------------------------------------------------------------------*/
 #sc-logo img {
@@ -1137,6 +1149,7 @@ ul.bullets {
 .design-iterations-grid .mockup.low-fid img,
 .design-iterations-grid .mockup.mid-fid img {
   max-height: 82.5vw;
+  max-width: calc(50vw - 30px);
   width: auto;
 }
 
@@ -1211,7 +1224,7 @@ ul.bullets {
 #select-pref .mockup.hi-fid1 img {
   max-height: 81.82vw;
   width: auto;
-  max-width: unset;
+  /* max-width: unset; */
 }
 
 #hunt-info .circle,
@@ -1250,6 +1263,7 @@ ul.bullets {
 
 #buy-hunt .no-shell.low-fid img {
   max-height: 62.17vw;
+  max-width: calc(44.4vw - 27px);
   width: auto;
 }
 
@@ -2791,7 +2805,7 @@ body .sc a:visited { color: var(--sc-red); }
     height: 280px;
     max-height: unset;
     max-width: unset;
-    width: auto;
+    width: 140px;
   }
 
   /*--------------------------------------------------------------------------*/
@@ -3131,7 +3145,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   #sus-score img {
     height: 200px;
-    width: auto;
+    width: 209px;
   }
 
   #positive-quotes  {
@@ -4002,6 +4016,22 @@ body .sc a:visited { color: var(--sc-red); }
     max-width: unset;
   }
 
+  #finding-a-hunt .mockup.low-fid img,
+  #hunt-info .mockup.low-fid img {
+    width: 176px;
+  }
+
+  #finding-a-hunt .mockup.mid-fid img,
+  #hunt-info .mockup.mid-fid img {
+    width: 183px;
+  }
+
+  #finding-a-hunt .mockup.hi-fid1 img,
+  #finding-a-hunt .mockup.final-mockup img,
+  #hunt-info .mockup.hi-fid1 img {
+    width: 185px;
+  }
+
   .rect-container img {
     width: 185px;
     max-width: unset;
@@ -4149,8 +4179,8 @@ body .sc a:visited { color: var(--sc-red); }
   }
 
   #test-plan-docs picture img {
-    width: auto;
     height: 405px;
+    width: 360px;
     max-width: unset;
     margin-top: 0;
     margin-bottom: 0;
@@ -4158,7 +4188,7 @@ body .sc a:visited { color: var(--sc-red); }
 
   .testing .mockup img {
     height: 370px;
-    width: auto;
+    width: 185px;
     max-width: unset;
     max-height: unset;
   }
