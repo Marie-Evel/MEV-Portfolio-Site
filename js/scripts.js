@@ -134,7 +134,6 @@ var MainNav = (function() {
 
     if ( basedOnTop ) {
       curPosition = Global.getScrollPosition() + 0.4 * window.innerHeight;
-
     } else {
       curPosition = curPosition + window.innerHeight;
     }

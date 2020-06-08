@@ -332,17 +332,12 @@ a.overlay { text-decoration: none; }
      object-position: top left;
 }
 
-.image-container svg {
-  /* width: 100%; */
-  /* NOTE: Safari fix */
-  width: 96%;
-}
+.image-container svg { width: 96%; }
 
 #mev-logo-animation .image-container {
   background-color: rgba(243,165,213,0.4);
   position: absolute;
   top: 0;
-  /* NOTE: Safari fix */
   width: calc(100vw - 40px);
 }
 
@@ -417,21 +412,6 @@ h1 > p {
 
 #fun { margin-top: 30px; }
 
-/*----------------------------------------------------------------------------*/
-/* resume page */
-/*----------------------------------------------------------------------------*/
-.resume-container {
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  height: calc(100vh - 61px);
-  max-height: 1175px;
-}
-
-.resume-container iframe {
-  width: 1px;
-  min-width: 100%;
-  margin-bottom: -6px;
-}
 
 /*----------------------------------------------------------------------------*/
 /* Footer */
@@ -601,11 +581,7 @@ h1 > p {
     grid-template-areas: "my-story skills-and-tools"
                          "personal skills-and-tools"
                          "fun skills-and-tools";
-   /* grid-template-areas: "skills-and-tools my-story"
-                        "skills-and-tools personal"
-                        "skills-and-tools fun"; */ /* NOTE: sidebar on the left */
     grid-template-columns: 1fr 30%;
-    /* grid-template-columns: 30% 1fr;  */ /* NOTE: sidebar on the left */
     grid-gap: 20px 30px;
   }
 
@@ -618,7 +594,6 @@ h1 > p {
     min-height: 1080px;
     padding: 30px 30px 40px 40px;
     margin: -30px -40px -40px 0px;
-    /* margin: -30px 0px -40px -40px; */ /* NOTE: sidebar on the left */
   }
 
   #resume-button .button-ghost { margin-top: 0px; }
@@ -642,9 +617,6 @@ h1 > p {
 
   .indented-quote { margin: 30px 50px 30px 30px; }
 
-  /* resume page | tablets */
-  /*----------------------------------------------------------------------------*/
-  .resume-container embed { height: calc(100vh - 75px); }
 
   /* Footer | tablets */
   /*--------------------------------------------------------------------------*/
@@ -723,7 +695,6 @@ h1 > p {
 
   #about-me .section-content {
     grid-template-columns: 1fr 270px;
-    /* grid-template-columns: 270px 1fr; */ /* NOTE: sidebar on the left */
     grid-gap: 30px 50px;
   }
 
@@ -731,5 +702,4 @@ h1 > p {
     min-height: 1200px;
     padding: 30px 40px 40px 70px;
     margin: -30px -70px -40px 0px;
-    /* margin: -30px 0px -40px -70px; */ /* NOTE: sidebar on the left */
   }

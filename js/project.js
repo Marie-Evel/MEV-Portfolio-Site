@@ -84,7 +84,6 @@ var ProjectNav = function() {
           $priorSection = $projectNavSlideout.find('.current-section'),
           $menuItem = $projectNavSlideout.find('a[href="' + curAnchor + '"]');
 
-
     if ( $menuItem.parentsUntil('.dropdown').length ) {
       const $targetDropdown = $menuItem.parents('.dropdown');
 
