@@ -529,6 +529,10 @@ ul.bullets {
   font-weight: 500;
 }
 
+img.lazyload:not(.lazyloaded) {
+  background-color: var(--sc-light-pink);
+  border: solid 1px var(--sc-med-red);
+}
 
 /* Intro */
 /*----------------------------------------------------------------------------*/
@@ -762,6 +766,11 @@ ul.bullets {
 #project-nav-slideout .dropdown-content {
   display: none;
   padding: 0 0 5px 35px;
+}
+
+#project-nav-slideout .current-position {
+  color: var(--sc-red);
+  font-weight: bold;
 }
 
 
