@@ -39,7 +39,6 @@ var ProjectNav = function() {
 
           if ( scrollIt(newHash) ) {
             MainNav.scrollNavigate(newHash);
-            // MainNav.scrollNavigate(newHash, newUrl);
           } else {
             fadeNavigate(newHash, newUrl);
           }
@@ -73,6 +72,7 @@ var ProjectNav = function() {
       $projectNavSlideout.animate({ width: 'toggle'}, function() {
         Global.hideMenu($projectNavSlideout);
       });
+      $projectNavSlideout.find('.current-position').removeClass('current-position');
       return true; // projectNav was just closed
     } else {
       return false; // projectNav was already closed
@@ -82,27 +82,30 @@ var ProjectNav = function() {
   const expandCurrentSection = function() {
     const curAnchor = MainNav.getCurAnchor(true),
           $priorSection = $projectNavSlideout.find('.current-section'),
-          $menuItem = $projectNavSlideout.find('a[href="' + curAnchor + '"]');
+          $menuItem = $projectNavSlideout.find('a[href="' + curAnchor + '"]').last();
 
-    if ( $menuItem.parentsUntil('.dropdown').length ) {
+    $projectNavSlideout.find('.current-position').removeClass('current-position');
+    $menuItem.addClass('current-position');
+
+    if ( $menuItem.parents('.dropdown').length ) {
       const $targetDropdown = $menuItem.parents('.dropdown');
+
+      $targetDropdown.addClass('current-section');
 
       if ( $priorSection.length ) {
         if( $priorSection[0] !== $targetDropdown[0] ) {
+          $priorSection.removeClass('current-section');
           if ( dropdownIsExpanded($priorSection) ) {
             toggleDropdown($priorSection);
           }
-          $priorSection.removeClass('current-section');
         }
       }
 
       if ( !dropdownIsExpanded($targetDropdown) ) {
         toggleDropdown($targetDropdown);
-        $targetDropdown.addClass('current-section');
       }
     }
   };
-
 
   const getMenuCaret = function($targetDropdown) {
     if ($targetDropdown.find('.fa').length) {
@@ -130,6 +133,14 @@ var ProjectNav = function() {
 
     $menuCaret.toggleClass('fa-caret-down');
     $menuCaret.toggleClass('fa-caret-up');
+
+    if ( $targetDropdown.hasClass('current-section') ) {
+      if ( $menuCaret.hasClass('fa-caret-down') ) {
+        $targetDropdown.find('.top-menu a').addClass('current-position')
+      } else {
+        $targetDropdown.find('.top-menu a').removeClass('current-position')
+      }
+    }
 
     // NOTE: Doesn't work...
     // I was trying to scroll the bottom of the pullout nav when the user
